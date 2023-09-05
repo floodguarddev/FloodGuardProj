@@ -1,8 +1,6 @@
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
-const passportLocalMongoose = require("passport-local-mongoose")
-
 const Session = new Schema({
   refreshToken: {
     type: String,
@@ -11,13 +9,13 @@ const Session = new Schema({
 })
 
 const Admin = new Schema({
-  firstName: {
+  name: {
     type: String,
-    default: "",
+    required: true
   },
-  lastName: {
+  username: {
     type: String,
-    default: "",
+    required: true,
   },
   authStrategy: {
     type: String,
@@ -27,15 +25,5 @@ const Admin = new Schema({
     type: [Session],
   },
 })
-
-//Remove refreshToken from the response
-Admin.set("toJSON", {
-  transform: function (doc, ret, options) {
-    delete ret.refreshToken
-    return ret
-  },
-})
-
-Admin.plugin(passportLocalMongoose)
 
 module.exports = mongoose.model("Admin", Admin)

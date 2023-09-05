@@ -1,0 +1,34 @@
+let User = require('./../models/user.model');
+const { isRescuer } = require('./rescuer.repository');
+
+async function getUserUsingEmail(email){
+    let user = await User.findOne({email}).catch(error => {
+        throw new createHttpError.InternalServerError(error);
+    }
+    );
+
+    return user
+}
+
+async function isUserAvailableUsingEmail(email){
+    let user = await getUserUsingEmail(email);
+
+    return (user != null);
+}
+
+async function getUserRoles(userId){
+    roles = [];
+    
+
+    if(await isRescuer(userId))
+        roles.push("rescuer");
+
+    if(await isNGO(userId))
+        roles.push("ngo");
+
+    return roles
+}
+
+
+
+module.exports = {getUserUsingEmail, getUserRoles, isUserAvailableUsingEmail}

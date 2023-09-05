@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
 const Rescuer_Request = new Schema({
-    userID:{ type: Schema.Types.ObjectId, ref: 'User', unique: true, required: true },
+    userId:{ type: Schema.Types.ObjectId, ref: 'User', unique: true, required: true },
     cnicNumber: {type: Number, required:true},
     address: {type: String, required:true},
     rescuerImageLink: {type: String},

@@ -9,11 +9,7 @@ const Session = new Schema({
 })
 
 const User = new Schema({
-  firstName: {
-    type: String,
-    default: "",
-  },
-  lastName: {
+  name: {
     type: String,
     default: "",
   },
@@ -21,27 +17,27 @@ const User = new Schema({
     type: String,
     default: "local",
   },
-  username: {
+  verified: {
+    type: Boolean,
+    default: false
+  },
+  email: {
     type: String,
     required:true,
     unique: true
   },
-  hash:{
-    type: String,
-    required: true
-  },
-  refreshToken: {
+  refreshTokens: {
     type: [Session],
   },
 })
 
 //Remove refreshToken from the response
-User.set("toJSON", {
-  transform: function (doc, ret, options) {
-    delete ret.refreshToken
-    delete ret.hash
-    return ret
-  },
-})
+// User.set("toJSON", {
+//   transform: function (doc, ret, options) {
+//     delete ret.refreshToken
+//     delete ret.hash
+//     return ret
+//   },
+// })
 
 module.exports = mongoose.model("User", User)

@@ -4,13 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var morgan = require('morgan');
 require('dotenv').config();
-
+var {infoLogger} = require('./src/logging/logger')
 var {errorLogger, errorResponder, invalidPathHandler, assignHTTPError} = require('./src/middlewares/errorhandling');
 
 global.__basedir = __dirname;
 
 //Setting Up DB//
-
+require('./db/connection');
 
 //Importing Routes//
 var indexRouter = require('./src/routes/index');
