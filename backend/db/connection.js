@@ -19,9 +19,9 @@ mongoose.connect(process.env.DB_URI)
 .then(async ()=>{
     console.log('DB has been successfully connected');
 
-    await dropAllCollections();
+    // await dropAllCollections();
 
-    console.log('Collections have been deleted from db');
+    // console.log('Collections have been deleted from db');
 })
 .catch((error)=>{
     console.log('Failed to connect to db: ' + error.message )

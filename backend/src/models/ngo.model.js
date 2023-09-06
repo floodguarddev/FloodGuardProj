@@ -11,7 +11,7 @@ const NGO = new Schema({
     ngoImageLink: {type: String},
     ngoName: {type: String, required: true},
     ngoContactNumber: {type: String, required: true},
-    ngoID: {type:Number, required: true},
+    ngoId: {type:Number, required: true},
     registrationCertificateLink: {type:String , required: true},
     annualReportLink: {type: String, required: true},
     taxExemptionLink: {type: String, required: true},

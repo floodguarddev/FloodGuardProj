@@ -31,13 +31,12 @@ const User = new Schema({
   },
 })
 
-//Remove refreshToken from the response
-// User.set("toJSON", {
-//   transform: function (doc, ret, options) {
-//     delete ret.refreshToken
-//     delete ret.hash
-//     return ret
-//   },
-// })
+//Remove refreshTokens from the response
+User.set("toJSON", {
+  transform: function (doc, ret, options) {
+    delete ret.refreshTokens
+    return ret
+  },
+})
 
 module.exports = mongoose.model("User", User)

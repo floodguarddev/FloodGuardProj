@@ -9,9 +9,6 @@ var {errorLogger, errorResponder, invalidPathHandler, assignHTTPError} = require
 
 global.__basedir = __dirname;
 
-//Setting Up DB//
-require('./db/connection');
-
 //Importing Routes//
 var indexRouter = require('./src/routes/index');
 var usersRouter = require('./src/routes/users');

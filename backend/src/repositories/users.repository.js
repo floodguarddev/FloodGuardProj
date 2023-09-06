@@ -17,6 +17,16 @@ async function isUserAvailableUsingEmail(email){
     return (user != null);
 }
 
+async function getUserById(userId){
+    let user = await User.findById(userId).catch(error => {
+        throw new createHttpError.InternalServerError(error);
+    }
+    );
+    
+    return user
+}
+
+
 async function getUserRoles(userId){
     roles = [];
     
@@ -32,4 +42,4 @@ async function getUserRoles(userId){
 
 
 
-module.exports = {getUserUsingEmail, getUserRoles, isUserAvailableUsingEmail}
+module.exports = {getUserUsingEmail, getUserById, getUserRoles, isUserAvailableUsingEmail}

@@ -34,7 +34,6 @@ const getRefreshTokenPayload = (req)=>{
 
 
 const getFBAccessToken = async (code)=> {
-  console.log(code);
   const { data } = await axios({
     url: 'https://graph.facebook.com/v4.0/oauth/access_token',
     method: 'get',
@@ -58,7 +57,7 @@ async function getFacebookUserData(accesstoken) {
       access_token: accesstoken,
     },
   });
-  console.log(data); // { id, email, first_name, last_name }
+  
   return data;
 };
 

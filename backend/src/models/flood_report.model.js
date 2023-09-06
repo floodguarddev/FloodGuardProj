@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema
 
 const Flood_Report = new Schema({
-  userID:{ type: Schema.Types.ObjectId, ref: 'User', unique: true, required: true },
+  userId:{ type: Schema.Types.ObjectId, ref: 'User', unique: true, required: true },
   location: {
     type: {
       type: String,
