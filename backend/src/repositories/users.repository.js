@@ -1,4 +1,5 @@
 let User = require('./../models/user.model');
+const { isNGO } = require('./ngo.repository');
 const { isRescuer } = require('./rescuer.repository');
 
 async function getUserUsingEmail(email){

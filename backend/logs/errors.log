@@ -556,3 +556,883 @@
   message: 'userId is not defined',
   timestamp: '2023-09-05T23:32:16.895Z'
 }
+{
+  error: Error: Cannot find module './db/connection'
+  Require stack:
+  - F:\FYP Project\backend\bin\www
+      at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
+      at Module._load (node:internal/modules/cjs/loader:922:27)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP Project\backend\bin\www:14:1)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [ 'F:\\FYP Project\\backend\\bin\\www' ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module './db/connection'\n" +
+    'Require stack:\n' +
+    '- F:\\FYP Project\\backend\\bin\\www\n' +
+    "Error: Cannot find module './db/connection'\n" +
+    'Require stack:\n' +
+    '- F:\\FYP Project\\backend\\bin\\www\n' +
+    '    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:922:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP Project\\backend\\bin\\www:14:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)',
+  stack: "Error: Cannot find module './db/connection'\n" +
+    'Require stack:\n' +
+    '- F:\\FYP Project\\backend\\bin\\www\n' +
+    '    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:922:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP Project\\backend\\bin\\www:14:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)',
+  exception: true,
+  date: 'Wed Sep 06 2023 15:34:18 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 11304,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 74338304,
+      heapTotal: 39063552,
+      heapUsed: 27053856,
+      external: 19577783,
+      arrayBuffers: 18638732
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 221205.703 },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._resolveFilename',
+      line: 1077,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 922,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 1,
+      file: 'F:\\FYP Project\\backend\\bin\\www',
+      function: null,
+      line: 14,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'Function.executeUserEntryPoint [as runMain]',
+      line: 81,
+      method: 'executeUserEntryPoint [as runMain]',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-06T10:34:18.197Z'
+}
+{
+  error: F:\FYP Project\backend\src\services\users.services.js:43
+      let payload = {
+          ^^^^^^^
+  
+  SyntaxError: Unexpected identifier
+      at internalCompileFunction (node:internal/vm:73:18)
+      at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+      at Module._compile (node:internal/modules/cjs/loader:1220:27)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP Project\backend\src\controllers\users.controllers.js:2:22)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14),
+  level: 'error',
+  message: 'uncaughtException: Unexpected identifier\n' +
+    'F:\\FYP Project\\backend\\src\\services\\users.services.js:43\n' +
+    '    let payload = {\n' +
+    '        ^^^^^^^\n' +
+    '\n' +
+    'SyntaxError: Unexpected identifier\n' +
+    '    at internalCompileFunction (node:internal/vm:73:18)\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1178:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1220:27)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP Project\\backend\\src\\controllers\\users.controllers.js:2:22)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)',
+  stack: 'F:\\FYP Project\\backend\\src\\services\\users.services.js:43\n' +
+    '    let payload = {\n' +
+    '        ^^^^^^^\n' +
+    '\n' +
+    'SyntaxError: Unexpected identifier\n' +
+    '    at internalCompileFunction (node:internal/vm:73:18)\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1178:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1220:27)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP Project\\backend\\src\\controllers\\users.controllers.js:2:22)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)',
+  exception: true,
+  date: 'Wed Sep 06 2023 15:52:06 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14108,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 71733248,
+      heapTotal: 36704256,
+      heapUsed: 26964832,
+      external: 20215879,
+      arrayBuffers: 19276828
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 222274.171 },
+  trace: [
+    {
+      column: 18,
+      file: 'node:internal/vm',
+      function: 'internalCompileFunction',
+      line: 73,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapSafe',
+      line: 1178,
+      method: null,
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1220,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 22,
+      file: 'F:\\FYP Project\\backend\\src\\controllers\\users.controllers.js',
+      function: null,
+      line: 2,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-06T10:52:06.670Z'
+}
+{
+  error: Error: Cannot find module 'axios'
+  Require stack:
+  - F:\FYP Project\backend\src\utils\authentication.js
+  - F:\FYP Project\backend\src\services\users.services.js
+  - F:\FYP Project\backend\src\controllers\users.controllers.js
+  - F:\FYP Project\backend\src\routes\users.js
+  - F:\FYP Project\backend\app.js
+  - F:\FYP Project\backend\bin\www
+      at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
+      at Module._load (node:internal/modules/cjs/loader:922:27)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP Project\backend\src\utils\authentication.js:1:28)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'F:\\FYP Project\\backend\\src\\utils\\authentication.js',
+      'F:\\FYP Project\\backend\\src\\services\\users.services.js',
+      'F:\\FYP Project\\backend\\src\\controllers\\users.controllers.js',
+      'F:\\FYP Project\\backend\\src\\routes\\users.js',
+      'F:\\FYP Project\\backend\\app.js',
+      'F:\\FYP Project\\backend\\bin\\www'
+    ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module 'axios'\n" +
+    'Require stack:\n' +
+    '- F:\\FYP Project\\backend\\src\\utils\\authentication.js\n' +
+    '- F:\\FYP Project\\backend\\src\\services\\users.services.js\n' +
+    '- F:\\FYP Project\\backend\\src\\controllers\\users.controllers.js\n' +
+    '- F:\\FYP Project\\backend\\src\\routes\\users.js\n' +
+    '- F:\\FYP Project\\backend\\app.js\n' +
+    '- F:\\FYP Project\\backend\\bin\\www\n' +
+    "Error: Cannot find module 'axios'\n" +
+    'Require stack:\n' +
+    '- F:\\FYP Project\\backend\\src\\utils\\authentication.js\n' +
+    '- F:\\FYP Project\\backend\\src\\services\\users.services.js\n' +
+    '- F:\\FYP Project\\backend\\src\\controllers\\users.controllers.js\n' +
+    '- F:\\FYP Project\\backend\\src\\routes\\users.js\n' +
+    '- F:\\FYP Project\\backend\\app.js\n' +
+    '- F:\\FYP Project\\backend\\bin\\www\n' +
+    '    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:922:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP Project\\backend\\src\\utils\\authentication.js:1:28)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)',
+  stack: "Error: Cannot find module 'axios'\n" +
+    'Require stack:\n' +
+    '- F:\\FYP Project\\backend\\src\\utils\\authentication.js\n' +
+    '- F:\\FYP Project\\backend\\src\\services\\users.services.js\n' +
+    '- F:\\FYP Project\\backend\\src\\controllers\\users.controllers.js\n' +
+    '- F:\\FYP Project\\backend\\src\\routes\\users.js\n' +
+    '- F:\\FYP Project\\backend\\app.js\n' +
+    '- F:\\FYP Project\\backend\\bin\\www\n' +
+    '    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:922:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP Project\\backend\\src\\utils\\authentication.js:1:28)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)',
+  exception: true,
+  date: 'Wed Sep 06 2023 15:55:05 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 9156,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 74493952,
+      heapTotal: 39063552,
+      heapUsed: 26979272,
+      external: 19579235,
+      arrayBuffers: 18640184
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 222453.484 },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._resolveFilename',
+      line: 1077,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 922,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'F:\\FYP Project\\backend\\src\\utils\\authentication.js',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-06T10:55:05.984Z'
+}
+{
+  error: Error: Cannot find module 'axios'
+  Require stack:
+  - F:\FYP Project\backend\src\utils\authentication.js
+  - F:\FYP Project\backend\src\services\users.services.js
+  - F:\FYP Project\backend\src\controllers\users.controllers.js
+  - F:\FYP Project\backend\src\routes\users.js
+  - F:\FYP Project\backend\app.js
+  - F:\FYP Project\backend\bin\www
+      at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
+      at Module._load (node:internal/modules/cjs/loader:922:27)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP Project\backend\src\utils\authentication.js:1:28)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'F:\\FYP Project\\backend\\src\\utils\\authentication.js',
+      'F:\\FYP Project\\backend\\src\\services\\users.services.js',
+      'F:\\FYP Project\\backend\\src\\controllers\\users.controllers.js',
+      'F:\\FYP Project\\backend\\src\\routes\\users.js',
+      'F:\\FYP Project\\backend\\app.js',
+      'F:\\FYP Project\\backend\\bin\\www'
+    ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module 'axios'\n" +
+    'Require stack:\n' +
+    '- F:\\FYP Project\\backend\\src\\utils\\authentication.js\n' +
+    '- F:\\FYP Project\\backend\\src\\services\\users.services.js\n' +
+    '- F:\\FYP Project\\backend\\src\\controllers\\users.controllers.js\n' +
+    '- F:\\FYP Project\\backend\\src\\routes\\users.js\n' +
+    '- F:\\FYP Project\\backend\\app.js\n' +
+    '- F:\\FYP Project\\backend\\bin\\www\n' +
+    "Error: Cannot find module 'axios'\n" +
+    'Require stack:\n' +
+    '- F:\\FYP Project\\backend\\src\\utils\\authentication.js\n' +
+    '- F:\\FYP Project\\backend\\src\\services\\users.services.js\n' +
+    '- F:\\FYP Project\\backend\\src\\controllers\\users.controllers.js\n' +
+    '- F:\\FYP Project\\backend\\src\\routes\\users.js\n' +
+    '- F:\\FYP Project\\backend\\app.js\n' +
+    '- F:\\FYP Project\\backend\\bin\\www\n' +
+    '    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:922:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP Project\\backend\\src\\utils\\authentication.js:1:28)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)',
+  stack: "Error: Cannot find module 'axios'\n" +
+    'Require stack:\n' +
+    '- F:\\FYP Project\\backend\\src\\utils\\authentication.js\n' +
+    '- F:\\FYP Project\\backend\\src\\services\\users.services.js\n' +
+    '- F:\\FYP Project\\backend\\src\\controllers\\users.controllers.js\n' +
+    '- F:\\FYP Project\\backend\\src\\routes\\users.js\n' +
+    '- F:\\FYP Project\\backend\\app.js\n' +
+    '- F:\\FYP Project\\backend\\bin\\www\n' +
+    '    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:922:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP Project\\backend\\src\\utils\\authentication.js:1:28)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)',
+  exception: true,
+  date: 'Wed Sep 06 2023 15:58:09 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 12024,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 74776576,
+      heapTotal: 39063552,
+      heapUsed: 27040120,
+      external: 19587428,
+      arrayBuffers: 18648377
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 222637.046 },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._resolveFilename',
+      line: 1077,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 922,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'F:\\FYP Project\\backend\\src\\utils\\authentication.js',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-06T10:58:09.541Z'
+}
+{
+  error: Error: Cannot find module 'jsonwebtoken'
+  Require stack:
+  - F:\FYP Project\backend\src\utils\authentication.js
+  - F:\FYP Project\backend\src\services\users.services.js
+  - F:\FYP Project\backend\src\controllers\users.controllers.js
+  - F:\FYP Project\backend\src\routes\users.js
+  - F:\FYP Project\backend\app.js
+  - F:\FYP Project\backend\bin\www
+      at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
+      at Module._load (node:internal/modules/cjs/loader:922:27)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP Project\backend\src\utils\authentication.js:2:13)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'F:\\FYP Project\\backend\\src\\utils\\authentication.js',
+      'F:\\FYP Project\\backend\\src\\services\\users.services.js',
+      'F:\\FYP Project\\backend\\src\\controllers\\users.controllers.js',
+      'F:\\FYP Project\\backend\\src\\routes\\users.js',
+      'F:\\FYP Project\\backend\\app.js',
+      'F:\\FYP Project\\backend\\bin\\www'
+    ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module 'jsonwebtoken'\n" +
+    'Require stack:\n' +
+    '- F:\\FYP Project\\backend\\src\\utils\\authentication.js\n' +
+    '- F:\\FYP Project\\backend\\src\\services\\users.services.js\n' +
+    '- F:\\FYP Project\\backend\\src\\controllers\\users.controllers.js\n' +
+    '- F:\\FYP Project\\backend\\src\\routes\\users.js\n' +
+    '- F:\\FYP Project\\backend\\app.js\n' +
+    '- F:\\FYP Project\\backend\\bin\\www\n' +
+    "Error: Cannot find module 'jsonwebtoken'\n" +
+    'Require stack:\n' +
+    '- F:\\FYP Project\\backend\\src\\utils\\authentication.js\n' +
+    '- F:\\FYP Project\\backend\\src\\services\\users.services.js\n' +
+    '- F:\\FYP Project\\backend\\src\\controllers\\users.controllers.js\n' +
+    '- F:\\FYP Project\\backend\\src\\routes\\users.js\n' +
+    '- F:\\FYP Project\\backend\\app.js\n' +
+    '- F:\\FYP Project\\backend\\bin\\www\n' +
+    '    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:922:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP Project\\backend\\src\\utils\\authentication.js:2:13)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)',
+  stack: "Error: Cannot find module 'jsonwebtoken'\n" +
+    'Require stack:\n' +
+    '- F:\\FYP Project\\backend\\src\\utils\\authentication.js\n' +
+    '- F:\\FYP Project\\backend\\src\\services\\users.services.js\n' +
+    '- F:\\FYP Project\\backend\\src\\controllers\\users.controllers.js\n' +
+    '- F:\\FYP Project\\backend\\src\\routes\\users.js\n' +
+    '- F:\\FYP Project\\backend\\app.js\n' +
+    '- F:\\FYP Project\\backend\\bin\\www\n' +
+    '    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:922:27)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP Project\\backend\\src\\utils\\authentication.js:2:13)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)',
+  exception: true,
+  date: 'Wed Sep 06 2023 15:59:40 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 13320,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 75104256,
+      heapTotal: 39325696,
+      heapUsed: 28143880,
+      external: 19766450,
+      arrayBuffers: 18816766
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 222727.671 },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._resolveFilename',
+      line: 1077,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 922,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 13,
+      file: 'F:\\FYP Project\\backend\\src\\utils\\authentication.js',
+      function: null,
+      line: 2,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-06T10:59:40.166Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Reference Error',
+  functionReference: 'getUserRoles (F:\\FYP Project\\backend\\src\\repositories\\users.repository.js:26:5)',
+  requestPath: '/users/signup',
+  requestMethod: 'POST',
+  ip: '::1',
+  level: 'error',
+  message: 'isNGO is not defined',
+  timestamp: '2023-09-06T11:12:43.275Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Reference Error',
+  functionReference: 'Object.signup (F:\\FYP Project\\backend\\src\\services\\users.services.js:38:17)',
+  requestPath: '/users/signup',
+  requestMethod: 'POST',
+  ip: '::1',
+  level: 'error',
+  message: 'getUserRole is not defined',
+  timestamp: '2023-09-06T11:14:34.090Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Type Error',
+  functionReference: 'Object.signup (F:\\FYP Project\\backend\\src\\services\\users.services.js:51:23)',
+  requestPath: '/users/signup',
+  requestMethod: 'POST',
+  ip: '::1',
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'push')",
+  timestamp: '2023-09-06T11:15:18.243Z'
+}
