@@ -11,10 +11,11 @@ router.post('/resetPassword', userController.resetPassword);
 router.get('/sendVerificationEmail', verifyUser, verifyLocalStrategy, userController.sendVerificationEmail);
 router.get('/verifyEmail', userController.verifyEmail)
 router.get('/me', verifyUser, userController.viewMyProfile);
-router.get('/setPassword', verifyUser, verifyLocalStrategy, userController.setPassword);
+router.post('/setPassword', verifyUser, verifyLocalStrategy, userController.setPassword);
 router.get('/signout', verifyRefreshToken, userController.signout)
 router.get('/refreshTokenCall',verifyRefreshToken, userController.refreshTokenCall);
 
 /*Module 2: */
+
 
 module.exports = router;

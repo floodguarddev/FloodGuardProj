@@ -6,7 +6,13 @@ const Local_Strategy = new Schema({
     type: String,
     required: true,
     unique: true,
-    ref: 'User'
+    refPath: 'userModel'
+  },
+  userModel: {
+      type: String,
+      required: true,
+      enum: ['Admin', 'User'],
+      default: 'User' // This was done so I can extend Admin module without Editing User Model
   },
   hashedPassword: {
     type: String,

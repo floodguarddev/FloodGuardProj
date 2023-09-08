@@ -20,7 +20,7 @@ async function getHashedPassword(userId){
     return hashedPassword;
 }
 
-async function changeUserPassword(userId, hashedPassword){
+async function changePassword(userId, hashedPassword){
     await Local_Strategy.findOneAndUpdate({userId}, {hashedPassword}, {new: true}).catch(
         (error)=>{
             throw new createHttpError.InternalServerError(error);
@@ -28,4 +28,4 @@ async function changeUserPassword(userId, hashedPassword){
     );
 }
 
-module.exports = {saveHashedPassword, getHashedPassword, changeUserPassword}
+module.exports = {saveHashedPassword, getHashedPassword, changePassword}

@@ -1,6 +1,6 @@
 const moment = require("moment");
 
-function addDateQuery(key, sequelizeQuery, queryJson) {
+function addDateQuery(key, mongooseQuery, queryJson) {
   if (
     !(
       queryJson[`${key}`] ||
@@ -28,9 +28,50 @@ function addDateQuery(key, sequelizeQuery, queryJson) {
   if (queryJson[`${key}_lte`]) {
     dateQuery["$lte"] = new Date(queryJson[`${key}_lte`]);
   }
-  sequelizeQuery[key] = dateQuery;
+  mongooseQuery[key] = dateQuery;
 }
 
+function addNumberQuery(key, mongooseQuery, queryJson){
+  if(!(queryJson[`${key}`] 
+  || queryJson[`${key}_gt`] 
+  || queryJson[`${key}_lt`] 
+  || queryJson[`${key}_gte`] 
+  || queryJson[`${key}_lte`]))
+      return;
+  let numQuery = {};
+  if(queryJson[`${key}`]){
+      numQuery.$eq = parseFloat(queryJson[key])
+  }
+  if(queryJson[`${key}_gt`]){
+      numQuery.$gt = parseFloat(queryJson[`${key}_gt`])
+  }
+  if(queryJson[`${key}_lt`]){
+      numQuery.$lt = parseFloat(queryJson[`${key}_lt`])
+  }
+  if(queryJson[`${key}_gte`]){
+      numQuery.$gte = parseFloat(queryJson[`${key}_gte`])
+  }
+  if(queryJson[`${key}_lte`]){
+      numQuery.$lte= parseFloat(queryJson[`${key}_lte`])
+  }
+  mongooseQuery[key] = numQuery;
+}
+
+function addStringQuery(key, mongooseQuery, queryJson){
+
+  if(queryJson[key]){
+      mongooseQuery[key] = {$regex: queryJson[key], $options : 'i'};
+  }
+}
+
+
+function addBooleanQuery(key, mongooseQuery, queryJson){
+  if(queryJson[key]){
+      mongooseQuery[key] = JSON.parse(queryJson[key])
+  }
+}
+
+
 module.exports = {
-  addDateQuery,
+  addDateQuery, addStringQuery, addBooleanQuery, addNumberQuery
 };

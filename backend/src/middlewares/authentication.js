@@ -47,6 +47,29 @@ const verifyUser = (req,res,next)=>{
     
 }
 
+const verifyAdmin = (req,res,next)=>{
+  try{
+    let payload = getPayload(req);
+    
+    if(payload){
+        req.user = {id: payload.id, authStrategy: payload.authStrategy, roles: payload.roles};
+    }
+    else{
+      throw new createHttpError.Unauthorized("User is not authentic");
+    }
+
+    if(req.user.roles[0] != "admin"){
+      throw new createHttpError.Unauthorized("Given User doesn't have admin access");
+    }
+
+    return next()
+  }
+  catch(error){
+    return next(error);
+  }
+    
+}
+
 const verifyRefreshToken = (req, res, next)=>{
     try{
       // Check if req.body.user exists, create it if it doesn't
@@ -65,4 +88,4 @@ const verifyRefreshToken = (req, res, next)=>{
     
 }
 
-module.exports = {verifyUser, verifyRefreshToken, verifyOauthStrategy, verifyLocalStrategy}
+module.exports = {verifyUser, verifyAdmin, verifyRefreshToken, verifyOauthStrategy, verifyLocalStrategy}

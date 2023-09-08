@@ -1,12 +1,16 @@
 const User = require("../models/user.model");
 const Local_Strategy = require("../models/local_strategy.model");
-const { isUserAvailableUsingEmail, getUserRoles, getUserUsingEmail, getUserById } = require("../repositories/users.repository");
+const { isUserAvailableUsingEmail, getUserRoles, getUserUsingEmail, getUserById, getUsersByQuery } = require("../repositories/users.repository");
 const { generateHash } = require("../utils/passwordGeneration");
 const createHttpError = require('http-errors');
 const { getToken, getRefreshToken } = require("../utils/authentication");
-const { getHashedPassword, changeUserPassword } = require("../repositories/local_strategy.repository");
-const { sendResetPasswordEmail } = require("../utils/resetPassword");
+const { getHashedPassword, changePassword } = require("../repositories/local_strategy.repository");
+const { sendUserResetPasswordEmail } = require("../utils/resetPassword");
 const { sendUserVerficationEmail } = require("../utils/emailVerification");
+
+
+
+/*----------------------Assosiated with User Role------------------------*/
 
 /*
 Sign Up
@@ -138,7 +142,7 @@ async function sendPasswordResetEmail(email){
         throw new createHttpError.BadRequest("Given user is not using local authentication");
     }
 
-    let emailResponse =  await sendResetPasswordEmail(user.email).catch((error)=>{
+    let emailResponse =  await sendUserResetPasswordEmail(user.email).catch((error)=>{
         throw new createHttpError.InternalServerError(error);
     })
 
@@ -162,7 +166,7 @@ async function resetPassword(email, newPassword){
         throw new createHttpError.BadRequest("Given user is not using local authentication");
     }
 
-    await changeUserPassword(user.id, hashedPassword);
+    await changePassword(user.id, hashedPassword);
 }
 
 async function setPassword(userId, oldPassword, newPassword){
@@ -187,7 +191,7 @@ async function setPassword(userId, oldPassword, newPassword){
     
     let newHashedPassword = generateHash(newPassword);
 
-    await changeUserPassword(userId, newHashedPassword);
+    await changePassword(userId, newHashedPassword);
 }
 
 
@@ -303,11 +307,7 @@ async function signout(userId, refreshToken){
 
     let refreshTokensLength = user.refreshTokens.length;
 
-    console.log(user.refreshTokens.length)
-
     user.refreshTokens = user.refreshTokens.filter((refreshTokenObj)=>refreshTokenObj.refreshToken != refreshToken);
-
-    console.log(user.refreshTokens.length)
 
     if(refreshTokensLength <= user.refreshTokens.length ){
         throw new createHttpError.NotFound("Provided refresh token doesn't exist");
@@ -316,4 +316,81 @@ async function signout(userId, refreshToken){
     await user.save();
 }
 
-module.exports = {signup, signin, sendPasswordResetEmail, resetPassword, sendVerificationEmail, verifyEmail, getUserProfile, setPassword, refreshToken, signout}
+
+/*----------------------Assosiated with Admin Role------------------------*/
+
+async function addUser(name, email, password){
+
+    if(await isUserAvailableUsingEmail(email)){
+        throw new createHttpError.Conflict("User with current email already exists");
+    }
+
+    let hashedPassword = generateHash(password);
+
+    let authStrategy = "local";
+
+    let user = new User({name, email, authStrategy});
+
+
+    await user.save();
+    await Local_Strategy.create({userId: user._id, hashedPassword});
+
+    return user;
+}
+
+//Will be implemented later//
+async function deleteUser(userId){
+    throw new createHttpError.NotImplemented("Delete User is not Implemented at the moment");
+}
+
+async function editUser(userId, userObject){
+    let user = await getUserById(userId);
+
+    objectToPass = {};
+    
+    if(!user)
+    {
+        throw new createHttpError.NotFound("User with given details doesn't exist");
+    }
+    //If Email is present in user Object//
+    if(userObject.email){
+        if(user.authStrategy != "local"){
+            throw new createHttpError.BadRequest("Given user is not using local authentication, So Email cannot be edited");
+        }
+        user.email = userObject.email;
+        user.verified = false;
+    }
+
+    if(userObject.name){
+        user.name = userObject.name;
+    }
+
+    await user.save();
+
+    return user;
+}
+
+async function changeUserPassword(userId, newPassword){
+    let hashedPassword = generateHash(newPassword);
+
+    let user = await getUserById(userId);
+
+    if(!user)
+    {
+        throw new createHttpError.NotFound("User with the given information doesn't exist")
+    }
+
+    if(user.authStrategy != "local"){
+        throw new createHttpError.BadRequest("Given user is not using local authentication");
+    }
+
+    await changePassword(user.id, hashedPassword);
+}
+
+async function viewUsers(query, limit, offset){
+    let users = await getUsersByQuery(query, limit, offset);
+
+    return users;
+}
+
+module.exports = {signup, signin, sendPasswordResetEmail, resetPassword, sendVerificationEmail, verifyEmail, getUserProfile, setPassword, refreshToken, signout, addUser, deleteUser, editUser, viewUsers, changeUserPassword}

@@ -16,13 +16,10 @@ function parseResetPasswordToken(jwtToken){
     return payload.email;
 }
 
-async function sendResetPasswordEmail(email){
-
-    let resetPasswordToken = generateResetPasswordToken(email);
-
-    let subject = "Reset Password of Emumba To Do List";
+async function sendResetPasswordEmail(email, link){
+    let subject = "Reset Password of Flood Guard";
     
-    let emailBody = '<html><h2>Reset Passsword of Emumba To Do List</h2><p>Please, reset your password in emumba todo list using the given link</p><a href = "http://localhost:'+process.env.PORT+'/users/resetPassword?token='+resetPasswordToken+'"><button>Verify Email</button></a></html>';
+    let emailBody = '<html><h2>Reset Passsword of Emumba To Do List</h2><p>Please, reset your password in emumba todo list using the given link</p><a href = "'+link+'"><button>Verify Email</button></a></html>';
 
     let response = await sendEmail(email, subject, emailBody).catch(
         (error)=>{
@@ -33,4 +30,21 @@ async function sendResetPasswordEmail(email){
     return response;
 }
 
-module.exports = {generateResetPasswordToken, parseResetPasswordToken, sendResetPasswordEmail}
+async function sendUserResetPasswordEmail(email){
+    let resetPasswordToken = generateResetPasswordToken(email);
+    
+    link = process.env.SERVER_URL+'/users/resetPassword?token='+resetPasswordToken;
+
+    return await sendResetPasswordEmail(email, link);
+}
+
+async function sendAdminResetPasswordEmail(email){
+
+    let resetPasswordToken = generateResetPasswordToken(email);
+    
+    link = process.env.SERVER_URL+'/admins/resetPassword?token='+resetPasswordToken;
+
+    return await sendResetPasswordEmail(email, link);
+}
+
+module.exports = {generateResetPasswordToken, parseResetPasswordToken, sendAdminResetPasswordEmail, sendUserResetPasswordEmail}

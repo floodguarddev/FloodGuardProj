@@ -13,7 +13,7 @@ const Admin = new Schema({
     type: String,
     required: true
   },
-  username: {
+  email: {
     type: String,
     required: true,
   },
@@ -21,7 +21,7 @@ const Admin = new Schema({
     type: String,
     default: "local",
   },
-  refreshToken: {
+  refreshTokens: {
     type: [Session],
   },
 })

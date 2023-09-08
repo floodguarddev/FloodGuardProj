@@ -1,6 +1,8 @@
 let User = require('./../models/user.model');
 const { isNGO } = require('./ngo.repository');
 const { isRescuer } = require('./rescuer.repository');
+const createHttpError = require('http-errors');
+
 
 async function getUserUsingEmail(email){
     let user = await User.findOne({email}).catch(error => {
@@ -40,6 +42,10 @@ async function getUserRoles(userId){
     return roles
 }
 
+async function getUsersByQuery(query, limit = process.env.DEFAULT_LIMIT, offset = 0){
+    let users = await User.find(query).skip(offset).limit(limit);
 
+    return users;
+}
 
-module.exports = {getUserUsingEmail, getUserById, getUserRoles, isUserAvailableUsingEmail}
+module.exports = {getUserUsingEmail, getUserById, getUserRoles, isUserAvailableUsingEmail, getUsersByQuery}
