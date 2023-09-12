@@ -6,6 +6,7 @@ const NGO = new Schema({
     cnicNumber: {type: Number, required:true},
     address: {type: String, required:true},
     mobileNumber: {type: String, required: true},
+    assosiatedPersonStatus: {type: String, required: true},
     frontSideCNICLink: {type: String, required: true},
     backSideCNICLink: {type: String, required: true},
     ngoImageLink: {type: String},

@@ -1,6 +1,6 @@
 const Admin = require("../models/admin.model");
 const Local_Strategy = require("../models/local_strategy.model");
-const { isAdminAvailableUsingEmail, getAdminUsingEmail, getAdminById } = require("../repositories/admins.repository");
+const { isAdminAvailableUsingEmail, getAdminUsingEmail, getAdminById, getAdminsByQuery } = require("../repositories/admins.repository");
 const { generateHash } = require("../utils/passwordGeneration");
 const createHttpError = require('http-errors');
 const { getToken, getRefreshToken } = require("../utils/authentication");
@@ -226,7 +226,7 @@ async function signout(userId, refreshToken){
 }
 
 async function viewAdmins(query, limit, offset){
-    let users = await getUsersByQuery(query, limit, offset);
+    let users = await getAdminsByQuery(query, limit, offset);
 
     return users;
 }

@@ -7,6 +7,7 @@ const NGO_Request = new Schema({
     address: {type: String, required:true},
     ngoImageLink: {type: String},
     mobileNumber: {type: String, required: true},
+    assosiatedPersonStatus: {type: String, required: true},
     frontSideCNICLink: {type: String, required: true},
     backSideCNICLink: {type: String, required: true},
     ngoName: {type: String, required: true},

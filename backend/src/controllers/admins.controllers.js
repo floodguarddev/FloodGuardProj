@@ -4,7 +4,7 @@ const adminServices = require('../services/admins.services');
 const userServices = require('../services/users.services');
 const { dataResponse, messageResponse } = require('../utils/commonResponse');
 const { parseResetPasswordToken } = require('../utils/resetPassword');
-const { addStringQuery } = require('../utils/query');
+const { addStringQuery, addNumberQuery } = require('../utils/query');
 
 /*Handlers for Admin Role*/
 async function signin(req, res, next){

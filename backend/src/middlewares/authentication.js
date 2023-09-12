@@ -32,9 +32,11 @@ const verifyOauthStrategy = (req, res, next) => {
 const verifyUser = (req,res,next)=>{
   try{
     let payload = getPayload(req);
-    
+    console.log(payload);
     if(payload){
-        req.user = {id: payload.id, authStrategy: payload.authStrategy, roles: payload.roles};
+        req.user = {id: payload.id, authStrategy: payload.authStrategy};
+        req.rescuer = payload.rescuer;
+        req.ngo = payload.ngo;
     }
     else{
       throw new createHttpError.Unauthorized("User is not authentic");
@@ -46,6 +48,31 @@ const verifyUser = (req,res,next)=>{
   }
     
 }
+
+const verifyRescuer = (req,res,next)=>{
+  try{
+    if(!req.rescuer.id){
+      throw new createHttpError.Unauthorized("User is not a rescuer");
+    }
+    next();
+  }
+  catch(error){
+    return next(error);
+  }
+}
+
+const verifyNGO = (req,res,next)=>{
+  try{
+    if(!req.ngo.id){
+      throw new createHttpError.Unauthorized("User is not a rescuer");
+    }
+    next();
+  }
+  catch(error){
+    return next(error);
+  }
+}
+
 
 const verifyAdmin = (req,res,next)=>{
   try{
@@ -88,4 +115,4 @@ const verifyRefreshToken = (req, res, next)=>{
     
 }
 
-module.exports = {verifyUser, verifyAdmin, verifyRefreshToken, verifyOauthStrategy, verifyLocalStrategy}
+module.exports = {verifyUser, verifyAdmin, verifyRescuer, verifyNGO, verifyRefreshToken, verifyOauthStrategy, verifyLocalStrategy}

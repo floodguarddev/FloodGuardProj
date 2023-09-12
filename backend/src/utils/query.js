@@ -13,7 +13,7 @@ function addDateQuery(key, mongooseQuery, queryJson) {
     return;
   let dateQuery = {};
   if (queryJson[`${key}`]) {
-    dateQuery.$gte = new Date(queryJson[key]);
+    dateQuery.$gte = new Date(moment(queryJson[key]).startOf("day").toDate());
     dateQuery.$lte = new Date(moment(queryJson[key]).endOf("day").toDate());
   }
   if (queryJson[`${key}_gt`]) {

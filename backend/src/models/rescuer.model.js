@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const Rescuer = new Schema({
     userId:{ type: Schema.Types.ObjectId, ref: 'User', unique: true, required: true },
+    fullName: {type: String, required: true},
     cnicNumber: {type: Number, unique: true, required:true},
     address: {type: String, required:true},
     rescuerImageLink: {type: String, required:true},

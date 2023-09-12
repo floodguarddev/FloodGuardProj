@@ -49,7 +49,7 @@ async function signup(name, email, password){
         id: user._id,
         email: user.email,
         authStrategy: user.authStrategy,
-        roles
+        ...roles
     }
 
     let token = getToken(payload);
@@ -109,7 +109,7 @@ async function signin(email, password){
         id: user._id,
         email: user.email,
         authStrategy: user.authStrategy,
-        roles
+        ...roles
     }
 
     let token = getToken(payload);
@@ -271,7 +271,7 @@ async function refreshToken(userId, refreshToken){
         id: user._id,
         email: user.email,
         authStrategy: user.authStrategy,
-        roles
+        ...roles
     }
 
     let token = getToken(payload);
