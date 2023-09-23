@@ -6,14 +6,19 @@ const News = new Schema({
     type: String,
     required: true,
   },
+  author:{
+    type: String
+  },
   description: {
     type: String,
     required: true,
   },
-  imagesLinks: {
-    type: [{type: String}],
-    required: true,
-    default: []
+  url: {
+    type: String
+  },
+  imageUrl: {
+    type: String,
+    required: true
   },
   relatedNews: {
     type: [{type: Schema.Types.ObjectId, ref: "News"}],
@@ -29,6 +34,9 @@ const News = new Schema({
     type: Date,
     required: true,
   },
+  content: {
+    type: String
+  }
 });
 
 

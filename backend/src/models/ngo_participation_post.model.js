@@ -11,6 +11,11 @@ const NGO_Participation_Post = new Schema({
         type: String,
         required: true
     },
+    ngoId: {
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: "NGO"
+    },
     postDescription: {
         type: String,
         required: true

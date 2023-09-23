@@ -19,4 +19,18 @@ async function getSingleFileUrl(key, filesObj){
     }
 }
 
-module.exports = {getSingleFileUrlRequired, getSingleFileUrl};
+async function getMultipleFilesUrls(key, filesObj){
+    try{
+        filesUrls = []
+        for(let i = 0; i<filesObj[key].length; i++){
+            filesUrls.push(filePathToFileUrl(filesObj[key][i].path))
+        }
+        return filesUrls; 
+    }
+    catch(error)
+    {
+        return []
+    }
+}
+
+module.exports = {getSingleFileUrlRequired, getSingleFileUrl, getMultipleFilesUrls};

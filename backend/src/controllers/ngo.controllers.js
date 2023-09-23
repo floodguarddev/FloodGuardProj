@@ -138,6 +138,7 @@ async function viewNGOs(req, res, next){
         let query = req.query;
         addStringQuery('fullName', mongooseQuery, query);
         addStringQuery('cnicNumber', mongooseQuery, query);
+        addStringQuery('ngoName', mongooseQuery, query);
         addStringQuery('address', mongooseQuery, query);
         addStringQuery('mobileNumber', mongooseQuery, query);
         addStringQuery('assosiatedPersonStatus', mongooseQuery, query);

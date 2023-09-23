@@ -2,6 +2,9 @@ var express = require('express');
 const userController = require('../controllers/users.controllers');
 const rescuerController = require('../controllers/rescuer.controllers');
 const ngoController = require('../controllers/ngo.controllers');
+const fundRaisingController = require('../controllers/fund_raising.controllers');
+const ngoParticipationController = require('../controllers/ngo_ participation.controllers');
+const donationController = require('../controllers/donations.controller');
 const { verifyUser, verifyLocalStrategy, verifyRefreshToken } = require('../middlewares/authentication');
 const { rescuerFiles, ngoFiles } = require('../middlewares/fileupload');
 var router = express.Router();
@@ -42,25 +45,19 @@ router.put('/ngo_requests/me', verifyUser,
     ngoController.editNGORequestByUserId);
 
 /*--NGO--*/
-router.get('/ngos/:ngoId', verifyUser, ngoController.viewSpecificNGO);
-router.get('/ngos', verifyUser, ngoController.viewNGOs);
+router.get('/ngos/:ngoId', ngoController.viewSpecificNGO);
+router.get('/ngos', ngoController.viewNGOs);
 
 /*-- Module 7: NGO Participation & Fund Management -- */
-
-//View Participation Posts
-
-//View Specific Participation Post
-
+router.get('/ngo_participation_posts', ngoParticipationController.viewNGOParticipationPosts);
+router.get('/ngo_participation_posts/:postId', ngoParticipationController.viewSpecificNGOParticipationPost);
 //View Fund Raising Posts
-
+router.get('/fund_raising_posts', fundRaisingController.viewFundRaisingPosts);
 //View Specific Fund Raising Post
-
-//Edit Fund Raising Post
-
+router.get('/fund_raising_posts/:postId', fundRaisingController.viewSpecificFundRaisingPost);
 //Donate NGO
-
-//Donate on Fund Raising Post
-
+router.post('/createPaymentIntent', verifyUser, donationController.createPaymentIntent);
 //View Donation History
+router.get('/donations', verifyUser, donationController.getDonationsByUser);
 
 module.exports = router;

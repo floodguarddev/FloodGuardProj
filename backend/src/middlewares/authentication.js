@@ -32,7 +32,7 @@ const verifyOauthStrategy = (req, res, next) => {
 const verifyUser = (req,res,next)=>{
   try{
     let payload = getPayload(req);
-    console.log(payload);
+    
     if(payload){
         req.user = {id: payload.id, authStrategy: payload.authStrategy};
         req.rescuer = payload.rescuer;

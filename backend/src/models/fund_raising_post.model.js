@@ -7,6 +7,11 @@ const Fund_Raising_Post = new Schema({
         required: true,
         default: Date.now,
     },
+    ngoId: {
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: "NGO"
+    },
     postTitle: {
         type: String,
         required: true
@@ -14,6 +19,11 @@ const Fund_Raising_Post = new Schema({
     postDescription: {
         type: String,
         required: true
+    },
+    recievedAmount: {
+        type: Number,
+        required: true,
+        default: 0
     },
     requestedAmount: {
         type: Number,
@@ -26,8 +36,8 @@ const Fund_Raising_Post = new Schema({
         default: [],
     },
     relatedFlood:{
-        type: {type: Schema.Types.ObjectId, ref: 'Flood'},
-        required: true,
+        type: Schema.Types.ObjectId,
+        ref: 'Flood',
         default: null
     },
     transactions:

@@ -5,8 +5,10 @@ const userController = require('../controllers/users.controllers');
 const ngoController = require('../controllers/ngo.controllers');
 const rescuerController = require('../controllers/rescuer.controllers');
 const { verifyAdmin, verifyLocalStrategy, verifyRefreshToken } = require('../middlewares/authentication');
-const { rescuerFilesByAdmin } = require('../middlewares/fileupload');
-
+const { rescuerFilesByAdmin, ngoParticipationFilesByAdmin } = require('../middlewares/fileupload');
+const ngoParticipationController = require('../controllers/ngo_ participation.controllers');
+const fundRaisingController = require('../controllers/fund_raising.controllers');
+const donationController = require('../controllers/donations.controller');
 /* Module 1: User Profiling */
 /* -- Admin Profile -- */
 router.post('/signin', adminController.signin);
@@ -61,36 +63,54 @@ router.post('/ngos/:userId', verifyAdmin,
     rescuerFilesByAdmin.fields([{name: "ngoImage"}, {name: "frontSideCNIC"}, {name: "backSideCNIC"}, {name: "registrationCertificate"}, {name: "annualReport"}, {name: "taxExemption"}]),
     ngoController.addNGO);
 
-/*-- Module 7: NGO Participation & Fund Management -- */
-//Approve NGO Participation Request
-router.get('/ngo_partcipation_request/approve/:requestId', )
-//Reject NGO Participation Request
+/*-- Module 7: NGO Participation -- */
+// 1. Approve NGO Participation Request
+router.post('/ngo_partcipation_requests/approve/:requestId', verifyAdmin, ngoParticipationController.approveNGOParticipationRequest)
+// 2. Reject NGO Participation Request
+router.delete('/ngo_partcipation_requests/reject/:requestId', verifyAdmin, ngoParticipationController.rejectNGOParticipationRequest)
+// 3. View NGO Participation Requests
+router.get('/ngo_participation_requests', verifyAdmin, ngoParticipationController.viewNGOParticipationRequests);
+// 4. View Specific NGO Participation Request
+router.get('/ngo_participation_requests/:requestId', verifyAdmin, ngoParticipationController.viewSpecificNGOParticipationRequest);
+// 5. View NGO Participations
+router.get('/ngo_participation_posts', verifyAdmin, ngoParticipationController.viewNGOParticipationPosts)
+// 6. View Specific Participation
+router.get('/ngo_participation_posts/:postId', verifyAdmin, ngoParticipationController.viewSpecificNGOParticipationPost)
+// 7. Edit Delete NGO Participation Post
+router.post('/ngos/:ngoId/ngo_participation_posts/', verifyAdmin, 
+    ngoParticipationFilesByAdmin.fields([{name: 'postImages'}]),
+    ngoParticipationController.addNGOParticipationPost);
+router.put('/ngos/:ngoId/ngo_participation_posts/:postId', verifyAdmin, 
+    ngoParticipationFilesByAdmin.fields([{name: 'postImages'}]),
+    ngoParticipationController.editNGOParticipationPost)
+router.delete('/ngo_participation_posts/:postId', verifyAdmin, ngoParticipationController.deleteNGOParticipationPost)
 
-//View NGO Participation Requests
 
-//View Specific NGO Participation Request
-
-//View NGO Participation Posts
-
-//View Specific NGO Participation Post
-
-//Edit NGO Participation Post
-
-//Delete NGO Participation Post
-
-//Approve NGO Fund Raising Request
-
-//Edit NGO Fund Raising Request
-
-//View NGO Fund Raising Request
-
-//View My Fund Raising Posts
-
-//View Specific Fund Raising Post
-
-//Edit Fund Raising Post
+/*-- Module 7: Fund Raising -- */
+// 1. Approve NGO Participation Request
+router.post('/fund_raising_requests/approve/:requestId', verifyAdmin, fundRaisingController.approveFundRaisingRequest)
+// 2. Reject NGO Participation Request
+router.delete('/fund_raising_requests/reject/:requestId', verifyAdmin, fundRaisingController.rejectFundRaisingRequest)
+// 3. View NGO Participation Requests
+router.get('/fund_raising_requests', verifyAdmin, fundRaisingController.viewFundRaisingRequests);
+// 4. View Specific NGO Participation Request
+router.get('/fund_raising_requests/:requestId', verifyAdmin, fundRaisingController.viewSpecificFundRaisingRequest);
+// 5. View NGO Participations
+router.get('/fund_raising_posts', verifyAdmin, fundRaisingController.viewFundRaisingPosts)
+// 6. View Specific Participation
+router.get('/fund_raising_posts/:postId', verifyAdmin, fundRaisingController.viewSpecificFundRaisingPost)
+// 7. Edit Delete NGO Participation Post
+router.post('/ngos/:ngoId/fund_raising_posts/', verifyAdmin, 
+    ngoParticipationFilesByAdmin.fields([{name: 'postImages'}]),
+    fundRaisingController.addFundRaisingPost);
+router.put('/ngos/:ngoId/fund_raising_posts/:postId', verifyAdmin, 
+    ngoParticipationFilesByAdmin.fields([{name: 'postImages'}]),
+    fundRaisingController.editFundRaisingPost)
+router.delete('/fund_raising_posts/:postId', verifyAdmin, fundRaisingController.deleteFundRaisingPost)
 
 //View Donation History
-
+router.get('/donations', verifyAdmin, donationController.getDonations)
+//View Specific Donation
+router.get('/donations/:donationId', verifyAdmin, donationController.getSpecificDonation)
     
 module.exports = router;

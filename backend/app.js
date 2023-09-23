@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var bodyParser = require('body-parser');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var morgan = require('morgan');
@@ -15,8 +16,18 @@ var usersRouter = require('./src/routes/users');
 var adminsRouter = require('./src/routes/admins');
 var ngosRouter = require('./src/routes/ngos');
 var recuersRouter = require('./src/routes/rescuers');
+var webhooksRouter = require('./src/routes/webhooks');
+
+//Scheduled Jobs//
+const { newsJob } = require('./src/utils/scheduledTasks');
+
+//Starting News Job to Fetch related news from API if available..
+newsJob.start();
 
 var app = express();
+
+app.use('/webhooks', webhooksRouter);
+
 
 //Morgan's Information in Stream//
 app.use(morgan('combined', {stream: infoLogger.stream}));
@@ -33,7 +44,6 @@ app.use('/users', usersRouter);
 app.use('/admins', adminsRouter);
 app.use('/ngos', ngosRouter);
 app.use('/rescuers', recuersRouter);
-
 
 /*--------------Error Handling----------------*/
 

@@ -1,7 +1,10 @@
 var express = require('express');
 const { verifyUser, verifyNGO } = require('../middlewares/authentication');
 const ngoController = require('../controllers/ngo.controllers');
-const { ngoFiles } = require('../middlewares/fileupload');
+const ngoParticipationController = require('../controllers/ngo_ participation.controllers');
+const fundRaisingController = require('../controllers/fund_raising.controllers');
+const donationsController = require('../controllers/donations.controller');
+const { ngoFiles, ngoParticipationFiles, fundRaisingFiles } = require('../middlewares/fileupload');
 var router = express.Router();
 
 //As One must be a User Befor Being an Rescuer
@@ -17,30 +20,47 @@ router.put('/me',
   ngoController.editMyProfile);
 
 /*-- Module 7: NGO Participation & Fund Management -- */
-//Post NGO Participation Request
+router.post('/ngo_participation_requests', 
+            ngoParticipationFiles.fields([{name: "postImages"}]),
+            ngoParticipationController.postNGOParticipationRequest)
+router.put('/ngo_participation_requests/:ngoParticipationRequestId',
+            ngoParticipationFiles.fields([{name: "postImages"}]),
+            ngoParticipationController.editNGOParticipationRequestByNGO)
+router.delete('/ngo_participation_requests/:ngoParticipationRequestId',
+            ngoParticipationController.deleteNGOParticipationRequestByNGO)
+router.get('/ngo_participation_requests',
+            ngoParticipationController.viewMyNGOParticipationRequests)
+router.get('/ngo_participation_requests/:ngoParticipationRequestId',
+            ngoParticipationController.viewMySpecificNGOParticipationRequest)
+router.get('/ngo_participation_posts', ngoParticipationController.viewNGOParticipationPostsByNGO)
+router.get('/ngo_participation_posts/:postId', ngoParticipationController.viewSpecificNGOParticipationPostByNGO)
+router.put('/ngo_participation_posts/:postId', 
+    ngoParticipationFiles.fields([{name: 'postImages'}]),
+    ngoParticipationController.editNGOParticipationPostByNGO)
+router.delete('/ngo_participation_posts/:postId', ngoParticipationController.deleteNGOParticipationPostByNGO)
+/* --- Fund Raising --- */
+router.post('/fund_raising_requests', 
+            fundRaisingFiles.fields([{name: "postImages"}]),
+            fundRaisingController.postFundRaisingRequest)
+router.put('/fund_raising_requests/:requestId',
+            fundRaisingFiles.fields([{name: "postImages"}]),
+            fundRaisingController.editFundRaisingRequestByNGO)
+router.delete('/fund_raising_requests/:requestId',
+            fundRaisingController.deleteFundRaisingRequestByNGO)
+router.get('/fund_raising_requests',
+            fundRaisingController.viewMyFundRaisingRequests)
+router.get('/fund_raising_requests/:requestId',
+            fundRaisingController.viewMySpecificFundRaisingRequest)
+router.get('/fund_raising_posts', fundRaisingController.viewFundRaisingPostsByNGO)
+router.get('/fund_raising_posts/:postId', fundRaisingController.viewSpecificFundRaisingPostByNGO)
+router.put('/fund_raising_posts/:postId', 
+    fundRaisingFiles.fields([{name: 'postImages'}]),
+    fundRaisingController.editFundRaisingPostByNGO)
+router.delete('/fund_raising_posts/:postId', fundRaisingController.deleteFundRaisingPostByNGO)
 
-//Edit NGO Participation Request
+/*Connect To Stripe*/
+router.get('/get_connect_link', donationsController.getConnectLink);
 
-//View NGO Participation Request
-
-//View My Participation Posts
-
-//View Specific Participation Post
-
-//Edit Participation Post
-
-//Post NGO Fund Raising Request
-
-//Edit NGO Fund Raising Request
-
-//View NGO Fund Raising Request
-
-//View My Fund Raising Posts
-
-//View Specific Fund Raising Post
-
-//Edit Fund Raising Post
-
-//View Donation History
-
+/*Donations*/
+router.get('/donations', donationsController.getDonationsByNGO)
 module.exports = router;

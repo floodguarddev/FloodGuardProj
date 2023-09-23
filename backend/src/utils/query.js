@@ -1,6 +1,21 @@
 const moment = require("moment");
 
+function arrayToNestedKey(array){
+  let nestedKey = "";
+  array.forEach(element => {
+    nestedKey = nestedKey + element + ".";
+  });
+  nestedKey = nestedKey.slice(0, nestedKey.length-1);//Exclude last dot//
+  return nestedKey;
+}
+
 function addDateQuery(key, mongooseQuery, queryJson) {
+  let queryKey = key;
+  if(Array.isArray(key)){
+    queryKey = arrayToNestedKey(key)
+    key = key[key.length-1]; 
+  }
+
   if (
     !(
       queryJson[`${key}`] ||
@@ -28,10 +43,17 @@ function addDateQuery(key, mongooseQuery, queryJson) {
   if (queryJson[`${key}_lte`]) {
     dateQuery["$lte"] = new Date(queryJson[`${key}_lte`]);
   }
-  mongooseQuery[key] = dateQuery;
+  mongooseQuery[queryKey] = dateQuery;
 }
 
 function addNumberQuery(key, mongooseQuery, queryJson){
+  let queryKey = key;
+  if(Array.isArray(key)){
+    queryKey = arrayToNestedKey(key)
+    key = key[key.length-1]; 
+  }
+
+
   if(!(queryJson[`${key}`] 
   || queryJson[`${key}_gt`] 
   || queryJson[`${key}_lt`] 
@@ -54,20 +76,31 @@ function addNumberQuery(key, mongooseQuery, queryJson){
   if(queryJson[`${key}_lte`]){
       numQuery.$lte= parseFloat(queryJson[`${key}_lte`])
   }
-  mongooseQuery[key] = numQuery;
+  mongooseQuery[queryKey] = numQuery;
 }
 
 function addStringQuery(key, mongooseQuery, queryJson){
+  let queryKey = key;
+  if(Array.isArray(key)){
+    queryKey = arrayToNestedKey(key)
+    key = key[key.length-1]; 
+  }
 
   if(queryJson[key]){
-      mongooseQuery[key] = {$regex: queryJson[key], $options : 'i'};
+      mongooseQuery[queryKey] = {$regex: queryJson[key], $options : 'i'};
   }
 }
 
 
 function addBooleanQuery(key, mongooseQuery, queryJson){
+  let queryKey = key;
+  if(Array.isArray(key)){
+    queryKey = arrayToNestedKey(key)
+    key = key[key.length-1]; 
+  }
+
   if(queryJson[key]){
-      mongooseQuery[key] = JSON.parse(queryJson[key])
+      mongooseQuery[queryKey] = JSON.parse(queryJson[key])
   }
 }
 

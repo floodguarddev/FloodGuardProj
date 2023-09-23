@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
 const Transaction = new Schema({
-    transactionId: {type:String, require: true, unique: true},
+    paymentId: {type:String, require: true},
     transactionDate: {type: Date, require: true, default: Date.now()},
     amount: {type: Number, required: true}, //Donation should be stored in PKR
     sender: {type: Schema.Types.ObjectId, require: true, ref: 'User'},

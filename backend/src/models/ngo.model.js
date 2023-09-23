@@ -17,6 +17,7 @@ const NGO = new Schema({
     annualReportLink: {type: String, required: true},
     taxExemptionLink: {type: String, required: true},
     creditCardNumber: {type: String, required: true},
+    stripeAccountId: {type:String, default: null},
     fundRaisingPosts: {
         type: [{type: Schema.Types.ObjectId, ref:'Fund Raising Post'}],
         required: true,
