@@ -2,14 +2,14 @@ const appRoot = require('app-root-path');
 const winston = require('winston');
 
 /*Costum Formats for printing errors*/
-const errorFormat = winston.format.printf(({ level, message, timestamp, meta }) => {
-    return JSON.stringify({
-        timestamp,
-        level,
-        message,
-        ...meta
-    });
-});
+// const errorFormat = winston.format.printf(({ level, message, timestamp, meta }) => {
+//     return JSON.stringify({
+//         timestamp,
+//         level,
+//         message,
+//         ...meta
+//     });
+// });
 
 
 /*Options for different error logs*/
@@ -54,7 +54,7 @@ const infoLogger = winston.createLogger({
 });
 
 infoLogger.stream = {
-    write: function(message, encoding) {
+    write: function(message) {
       // use the 'info' log level so the output will be picked up by both
       // transports (file and console)
       infoLogger.info(message);

@@ -33,7 +33,7 @@ async function sendResetPasswordEmail(email, link){
 async function sendUserResetPasswordEmail(email){
     let resetPasswordToken = generateResetPasswordToken(email);
     
-    link = process.env.SERVER_URL+'/users/resetPassword?token='+resetPasswordToken;
+    let link = process.env.SERVER_URL+'/users/resetPassword?token='+resetPasswordToken;
 
     return await sendResetPasswordEmail(email, link);
 }
@@ -42,7 +42,7 @@ async function sendAdminResetPasswordEmail(email){
 
     let resetPasswordToken = generateResetPasswordToken(email);
     
-    link = process.env.SERVER_URL+'/admins/resetPassword?token='+resetPasswordToken;
+    let link = process.env.SERVER_URL+'/admins/resetPassword?token='+resetPasswordToken;
 
     return await sendResetPasswordEmail(email, link);
 }

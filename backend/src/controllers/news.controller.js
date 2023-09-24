@@ -7,7 +7,7 @@ const { dataResponse, messageResponse } = require("../utils/commonResponse");
 async function deleteNews(req, res, next){
     try{
         let newsId = req.params.newsId;
-        let news = newsServices.deleteNews(newsId);
+        newsServices.deleteNews(newsId);
         return res.status(200).send(messageResponse(`News with id ${newsId} has been deleted successfully.`))
     }
     catch(error)
@@ -34,7 +34,7 @@ async function addNews(req, res, next){
     try{
         let {title, author, description, url, relatedNews, relatedFloods, publishedAt, content} = req.body;
         let imageUrl = await multerFilesParser.getSingleFileUrlRequired("newsImage", req.files);
-        let news = await newsServices.addNews(title, author, description, url, imageUrl, publishedAt, content);
+        let news = await newsServices.addNews(title, author, description, url, imageUrl, relatedNews, relatedFloods, publishedAt, content);
         res.status(200).send(dataResponse("success", {news}));
     }
     catch(error)

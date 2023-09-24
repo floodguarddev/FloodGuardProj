@@ -1,6 +1,6 @@
 let User = require('./../models/user.model');
-const { isNGO, getNGOByUserId } = require('./ngo.repository');
-const { isRescuer, getRescuerById, getRescuerByUserId } = require('./rescuer.repository');
+const { getNGOByUserId } = require('./ngo.repository');
+const { getRescuerByUserId } = require('./rescuer.repository');
 const createHttpError = require('http-errors');
 
 
@@ -30,7 +30,7 @@ async function getUserById(userId){
 
 
 async function getUserRoles(userId){
-    roles = {};
+    let roles = {};
     
     let rescuer = await getRescuerByUserId(userId);
     if(rescuer)

@@ -164,7 +164,7 @@ async function deleteRescuer(req, res, next){
 }
 async function editRescuer(req, res, next){
     try{
-        rescuerId = req.params.rescuerId;
+        let rescuerId = req.params.rescuerId;
 
         let rescuerRequestObj = req.body;
         delete rescuerRequestObj.approveDate;
@@ -185,7 +185,7 @@ async function editRescuer(req, res, next){
 }
 async function addRescuer(req, res, next){
     try{
-        userId = req.params.userId;
+        let userId = req.params.userId;
         const {fullName, cnicNumber, address, mobileNumber} = req.body;
         
         let rescuerImageLink = await multerFilesParser.getSingleFileUrlRequired("rescuerImage", req.files)
@@ -227,7 +227,7 @@ async function deleteMyProfile(req, res, next){
 }
 async function editMyProfile(req, res, next){
     try{
-        rescuerId = req.rescuer.id;
+        let rescuerId = req.rescuer.id;
 
         let rescuerRequestObj = req.body;
         delete rescuerRequestObj.approveDate;

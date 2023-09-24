@@ -6,7 +6,7 @@ const { dataResponse, messageResponse } = require("../utils/commonResponse");
 async function deletePrecaution(req, res, next){
     try{
         let precautionId = req.params.precautionId;
-        let precaution = floodPrecautionServices.deletePrecaution(precautionId);
+        await floodPrecautionServices.deletePrecaution(precautionId);
         return res.status(200).send(messageResponse(`Flood Precaution with id ${precautionId} has been deleted successfully.`))
     }
     catch(error)

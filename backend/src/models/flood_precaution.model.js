@@ -14,6 +14,6 @@ const Flood_Precaution = new Schema({
     type: String,
     required: true,
   }],
-});
+})
 
 module.exports = mongoose.model('Flood Precaution', Flood_Precaution);;

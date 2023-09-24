@@ -208,7 +208,6 @@ async function viewSpecificNGOParticipationPost(req, res, next){
 async function editNGOParticipationPost(req, res, next){
     try{
         let postId = req.params.postId;
-        let ngoId = req.params.ngoId;
         const ngoParticipationObj = req.body;
         
         ngoParticipationObj.postImagesLinks = await multerFilesParser.getMultipleFilesUrls("postImages", req.files)
@@ -227,7 +226,7 @@ async function deleteNGOParticipationPost(req, res, next){
     try{
         let postId = req.params.postId;
 
-        let ngoParticipationPost = await ngoParticipationServices.deleteNGOParticipationPost(postId);
+        await ngoParticipationServices.deleteNGOParticipationPost(postId);
 
         return res.status(200).send(messageResponse("NGO Participation post has been deleted successfully."));
     }
@@ -295,7 +294,7 @@ async function deleteNGOParticipationPostByNGO(req, res, next){
         let ngoId = req.ngo.id;
         let postId = req.params.postId;
 
-        let ngoParticipationPost = await ngoParticipationServices.deleteNGOParticipationPostByNGO(ngoId, postId);
+        await ngoParticipationServices.deleteNGOParticipationPostByNGO(ngoId, postId);
 
         return res.status(200).send(messageResponse("NGO Participation post has been deleted successfully."));
     }

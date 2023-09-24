@@ -100,7 +100,7 @@ async function setPassword(req, res, next){
 
         let {oldPassword, newPassword} = req.body;
 
-        let user = await userServices.setPassword(userId, oldPassword, newPassword);
+        await userServices.setPassword(userId, oldPassword, newPassword);
 
         return res.send(messageResponse("success", "Your password has been changed successfully"));
     }

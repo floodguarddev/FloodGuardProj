@@ -233,28 +233,6 @@ async function deleteFundRaisingPostByNGO(ngoId, postId){
     }
 }
 
-/*Donations*/
-
-async function createPaymentIntent(amount, ngoId){
-    let ngo = await getNGOById(ngoId);
-
-    if(!ngo){
-        throw new createHttpError.NotFound('NGO with given id is not valid');
-    }
-
-
-
-    const paymentIntent = await stripe.paymentIntent.create({
-        amount: amount,
-        currency: 'usd',
-        application_fee_amount: 0, 
-        transfer_data: {
-            destination: ngoStripeAccountID, // Transfer to the specified NGO
-        }
-    });
-
-    return paymentIntent.client_secret;
-}
 module.exports = {
     /*NGO Paritcipation Request*/
     postFundRaisingRequest, editParticipationRequestByNGO, deleteFundRaisingRequestByNGO, viewSpecificFundRaisingRequestByNGO,

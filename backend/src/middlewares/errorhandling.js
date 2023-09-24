@@ -48,7 +48,7 @@ const errorLogger = (error, req, res, next) => {
   
 // Error handling Middleware function reads the error message 
 // and sends back a response in JSON format
-const errorResponder = (error, req, res, next) => {
+const errorResponder = (error, req, res) => {
     res.header("Content-Type", 'application/json')
         
     const status = error.status
@@ -57,7 +57,7 @@ const errorResponder = (error, req, res, next) => {
 
 // Fallback Middleware function for returning 
 // 404 error for undefined paths
-const invalidPathHandler = (req, res, next) => {
+const invalidPathHandler = (req, res) => {
     res.status(404)
     res.send(errorResponse('Not Found', 'Invalid path, There is no route with the given path.'))
 }

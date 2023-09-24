@@ -21,7 +21,7 @@ async function validityOfRescuer(userId, cnicNumber, mobileNumber){
     if(!rescuer)
         return; //There is no Rescuer, so It is valid
 
-    if(rescuer.userId = userId){
+    if(rescuer.userId == userId){
         throw new createHttpError.Conflict("Rescuer with given userId already Exists");
     }
     else if(rescuer.cnicNumber == cnicNumber){

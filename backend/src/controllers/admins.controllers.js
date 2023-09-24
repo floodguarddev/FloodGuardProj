@@ -4,7 +4,7 @@ const adminServices = require('../services/admins.services');
 const userServices = require('../services/users.services');
 const { dataResponse, messageResponse } = require('../utils/commonResponse');
 const { parseResetPasswordToken } = require('../utils/resetPassword');
-const { addStringQuery, addNumberQuery } = require('../utils/query');
+const { addStringQuery } = require('../utils/query');
 
 /*Handlers for Admin Role*/
 async function signin(req, res, next){
@@ -62,7 +62,7 @@ async function setPassword(req, res, next){
 
         let {oldPassword, newPassword} = req.body;
 
-        let user = await adminServices.setPassword(userId, oldPassword, newPassword);
+        await adminServices.setPassword(userId, oldPassword, newPassword);
 
         return res.send(messageResponse("success", "Your password has been changed successfully"));
     }

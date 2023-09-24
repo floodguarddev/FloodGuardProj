@@ -1,13 +1,12 @@
 const User = require("../models/user.model");
 const Local_Strategy = require("../models/local_strategy.model");
 const { isUserAvailableUsingEmail, getUserRoles, getUserUsingEmail, getUserById, getUsersByQuery } = require("../repositories/users.repository");
-const { generateHash } = require("../utils/passwordGeneration");
+const { generateHash, comparePassword } = require("../utils/passwordGeneration");
 const createHttpError = require('http-errors');
 const { getToken, getRefreshToken } = require("../utils/authentication");
 const { getHashedPassword, changePassword } = require("../repositories/local_strategy.repository");
 const { sendUserResetPasswordEmail } = require("../utils/resetPassword");
 const { sendUserVerficationEmail } = require("../utils/emailVerification");
-
 
 
 /*----------------------Assosiated with User Role------------------------*/
@@ -346,7 +345,7 @@ async function deleteUser(userId){
 async function editUser(userId, userObject){
     let user = await getUserById(userId);
 
-    objectToPass = {};
+    let objectToPass = {};
     
     if(!user)
     {

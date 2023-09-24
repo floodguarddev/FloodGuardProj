@@ -2,7 +2,6 @@ const createHttpError = require('http-errors');
 const newsRepository = require('../repositories/news.repository');
 const News = require('../models/news.model');
 const { default: axios } = require('axios');
-const moment = require('moment');
 const { getYesterdayDate } = require('../utils/dates');
 
 //Delete
@@ -26,8 +25,8 @@ async function editNews(newsId, newsObj){
     return news;
 }
 //Add
-async function addNews(title, author, description, url, imageUrl, publishedAt, content){
-    let news = await News.create({title, author, description, url, imageUrl, publishedAt, content}).catch((error)=>{
+async function addNews(title, author, description, url, imageUrl, relatedNews, relatedFloods, publishedAt, content){
+    let news = await News.create({title, author, description, url, imageUrl, relatedNews, relatedFloods, publishedAt, content}).catch((error)=>{
         throw new createHttpError.InternalServerError(error);
     })
     return news;

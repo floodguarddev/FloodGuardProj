@@ -35,10 +35,6 @@ async function getTransactionsByQuery(query, limit = process.env.DEFAULT_LIMIT, 
     return transactions;
 }
 
-async function getTransactionByNGO(ngoId){
-
-}
-
 async function getTransactionById(id){
     let transaction = await Transaction.findById(id).populate('sender').populate('reciever').catch(error => {
         throw new createHttpError.InternalServerError(error);

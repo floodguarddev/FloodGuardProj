@@ -21,7 +21,7 @@ async function getSingleFileUrl(key, filesObj){
 
 async function getMultipleFilesUrls(key, filesObj){
     try{
-        filesUrls = []
+        let filesUrls = []
         for(let i = 0; i<filesObj[key].length; i++){
             filesUrls.push(filePathToFileUrl(filesObj[key][i].path))
         }

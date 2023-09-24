@@ -37,7 +37,7 @@ const News = new Schema({
   content: {
     type: String
   }
-});
+})
 
 
 module.exports = mongoose.model('News', News);;

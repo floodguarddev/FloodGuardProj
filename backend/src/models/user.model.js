@@ -33,7 +33,7 @@ const User = new Schema({
 
 //Remove refreshTokens from the response
 User.set("toJSON", {
-  transform: function (doc, ret, options) {
+  transform: function (doc, ret, _options) {
     delete ret.refreshTokens
     return ret
   },

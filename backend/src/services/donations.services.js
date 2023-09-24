@@ -2,7 +2,6 @@ const createHttpError = require('http-errors');
 const ngoRepository = require('../repositories/ngo.repository');
 const { generateStripeVerificationToken, parseStripeVerificationToken } = require('../utils/stripe');
 const Transaction = require('../models/transaction.model');
-const fundRaisingRepository = require('../repositories/fund_raising.repository');
 const transactionRepository = require('../repositories/transaction.repository');
 const fund_raising_postModel = require('../models/fund_raising_post.model');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
@@ -36,7 +35,7 @@ async function addNGOStripeAccountId(stateToken, authCode){
         throw new createHttpError.NotFound("NGO with given id doesn't exists");
     }
 
-    stripeInfo = await stripe.oauth.token({
+    let stripeInfo = await stripe.oauth.token({
         grant_type: 'authorization_code',
         code: authCode
     })
@@ -69,7 +68,7 @@ async function createPaymentIntent(userId, amount, ngoId, postId = undefined){
         throw new createHttpError.NotAcceptable("Given NGO doesn't have an Stripe Account Connected");
     }
 
-    ngoStripeAccountID=  ngo.stripeAccountId;
+    let ngoStripeAccountID =  ngo.stripeAccountId;
 
     const paymentIntent = await stripe.paymentIntents.create({
         amount: amount*100,

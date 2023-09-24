@@ -208,7 +208,6 @@ async function viewSpecificFundRaisingPost(req, res, next){
 async function editFundRaisingPost(req, res, next){
     try{
         let postId = req.params.postId;
-        let ngoId = req.params.ngoId;
         const fundRaisingObj = req.body;
         
         fundRaisingObj.postImagesLinks = await multerFilesParser.getMultipleFilesUrls("postImages", req.files)
@@ -227,7 +226,7 @@ async function deleteFundRaisingPost(req, res, next){
     try{
         let postId = req.params.postId;
 
-        let fundRaisingPost = await fundRaisingServices.deleteFundRaisingPost(postId);
+        await fundRaisingServices.deleteFundRaisingPost(postId);
 
         return res.status(200).send(messageResponse("NGO Participation post has been deleted successfully."));
     }
@@ -295,7 +294,7 @@ async function deleteFundRaisingPostByNGO(req, res, next){
         let ngoId = req.ngo.id;
         let postId = req.params.postId;
 
-        let fundRaisingPost = await fundRaisingServices.deleteFundRaisingPostByNGO(ngoId, postId);
+        await fundRaisingServices.deleteFundRaisingPostByNGO(ngoId, postId);
 
         return res.status(200).send(messageResponse("NGO Participation post has been deleted successfully."));
     }

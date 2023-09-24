@@ -59,6 +59,6 @@ async function getFacebookUserData(accesstoken) {
   });
   
   return data;
-};
+}
 
 module.exports = {getToken, getRefreshToken, getPayload, getFBAccessToken, getFacebookUserData, getRefreshTokenPayload}

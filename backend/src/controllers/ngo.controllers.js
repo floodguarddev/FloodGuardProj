@@ -181,7 +181,7 @@ async function deleteNGO(req, res, next){
 }
 async function editNGO(req, res, next){
     try{
-        ngoId = req.params.ngoId;
+        let ngoId = req.params.ngoId;
 
         console.log(req.body);
 
@@ -210,7 +210,7 @@ async function editNGO(req, res, next){
 
 async function addNGO(req, res, next){
     try{
-        userId = req.params.userId;
+        let userId = req.params.userId;
         const {cnicNumber, address, mobileNumber, assosiatedPersonStatus, ngoName, ngoContactNumber, ngoId, creditCardNumber} = req.body;
         console.log(req.body);
         let ngoImageLink = await multerFilesParser.getSingleFileUrlRequired("ngoImage", req.files)
@@ -255,7 +255,7 @@ async function deleteMyProfile(req, res, next){
 }
 async function editMyProfile(req, res, next){
     try{
-        ngoId = req.ngo.id;
+        let ngoId = req.ngo.id;
 
         let ngoRequestObj = req.body;
 

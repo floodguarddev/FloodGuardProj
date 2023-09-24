@@ -1,7 +1,7 @@
 const Admin = require("../models/admin.model");
 const Local_Strategy = require("../models/local_strategy.model");
 const { isAdminAvailableUsingEmail, getAdminUsingEmail, getAdminById, getAdminsByQuery } = require("../repositories/admins.repository");
-const { generateHash } = require("../utils/passwordGeneration");
+const { generateHash, comparePassword } = require("../utils/passwordGeneration");
 const createHttpError = require('http-errors');
 const { getToken, getRefreshToken } = require("../utils/authentication");
 const { getHashedPassword, changePassword } = require("../repositories/local_strategy.repository");

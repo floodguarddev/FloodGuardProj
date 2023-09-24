@@ -1,4 +1,3 @@
-const createHttpError = require("http-errors");
 const donationServices = require("../services/donations.services");
 const { dataResponse, messageResponse } = require("../utils/commonResponse");
 const { addNumberQuery, addStringQuery, addDateQuery } = require("../utils/query");

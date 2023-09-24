@@ -14,7 +14,7 @@ async function validityOfNGORequest(userId, cnicNumber, ngoName, ngoContactNumbe
     if(!ngoRequest)
         return; //There is no Request, so It is valid
     
-    if(ngoRequest.userId = userId){
+    if(ngoRequest.userId == userId){
         throw new createHttpError.Conflict("NGO Request with given userId already Exists");
     }
     else if(ngoRequest.cnicNumber == cnicNumber){
