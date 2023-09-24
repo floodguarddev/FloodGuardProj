@@ -7,23 +7,44 @@ const { getYesterdayDate } = require('../utils/dates');
 
 //Delete
 async function deleteNews(newsId){
-
+    let news = await News.findByIdAndDelete(newsId).catch((error)=>{
+        throw new createHttpError.InternalServerError(error);
+    });
+    if(!news){
+        throw new createHttpError.NotFound("News with given id doesn't exist");
+    }
+    return news;
 }
 //Edit
 async function editNews(newsId, newsObj){
-    
+    let news = await News.findByIdAndUpdate(newsId, newsObj, {new: true}).catch((error)=>{
+        throw new createHttpError.InternalServerError(error);
+    })
+    if(!news){
+        throw new createHttpError.NotFound("News with given id doesn't exist");
+    }
+    return news;
 }
 //Add
 async function addNews(title, author, description, url, imageUrl, publishedAt, content){
-
+    let news = await News.create({title, author, description, url, imageUrl, publishedAt, content}).catch((error)=>{
+        throw new createHttpError.InternalServerError(error);
+    })
+    return news;
 }
 //View
 async function getSpecificNews(id){
+    let news = await newsRepository.getNewsById(id);
 
+    if(!news)
+        throw new createHttpError.NotFound("News with given id doesn't exist");
+
+    return news;
 }
 //View All
 async function getNews(query, limit, offset){
-
+    let news = await newsRepository.getNewsByQuery(query, limit, offset);
+    return news;
 }
 
 //Add Bulk News

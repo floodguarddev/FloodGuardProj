@@ -18,7 +18,7 @@ var ngosRouter = require('./src/routes/ngos');
 var recuersRouter = require('./src/routes/rescuers');
 var webhooksRouter = require('./src/routes/webhooks');
 
-//Scheduled Jobs//
+//-----------------Scheduled Jobs-----------------//
 const { newsJob } = require('./src/utils/scheduledTasks');
 
 //Starting News Job to Fetch related news from API if available..
@@ -26,7 +26,7 @@ newsJob.start();
 
 var app = express();
 
-app.use('/webhooks', webhooksRouter);
+app.use('/webhooks', webhooksRouter); //Webhooks may contain encrypted data, so It must be called before middlewares that can affect the req.body
 
 
 //Morgan's Information in Stream//

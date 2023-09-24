@@ -5,10 +5,12 @@ const userController = require('../controllers/users.controllers');
 const ngoController = require('../controllers/ngo.controllers');
 const rescuerController = require('../controllers/rescuer.controllers');
 const { verifyAdmin, verifyLocalStrategy, verifyRefreshToken } = require('../middlewares/authentication');
-const { rescuerFilesByAdmin, ngoParticipationFilesByAdmin } = require('../middlewares/fileupload');
+const { rescuerFilesByAdmin, ngoParticipationFilesByAdmin, newsFilesByAdmin } = require('../middlewares/fileupload');
 const ngoParticipationController = require('../controllers/ngo_ participation.controllers');
 const fundRaisingController = require('../controllers/fund_raising.controllers');
 const donationController = require('../controllers/donations.controller');
+const newsController = require('../controllers/news.controller');
+const floodPrecautionController = require('../controllers/flood_precautions.controller')
 /* Module 1: User Profiling */
 /* -- Admin Profile -- */
 router.post('/signin', adminController.signin);
@@ -113,4 +115,18 @@ router.get('/donations', verifyAdmin, donationController.getDonations)
 //View Specific Donation
 router.get('/donations/:donationId', verifyAdmin, donationController.getSpecificDonation)
     
+//News//
+router.get('/news', verifyAdmin, newsController.viewNews)
+router.get('/news/:newsId', verifyAdmin, newsController.viewSpecificNews);
+router.post('/news', verifyAdmin, newsFilesByAdmin.fields([{name: "newsImage"}]), newsController.addNews);
+router.delete('/news/:newsId', verifyAdmin, newsController.deleteNews);
+router.put('/news/:newsId', verifyAdmin, newsFilesByAdmin.fields([{name: "newsImage"}]), newsController.editNews);
+
+//Precautions//
+router.get('/precautions', verifyAdmin, floodPrecautionController.viewPrecautions)
+router.get('/precautions/:precautionId', verifyAdmin, floodPrecautionController.viewSpecificPrecaution);
+router.post('/precautions', verifyAdmin, floodPrecautionController.addPrecaution);
+router.delete('/precautions/:precautionId', verifyAdmin, floodPrecautionController.deletePrecaution);
+router.put('/precautions/:precautionId', verifyAdmin, floodPrecautionController.editPrecaution);
+
 module.exports = router;

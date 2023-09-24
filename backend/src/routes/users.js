@@ -5,6 +5,8 @@ const ngoController = require('../controllers/ngo.controllers');
 const fundRaisingController = require('../controllers/fund_raising.controllers');
 const ngoParticipationController = require('../controllers/ngo_ participation.controllers');
 const donationController = require('../controllers/donations.controller');
+const newsController = require('../controllers/news.controller');
+const floodPrecautionController = require('../controllers/flood_precautions.controller')
 const { verifyUser, verifyLocalStrategy, verifyRefreshToken } = require('../middlewares/authentication');
 const { rescuerFiles, ngoFiles } = require('../middlewares/fileupload');
 var router = express.Router();
@@ -59,5 +61,12 @@ router.get('/fund_raising_posts/:postId', fundRaisingController.viewSpecificFund
 router.post('/createPaymentIntent', verifyUser, donationController.createPaymentIntent);
 //View Donation History
 router.get('/donations', verifyUser, donationController.getDonationsByUser);
+
+/*--- Module 5: News & Precautions ----*/
+router.get('/news',   newsController.viewNews)
+router.get('/news/:newsId',  newsController.viewSpecificNews);
+
+router.get('/precautions', floodPrecautionController.viewPrecautions)
+router.get('/precautions/:precautionId', floodPrecautionController.viewSpecificPrecaution);
 
 module.exports = router;

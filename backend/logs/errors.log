@@ -25720,3 +25720,4343 @@
   ],
   timestamp: '2023-09-23T14:01:45.200Z'
 }
+{
+  error: ReferenceError: newsControlleeer is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:118:34)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsControlleeer is not defined\n' +
+    'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:39:22 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 11256,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80642048,
+      heapTotal: 61001728,
+      heapUsed: 31270312,
+      external: 19456025,
+      arrayBuffers: 18506341
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 6744.125 },
+  trace: [
+    {
+      column: 34,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 118,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:39:22.279Z'
+}
+{
+  error: ReferenceError: newsControlleeer is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:118:34)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsControlleeer is not defined\n' +
+    'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:40:44 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 3748,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80474112,
+      heapTotal: 61001728,
+      heapUsed: 31339304,
+      external: 19464216,
+      arrayBuffers: 18514532
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 6826.812 },
+  trace: [
+    {
+      column: 34,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 118,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:40:44.959Z'
+}
+{
+  error: ReferenceError: newsControlleeer is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:118:34)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsControlleeer is not defined\n' +
+    'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:41:17 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 15168,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80273408,
+      heapTotal: 61263872,
+      heapUsed: 31266432,
+      external: 19456025,
+      arrayBuffers: 18506341
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 6859.343 },
+  trace: [
+    {
+      column: 34,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 118,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:41:17.494Z'
+}
+{
+  error: ReferenceError: newsControlleeer is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:118:34)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsControlleeer is not defined\n' +
+    'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:41:23 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14488,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80334848,
+      heapTotal: 61263872,
+      heapUsed: 31376560,
+      external: 19456025,
+      arrayBuffers: 18506341
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 6865.64 },
+  trace: [
+    {
+      column: 34,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 118,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:41:23.794Z'
+}
+{
+  error: ReferenceError: newsControlleeer is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:118:34)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsControlleeer is not defined\n' +
+    'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:41:35 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 13292,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80379904,
+      heapTotal: 61001728,
+      heapUsed: 31376848,
+      external: 19464217,
+      arrayBuffers: 18514533
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 6877.187 },
+  trace: [
+    {
+      column: 34,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 118,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:41:35.342Z'
+}
+{
+  error: ReferenceError: newsControlleeer is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:118:34)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsControlleeer is not defined\n' +
+    'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:41:42 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14908,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80564224,
+      heapTotal: 61263872,
+      heapUsed: 31371400,
+      external: 19456025,
+      arrayBuffers: 18506341
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 6884.593 },
+  trace: [
+    {
+      column: 34,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 118,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:41:42.749Z'
+}
+{
+  error: ReferenceError: newsControlleeer is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:118:34)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsControlleeer is not defined\n' +
+    'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:42:18 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14748,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80232448,
+      heapTotal: 61001728,
+      heapUsed: 31342432,
+      external: 19456025,
+      arrayBuffers: 18506341
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 6920.14 },
+  trace: [
+    {
+      column: 34,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 118,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:42:18.284Z'
+}
+{
+  error: ReferenceError: newsControlleeer is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:118:34)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsControlleeer is not defined\n' +
+    'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:42:55 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 11480,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80474112,
+      heapTotal: 61001728,
+      heapUsed: 31141768,
+      external: 19456025,
+      arrayBuffers: 18506341
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 6957.031 },
+  trace: [
+    {
+      column: 34,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 118,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:42:55.178Z'
+}
+{
+  error: ReferenceError: newsControlleeer is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:118:34)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsControlleeer is not defined\n' +
+    'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:45:04 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14356,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80281600,
+      heapTotal: 61001728,
+      heapUsed: 31182656,
+      external: 19456025,
+      arrayBuffers: 18506341
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 7086.187 },
+  trace: [
+    {
+      column: 34,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 118,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:45:04.338Z'
+}
+{
+  error: ReferenceError: newsControlleeer is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:118:34)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsControlleeer is not defined\n' +
+    'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:46:19 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 6436,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80535552,
+      heapTotal: 61263872,
+      heapUsed: 31404056,
+      external: 19466415,
+      arrayBuffers: 18516731
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 7161.828 },
+  trace: [
+    {
+      column: 34,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 118,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:46:19.979Z'
+}
+{
+  error: ReferenceError: newsControlleeer is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:118:34)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsControlleeer is not defined\n' +
+    'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:46:39 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 7560,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80420864,
+      heapTotal: 61001728,
+      heapUsed: 31289704,
+      external: 19456024,
+      arrayBuffers: 18506340
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 7181.171 },
+  trace: [
+    {
+      column: 34,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 118,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:46:39.317Z'
+}
+{
+  error: ReferenceError: newsControlleeer is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:118:34)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsControlleeer is not defined\n' +
+    'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:47:18 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 6700,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80703488,
+      heapTotal: 61001728,
+      heapUsed: 31285408,
+      external: 19456024,
+      arrayBuffers: 18506340
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 7219.859 },
+  trace: [
+    {
+      column: 34,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 118,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:47:18.012Z'
+}
+{
+  error: F:\FYP-Project\backend\src\repositories\news.repository.js:6
+  }
+  ^
+  
+  SyntaxError: Unexpected token '}'
+      at internalCompileFunction (node:internal/vm:73:18)
+      at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+      at Module._compile (node:internal/modules/cjs/loader:1220:27)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\src\services\news.services.js:2:24)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14),
+  level: 'error',
+  message: "uncaughtException: Unexpected token '}'\n" +
+    'F:\\FYP-Project\\backend\\src\\repositories\\news.repository.js:6\n' +
+    '}\n' +
+    '^\n' +
+    '\n' +
+    "SyntaxError: Unexpected token '}'\n" +
+    '    at internalCompileFunction (node:internal/vm:73:18)\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1178:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1220:27)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\services\\news.services.js:2:24)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)',
+  stack: 'F:\\FYP-Project\\backend\\src\\repositories\\news.repository.js:6\n' +
+    '}\n' +
+    '^\n' +
+    '\n' +
+    "SyntaxError: Unexpected token '}'\n" +
+    '    at internalCompileFunction (node:internal/vm:73:18)\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1178:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1220:27)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\services\\news.services.js:2:24)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:47:51 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 6820,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80502784,
+      heapTotal: 61526016,
+      heapUsed: 30608320,
+      external: 19464405,
+      arrayBuffers: 18514721
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 7253.796 },
+  trace: [
+    {
+      column: 18,
+      file: 'node:internal/vm',
+      function: 'internalCompileFunction',
+      line: 73,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapSafe',
+      line: 1178,
+      method: null,
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1220,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 24,
+      file: 'F:\\FYP-Project\\backend\\src\\services\\news.services.js',
+      function: null,
+      line: 2,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:47:51.940Z'
+}
+{
+  error: F:\FYP-Project\backend\src\repositories\news.repository.js:6
+  }
+  ^
+  
+  SyntaxError: Unexpected token '}'
+      at internalCompileFunction (node:internal/vm:73:18)
+      at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+      at Module._compile (node:internal/modules/cjs/loader:1220:27)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\src\services\news.services.js:2:24)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14),
+  level: 'error',
+  message: "uncaughtException: Unexpected token '}'\n" +
+    'F:\\FYP-Project\\backend\\src\\repositories\\news.repository.js:6\n' +
+    '}\n' +
+    '^\n' +
+    '\n' +
+    "SyntaxError: Unexpected token '}'\n" +
+    '    at internalCompileFunction (node:internal/vm:73:18)\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1178:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1220:27)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\services\\news.services.js:2:24)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)',
+  stack: 'F:\\FYP-Project\\backend\\src\\repositories\\news.repository.js:6\n' +
+    '}\n' +
+    '^\n' +
+    '\n' +
+    "SyntaxError: Unexpected token '}'\n" +
+    '    at internalCompileFunction (node:internal/vm:73:18)\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1178:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1220:27)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\services\\news.services.js:2:24)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:47:58 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 11348,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80384000,
+      heapTotal: 61001728,
+      heapUsed: 30759208,
+      external: 19456214,
+      arrayBuffers: 18506530
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 7260.406 },
+  trace: [
+    {
+      column: 18,
+      file: 'node:internal/vm',
+      function: 'internalCompileFunction',
+      line: 73,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapSafe',
+      line: 1178,
+      method: null,
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1220,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 24,
+      file: 'F:\\FYP-Project\\backend\\src\\services\\news.services.js',
+      function: null,
+      line: 2,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:47:58.550Z'
+}
+{
+  error: ReferenceError: newsControlleeer is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:118:34)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsControlleeer is not defined\n' +
+    'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: newsControlleeer is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:118:34)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:48:48 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 7844,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80334848,
+      heapTotal: 61788160,
+      heapUsed: 31133528,
+      external: 19474346,
+      arrayBuffers: 18524662
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 7310 },
+  trace: [
+    {
+      column: 34,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 118,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:48:48.153Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Type Error',
+  functionReference: 'verifyAdmin (F:\\FYP-Project\\backend\\src\\middlewares\\authentication.js:88:22)',
+  requestPath: '/admins/news',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "Cannot read properties of undefined (reading '0')",
+  timestamp: '2023-09-23T02:50:42.517Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Reference Error',
+  functionReference: 'Object.getNewsByQuery (F:\\FYP-Project\\backend\\src\\repositories\\news.repository.js:5:16)',
+  requestPath: '/admins/news',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'Rescuer_Request is not defined',
+  timestamp: '2023-09-23T02:51:04.903Z'
+}
+{
+  error: F:\FYP-Project\backend\src\services\news.services.js:25
+          new createHttpError.NotFound('News with given id doesn't exist');
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  
+  SyntaxError: missing ) after argument list
+      at internalCompileFunction (node:internal/vm:73:18)
+      at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+      at Module._compile (node:internal/modules/cjs/loader:1220:27)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\src\controllers\news.controller.js:2:22)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14),
+  level: 'error',
+  message: 'uncaughtException: missing ) after argument list\n' +
+    'F:\\FYP-Project\\backend\\src\\services\\news.services.js:25\n' +
+    "        new createHttpError.NotFound('News with given id doesn't exist');\n" +
+    '                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^\n' +
+    '\n' +
+    'SyntaxError: missing ) after argument list\n' +
+    '    at internalCompileFunction (node:internal/vm:73:18)\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1178:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1220:27)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\controllers\\news.controller.js:2:22)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)',
+  stack: 'F:\\FYP-Project\\backend\\src\\services\\news.services.js:25\n' +
+    "        new createHttpError.NotFound('News with given id doesn't exist');\n" +
+    '                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^\n' +
+    '\n' +
+    'SyntaxError: missing ) after argument list\n' +
+    '    at internalCompileFunction (node:internal/vm:73:18)\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1178:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1220:27)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\controllers\\news.controller.js:2:22)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)',
+  exception: true,
+  date: 'Sat Sep 23 2023 07:59:10 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 2940,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80392192,
+      heapTotal: 61001728,
+      heapUsed: 30677752,
+      external: 19464850,
+      arrayBuffers: 18515166
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 7932.296 },
+  trace: [
+    {
+      column: 18,
+      file: 'node:internal/vm',
+      function: 'internalCompileFunction',
+      line: 73,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapSafe',
+      line: 1178,
+      method: null,
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1220,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 22,
+      file: 'F:\\FYP-Project\\backend\\src\\controllers\\news.controller.js',
+      function: null,
+      line: 2,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T02:59:10.453Z'
+}
+{
+  error: ReferenceError: routere is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:119:1)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: routere is not defined\n' +
+    'ReferenceError: routere is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:119:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: routere is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:119:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 08:01:25 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 11628,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80330752,
+      heapTotal: 61526016,
+      heapUsed: 31280408,
+      external: 19464254,
+      arrayBuffers: 18514570
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 8067.531 },
+  trace: [
+    {
+      column: 1,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 119,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T03:01:25.679Z'
+}
+{
+  error: ReferenceError: routere is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:119:1)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: routere is not defined\n' +
+    'ReferenceError: routere is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:119:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: routere is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:119:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 08:02:25 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 11068,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80310272,
+      heapTotal: 61526016,
+      heapUsed: 31393600,
+      external: 19464256,
+      arrayBuffers: 18514572
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 8127.687 },
+  trace: [
+    {
+      column: 1,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 119,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T03:02:25.842Z'
+}
+{
+  error: ReferenceError: routere is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:119:1)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: routere is not defined\n' +
+    'ReferenceError: routere is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:119:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: routere is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:119:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 08:02:34 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14388,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80478208,
+      heapTotal: 61001728,
+      heapUsed: 31216400,
+      external: 19456062,
+      arrayBuffers: 18506378
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 8136.531 },
+  trace: [
+    {
+      column: 1,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 119,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T03:02:34.686Z'
+}
+{
+  error: ReferenceError: routere is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:119:1)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: routere is not defined\n' +
+    'ReferenceError: routere is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:119:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: routere is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:119:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 08:03:24 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 11752,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80547840,
+      heapTotal: 61526016,
+      heapUsed: 31344632,
+      external: 19456064,
+      arrayBuffers: 18506380
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 8186.406 },
+  trace: [
+    {
+      column: 1,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 119,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T03:03:24.558Z'
+}
+{
+  error: ReferenceError: routere is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:119:1)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: routere is not defined\n' +
+    'ReferenceError: routere is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:119:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: routere is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:119:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 08:03:30 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 4484,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80228352,
+      heapTotal: 61001728,
+      heapUsed: 31346632,
+      external: 19456063,
+      arrayBuffers: 18506379
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 8192.406 },
+  trace: [
+    {
+      column: 1,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 119,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T03:03:30.554Z'
+}
+{
+  error: ReferenceError: routere is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:119:1)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: routere is not defined\n' +
+    'ReferenceError: routere is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:119:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: routere is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:119:1)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 08:03:41 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14240,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80465920,
+      heapTotal: 61263872,
+      heapUsed: 31295048,
+      external: 19464255,
+      arrayBuffers: 18514571
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 8203.171 },
+  trace: [
+    {
+      column: 1,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 119,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T03:03:41.323Z'
+}
+{
+  errorStatus: 401,
+  errorName: 'Unauthorized Error',
+  functionReference: 'verifyAdmin (F:\\FYP-Project\\backend\\src\\middlewares\\authentication.js:85:13)',
+  requestPath: '/admins/news/',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'User is not authentic',
+  timestamp: '2023-09-23T03:20:55.948Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Type Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:5:17)',
+  requestPath: '/admins/news/',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'newsImage')",
+  timestamp: '2023-09-23T03:21:07.068Z'
+}
+{
+  error: TypeError: newsFilesByAdmin is not a function
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:120:35)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsFilesByAdmin is not a function\n' +
+    'TypeError: newsFilesByAdmin is not a function\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:120:35)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'TypeError: newsFilesByAdmin is not a function\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:120:35)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 08:22:46 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14620,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80506880,
+      heapTotal: 61001728,
+      heapUsed: 31233784,
+      external: 19465379,
+      arrayBuffers: 18515695
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 9348.531 },
+  trace: [
+    {
+      column: 35,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 120,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T03:22:46.692Z'
+}
+{
+  error: TypeError: newsFilesByAdmin is not a function
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\admins.js:120:35)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:20)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsFilesByAdmin is not a function\n' +
+    'TypeError: newsFilesByAdmin is not a function\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:120:35)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'TypeError: newsFilesByAdmin is not a function\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\admins.js:120:35)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 08:23:07 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 12544,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80674816,
+      heapTotal: 61263872,
+      heapUsed: 31495704,
+      external: 19457187,
+      arrayBuffers: 18507503
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 9369.25 },
+  trace: [
+    {
+      column: 35,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\admins.js',
+      function: null,
+      line: 120,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T03:23:07.405Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Type Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:5:17)',
+  requestPath: '/admins/news/',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'newsImage')",
+  timestamp: '2023-09-23T03:24:12.621Z'
+}
+{
+  errorStatus: 500,
+  errorName: 'Internal Server Error',
+  functionReference: 'F:\\FYP-Project\\backend\\src\\services\\news.services.js:19:15',
+  requestPath: '/admins/news/',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: Error: News validation failed: publishedAt: Path `publishedAt` is required.
+      at ValidationError.inspect (F:\FYP-Project\backend\node_modules\mongoose\lib\error\validation.js:50:26)
+      at formatValue (node:internal/util/inspect:806:19)
+      at formatProperty (node:internal/util/inspect:1920:11)
+      at formatRaw (node:internal/util/inspect:1055:9)
+      at formatValue (node:internal/util/inspect:841:10)
+      at inspect (node:internal/util/inspect:365:10)
+      at Format.transform (F:\FYP-Project\backend\node_modules\logform\pretty-print.js:27:19)
+      at Format.transform (F:\FYP-Project\backend\node_modules\logform\combine.js:20:24)
+      at File._write (F:\FYP-Project\backend\node_modules\winston-transport\index.js:91:33)
+      at doWrite (F:\FYP-Project\backend\node_modules\winston-transport\node_modules\readable-stream\lib\_stream_writable.js:390:139) {
+    errors: {
+      publishedAt: ValidatorError: Path `publishedAt` is required.
+          at validate (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1365:13)
+          at SchemaType.doValidate (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1349:7)
+          at F:\FYP-Project\backend\node_modules\mongoose\lib\document.js:2947:18
+          at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+        properties: {
+          validator: [Function (anonymous)],
+          message: 'Path `publishedAt` is required.',
+          type: 'required',
+          path: 'publishedAt',
+          value: undefined
+        },
+        kind: 'required',
+        path: 'publishedAt',
+        value: undefined,
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true
+      }
+    },
+    _message: 'News validation failed'
+  },
+  timestamp: '2023-09-23T03:25:20.179Z'
+}
+{
+  errorStatus: 401,
+  errorName: 'Unauthorized Error',
+  functionReference: 'verifyAdmin (F:\\FYP-Project\\backend\\src\\middlewares\\authentication.js:85:13)',
+  requestPath: '/admins/news/650e5ac24cf22d0d879c82b7',
+  requestMethod: 'DELETE',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'User is not authentic',
+  timestamp: '2023-09-23T03:42:11.613Z'
+}
+{
+  errorStatus: 401,
+  errorName: 'Unauthorized Error',
+  functionReference: 'verifyAdmin (F:\\FYP-Project\\backend\\src\\middlewares\\authentication.js:85:13)',
+  requestPath: '/admins/news/650e415804365fadafff1ccb',
+  requestMethod: 'PUT',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'User is not authentic',
+  timestamp: '2023-09-23T03:46:15.085Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:64:21)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:15:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:64:21)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:15:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:64:21)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:15:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 08:48:44 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 11620,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80248832,
+      heapTotal: 61001728,
+      heapUsed: 30427336,
+      external: 19430253,
+      arrayBuffers: 18480569
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 10906.437 },
+  trace: [
+    {
+      column: 21,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 64,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 15,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T03:48:44.580Z'
+}
+{
+  error: ReferenceError: newsController is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:64:22)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:15:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsController is not defined\n' +
+    'ReferenceError: newsController is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:64:22)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:15:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: newsController is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:64:22)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:15:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 08:49:04 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14944,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80347136,
+      heapTotal: 61001728,
+      heapUsed: 30333280,
+      external: 19438457,
+      arrayBuffers: 18488773
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 10925.89 },
+  trace: [
+    {
+      column: 22,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 64,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 15,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T03:49:04.044Z'
+}
+{
+  error: ReferenceError: newsController is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:64:23)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:15:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: newsController is not defined\n' +
+    'ReferenceError: newsController is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:64:23)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:15:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: newsController is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:64:23)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:15:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sat Sep 23 2023 08:49:29 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14308,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 80150528,
+      heapTotal: 61263872,
+      heapUsed: 30553464,
+      external: 19430265,
+      arrayBuffers: 18480581
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 10951.64 },
+  trace: [
+    {
+      column: 23,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 64,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 15,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-23T03:49:29.794Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:68:21)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:15:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:68:21)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:15:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:68:21)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:15:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sun Sep 24 2023 10:42:04 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14172,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 79200256,
+      heapTotal: 61263872,
+      heapUsed: 30874904,
+      external: 19466314,
+      arrayBuffers: 18516630
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 104106.421 },
+  trace: [
+    {
+      column: 21,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 68,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 15,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-24T05:42:04.566Z'
+}
+{
+  error: ReferenceError: floodPrecautionController is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:68:28)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:15:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: floodPrecautionController is not defined\n' +
+    'ReferenceError: floodPrecautionController is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:68:28)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:15:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: floodPrecautionController is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:68:28)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:15:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Sun Sep 24 2023 10:42:27 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 17032,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 79245312,
+      heapTotal: 61526016,
+      heapUsed: 30735808,
+      external: 19446694,
+      arrayBuffers: 18497010
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 104129.75 },
+  trace: [
+    {
+      column: 28,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 68,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 15,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-09-24T05:42:27.905Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Token Expired Error',
+  functionReference: 'F:\\FYP-Project\\backend\\node_modules\\jsonwebtoken\\verify.js:190:21',
+  requestPath: '/admins/precautions/',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'jwt expired',
+  timestamp: '2023-09-24T19:12:32.816Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Token Expired Error',
+  functionReference: 'F:\\FYP-Project\\backend\\node_modules\\jsonwebtoken\\verify.js:190:21',
+  requestPath: '/admins/precautions/',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'jwt expired',
+  timestamp: '2023-09-24T19:12:55.249Z'
+}
+{
+  errorStatus: 401,
+  errorName: 'Unauthorized Error',
+  functionReference: 'verifyRefreshToken (F:\\FYP-Project\\backend\\src\\middlewares\\authentication.js:108:15)',
+  requestPath: '/admins/refreshTokenCall',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'User is not authentic',
+  timestamp: '2023-09-24T19:13:18.101Z'
+}
+{
+  errorStatus: 401,
+  errorName: 'Unauthorized Error',
+  functionReference: 'verifyAdmin (F:\\FYP-Project\\backend\\src\\middlewares\\authentication.js:85:13)',
+  requestPath: '/admins/precautions/',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'User is not authentic',
+  timestamp: '2023-09-24T19:16:10.375Z'
+}
+{
+  errorStatus: 401,
+  errorName: 'Unauthorized Error',
+  functionReference: 'verifyAdmin (F:\\FYP-Project\\backend\\src\\middlewares\\authentication.js:85:13)',
+  requestPath: '/admins/precautions/65108b01f3578b5e4c59c73d',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'User is not authentic',
+  timestamp: '2023-09-24T19:16:37.627Z'
+}
+{
+  errorStatus: 404,
+  errorName: 'Not Found Error',
+  functionReference: 'Object.getSpecificPrecaution (F:\\FYP-Project\\backend\\src\\services\\flood_precautions.services.js:37:15)',
+  requestPath: '/users/precautions/65108b01f3578b5e4c59c73d',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "Flood Precaution with given id doesn't exist",
+  timestamp: '2023-09-24T19:20:56.951Z'
+}

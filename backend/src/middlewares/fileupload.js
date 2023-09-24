@@ -39,7 +39,6 @@ let rescuerFilesByAdmin = multer({
   })
 })
 
-
 /*Rescuer Files*/
 
 let ngoFiles = multer({
@@ -138,7 +137,36 @@ let fundRaisingFilesByAdmin = multer({
   })
 })
 
+let newsFilesByAdmin = multer({
+  storage: multer.diskStorage({
+    destination: (req, file, cb) => {
+      let dir = __basedir + `/public/uploads/news/`;
+      createDirIfNotExists(dir);
+      cb(null, dir);
+    },
+    filename: (req, file, cb) => {
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+      cb(null, file.fieldname + "-" + uniqueSuffix + "." + file.mimetype.split('/')[1]);
+    },
+  })
+})
+
+let precautionFilesByAdmin = multer({
+  storage: multer.diskStorage({
+    destination: (req, file, cb) => {
+      let dir = __basedir + `/public/uploads/precautions/`;
+      createDirIfNotExists(dir);
+      cb(null, dir);
+    },
+    filename: (req, file, cb) => {
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+      cb(null, file.fieldname + "-" + uniqueSuffix + "." + file.mimetype.split('/')[1]);
+    },
+  })
+})
+
 module.exports = {rescuerFiles, rescuerFilesByAdmin, 
                   ngoFiles, ngoFilesByAdmin,
                   ngoParticipationFiles, ngoParticipationFilesByAdmin,
-                  fundRaisingFiles, fundRaisingFilesByAdmin};
+                  fundRaisingFiles, fundRaisingFilesByAdmin,
+                  newsFilesByAdmin, precautionFilesByAdmin};
