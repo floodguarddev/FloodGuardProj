@@ -18,7 +18,7 @@ function addDateQuery(key, mongooseQuery, queryJson) {
 
   if (
     !(
-      queryJson[`${key}`] ||
+      queryJson[`${key}_eq`] ||
       queryJson[`${key}_gt`] ||
       queryJson[`${key}_lt`] ||
       queryJson[`${key}_gte`] ||
@@ -27,9 +27,9 @@ function addDateQuery(key, mongooseQuery, queryJson) {
   )
     return;
   let dateQuery = {};
-  if (queryJson[`${key}`]) {
-    dateQuery.$gte = new Date(moment(queryJson[key]).startOf("day").toDate());
-    dateQuery.$lte = new Date(moment(queryJson[key]).endOf("day").toDate());
+  if (queryJson[`${key}_eq`]) {
+    dateQuery.$gte = new Date(moment(queryJson[`${key}_eq`]).startOf("day").toDate());
+    dateQuery.$lte = new Date(moment(queryJson[`${key}_eq`]).endOf("day").toDate());
   }
   if (queryJson[`${key}_gt`]) {
     dateQuery.$gt = new Date(queryJson[`${key}_gt`]);
@@ -54,15 +54,15 @@ function addNumberQuery(key, mongooseQuery, queryJson){
   }
 
 
-  if(!(queryJson[`${key}`] 
+  if(!(queryJson[`${key}_eq`] 
   || queryJson[`${key}_gt`] 
   || queryJson[`${key}_lt`] 
   || queryJson[`${key}_gte`] 
   || queryJson[`${key}_lte`]))
       return;
   let numQuery = {};
-  if(queryJson[`${key}`]){
-      numQuery.$eq = parseFloat(queryJson[key])
+  if(queryJson[`${key}_eq`]){
+      numQuery.$eq = parseFloat(queryJson[`${key}_eq`])
   }
   if(queryJson[`${key}_gt`]){
       numQuery.$gt = parseFloat(queryJson[`${key}_gt`])

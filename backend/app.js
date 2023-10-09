@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var morgan = require('morgan');
+var cors = require('cors');
 require('dotenv').config();
 var {infoLogger} = require('./src/logging/logger')
 var {errorLogger, errorResponder, invalidPathHandler, assignHTTPError} = require('./src/middlewares/errorhandling');
@@ -25,6 +26,25 @@ const { newsJob } = require('./src/utils/scheduledTasks');
 newsJob.start();
 
 var app = express();
+
+//Add the client URL to the CORS policy
+
+const whitelist = process.env.WHITELISTED_DOMAINS
+  ? process.env.WHITELISTED_DOMAINS.split(",")
+  : []
+console.log(whitelist);
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (!origin || whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error("Not allowed by CORS"))
+    }
+  },
+  credentials: true
+}
+
+app.use(cors(corsOptions))
 
 app.use('/webhooks', webhooksRouter); //Webhooks may contain encrypted data, so It must be called before middlewares that can affect the req.body
 

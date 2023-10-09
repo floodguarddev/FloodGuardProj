@@ -26,9 +26,18 @@ const User = new Schema({
     required:true,
     unique: true
   },
+  donations: {
+    type: Number,
+    required: true,
+    default: 0
+  },
+  userPhotoLink: {
+    type: String,
+    default: null
+  },
   refreshTokens: {
     type: [Session],
-  },
+  }
 })
 
 //Remove refreshTokens from the response

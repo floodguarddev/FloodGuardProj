@@ -318,7 +318,7 @@ async function signout(userId, refreshToken){
 
 /*----------------------Assosiated with Admin Role------------------------*/
 
-async function addUser(name, email, password){
+async function addUser(name, email, password, userPhotoLink){
 
     if(await isUserAvailableUsingEmail(email)){
         throw new createHttpError.Conflict("User with current email already exists");
@@ -328,7 +328,7 @@ async function addUser(name, email, password){
 
     let authStrategy = "local";
 
-    let user = new User({name, email, authStrategy});
+    let user = new User({name, email, authStrategy, userPhotoLink});
 
 
     await user.save();
@@ -337,9 +337,17 @@ async function addUser(name, email, password){
     return user;
 }
 
-//Will be implemented later//
+
 async function deleteUser(userId){
-    throw new createHttpError.NotImplemented("Delete User is not Implemented at the moment");
+    let user = await User.findByIdAndDelete(userId);
+    
+    if(!user)
+    {
+        throw new createHttpError.NotFound("User with given details doesn't exist");
+    }
+    //Will be implemented later//
+    
+    return user;
 }
 
 async function editUser(userId, userObject){
@@ -362,6 +370,10 @@ async function editUser(userId, userObject){
 
     if(userObject.name){
         user.name = userObject.name;
+    }
+
+    if(userObject.userPhotoLink){
+        user.userPhotoLink = userObject.userPhotoLink;
     }
 
     await user.save();

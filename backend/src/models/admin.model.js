@@ -17,6 +17,10 @@ const Admin = new Schema({
     type: String,
     required: true,
   },
+  adminPhotoLink: {
+    type: String,
+    default: null
+  },
   authStrategy: {
     type: String,
     default: "local",

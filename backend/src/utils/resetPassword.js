@@ -42,7 +42,7 @@ async function sendAdminResetPasswordEmail(email){
 
     let resetPasswordToken = generateResetPasswordToken(email);
     
-    let link = process.env.SERVER_URL+'/admins/resetPassword?token='+resetPasswordToken;
+    let link = process.env.ADMIN_CLIENT_URL+'/reset_password?token='+resetPasswordToken;
 
     return await sendResetPasswordEmail(email, link);
 }

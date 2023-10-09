@@ -10,7 +10,7 @@ const { sendAdminResetPasswordEmail } = require("../utils/resetPassword");
 
 /*Add Admin*/
 
-async function addAdmin(name, email, password){
+async function addAdmin(name, email, password, adminPhotoLink){
 
     if(await isAdminAvailableUsingEmail(email)){
         throw new createHttpError.Conflict("Admin with current email already exists");
@@ -18,7 +18,7 @@ async function addAdmin(name, email, password){
 
     let hashedPassword = generateHash(password);
 
-    let admin = new Admin({name, email});
+    let admin = new Admin({name, email, adminPhotoLink});
 
 
     await admin.save();
@@ -145,7 +145,7 @@ async function setPassword(userId, oldPassword, newPassword){
     let isMatch = comparePassword(oldPassword, hashedPassword);
 
     if(!isMatch){
-        throw new createHttpError.Unauthorized("Please provide correct credentials to login");
+        throw new createHttpError.Unauthorized("Please provide correct credentials to change Password");
     }
     
     let newHashedPassword = generateHash(newPassword);
@@ -231,4 +231,17 @@ async function viewAdmins(query, limit, offset){
     return users;
 }
 
-module.exports = {signin, sendPasswordResetEmail, resetPassword, getUserProfile, setPassword, refreshToken, signout, addAdmin, viewAdmins}
+async function updateProfile(userId, name, email, adminPhotoLink){
+    let admin = await Admin.findByIdAndUpdate(userId, {name, email, adminPhotoLink}, {new: true});
+
+    if(!admin)
+    {
+        throw new createHttpError.NotFound("Admin with given details doesn't exist");
+    }
+
+    return admin
+}
+
+
+
+module.exports = {signin, sendPasswordResetEmail, resetPassword, getUserProfile, setPassword, refreshToken, signout, addAdmin, viewAdmins, updateProfile}

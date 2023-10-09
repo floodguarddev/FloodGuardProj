@@ -164,8 +164,40 @@ let precautionFilesByAdmin = multer({
   })
 })
 
+let profileFiles = multer({
+  limits: {
+    fileSize: maxSize
+  },
+  storage: multer.diskStorage({
+    destination: (req, file, cb) => {
+      let dir = __basedir + `/public/uploads/profile/`;
+      createDirIfNotExists(dir);
+      cb(null, dir);
+    },
+    filename: (req, file, cb) => {
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+      cb(null, file.fieldname + "-" + uniqueSuffix + "." + file.mimetype.split('/')[1]);
+    },
+  })
+})
+
+let profileFilesByAdmin = multer({
+  storage: multer.diskStorage({
+    destination: (req, file, cb) => {
+      let dir = __basedir + `/public/uploads/profile/`;
+      createDirIfNotExists(dir);
+      cb(null, dir);
+    },
+    filename: (req, file, cb) => {
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+      cb(null, file.fieldname + "-" + uniqueSuffix + "." + file.mimetype.split('/')[1]);
+    },
+  })
+})
+
 module.exports = {rescuerFiles, rescuerFilesByAdmin, 
                   ngoFiles, ngoFilesByAdmin,
                   ngoParticipationFiles, ngoParticipationFilesByAdmin,
                   fundRaisingFiles, fundRaisingFilesByAdmin,
-                  newsFilesByAdmin, precautionFilesByAdmin};
+                  newsFilesByAdmin, precautionFilesByAdmin,
+                  profileFiles, profileFilesByAdmin};

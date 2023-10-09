@@ -5,7 +5,7 @@ const userController = require('../controllers/users.controllers');
 const ngoController = require('../controllers/ngo.controllers');
 const rescuerController = require('../controllers/rescuer.controllers');
 const { verifyAdmin, verifyRefreshToken } = require('../middlewares/authentication');
-const { rescuerFilesByAdmin, ngoParticipationFilesByAdmin, newsFilesByAdmin } = require('../middlewares/fileupload');
+const { rescuerFilesByAdmin, ngoParticipationFilesByAdmin, newsFilesByAdmin, profileFiles, profileFilesByAdmin } = require('../middlewares/fileupload');
 const ngoParticipationController = require('../controllers/ngo_ participation.controllers');
 const fundRaisingController = require('../controllers/fund_raising.controllers');
 const donationController = require('../controllers/donations.controller');
@@ -17,20 +17,22 @@ router.post('/signin', adminController.signin);
 router.post('/sendPasswordResetEmail', adminController.sendPasswordResetEmail);
 router.post('/resetPassword', adminController.resetPassword);
 router.get('/me', verifyAdmin, adminController.viewMyProfile);
+router.put('/me', verifyAdmin, profileFiles.fields([{'name': 'adminPhoto'}]), adminController.updateMyProfile);
 router.post('/setPassword', verifyAdmin, adminController.setPassword);
 router.get('/signout', verifyRefreshToken, adminController.signout)
 router.get('/refreshTokenCall',verifyRefreshToken, adminController.refreshTokenCall);
 
 /* -- User Management -- */
-router.post('/users', verifyAdmin, userController.addUser);
+router.post('/users', profileFilesByAdmin.fields([{name: "userPhoto"}]),verifyAdmin, userController.addUser);
 router.get('/users', verifyAdmin, userController.viewUsers);
 router.get('/users/:userId', verifyAdmin, userController.viewSpecificUser);
-
+router.put('/users/:userId', verifyAdmin, profileFilesByAdmin.fields([{name: "userPhoto"}]), userController.editUser)
+router.delete('/users/:userId', verifyAdmin, userController.deleteUser)
 /* -- Admin Management -- */
-router.post('/admins', verifyAdmin, adminController.addAdmin);
+router.post('/admins', verifyAdmin, profileFilesByAdmin.fields([{name: "adminPhoto"}]), adminController.addAdmin);
 router.get('/admins', verifyAdmin, adminController.viewAdmins);
 router.get('/admins/:userId', verifyAdmin, adminController.viewSpecificAdmin);
-
+router.put('/admins/:userId', verifyAdmin, profileFiles.fields([{'name': 'adminPhoto'}]), adminController.editAdmin);
 /*Module 6: NGO and Rescuer*/
 /* -- Rescuer Requests -- */
 router.get('/rescuer_requests', verifyAdmin, rescuerController.viewRescuerRequests);

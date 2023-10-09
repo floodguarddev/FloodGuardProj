@@ -3,6 +3,7 @@ const errLogger = require("../logging/logger").errorLogger;
 
 //Error with no status code.
 const assignHTTPError = (error, req, res, next)=>{
+    console.log(error);
     if(!error.status){
         error.status = 400;
     }
@@ -29,8 +30,6 @@ const errorLogger = (error, req, res, next) => {
     let requestMethod = req.method
     let message = error.message
     let ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
-
-    console.log(error.stack);
     
     errLogger.error(message, {
         errorStatus,
@@ -40,17 +39,14 @@ const errorLogger = (error, req, res, next) => {
         requestMethod,
         ip
     })
-    
-    console.log(error);
 
     next(error) // calling next middleware
 }
   
 // Error handling Middleware function reads the error message 
 // and sends back a response in JSON format
-const errorResponder = (error, req, res) => {
+const errorResponder = (error, req, res, next) => {
     res.header("Content-Type", 'application/json')
-        
     const status = error.status
     res.status(status).send(errorResponse(error.name , error.message));
 }

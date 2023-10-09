@@ -5,6 +5,7 @@ const userServices = require('../services/users.services');
 const { dataResponse, messageResponse } = require('../utils/commonResponse');
 const { parseResetPasswordToken } = require('../utils/resetPassword');
 const { addStringQuery } = require('../utils/query');
+const multerFilesParser = require("../utils/multerFilesParser");
 
 /*Handlers for Admin Role*/
 async function signin(req, res, next){
@@ -12,6 +13,7 @@ async function signin(req, res, next){
         const {email, password} = req.body;
         let signinRes = await adminServices.signin(email, password);
         res.cookie("refreshToken", signinRes.refreshToken, cookiesOptions)
+
         return res.status(200).send(dataResponse("success", signinRes))
     }
     catch(error){
@@ -60,6 +62,7 @@ async function setPassword(req, res, next){
     try{
         let userId = req.user.id;
 
+
         let {oldPassword, newPassword} = req.body;
 
         await adminServices.setPassword(userId, oldPassword, newPassword);
@@ -76,11 +79,11 @@ async function refreshTokenCall(req, res, next){
         let oldRefreshToken = req.signedCookies.refreshToken;
         let userId = req.user.id;
 
-        let {token, refreshToken} = await adminServices.refreshToken(userId, oldRefreshToken);
+        let {token, admin, refreshToken} = await adminServices.refreshToken(userId, oldRefreshToken);
 
         res.cookie("refreshToken", refreshToken, cookiesOptions);
         
-        return res.send(dataResponse("success", {token}));
+        return res.send(dataResponse("success", {admin, token}));
         
     }
     catch(error){
@@ -107,7 +110,10 @@ async function signout(req, res, next){
 async function addAdmin(req, res, next){
     try{
         const {email, password, name} = req.body;
-        let admin = await adminServices.addAdmin(name, email, password);
+
+        let adminPhotoLink = await multerFilesParser.getSingleFileUrl("adminPhotoLink", req.files)
+
+        let admin = await adminServices.addAdmin(name, email, password, adminPhotoLink);
         return res.status(201).send(dataResponse("success", {admin}))
     }
     catch(error){
@@ -126,8 +132,21 @@ async function deleteUser(req, res, next){
     }
 }
 
-async function editUser(req, res, next){
+async function editAdmin(req, res, next){
+    try{
+        let userId = req.params.userId;
 
+        let {name, email} = req.body;
+ 
+        let adminPhotoLink = await multerFilesParser.getSingleFileUrl("adminPhotoLink", req.files)
+        
+        let admin = await adminServices.updateProfile(userId, name, email, adminPhotoLink);
+
+        return res.status(200).send(dataResponse("success", {admin}));
+    }
+    catch(error){
+        return next(error);
+    }
 }
 
 async function viewAdmins(req, res, next){
@@ -138,12 +157,12 @@ async function viewAdmins(req, res, next){
         addStringQuery('name', mongooseQuery, query);
         addStringQuery('email', mongooseQuery, query);
         //Pagination//
-        let limit = parseInt(req.query.limit) || 2;
+        let limit = parseInt(req.query.limit) || process.env.DEFAULT_LIMIT;
         let offset = parseInt(req.query.offset) || 0;
         
-        let user = await userServices.viewUsers(mongooseQuery, limit, offset);
+        let admins = await adminServices.viewAdmins(mongooseQuery, limit, offset);
 
-        return res.send(dataResponse("success", {user}));
+        return res.send(dataResponse("success", {admins}));
     }
     catch(error){
         return next(error);
@@ -163,8 +182,25 @@ async function viewSpecificAdmin(req, res, next){
     }
 }
 
+async function updateMyProfile(req, res, next){
+    try{
+        let userId = req.user.id;
+
+        let {name, email} = req.body;
+ 
+        let adminPhotoLink = await multerFilesParser.getSingleFileUrl("adminPhoto", req.files)
+        
+        let admin = await adminServices.updateProfile(userId, name, email, adminPhotoLink);
+
+        return res.status(200).send(dataResponse("success", {admin}));
+    }
+    catch(error){
+        return next(error);
+    }
+}
+
 module.exports = {
     signin, sendPasswordResetEmail, resetPassword, viewMyProfile, setPassword, refreshTokenCall, signout,
 
-    addAdmin, viewAdmins, viewSpecificAdmin
+    addAdmin, viewAdmins, viewSpecificAdmin, updateMyProfile, editAdmin
 }

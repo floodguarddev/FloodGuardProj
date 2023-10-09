@@ -5,5 +5,5 @@ module.exports =  {
     secure: false,
     signed: true,
     maxAge: eval(process.env.REFRESH_TOKEN_EXPIRY) * 1000,
-    sameSite: "lax",
+    sameSite: 'lax',
 }

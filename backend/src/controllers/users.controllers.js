@@ -3,8 +3,9 @@ const cookiesOptions = require('../../config/cookiesConfig');
 const userServices = require('../services/users.services');
 const { dataResponse, messageResponse } = require('../utils/commonResponse');
 const { parseEmailVerificationToken } = require('../utils/emailVerification');
-const { addStringQuery } = require('../utils/query');
+const { addStringQuery, addNumberQuery } = require('../utils/query');
 const { parseResetPasswordToken } = require('../utils/resetPassword');
+const multerFilesParser = require("../utils/multerFilesParser");
 
 
 /*Handlers for User Role*/
@@ -144,7 +145,11 @@ async function signout(req, res, next){
 async function addUser(req, res, next){
     try{
         const {email, password, name} = req.body;
-        let user = await userServices.addUser(name, email, password);
+
+        let userPhotoLink = await multerFilesParser.getSingleFileUrl("userPhoto", req.files);
+        
+        let user = await userServices.addUser(name, email, password, userPhotoLink);
+        
         return res.status(201).send(dataResponse("success", {user}))
     }
     catch(error){
@@ -156,7 +161,7 @@ async function deleteUser(req, res, next){
     try{
         const userId = req.params.userId;
         await userServices.deleteUser(userId);
-        return res.status(201).send(dataResponse("success", "User has been deleted successfully"));
+        return res.status(200).send(messageResponse("success", "User has been deleted successfully"));
     }
     catch(error){
         return next(error);
@@ -164,7 +169,20 @@ async function deleteUser(req, res, next){
 }
 
 async function editUser(req, res, next){
+    try{
+        let userId = req.params.userId;
 
+        let {name, email} = req.body;
+ 
+        let userPhotoLink = await multerFilesParser.getSingleFileUrl("userPhoto", req.files)
+        
+        let user = await userServices.editUser(userId, {name, email, userPhotoLink});
+
+        return res.status(200).send(dataResponse("success", {user}));
+    }
+    catch(error){
+        return next(error);
+    }
 }
 
 async function viewUsers(req, res, next){
@@ -174,13 +192,13 @@ async function viewUsers(req, res, next){
         let query = req.query;
         addStringQuery('name', mongooseQuery, query);
         addStringQuery('email', mongooseQuery, query);
+        addNumberQuery('donations', mongooseQuery, query);
         //Pagination//
-        let limit = parseInt(req.query.limit) || 2;
+        let limit = parseInt(req.query.limit) || process.env.DEFAULT_LIMIT;
         let offset = parseInt(req.query.offset) || 0;
         
-        let user = await userServices.viewUsers(mongooseQuery, limit, offset);
-
-        return res.send(dataResponse("success", {user}));
+        let users = await userServices.viewUsers(mongooseQuery, limit, offset);
+        return res.send(dataResponse("success", {users}));
     }
     catch(error){
         return next(error);
