@@ -67,7 +67,7 @@ const Sidebar = ({ toogleActive }) => {
           path: "/admins/add"
         }
       ],
-    },,
+    },
     {
       title: "Users",
       path: "/users/",
@@ -87,6 +87,76 @@ const Sidebar = ({ toogleActive }) => {
         {
           title: "Add User",
           path: "/users/add"
+        }
+      ],
+    },
+    {
+      title: "Flood Precautions",
+      path: "/flood_precautions/",
+      icon: <PostAddIcon />,
+      iconClosed: <KeyboardArrowRightIcon />,
+      iconOpened: <KeyboardArrowDownIcon />,
+  
+      subNav: [
+        {
+          title: "Precautions List",
+          path: "/flood_precautions/list",
+        },
+        {
+          title: "View Precaution",
+          path: "/flood_precautions/"+viewContext.selectedFloodPrecaution
+        },
+        {
+          title: "Add Precaution",
+          path: "/flood_precautions/add"
+        }
+      ],
+    },
+    {
+      title: "News",
+      path: "/news/",
+      icon: <PostAddIcon />,
+      iconClosed: <KeyboardArrowRightIcon />,
+      iconOpened: <KeyboardArrowDownIcon />,
+  
+      subNav: [
+        {
+          title: "News List",
+          path: "/news/list",
+        },
+        {
+          title: "View News",
+          path: "/news/"+viewContext.selectedNews
+        },
+        {
+          title: "Add News",
+          path: "/news/add"
+        }
+      ],
+    },
+    {
+      title: "NGO Participation",
+      path: "/ngo_participations/",
+      icon: <PostAddIcon />,
+      iconClosed: <KeyboardArrowRightIcon />,
+      iconOpened: <KeyboardArrowDownIcon />,
+  
+      subNav: [
+        {
+          title: "Posts List",
+          path: "/ngo_participations/list",
+        },
+        {
+          title: "View Post",
+          path: "/ngo_participations/"+viewContext.selectedNews
+        },
+        {
+          title: "Add Post",
+          path: "/ngo_participations/add"
+        },
+        {
+          title: "Post Requests",
+          path: "/ngo_participations/requests"
         }
       ],
     },

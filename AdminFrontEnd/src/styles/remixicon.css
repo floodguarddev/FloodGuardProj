@@ -16,6 +16,7 @@
   url("/fonts/remixicon.woff?t=1590207869815") format("woff"),
   url('/fonts/remixicon.ttf?t=1590207869815') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
   url('/fonts/remixicon.svg?t=1590207869815#remixicon') format('svg'); /* iOS 4.1- */
+  
   font-display: swap;
 }
 
@@ -1156,6 +1157,11 @@
 .ri-indeterminate-circle-line:before { content: "\ee57"; }
 .ri-information-fill:before { content: "\ee58"; }
 .ri-information-line:before { content: "\ee59"; }
+
+.ri-circle-line:before { content: "\f3c2"; }
+
+.ri-circle-filled:before { content: "\f3c1"; }
+
 .ri-infrared-thermometer-fill:before { content: "\ee5a"; }
 .ri-infrared-thermometer-line:before { content: "\ee5b"; }
 .ri-ink-bottle-fill:before { content: "\ee5c"; }

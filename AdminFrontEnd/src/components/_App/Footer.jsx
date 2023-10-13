@@ -16,15 +16,14 @@ const Footer = () => {
       >
         <Box>
           <Typography>
-            Copyright  {' '}
-            <strong>Admash</strong> is Proudly Owned by {' '}
+            <strong>Flood Guard</strong> - {" Owned by "}
             <Link
-              href="https://envytheme.com/"
+              href="http://www.comsats.edu.pk/"
               target="_blank" 
               underline="none"
               rel="noreferrer"
             >
-              EnvyTheme
+              Comsats
             </Link>
           </Typography>
         </Box>

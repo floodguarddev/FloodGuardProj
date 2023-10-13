@@ -59,6 +59,7 @@ BootstrapDialogTitle.propTypes = {
 
 const EditUser = ({user, setUser, handleClose, open}) => {
   const [userContext, setUserContext] = useUser();
+  
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [userPhoto, setUserPhoto] = useState(undefined);

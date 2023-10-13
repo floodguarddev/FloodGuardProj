@@ -120,7 +120,7 @@ async function approveFundRaisingRequest(req, res, next){
 
         let fundRaising = await fundRaisingServices.approveFundRaisingRequest(requestId);
 
-        return res.send(dataResponse("success", {fundRaising}));
+        return res.send(message("success", "Fund raising request has been approved successfully"));
     }
     catch(error){
         next(error);
@@ -133,7 +133,7 @@ async function rejectFundRaisingRequest(req, res, next){
 
         await fundRaisingServices.rejectFundRaisingRequest(requestId);
 
-        return res.send(messageResponse("NGO Participation request has been deleted"));
+        return res.send(messageResponse("success", "Fund raising request has been deleted"));
     }
     catch(error){
         next(error);

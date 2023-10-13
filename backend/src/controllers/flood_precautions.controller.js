@@ -7,7 +7,7 @@ async function deletePrecaution(req, res, next){
     try{
         let precautionId = req.params.precautionId;
         await floodPrecautionServices.deletePrecaution(precautionId);
-        return res.status(200).send(messageResponse(`Flood Precaution with id ${precautionId} has been deleted successfully.`))
+        return res.status(200).send(messageResponse("success", `Flood Precaution with id ${precautionId} has been deleted successfully.`))
     }
     catch(error)
     {

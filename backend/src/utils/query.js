@@ -104,6 +104,11 @@ function addBooleanQuery(key, mongooseQuery, queryJson){
   }
 }
 
+function simpleQuerySearch(key, fieldsArray, mongooseQuery, queryJson){
+
+  
+
+}
 
 module.exports = {
   addDateQuery, addStringQuery, addBooleanQuery, addNumberQuery

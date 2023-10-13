@@ -25,7 +25,7 @@ async function authorizeAccount(req, res, next){
         
         await donationServices.addNGOStripeAccountId(stateToken, authCode);
 
-        return res.status(200).json(messageResponse("Stripe account has been successfully added in ngo"));
+        return res.status(200).json(messageResponse("succcess", "Stripe account has been successfully added in ngo"));
     }
     catch(error){
         next(error);

@@ -4,7 +4,8 @@ const ngoParticipationRepository = require('../repositories/ngo_participation.re
 const { getNGOById } = require('../repositories/ngo.repository');
 const NGO_Participation_Post = require('../models/ngo_participation_post.model');
 const NGO_Participation_Post_Request = require('../models/ngo_participation_post_requests.model');
-
+const { default: mongoose } = require('mongoose');
+const ObjectId = mongoose.Types.ObjectId;
 
 /*-----------------NGO Participation Requests-----------------*/
 async function postNGOParticipationRequest(ngoId, postTitle, postDescription, postImagesLinks){
@@ -64,7 +65,7 @@ async function deleteParticipationRequestByNGO(ngoId, ngoParticipationRequestId)
 }
 
 async function viewNGOParticipationRequestsByNGO(ngoId, query, limit, offset){
-    query.ngoId = ngoId;
+    query.ngoId = new ObjectId(ngoId);
 
     let ngoParticipationRequests = await ngoParticipationRequestRepository.getRequestsByQuery(query, limit, offset);
 
@@ -184,7 +185,7 @@ async function deleteNGOParticipationPost(postId){
 /*----NGO---*/
 
 async function viewNGOParticipationPostsByNGO(ngoId, query, limit, offset){
-    query.ngoId = ngoId;
+    query.ngoId = new ObjectId(ngoId);;
     let ngoParticipationPosts = await ngoParticipationRepository.getPostsByQuery(query, limit, offset);
 
     return ngoParticipationPosts;

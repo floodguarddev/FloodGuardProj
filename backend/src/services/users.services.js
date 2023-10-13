@@ -84,6 +84,7 @@ Expected Output
 */
 
 async function signin(email, password){
+    console.log(email, password);
     let user = await getUserUsingEmail(email);
 
     if(!user){

@@ -3,9 +3,9 @@ import {useParams } from 'react-router-dom'
 import Loader from '@/pages/general/Loader';
 import { useSnackbar } from 'notistack';
 import { useUser } from '@/context/UserContext';
-import { getSpecificFloodPrecautions } from '@/services/floodPrecautions.services';
 import BadRequest from '@/pages/general/BadRequest';
-import { FloodPrecautionsProfile } from '@/components/FloodPrecautionsComponents/FloodPrecautionsProfile';
+import { SpecificFloodPrecaution } from '@/components/FloodPrecautionComponents/SpecificFloodPrecaution';
+import { getSpecificPrecautions } from '@/services/flood_precautions.services';
 export default function  ViewSpecificFloodPrecaution(){
   const [floodPrecautions, setFloodPrecautions] = useState(null);
   const [userContext, setUserContext] = useUser();
@@ -14,11 +14,12 @@ export default function  ViewSpecificFloodPrecaution(){
   const params = useParams();
 
   useEffect(()=>{
-    getSpecificFloodPrecautions(userContext.token, params.id).then(
-        (response)=>response.data.data.floodPrecautions
+    getSpecificPrecautions(userContext.token, params.id).then(
+        (response)=>response.data.data.flood_precaution
     ).then(
-        (floodPrecautions)=>{
-            setFloodPrecautions(floodPrecautions);
+        (flood_precaution)=>{
+            console.log(flood_precaution)
+            setFloodPrecautions(flood_precaution);
         }
     ).catch(
         (error)=>{
@@ -35,7 +36,7 @@ export default function  ViewSpecificFloodPrecaution(){
     (error)?
     <BadRequest message="Given Flood Precautions Id is not Valid, Please Try to Select a Valid Id from FloodPrecautions List" buttonLabel="Go to FloodPrecautions List" buttonLink="/flood_precautions/list"/>:
     (floodPrecautions)?
-    <div><FloodPrecautionsProfile floodPrecautions = {floodPrecautions} /></div>:
+    <div><SpecificFloodPrecaution precaution = {floodPrecautions} /></div>:
     <Loader/>
   )
 }

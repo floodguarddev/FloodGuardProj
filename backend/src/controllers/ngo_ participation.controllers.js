@@ -120,7 +120,7 @@ async function approveNGOParticipationRequest(req, res, next){
 
         let ngoParticipation = await ngoParticipationServices.approveNGOParticipationRequest(requestId);
 
-        return res.send(dataResponse("success", {ngoParticipation}));
+        return res.send(messageResponse("success", "NGO Participation request has been approved"));
     }
     catch(error){
         next(error);
@@ -133,7 +133,7 @@ async function rejectNGOParticipationRequest(req, res, next){
 
         await ngoParticipationServices.rejectNGOParticipationRequest(requestId);
 
-        return res.send(messageResponse("NGO Participation request has been deleted"));
+        return res.send(messageResponse("successs", "NGO Participation request has been deleted"));
     }
     catch(error){
         next(error);
@@ -228,7 +228,7 @@ async function deleteNGOParticipationPost(req, res, next){
 
         await ngoParticipationServices.deleteNGOParticipationPost(postId);
 
-        return res.status(200).send(messageResponse("NGO Participation post has been deleted successfully."));
+        return res.status(200).send(messageResponse("successs", "NGO Participation post has been deleted successfully."));
     }
     catch(error){
         next(error);
@@ -296,7 +296,7 @@ async function deleteNGOParticipationPostByNGO(req, res, next){
 
         await ngoParticipationServices.deleteNGOParticipationPostByNGO(ngoId, postId);
 
-        return res.status(200).send(messageResponse("NGO Participation post has been deleted successfully."));
+        return res.status(200).send(messageResponse("successs", "NGO Participation post has been deleted successfully."));
     }
     catch(error){
         next(error);

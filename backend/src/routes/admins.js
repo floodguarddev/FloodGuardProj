@@ -120,9 +120,9 @@ router.get('/donations/:donationId', verifyAdmin, donationController.getSpecific
 //News//
 router.get('/news', verifyAdmin, newsController.viewNews)
 router.get('/news/:newsId', verifyAdmin, newsController.viewSpecificNews);
-router.post('/news', verifyAdmin, newsFilesByAdmin.fields([{name: "newsImage"}]), newsController.addNews);
+router.post('/news', verifyAdmin, newsFilesByAdmin.fields([{name: "image"}]), newsController.addNews);
 router.delete('/news/:newsId', verifyAdmin, newsController.deleteNews);
-router.put('/news/:newsId', verifyAdmin, newsFilesByAdmin.fields([{name: "newsImage"}]), newsController.editNews);
+router.put('/news/:newsId', verifyAdmin, newsFilesByAdmin.fields([{name: "image"}]), newsController.editNews);
 
 //Precautions//
 router.get('/precautions', verifyAdmin, floodPrecautionController.viewPrecautions)

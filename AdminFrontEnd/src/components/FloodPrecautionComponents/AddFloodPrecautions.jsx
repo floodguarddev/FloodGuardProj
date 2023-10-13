@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "@mui/material/Card";
-import { IconButton, Tooltip, Typography } from "@mui/material";
+import { Fab, IconButton, Tooltip, Typography } from "@mui/material";
 import {Link} from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import { Box } from "@mui/system";
@@ -11,6 +11,7 @@ import { useUser } from '@/context/UserContext';
 import { useSnackbar } from 'notistack';
 import DeleteIcon from "@mui/icons-material/Delete";
 import PlaylistAddCircleOutlinedIcon from '@mui/icons-material/PlaylistAddCircleOutlined';
+import AddIcon from '@mui/icons-material/Add';
 
 export function AddFloodPrecautions() {
   const [userContext, setUserContext] = useUser();
@@ -131,7 +132,7 @@ export function AddFloodPrecautions() {
                     />
                 </Grid>
 
-                <Grid item xs={12}>
+                <Grid item xs={12} textAlign={"center"}>
                     <Typography
                         component="label"
                         sx={{
@@ -197,6 +198,7 @@ export function AddFloodPrecautions() {
                         })
                     }
                     <Tooltip title="Add Precautions" placement="top">
+                        
                         <IconButton
                         aria-label="info"
                         size="large"
@@ -212,13 +214,15 @@ export function AddFloodPrecautions() {
                             setPrecautionsList(precautions)
                         }}
                         >
-                             <PlaylistAddCircleOutlinedIcon fontSize="inherit" />
+                             <Fab color="primary" aria-label="add">
+                                <AddIcon sx={{ color: "#fff !important" }} />
+                            </Fab>
                         </IconButton>
                     </Tooltip>
                 </Grid>
             </Grid>
           </Box>
- 
+          
           <Button
             fullWidth
             variant="contained"
@@ -235,7 +239,7 @@ export function AddFloodPrecautions() {
               addFloodPrecationsFunc();
             }}
           >
-            Create New Flood Precations
+            Create New Flood Precautions
           </Button>
 
         </Box>

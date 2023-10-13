@@ -24,6 +24,7 @@ async function signup(req, res, next){
 
 async function signin(req, res, next){
     try{
+        console.log(req.body);
         const {email, password} = req.body;
         let signinRes = await userServices.signin(email, password);
         res.cookie("refreshToken", signinRes.refreshToken, cookiesOptions)
@@ -115,11 +116,11 @@ async function refreshTokenCall(req, res, next){
         let oldRefreshToken = req.signedCookies.refreshToken;
         let userId = req.user.id;
 
-        let {token, refreshToken} = await userServices.refreshToken(userId, oldRefreshToken);
+        let {token, user, refreshToken} = await userServices.refreshToken(userId, oldRefreshToken);
 
         res.cookie("refreshToken", refreshToken, cookiesOptions);
         
-        return res.send(dataResponse("success", {token}));
+        return res.send(dataResponse("success", {token, user, refreshToken}));
         
     }
     catch(error){

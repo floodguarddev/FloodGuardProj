@@ -45,10 +45,19 @@ import AddAdminPage from './pages/admins/AddAdminPage';
 import ViewAdminProfile from './pages/admins/ViewAdminProfile';
 
 //Flood Precautions
-//import FloodPrecautionsList from './pages/flood_precautions/FloodPrecautionsList';
+import FloodPrecautionsList from './pages/flood_precautions/FloodPrecautionsList';
 import AddFloodPrecautionsPage from './pages/flood_precautions/AddFloodPrecautionsPage';
-//import ViewFloodPrecautionsProfile from './pages/flood_precautions/ViewFloodPrecautionsProfile';
+import ViewSpecificFloodPrecaution from './pages/flood_precautions/ViewSpecificFloodPrecaution';
+//News
+import NewsList from './pages/news/NewsList';
+import AddNewsPage from './pages/news/AddNewsPage';
+import ViewSpecificNews from './pages/news/ViewSpecificNews';
+import NgoPartcipationsList from './pages/ngo_participation/NgoParticipationList';
 
+//NgoParticipation
+import AddNgoPartcipationPage from './pages/ngo_participation/AddNgoParticipationPage';
+import ViewSpecificNgoPartcipation from './pages/ngo_participation/ViewSpecificNgoParticipation';
+import NgoPartcipationRequestsList from './pages/ngo_participation/NgoPartcipationRequestsList';
 function App() {
   const [userContext, setUserContext] = useContext(UserContext)
 
@@ -120,10 +129,23 @@ function App() {
                     <Route path='/admins/:id' element={<ViewAdminProfile />}/>
                   </Route>
                   <Route path="/flood_precautions">
-                    {/* <Route path="/flood_precautions" element={<Navigate to="/flood_precautions/list" />}/>
-                    <Route path='/flood_precautions/list' element={<FloodPrecautionsList />}/> */}
+                    <Route path="/flood_precautions" element={<Navigate to="/flood_precautions/list" />}/>
+                    <Route path='/flood_precautions/list' element={<FloodPrecautionsList />}/>
                     <Route path='/flood_precautions/add' element={<AddFloodPrecautionsPage />}/>
-                    {/* <Route path='/flood_precautions/:id' element={<ViewFloodPrecautionsProfile />}/> */}
+                    <Route path='/flood_precautions/:id' element={<ViewSpecificFloodPrecaution />}/>
+                  </Route>
+                  <Route path="/news">
+                    <Route path="/news" element={<Navigate to="/news/list" />}/>
+                    <Route path='/news/list' element={<NewsList />}/>
+                    <Route path='/news/add' element={<AddNewsPage />}/>
+                    <Route path='/news/:id' element={<ViewSpecificNews />}/>
+                  </Route>
+                  <Route path="/ngo_participations">
+                    <Route path="/ngo_participations" element={<Navigate to="/ngo_participations/list" />}/>
+                    <Route path='/ngo_participations/list' element={<NgoPartcipationsList />}/> 
+                    <Route path='/ngo_participations/requests' element={<NgoPartcipationRequestsList />}/>
+                    <Route path='/ngo_participations/add' element={<AddNgoPartcipationPage />}/>
+                    <Route path='/ngo_participations/:id' element={<ViewSpecificNgoPartcipation />}/>
                   </Route>
                   <Route path='*' element={<NotFound/>} />
                 </Routes>

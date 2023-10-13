@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
 import PropTypes from "prop-types";
 import { useTheme } from "@mui/material/styles";
@@ -14,16 +14,13 @@ import FirstPageIcon from "@mui/icons-material/FirstPage";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import LastPageIcon from "@mui/icons-material/LastPage";
-import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
 import AddIcon from "@mui/icons-material/Add";
-import ClearIcon from "@mui/icons-material/Clear";
 import styles from '@/styles/PageTitle.module.css'
 import {Link} from 'react-router-dom';
-import { ViewFloodPrecautionsList } from "../../components/FloodPrecautionsComponents/ViewFloodPrecautionsList";
-import EditFloodPrecautions from "@/components/FloodPrecautionsComponents/EditFloodPrecautions";
-import { SearchAndFilter } from '../../components/FloodPrecautionsComponents/SearchAndFilter';
+import { ViewFloodPrecautionsList } from "../../components/FloodPrecautionComponents/ViewFloodPrecautionsList";
+import EditFloodPrecautions  from "@/components/FloodPrecautionComponents/EditFloodPrecautions";
+import { SearchAndFilter } from '../../components/FloodPrecautionComponents/SearchAndFilter';
 // End Create new floodPrecautions Modal
 
 function MembersLists(props) {
@@ -94,15 +91,14 @@ MembersLists.propTypes = {
   page: PropTypes.number.isRequired,
   rowsPerPage: PropTypes.number.isRequired,
 };
-
 export default function FloodPrecautionsList() {
   //FloodPrecautions List Refresher
   const [floodPrecautionsRefresh, setFloodPrecautionsRefresh] = React.useState(true);
   //Query//
-  const[query, setQuery] = React.useState({limit: 10, offset:0});
+  const[query, setQuery] = React.useState({limit: 6, offset:0});
   // Table
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [rowsPerPage, setRowsPerPage] = React.useState(6);
   const [totalRecords, setTotalRecords] = React.useState(100);
 
   const handleChangePage = (event, newPage) => {
@@ -140,12 +136,12 @@ export default function FloodPrecautionsList() {
     <>
       {/* Page title */}
       <div className={styles.pageTitle}>
-        <h1>FloodPrecautions List</h1>
+        <h1>Flood Precautions List</h1>
         <ul>
           <li>
             <Link to="/">Dashboard</Link>
           </li>
-          <li>FloodPrecautions List</li>
+          <li>Flood Precautions List</li>
         </ul>
       </div>
 
@@ -175,7 +171,7 @@ export default function FloodPrecautionsList() {
               fontWeight: 500,
             }}
           >
-            FloodPrecautions List
+            Flood Precautions List
           </Typography>
           <Link to = "/flood_precautions/add">
             <Button
@@ -193,37 +189,33 @@ export default function FloodPrecautionsList() {
                 sx={{ position: "relative", top: "-1px" }}
                 className='mr-5px'
               />{" "}
-              Create New FloodPrecautions
+              Create New Flood Precautions
             </Button>
           </Link>
           
         </Box>
         <SearchAndFilter setFloodPrecautionsRefresh={setFloodPrecautionsRefresh} offset={page*rowsPerPage} limit = {rowsPerPage} query = {query} setQuery = {setQuery}/>
+        <ViewFloodPrecautionsList floodPrecautionsRefresh={floodPrecautionsRefresh} setFloodPrecautionsRefresh={setFloodPrecautionsRefresh} handleEditOpen={handleEditOpen} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
         <TableContainer
           component={Paper}
           sx={{
             boxShadow: "none",
           }}
         >
-          <Table 
-            sx={{ minWidth: 850 }} 
-            aria-label="custom pagination table"
-            className="dark-table"
-          >
+          <Table>
             {/* View FloodPrecautions */}
-            <ViewFloodPrecautionsList floodPrecautionsRefresh={floodPrecautionsRefresh} setFloodPrecautionsRefresh={setFloodPrecautionsRefresh} handleEditOpen={handleEditOpen} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
-
+                        
             <TableFooter>
               <TableRow>
                 <TablePagination
-                  rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
+                  rowsPerPageOptions={[6, 12, 24, { label: "All", value: -1 }]}
                   colSpan={8}
                   count={totalRecords}
                   rowsPerPage={rowsPerPage}
                   page={page}
                   SelectProps={{
                     inputProps: {
-                      "aria-label": "rows per page",
+                      "aria-label": "Precautions Per Page",
                     },
                     native: true,
                   }}
@@ -242,7 +234,7 @@ export default function FloodPrecautionsList() {
         /*Update FloodPrecautions*/
       }
       
-      <EditFloodPrecautions
+      <EditFloodPrecautions 
         handleClose={handleEditClose}
         aria-labelledby="customized-dialog-title"
         open={editOpen}

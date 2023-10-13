@@ -13,7 +13,6 @@ async function getRequestsByQuery(query, limit = process.env.DEFAULT_LIMIT, offs
         ]
     );
 
-
     ngoParticipationRequests = ngoParticipationRequests.map(
         (obj)=>{
             let newObj = {...obj, ngoName: obj.ngo.ngoName, ngoImageLink: obj.ngo.ngoImageLink, ngoId: obj.ngo._id};

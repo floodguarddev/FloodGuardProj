@@ -26,13 +26,17 @@ async function getPostsByQuery(query, limit = process.env.DEFAULT_LIMIT, offset 
 }
 
 async function getNGOParticipationById(id){
-    let ngoParticipationRequest = await NGO_Participation_Post.findById(id).populate('ngoId').catch(error => {
+    let ngoParticipationPost = await NGO_Participation_Post.findById(id).populate('ngoId').catch(error => {
         throw new createHttpError.InternalServerError(error);
     }
     );
 
-    ngoParticipationRequest = {...ngoParticipationRequest.toJSON(), ngoName: ngoParticipationRequest.ngoId.ngoName, ngoImageLink: ngoParticipationRequest.ngoId.ngoImageLink, ngoId: ngoParticipationRequest.ngoId._id};
-    return ngoParticipationRequest;
+    if(!ngoParticipationPost){
+        throw new createHttpError.NotFound("NGO Request with given id is not available");
+    }
+
+    ngoParticipationPost = {...ngoParticipationPost.toJSON(), ngoName: ngoParticipationPost.ngoId.ngoName, ngoImageLink: ngoParticipationPost.ngoId.ngoImageLink, ngoId: ngoParticipationPost.ngoId._id};
+    return ngoParticipationPost;
 }
 
 async function deleteNGOParticipationById(requestId){

@@ -33,6 +33,7 @@ const News = new Schema({
   publishedAt: {
     type: Date,
     required: true,
+    default: new Date()
   },
   content: {
     type: String
