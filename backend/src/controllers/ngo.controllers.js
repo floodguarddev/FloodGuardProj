@@ -1,6 +1,6 @@
 const multerFilesParser = require("../utils/multerFilesParser");
 const ngoServices = require("../services/ngos.services");
-const { addStringQuery } = require("../utils/query");
+const { addStringQuery, addSimpleQuerySearch } = require("../utils/query");
 const { dataResponse } = require("../utils/commonResponse");
 
 //{frontSideCNICLink, backSideCNICLink: ngoImageLink: registrationCertificateLink: annualReportLink: taxExemptionLink: }
@@ -136,15 +136,20 @@ async function viewNGOs(req, res, next){
         //Filtering//
         let mongooseQuery = {};
         let query = req.query;
-        addStringQuery('fullName', mongooseQuery, query);
-        addStringQuery('cnicNumber', mongooseQuery, query);
-        addStringQuery('ngoName', mongooseQuery, query);
-        addStringQuery('address', mongooseQuery, query);
-        addStringQuery('mobileNumber', mongooseQuery, query);
-        addStringQuery('assosiatedPersonStatus', mongooseQuery, query);
-        addStringQuery('ngoContactNumber', mongooseQuery, query);
-        addStringQuery('ngoId', mongooseQuery, query);
-        addStringQuery('creditCardNumber', mongooseQuery, query);
+
+        
+        if(!addSimpleQuerySearch([['ngoName']], mongooseQuery, query))
+        {
+            addStringQuery('fullName', mongooseQuery, query);
+            addStringQuery('cnicNumber', mongooseQuery, query);
+            addStringQuery('ngoName', mongooseQuery, query);
+            addStringQuery('address', mongooseQuery, query);
+            addStringQuery('mobileNumber', mongooseQuery, query);
+            addStringQuery('assosiatedPersonStatus', mongooseQuery, query);
+            addStringQuery('ngoContactNumber', mongooseQuery, query);
+            addStringQuery('ngoId', mongooseQuery, query);
+            addStringQuery('creditCardNumber', mongooseQuery, query);
+        }
         //Pagination//
         let limit = parseInt(req.query.limit) || process.env.DEFAULT_LIMIT;
         let offset = parseInt(req.query.offset) || 0;

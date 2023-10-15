@@ -157,7 +157,7 @@ async function addNGOParticipationPost(req, res, next){
     try{
         let ngoId = req.params.ngoId;
         const {postTitle, postDescription} = req.body;
-        
+        console.log(req.files);
         let postImagesLinks = await multerFilesParser.getMultipleFilesUrls("postImages", req.files)
 
         let ngoParticipationPost = await ngoParticipationServices.addNGOParticipationPost(ngoId, postTitle, postDescription, postImagesLinks);

@@ -35,10 +35,12 @@ const cardStyle = { // Black outline
     bottom: '10px',
     right: '10px',
   };
-export const SearchAndFilter = ({query, setQuery, offset, limit, setNewsRefresh}) => {
+export const SearchAndFilter = ({query, setQuery, offset, limit, setNgoParticipationsRefresh}) => {
     //References//''
-    const titleRef = useRef(null);
-    const descriptionRef = useRef(null);
+    const postTitleRef = useRef(null);
+    const postDescriptionRef = useRef(null);
+    const ngoNameRef = useRef(null)
+    const postedDateRef = useRef(null)
 
     const [searchText, setSearchText] = useState('');
     const [timeoutId, setTimeoutId] = useState(null);
@@ -47,17 +49,20 @@ export const SearchAndFilter = ({query, setQuery, offset, limit, setNewsRefresh}
 
     const applyFilter = ()=>{
       let newQuery = {};
-      newQuery = {...newQuery,...titleRef.current.applyFilter()};
-      newQuery = {...newQuery,...descriptionRef.current.applyFilter()};
+      newQuery = {...newQuery,...postTitleRef.current.applyFilter()};
+      newQuery = {...newQuery,...postDescriptionRef.current.applyFilter()};
+      newQuery = {...newQuery,...ngoNameRef.current.applyFilter()};
+      newQuery = {...newQuery,...postedDateRef.current.applyFilter()};
       newQuery = {...newQuery, offset: offset};
       newQuery = {...newQuery, limit: limit};
+      console.log(newQuery);
       setQuery(newQuery);
-      setNewsRefresh(true);
+      setNgoParticipationsRefresh(true);
     }
 
     const handleClearSearch = () => {
         setSearchText('');
-        setNewsRefresh(true);
+        setNgoParticipationsRefresh(true);
     };
     
 
@@ -79,7 +84,7 @@ export const SearchAndFilter = ({query, setQuery, offset, limit, setNewsRefresh}
           setShowFilters(false);
           console.log(offset);
           setQuery({"q": searchText, offset: offset, limit: limit});
-          setNewsRefresh(true);
+          setNgoParticipationsRefresh(true);
         }, 700);
     
         // Update the timeoutId state
@@ -123,9 +128,11 @@ export const SearchAndFilter = ({query, setQuery, offset, limit, setNewsRefresh}
             </Typography>
             <CardContent>
             <Box component="form" noValidate sx={{ mt: 2,  mb: 2}}>
-                <Grid container spacing={2}>
-                    <StringFilter lg={6} ref={titleRef} title = {"Title"} field={"title"}/>
-                    <StringFilter lg={6} ref={descriptionRef} title = {"Description"} field={"description"}/>
+                <Grid container justifyContent="center" spacing={2}>
+                    <StringFilter lg={4} ref={postTitleRef} title = {"Title"} field={"postTitle"}/>
+                    <StringFilter lg={4} ref={postDescriptionRef} title = {"Description"} field={"postDescription"}/>
+                    <StringFilter lg={4} ref={ngoNameRef} title = {"NGO Name"} field={"ngoName"}/>
+                    <DateFilter lg = {4} ref={postedDateRef} title = {"Posted Date"} field={"postedDate"}/>
                 </Grid>
             </Box>
             </CardContent>

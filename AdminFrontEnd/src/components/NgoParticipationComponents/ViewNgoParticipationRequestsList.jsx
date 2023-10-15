@@ -8,8 +8,8 @@ import {useSnackbar } from 'notistack';
 import { useView } from '@/context/ViewContext';
 import { Link, useNavigate } from "react-router-dom";
 import { jsonToSearchQuery } from '../../utils/query';
-import { approveNgoParticipationRequest, rejectNgoParticipationRequest, getNgoParticipationRequestsList } from '../../services/ngo_partcipation.services';
-//import styles from "./ViewNgoPartcipationRequestList.module.css";
+import { approveNgoParticipationRequest, rejectNgoParticipationRequest, getNgoParticipationRequestsList } from '../../services/ngo_participation.services';
+//import styles from "./ViewNgoParticipationRequestList.module.css";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import { Box, Typography } from "@mui/material";
@@ -19,7 +19,7 @@ import { getPublishDate } from '../../utils/date';
 export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequestsRefresh, setNgoParticipationRequestsRefresh}) => {
   const navigate = useNavigate();
   const [userContext, setUserContext] = useUser();
-  const [ngoPartcipationRequestList,setNgoPartcipationRequestList]=useState(null);
+  const [ngoParticipationRequestList,setNgoParticipationRequestList]=useState(null);
   const { enqueueSnackbar } = useSnackbar();
   const [viewContext, setViewContext] = useView();
   
@@ -35,9 +35,9 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
                 console.log(response.data);
                 return response.data.data.ngoParticipationRequests;
             }
-        ).then((ngoPartcipationRequests)=>{
-            console.log(ngoPartcipationRequests);
-            setNgoPartcipationRequestList(ngoPartcipationRequests);
+        ).then((ngoParticipationRequests)=>{
+            console.log(ngoParticipationRequests);
+            setNgoParticipationRequestList(ngoParticipationRequests);
             setNgoParticipationRequestsRefresh(false);
         }).catch((error)=>{
             enqueueSnackbar(error.message || error.response.data.message, { variant: "error", anchorOrigin: {
@@ -48,11 +48,11 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
   }, 
   [ngoParticipationRequestsRefresh])
 
-  const viewNgoPartcipationRequest = (ngoPartcipationRequestId)=>{
+  const viewNgoParticipationRequest = (ngoParticipationRequestId)=>{
     try{
-        setViewContext((oldValues)=>{return {...oldValues, selectedNgoPartcipationRequest: ngoPartcipationRequestId}});
-        console.log(ngoPartcipationRequestId)
-        navigate(`/ngoPartcipationRequest/${ngoPartcipationRequestId}`);
+        setViewContext((oldValues)=>{return {...oldValues, selectedNgoParticipationRequest: ngoParticipationRequestId}});
+        console.log(ngoParticipationRequestId)
+        navigate(`/ngoParticipationRequest/${ngoParticipationRequestId}`);
     }
     catch(error){
         alert(error)
@@ -61,8 +61,8 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
 
   
 
-  const rejectNgoPartcipationRequestFunc = (ngoPartcipationRequestId)=>{
-    rejectNgoParticipationRequest(userContext.token, ngoPartcipationRequestId).then(
+  const rejectNgoParticipationRequestFunc = (ngoParticipationRequestId)=>{
+    rejectNgoParticipationRequest(userContext.token, ngoParticipationRequestId).then(
         (response)=>{
             console.log(response);
             return response.data.message;
@@ -82,8 +82,8 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
   }
 
 
-  const approveNgoPartcipationRequestFunc = (ngoPartcipationRequestId)=>{
-    approveNgoParticipationRequest(userContext.token, ngoPartcipationRequestId).then(
+  const approveNgoParticipationRequestFunc = (ngoParticipationRequestId)=>{
+    approveNgoParticipationRequest(userContext.token, ngoParticipationRequestId).then(
         (response)=>{
             console.log(response);
             return response.data.message;
@@ -102,9 +102,9 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
     })
   }
 
-  const NgoPartcipationRequestCard = ({ngoPartcipationRequest})=>{
+  const NgoParticipationRequestCard = ({ngoParticipationRequest})=>{
     return(
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} key={ngoPartcipationRequest._id}>
+        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} key={ngoParticipationRequest._id}>
           <Card sx={{ mb: '15px' }}>
               <Swiper 
                 navigation={true} 
@@ -112,7 +112,7 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
                 modules={[Navigation]}
               >
                 {
-                  ngoPartcipationRequest.postImagesLinks.map((image)=>(
+                  ngoParticipationRequest.postImagesLinks.map((image)=>(
                     <SwiperSlide>
                       <CardMedia image = {image} sx={{height: "240px"}}/>
                     </SwiperSlide>
@@ -143,7 +143,7 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
                           mb: "5px",
                           }}
                       >
-                          {ngoPartcipationRequest.postTitle.length>70?ngoPartcipationRequest.postTitle.slice(0,70)+"...":ngoPartcipationRequest.postTitle}
+                          {ngoParticipationRequest.postTitle.length>70?ngoParticipationRequest.postTitle.slice(0,70)+"...":ngoParticipationRequest.postTitle}
                       </Typography>
                     </Box>
                   </Box> 
@@ -159,7 +159,7 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
                 >
                   <Link
                     style={{ textDecoration: 'none' }}>
-                      <Avatar alt={ngoPartcipationRequest.ngoName} src={ngoPartcipationRequest.ngoImageLink} />
+                      <Avatar alt={ngoParticipationRequest.ngoName} src={ngoParticipationRequest.ngoImageLink} />
                     </Link>
                     
                   <Box>
@@ -171,7 +171,7 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
                         fontWeight: 650
                       }}
                     >
-                      {ngoPartcipationRequest.ngoName}
+                      {ngoParticipationRequest.ngoName}
                     </Typography>
                     </Link>
                     
@@ -180,7 +180,7 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
                         fontSize: 14,
                       }}
                     >
-                      {getPublishDate(ngoPartcipationRequest.requestedDate)}
+                      {getPublishDate(ngoParticipationRequest.requestedDate)}
                     </Typography>
                   </Box>
                 </Box>
@@ -198,7 +198,7 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
                         fontSize: 14,
                       }}
                     >
-                      {ngoPartcipationRequest.postDescription.length>120?ngoPartcipationRequest.postDescription.slice(0,120)+"...":ngoPartcipationRequest.postDescription}
+                      {ngoParticipationRequest.postDescription.length>120?ngoParticipationRequest.postDescription.slice(0,120)+"...":ngoParticipationRequest.postDescription}
                     </Typography>
                   </Box>
                 </Box>
@@ -217,7 +217,7 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
                       color: "#fff !important",
                     }}
                     onClick={()=>{
-                        approveNgoPartcipationRequestFunc(ngoPartcipationRequest._id)
+                        approveNgoParticipationRequestFunc(ngoParticipationRequest._id)
                     }}
                   >
                     < i class="ri-check-line"/> Accept
@@ -234,7 +234,7 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
                       ml:"10px"
                     }}
                     onClick={()=>{
-                      rejectNgoPartcipationRequestFunc(ngoPartcipationRequest._id)
+                      rejectNgoParticipationRequestFunc(ngoParticipationRequest._id)
                     }}
                   >
                     < i class="ri-close-line"/>Reject
@@ -249,7 +249,7 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
   return (
     <>
         {
-            ngoPartcipationRequestList?
+            ngoParticipationRequestList?
             <Grid
         container
         justifyContent="center"
@@ -257,8 +257,8 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
         columnSpacing={{ xs: 1, sm: 1, md: 1, lg: 1, xl: 2 }}
         m={2}
       >
-        {ngoPartcipationRequestList.map((ngoPartcipationRequest) => (
-          <NgoPartcipationRequestCard ngoPartcipationRequest={ngoPartcipationRequest}/>
+        {ngoParticipationRequestList.map((ngoParticipationRequest) => (
+          <NgoParticipationRequestCard ngoParticipationRequest={ngoParticipationRequest}/>
         ))}
       </Grid>:
             <div

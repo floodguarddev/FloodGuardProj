@@ -8,8 +8,8 @@ import {useSnackbar } from 'notistack';
 import { useView } from '@/context/ViewContext';
 import { Link, useNavigate } from "react-router-dom";
 import { jsonToSearchQuery } from '../../utils/query';
-import {deleteNgoParticipation, getNgoParticipationsList } from '../../services/ngo_partcipation.services';
-//import styles from "./ViewNgoPartcipationList.module.css";
+import {deleteNgoParticipation, getNgoParticipationsList } from '../../services/ngo_participation.services';
+//import styles from "./ViewNgoParticipationList.module.css";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import { Box, Typography } from "@mui/material";
@@ -21,7 +21,7 @@ import DriveFileRenameOutlineIcon from "@mui/icons-material/DriveFileRenameOutli
 export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipationsRefresh, setNgoParticipationsRefresh}) => {
   const navigate = useNavigate();
   const [userContext, setUserContext] = useUser();
-  const [ngoPartcipationList,setNgoPartcipationList]=useState(null);
+  const [ngoParticipationList,setNgoParticipationList]=useState(null);
   const { enqueueSnackbar } = useSnackbar();
   const [viewContext, setViewContext] = useView();
   
@@ -39,7 +39,7 @@ export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipati
             }
         ).then((ngoParticipationPosts)=>{
             console.log(ngoParticipationPosts);
-            setNgoPartcipationList(ngoParticipationPosts);
+            setNgoParticipationList(ngoParticipationPosts);
             setNgoParticipationsRefresh(false);
         }).catch((error)=>{
             enqueueSnackbar(error.message || error.response.data.message, { variant: "error", anchorOrigin: {
@@ -50,19 +50,19 @@ export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipati
   }, 
   [ngoParticipationsRefresh])
 
-  const viewNgoPartcipation = (ngoPartcipationId)=>{
+  const viewNgoParticipation = (ngoParticipationId)=>{
     try{
-        setViewContext((oldValues)=>{return {...oldValues, selectedNgoPartcipation: ngoPartcipationId}});
-        console.log(ngoPartcipationId)
-        navigate(`/ngo_participations/${ngoPartcipationId}`);
+        setViewContext((oldValues)=>{return {...oldValues, selectedNgoParticipation: ngoParticipationId}});
+        console.log(ngoParticipationId)
+        navigate(`/ngo_participations/${ngoParticipationId}`);
     }
     catch(error){
         alert(error)
     }
   }
 
-  const deleteNgoParticipationFunc = (ngoPartcipationId)=>{
-    deleteNgoParticipation(userContext.token, ngoPartcipationId).then(
+  const deleteNgoParticipationFunc = (ngoParticipationId)=>{
+    deleteNgoParticipation(userContext.token, ngoParticipationId).then(
         (response)=>{
             console.log(response);
             return response.data.message;
@@ -81,29 +81,9 @@ export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipati
     })
   }
   
-  const editNgoParticipationFunc = (ngoPartcipationId)=>{
-    approveNgoParticipation(userContext.token, ngoPartcipationId).then(
-        (response)=>{
-            console.log(response);
-            return response.data.message;
-        }
-    ).then((message)=>{
-        setNgoParticipationsRefresh(true);
-        enqueueSnackbar(message, { variant: "success", anchorOrigin: {
-            vertical: 'bottom',
-            horizontal: 'right'
-        }  });
-    }).catch((error)=>{
-        enqueueSnackbar(error.response? error.response.data.message : error.message , { variant: "error", anchorOrigin: {
-            vertical: 'bottom',
-            horizontal: 'right'
-        }  });
-    })
-  }
-
-  const NgoPartcipationCard = ({ngoPartcipation})=>{
+  const NgoParticipationCard = ({ngoParticipation})=>{
     return(
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} key={ngoPartcipation._id}>
+        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} key={ngoParticipation._id}>
           <Card sx={{ mb: '15px' }}>
               <Swiper 
                 navigation={true} 
@@ -111,7 +91,7 @@ export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipati
                 modules={[Navigation]}
               >
                 {
-                  ngoPartcipation.postImagesLinks.map((image)=>(
+                  ngoParticipation.postImagesLinks.map((image)=>(
                     <SwiperSlide>
                       <CardMedia image = {image} sx={{height: "240px"}}/>
                     </SwiperSlide>
@@ -142,7 +122,7 @@ export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipati
                           mb: "5px",
                           }}
                       >
-                          {ngoPartcipation.postTitle.length>70?ngoPartcipation.postTitle.slice(0,70)+"...":ngoPartcipation.postTitle}
+                          {ngoParticipation.postTitle.length>70?ngoParticipation.postTitle.slice(0,70)+"...":ngoParticipation.postTitle}
                       </Typography>
                     </Box>
                   </Box> 
@@ -166,7 +146,7 @@ export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipati
                  >
                  <Link
                     style={{ textDecoration: 'none' }}>
-                      <Avatar alt={ngoPartcipation.ngoName} src={ngoPartcipation.ngoImageLink} />
+                      <Avatar alt={ngoParticipation.ngoName} src={ngoParticipation.ngoImageLink} />
                     </Link>
                     
                   <Box>
@@ -178,7 +158,7 @@ export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipati
                         fontWeight: 650
                       }}
                     >
-                      {ngoPartcipation.ngoName}
+                      {ngoParticipation.ngoName}
                     </Typography>
                     </Link>
                     
@@ -187,7 +167,7 @@ export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipati
                         fontSize: 14,
                       }}
                     >
-                      {getPublishDate(ngoPartcipation.postedDate)}
+                      {getPublishDate(ngoParticipation.postedDate)}
                     </Typography>
                   </Box>
                  </Box>
@@ -208,7 +188,7 @@ export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipati
                           ml: '5px'
                         }}
                         onClick={()=>{
-                          deleteNgoParticipationFunc(ngoPartcipation._id)
+                          deleteNgoParticipationFunc(ngoParticipation._id)
                         }}
                       >
                         <DeleteIcon fontSize="inherit" />
@@ -226,7 +206,7 @@ export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipati
                           ml: '5px'
                         }}
                         onClick={()=>{
-                            handleEditOpen(ngoPartcipation);
+                            handleEditOpen(ngoParticipation);
                         }}
                       >
                         <DriveFileRenameOutlineIcon fontSize="inherit" />
@@ -248,7 +228,7 @@ export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipati
                         fontSize: 14,
                       }}
                     >
-                      {ngoPartcipation.postDescription.length>120?ngoPartcipation.postDescription.slice(0,120)+"...":ngoPartcipation.postDescription}
+                      {ngoParticipation.postDescription.length>120?ngoParticipation.postDescription.slice(0,120)+"...":ngoParticipation.postDescription}
                     </Typography>
                   </Box>
                 </Box>
@@ -266,7 +246,7 @@ export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipati
                       color: "#fff !important",
                     }}
                     onClick={()=>{
-                        viewNgoPartcipation(ngoPartcipation._id)
+                        viewNgoParticipation(ngoParticipation._id)
                     }}
                   >
                     View Details
@@ -281,7 +261,7 @@ export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipati
   return (
     <>
         {
-            ngoPartcipationList?
+            ngoParticipationList?
             <Grid
         container
         justifyContent="center"
@@ -289,8 +269,8 @@ export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipati
         columnSpacing={{ xs: 1, sm: 1, md: 1, lg: 1, xl: 2 }}
         m={2}
       >
-        {ngoPartcipationList.map((ngoPartcipation) => (
-          <NgoPartcipationCard ngoPartcipation={ngoPartcipation}/>
+        {ngoParticipationList.map((ngoParticipation) => (
+          <NgoParticipationCard ngoParticipation={ngoParticipation}/>
         ))}
       </Grid>:
             <div

@@ -5,10 +5,10 @@ import { useSnackbar } from 'notistack';
 import { useUser } from '@/context/UserContext';
 import BadRequest from '@/pages/general/BadRequest';
 import { SpecificNews } from '@/components/NewsComponents/SpecificNews';
-import { getSpecificNgoParticipation } from '../../services/ngo_partcipation.services';
+import { getSpecificNgoParticipation } from '../../services/ngo_participation.services';
 import { SpecificNgoParticipation } from '@/components/NgoParticipationComponents/SpecificNgoParticipation';
 
-export default function  ViewSpecificNgoPartcipation(){
+export default function  ViewSpecificNgoParticipation(){
   const [ngoParticipation, setNgoParticipation] = useState(null);
   const [userContext, setUserContext] = useUser();
   const [error, setError] = useState(false);

@@ -19,15 +19,15 @@ export async function deleteNgoParticipation(token, ngoParticipationId){
     return response;
 }
 
-export async function editNgoParticipation(token, ngoParticipationId, ngoParticipationObj){
+export async function editNgoParticipation(token, ngoId, ngoParticipationId, ngoParticipationObj){
     let axiosInstance = getAxiosInstance(token);
-    let response = await axiosInstance.put(`/ngo_participation_posts/${ngoParticipationId}`, ngoParticipationObj);
+    let response = await axiosInstance.put(`ngos/${ngoId}/ngo_participation_posts/${ngoParticipationId}`, ngoParticipationObj);
     return response;
 }
 
-export async function addNgoParticipation(token, ngoParticipationObj){
+export async function addNgoParticipation(token, ngoId, ngoParticipationObj){
     let axiosInstance = getAxiosInstance(token);
-    let response = await axiosInstance.post(`/ngo_participation_posts`, ngoParticipationObj);
+    let response = await axiosInstance.post(`/ngos/${ngoId}/ngo_participation_posts`, ngoParticipationObj);
     return response;
 }
 
@@ -46,12 +46,12 @@ export async function getSpecificNgoParticipationRequest(token, ngoParticipation
 
 export async function rejectNgoParticipationRequest(token, ngoParticipationRequestId){
     let axiosInstance = getAxiosInstance(token);
-    let response = await axiosInstance.delete(`/ngo_partcipation_requests/reject/${ngoParticipationRequestId}`);
+    let response = await axiosInstance.delete(`/ngo_participation_requests/reject/${ngoParticipationRequestId}`);
     return response;
 }
 
 export async function approveNgoParticipationRequest(token, ngoParticipationRequestId){
     let axiosInstance = getAxiosInstance(token);
-    let response = await axiosInstance.post(`/ngo_partcipation_requests/approve/${ngoParticipationRequestId}`);
+    let response = await axiosInstance.post(`/ngo_participation_requests/approve/${ngoParticipationRequestId}`);
     return response;
 }

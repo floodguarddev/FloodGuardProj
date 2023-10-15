@@ -198,8 +198,8 @@ async function viewUsers(req, res, next){
         let limit = parseInt(req.query.limit) || process.env.DEFAULT_LIMIT;
         let offset = parseInt(req.query.offset) || 0;
         
-        let users = await userServices.viewUsers(mongooseQuery, limit, offset);
-        return res.send(dataResponse("success", {users}));
+        let {total, users} = await userServices.viewUsers(mongooseQuery, limit, offset);
+        return res.send(dataResponse("success", {total, users}));
     }
     catch(error){
         return next(error);

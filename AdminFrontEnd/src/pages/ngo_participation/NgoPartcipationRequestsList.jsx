@@ -90,7 +90,7 @@ MembersLists.propTypes = {
   page: PropTypes.number.isRequired,
   rowsPerPage: PropTypes.number.isRequired,
 };
-export default function NgoPartcipationRequestsList() {
+export default function NgoParticipationRequestsList() {
   //NgoParticipationRequests List Refresher
   const [ngoParticipationRequestsRefresh, setNgoParticipationRequestsRefresh] = React.useState(true);
   //Query//

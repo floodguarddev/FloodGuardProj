@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Card from "@mui/material/Card";
-import { CardMedia, IconButton, Tooltip, Typography } from "@mui/material";
+import { Autocomplete, Avatar, CardMedia, IconButton, Tooltip, Typography } from "@mui/material";
 import {Link} from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import { Box } from "@mui/system";
@@ -10,15 +10,18 @@ import { addNews } from "@/services/news.services";
 import { useUser } from '@/context/UserContext';
 import { useSnackbar } from 'notistack';
 import CloseIcon from "@mui/icons-material/Close"
+import { NgoSearchBar } from "../SearchComponents/NgoSearchBar";
+import { addNgoParticipation } from "../../services/ngo_participation.services";
+import createFileList from "create-file-list";
 export function AddNgoParticipation() {
   const [userContext, setUserContext] = useUser();
-
   const [images, setImages] = React.useState([]);
   const [postTitle, setTitle] = React.useState("");
   const [postDescription, setDescription] = React.useState("");
   const [ngoId, setNgoId] = React.useState("");
+
   const fileSelectedHandler = (event) => {
-    console.log(event.target.files);
+    console.log(event.target.files)
     let newImages = [...images, ...event.target.files];
     setImages(newImages);
   }
@@ -38,21 +41,22 @@ export function AddNgoParticipation() {
 
   const { enqueueSnackbar } =  useSnackbar();
 
-  const addFloodPrecationsFunc = async (event) => {
+  const addNgoParticipationFunc = async () => {
 
     try{
-
+      let postImages = createFileList(images);
+      console.log(postImages);
       let token = userContext.token;
-    
       let formData = new FormData();
       formData.append('postTitle', postTitle);
       formData.append('postDescription', postDescription);
-      formData.append('ngoId', ngoId);
-      formData.append('postImages', images);
+      images.forEach((image)=>{
+        formData.append('postImages', image);
+      })
 
-      await addNews(token, formData);
+      await addNgoParticipation(token, ngoId, formData);
 
-      enqueueSnackbar("News Has been added Successfully", { variant: "success" ,anchorOrigin: {
+      enqueueSnackbar("Ngo Post Has been added Successfully", { variant: "success" ,anchorOrigin: {
         vertical: 'bottom',
         horizontal: 'right'
       } });
@@ -108,17 +112,8 @@ export function AddNgoParticipation() {
                     >
                         Select NGO
                     </Typography>
-
-                    <TextField
-                        fullWidth
-                        id="postTitle"
-                        name="postTitle"
-                        autoComplete="family-name"
-                        value={postTitle}
-                        onChange={(event)=>{
-                        setTitle(event.target.value)
-                        }}
-                    />
+                    <NgoSearchBar setNgoId={setNgoId}/>
+                    
               </Grid>
             <Grid item xs={12}>
                     <Typography
@@ -218,7 +213,7 @@ export function AddNgoParticipation() {
                               <CloseIcon />
                             </IconButton>
                             <CardMedia
-                              sx={{ height: 400, borderRadius:5, boxShadow: 4 }}
+                              sx={{ height: 300, borderRadius:5, boxShadow: 4 }}
                               image={URL.createObjectURL(image)}
                               
                             />
@@ -246,7 +241,7 @@ export function AddNgoParticipation() {
               color: "#fff !important",
             }}
             onClick={()=>{
-              addFloodPrecationsFunc();
+              addNgoParticipationFunc();
             }}
           >
             Add NGO Participation Post

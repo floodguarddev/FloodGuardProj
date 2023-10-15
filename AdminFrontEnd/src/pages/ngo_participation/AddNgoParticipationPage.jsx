@@ -3,7 +3,7 @@ import styles from '@/styles/PageTitle.module.css'
 import {Link} from 'react-router-dom';
 import { AddNgoParticipation } from "../../components/NgoParticipationComponents/AddNgoParticipation";
 
-export default function AddNgoPartcipationPage() {
+export default function AddNgoParticipationPage() {
   return (
     <>
       {/* Page title */}

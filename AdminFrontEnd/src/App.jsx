@@ -52,12 +52,18 @@ import ViewSpecificFloodPrecaution from './pages/flood_precautions/ViewSpecificF
 import NewsList from './pages/news/NewsList';
 import AddNewsPage from './pages/news/AddNewsPage';
 import ViewSpecificNews from './pages/news/ViewSpecificNews';
-import NgoPartcipationsList from './pages/ngo_participation/NgoParticipationList';
 
 //NgoParticipation
+import NgoPartcipationsList from './pages/ngo_participation/NgoParticipationList';
 import AddNgoPartcipationPage from './pages/ngo_participation/AddNgoParticipationPage';
 import ViewSpecificNgoPartcipation from './pages/ngo_participation/ViewSpecificNgoParticipation';
 import NgoPartcipationRequestsList from './pages/ngo_participation/NgoPartcipationRequestsList';
+
+//Fund Raising
+import FundRaisingRequestsList from './pages/fund_raisings/FundRaisingRequestsList';
+import AddFundRaisingPage from "./pages/fund_raisings/AddFundRaising";
+import ViewSpecificFundRaising from './pages/fund_raisings/ViewSpecificFundRaising';
+import FundRaisingsList from './pages/fund_raisings/FundRaisingList';
 function App() {
   const [userContext, setUserContext] = useContext(UserContext)
 
@@ -146,6 +152,13 @@ function App() {
                     <Route path='/ngo_participations/requests' element={<NgoPartcipationRequestsList />}/>
                     <Route path='/ngo_participations/add' element={<AddNgoPartcipationPage />}/>
                     <Route path='/ngo_participations/:id' element={<ViewSpecificNgoPartcipation />}/>
+                  </Route>
+                  <Route path="/fund_raisings">
+                    <Route path="/fund_raisings" element={<Navigate to="/fund_raisings/list" />}/>
+                    <Route path='/fund_raisings/list' element={<FundRaisingsList />}/> 
+                    <Route path='/fund_raisings/requests' element={<FundRaisingRequestsList />}/>
+                    <Route path='/fund_raisings/add' element={<AddFundRaisingPage />}/>
+                    <Route path='/fund_raisings/:id' element={<ViewSpecificFundRaising />}/>
                   </Route>
                   <Route path='*' element={<NotFound/>} />
                 </Routes>

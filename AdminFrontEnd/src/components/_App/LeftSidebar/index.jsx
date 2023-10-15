@@ -148,7 +148,7 @@ const Sidebar = ({ toogleActive }) => {
         },
         {
           title: "View Post",
-          path: "/ngo_participations/"+viewContext.selectedNews
+          path: "/ngo_participations/"+viewContext.selectedNgoParticipation
         },
         {
           title: "Add Post",
@@ -157,6 +157,32 @@ const Sidebar = ({ toogleActive }) => {
         {
           title: "Post Requests",
           path: "/ngo_participations/requests"
+        }
+      ],
+    },
+    {
+      title: "Fund Raising",
+      path: "/fund_raisings/",
+      icon: <PostAddIcon />,
+      iconClosed: <KeyboardArrowRightIcon />,
+      iconOpened: <KeyboardArrowDownIcon />,
+  
+      subNav: [
+        {
+          title: "Posts List",
+          path: "/fund_raisings/list",
+        },
+        {
+          title: "View Post",
+          path: "/fund_raisings/"+viewContext.selectedFundRaising
+        },
+        {
+          title: "Add Post",
+          path: "/fund_raisings/add"
+        },
+        {
+          title: "Post Requests",
+          path: "/fund_raisings/requests"
         }
       ],
     },

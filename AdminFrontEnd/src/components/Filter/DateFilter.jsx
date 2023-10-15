@@ -18,7 +18,7 @@ const  DateFilter  = forwardRef((props, ref) =>  {
   };
 
   const applyFilter = () => {
-    return {[props.field+selectedOption]: setSelectedDate.length>0?setSelectedDate:undefined}
+    return {[props.field+selectedOption]: selectedDate.length>0?selectedDate:undefined}
   };
 
   useImperativeHandle(ref, () => ({

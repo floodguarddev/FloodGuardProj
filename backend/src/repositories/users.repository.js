@@ -45,11 +45,10 @@ async function getUserRoles(userId){
 
 async function getUsersByQuery(query, limit = process.env.DEFAULT_LIMIT, offset = 0){
 
-    console.log(query);
+    let users = await User.find(query).sort().skip(offset).limit(limit);
+    const total = await User.countDocuments(query);
 
-    let users = await User.find(query).skip(offset).limit(limit);
-
-    return users;
+    return {total, users};
 }
 
 module.exports = {getUserUsingEmail, getUserById, getUserRoles, isUserAvailableUsingEmail, getUsersByQuery}

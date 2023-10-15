@@ -103,7 +103,7 @@ export default function UsersList() {
   // Table
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
-  const [totalRecords, setTotalRecords] = React.useState(100);
+  const [totalRecords, setTotalRecords] = React.useState(0);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -211,7 +211,7 @@ export default function UsersList() {
             className="dark-table"
           >
             {/* View Users */}
-            <ViewUserList usersRefresh={usersRefresh} setUsersRefresh={setUsersRefresh} handleEditOpen={handleEditOpen} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
+            <ViewUserList setTotalRecords={setTotalRecords} usersRefresh={usersRefresh} setUsersRefresh={setUsersRefresh} handleEditOpen={handleEditOpen} query={query} rowsPerPage={rowsPerPage} totalRows={totalRecords} />
 
             <TableFooter>
               <TableRow>

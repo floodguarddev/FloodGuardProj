@@ -20,6 +20,7 @@ import styles from '@/styles/PageTitle.module.css'
 import {Link} from 'react-router-dom';
 import { ViewNgoParticipationsList } from "../../components/NgoParticipationComponents/ViewNgoParticipationsList";
 import { SearchAndFilter } from '../../components/NgoParticipationComponents/SearchAndFilter';
+import EditNgoParticipation from "../../components/NgoParticipationComponents/EditNgoParticipation";
 // End Create new ngoParticipations Modal
 
 function MembersLists(props) {
@@ -90,7 +91,7 @@ MembersLists.propTypes = {
   page: PropTypes.number.isRequired,
   rowsPerPage: PropTypes.number.isRequired,
 };
-export default function NgoPartcipationsList() {
+export default function NgoParticipationsList() {
   //NgoParticipations List Refresher
   const [ngoParticipationsRefresh, setNgoParticipationsRefresh] = React.useState(true);
   //Query//
@@ -99,7 +100,10 @@ export default function NgoPartcipationsList() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(6);
   const [totalRecords, setTotalRecords] = React.useState(100);
-
+  // Edit Ngo Participation
+  const [editNgoParticipation, setEditNgoParticipation] = React.useState(null);
+  const [editOpen, setEditOpen] = React.useState(false);
+  
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
     setQuery((oldValues)=>{
@@ -119,17 +123,24 @@ export default function NgoPartcipationsList() {
     })
     setNgoParticipationsRefresh(true);
   };
-
+  const handleEditOpen = (ngoParticipation) => {
+    setEditNgoParticipation(ngoParticipation)
+    setEditOpen(true);
+  };
+  const handleEditClose = () => {
+    setEditOpen(false);
+    setNgoParticipationsRefresh(true);
+  };
   return (
     <>
       {/* Page title */}
       <div className={styles.pageTitle}>
-        <h1>NGO Participation Requests List</h1>
+        <h1>NGO Participation List</h1>
         <ul>
           <li>
             <Link to="/">Dashboard</Link>
           </li>
-          <li>NGO Participation Requests List</li>
+          <li>NGO Participation List</li>
         </ul>
       </div>
 
@@ -161,10 +172,28 @@ export default function NgoPartcipationsList() {
           >
             Flood NGO Participation Requests List
           </Typography>
-          
+          <Link to = "/ngo_participations/add">
+            <Button
+              variant="contained"
+              sx={{
+                textTransform: "capitalize",
+                borderRadius: "8px",
+                fontWeight: "500",
+                fontSize: "13px",
+                padding: "12px 20px",
+                color: "#fff !important",
+              }}
+            >
+              <AddIcon
+                sx={{ position: "relative", top: "-1px" }}
+                className='mr-5px'
+              />{" "}
+              Add NGO Participation Post
+            </Button>
+          </Link>
         </Box>
         <SearchAndFilter setNgoParticipationsRefresh={setNgoParticipationsRefresh} offset={page*rowsPerPage} limit = {rowsPerPage} query = {query} setQuery = {setQuery}/>
-        <ViewNgoParticipationsList ngoParticipationsRefresh={ngoParticipationsRefresh} setNgoParticipationsRefresh={setNgoParticipationsRefresh} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
+        <ViewNgoParticipationsList ngoParticipationsRefresh={ngoParticipationsRefresh} setNgoParticipationsRefresh={setNgoParticipationsRefresh} query={query} rowsPerPage={rowsPerPage} totalRows={10} handleEditOpen={handleEditOpen}/>
         <TableContainer
           component={Paper}
           sx={{
@@ -198,7 +227,18 @@ export default function NgoPartcipationsList() {
           </Table>
         </TableContainer>
       </Card>
+
+      {
+        /*Update News*/
+      }
       
+      <EditNgoParticipation 
+        handleClose={handleEditClose}
+        aria-labelledby="customized-dialog-title"
+        open={editOpen}
+        ngoParticipation={editNgoParticipation}
+        setNgoParticipation={setEditNgoParticipation}
+      />
     </>
   );
 }

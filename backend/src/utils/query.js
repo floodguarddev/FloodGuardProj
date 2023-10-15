@@ -104,12 +104,25 @@ function addBooleanQuery(key, mongooseQuery, queryJson){
   }
 }
 
-function simpleQuerySearch(key, fieldsArray, mongooseQuery, queryJson){
+function addSimpleQuerySearch(fieldsArray, mongooseQuery, queryJson){
+  //Check if Simple Query has beeen made or not//
+  if(!queryJson.q)
+    return false;
 
+  let stringQuery =  {$regex: queryJson.q, $options : 'i'}
+
+  simpleQuery = [];
+
+  fieldsArray.forEach((fieldArr)=>{
+    let field = arrayToNestedKey(fieldArr);
+    simpleQuery.push({ [field]: stringQuery });
+  })
   
+  mongooseQuery.$or = simpleQuery;
 
+  return true;
 }
 
 module.exports = {
-  addDateQuery, addStringQuery, addBooleanQuery, addNumberQuery
+  addDateQuery, addStringQuery, addBooleanQuery, addNumberQuery, addSimpleQuerySearch
 };

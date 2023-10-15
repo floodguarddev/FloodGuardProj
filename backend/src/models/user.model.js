@@ -31,6 +31,11 @@ const User = new Schema({
     required: true,
     default: 0
   },
+  createdDate:{
+    type: Date,
+    required: true,
+    default: new Date()
+  },
   userPhotoLink: {
     type: String,
     default: null

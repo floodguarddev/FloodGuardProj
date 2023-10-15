@@ -28,7 +28,7 @@ async function deleteFundRaisingRequestByNGO(req, res, next){
 
         let fundRaisingRequest = await fundRaisingServices.deleteFundRaisingRequestByNGO(ngoId, fundRaisingRequestId)
 
-        return res.status(200).send({fundRaisingRequest})
+        return res.status(200).send(messageResponse("success", "Fund Raising Post has been deleted successfully"));
     }
     catch(error){
         next(error)
@@ -75,7 +75,7 @@ async function viewMyFundRaisingRequests(req, res, next){
         let query = req.query;
         addStringQuery('postTitle', mongooseQuery, query);
         addStringQuery('postDescription', mongooseQuery, query);
-        addDateQuery('requestedDate', mongooseQuery, query);
+        addDateQuery('requestDate', mongooseQuery, query);
         //Pagination//
         let limit = parseInt(req.query.limit) || process.env.DEFAULT_LIMIT;
         let offset = parseInt(req.query.offset) || 0;
@@ -120,7 +120,7 @@ async function approveFundRaisingRequest(req, res, next){
 
         let fundRaising = await fundRaisingServices.approveFundRaisingRequest(requestId);
 
-        return res.send(message("success", "Fund raising request has been approved successfully"));
+        return res.send(messageResponse("success", "Fund raising request has been approved successfully"));
     }
     catch(error){
         next(error);

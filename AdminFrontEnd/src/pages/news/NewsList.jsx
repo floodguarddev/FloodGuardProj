@@ -100,7 +100,11 @@ export default function NewsList() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(6);
   const [totalRecords, setTotalRecords] = React.useState(100);
-
+  
+  // Edit News Model
+  const [editNews, setEditNews] = React.useState(null);
+  const [editOpen, setEditOpen] = React.useState(false);
+  
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
     setQuery((oldValues)=>{
@@ -121,9 +125,6 @@ export default function NewsList() {
     setNewsRefresh(true);
   };
 
-  // Edit News Model
-  const [editNews, setEditNews] = React.useState(null);
-  const [editOpen, setEditOpen] = React.useState(false);
   const handleEditOpen = (news) => {
     setEditNews(news)
     setEditOpen(true);

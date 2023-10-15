@@ -91,6 +91,7 @@ let ngoParticipationFiles = multer({
 let ngoParticipationFilesByAdmin = multer({
   storage: multer.diskStorage({
     destination: (req, file, cb) => {
+      console.log(req);
       console.log(req.params.userId);
       let dir = __basedir + `/public/uploads/ngos/${req.params.ngoId}/participation_posts/`;
       createDirIfNotExists(dir);

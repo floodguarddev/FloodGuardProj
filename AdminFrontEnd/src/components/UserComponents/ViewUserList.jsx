@@ -16,7 +16,7 @@ import { useView } from '@/context/ViewContext';
 import { useNavigate } from "react-router-dom";
 import {deleteUser} from "@/services/users.services"
 import { jsonToSearchQuery } from '../../utils/query';
-export const ViewUserList = ({rowsPerPage, query, handleEditOpen, usersRefresh, setUsersRefresh}) => {
+export const ViewUserList = ({setTotalRecords, rowsPerPage, query, handleEditOpen, usersRefresh, setUsersRefresh}) => {
   const navigate = useNavigate();
   const [userContext, setUserContext] = useUser();
   const [usersList,setUsersList]=useState(null);
@@ -33,11 +33,12 @@ export const ViewUserList = ({rowsPerPage, query, handleEditOpen, usersRefresh, 
 
         getUsersList(userContext.token, searchQuery).then(
             (response)=>{
-                return response.data.data.users;
+                return response.data.data;
             }
-        ).then((users)=>{
-            setUsersList(users);
-            setEmptyRows(rowsPerPage - users.length) ;
+        ).then((data)=>{
+            setTotalRecords(data.total)
+            setUsersList(data.users);
+            setEmptyRows(rowsPerPage - data.users.length) ;
             setUsersRefresh(false);
         }).catch((error)=>{
             enqueueSnackbar(error.message || error.response.data.message, { variant: "error", anchorOrigin: {

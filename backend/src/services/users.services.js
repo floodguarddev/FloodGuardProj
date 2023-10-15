@@ -400,9 +400,9 @@ async function changeUserPassword(userId, newPassword){
 }
 
 async function viewUsers(query, limit, offset){
-    let users = await getUsersByQuery(query, limit, offset);
+    let {total, users} = await getUsersByQuery(query, limit, offset);
 
-    return users;
+    return {total, users};
 }
 
 module.exports = {signup, signin, sendPasswordResetEmail, resetPassword, sendVerificationEmail, verifyEmail, getUserProfile, setPassword, refreshToken, signout, addUser, deleteUser, editUser, viewUsers, changeUserPassword}
