@@ -11,6 +11,7 @@ const fundRaisingController = require('../controllers/fund_raising.controllers')
 const donationController = require('../controllers/donations.controller');
 const newsController = require('../controllers/news.controller');
 const floodPrecautionController = require('../controllers/flood_precautions.controller')
+const reportController = require('../controllers/reports.controllers');
 /* Module 1: User Profiling */
 /* -- Admin Profile -- */
 router.post('/signin', adminController.signin);
@@ -130,5 +131,8 @@ router.get('/precautions/:precautionId', verifyAdmin, floodPrecautionController.
 router.post('/precautions', verifyAdmin, floodPrecautionController.addPrecaution);
 router.delete('/precautions/:precautionId', verifyAdmin, floodPrecautionController.deletePrecaution);
 router.put('/precautions/:precautionId', verifyAdmin, floodPrecautionController.editPrecaution);
+
+//Reports//
+router.get('/reports/users', verifyAdmin, reportController.getUsersStatus);
 
 module.exports = router;

@@ -78,9 +78,9 @@ async function getDonationsByUser(req, res, next){
         let limit = parseInt(req.query.limit) || process.env.DEFAULT_LIMIT;
         let offset = parseInt(req.query.offset) || 0; 
 
-        let myDonations = await donationServices.getDonationsByUser(userId, mongooseQuery, limit, offset);
+        let donations = await donationServices.getDonationsByUser(userId, mongooseQuery, limit, offset);
         
-        return res.status(200).send(dataResponse("success", {donations: myDonations}));
+        return res.status(200).send(dataResponse("success", {...donations}));
     }
     catch(error){
         next(error);
@@ -103,9 +103,9 @@ async function getDonationsByNGO(req, res, next){
         let limit = parseInt(req.query.limit) || process.env.DEFAULT_LIMIT;
         let offset = parseInt(req.query.offset) || 0; 
 
-        let myDonations = await donationServices.getDonationsByNGO(ngoId, mongooseQuery, limit, offset);
+        let donations = await donationServices.getDonationsByNGO(ngoId, mongooseQuery, limit, offset);
         
-        return res.status(200).send(dataResponse("success", {donations: myDonations}));
+        return res.status(200).send(dataResponse("success", {...donations}));
     }
     catch(error){
         next(error);
@@ -141,7 +141,7 @@ async function getDonations(req, res, next){
 
         let donations = await donationServices.viewDonations(mongooseQuery, limit, offset);
 
-        return res.status(200).send(dataResponse("success", {donations}));
+        return res.status(200).send(dataResponse("success", {...donations}));
 
     }
     catch(error){

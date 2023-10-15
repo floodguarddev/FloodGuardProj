@@ -193,7 +193,7 @@ export default function FundRaisingsList() {
           </Link>
         </Box>
         <SearchAndFilter setFundRaisingsRefresh={setFundRaisingsRefresh} offset={page*rowsPerPage} limit = {rowsPerPage} query = {query} setQuery = {setQuery}/>
-        <ViewFundRaisingsList fundRaisingsRefresh={fundRaisingsRefresh} setFundRaisingsRefresh={setFundRaisingsRefresh} query={query} rowsPerPage={rowsPerPage} totalRows={10} handleEditOpen={handleEditOpen}/>
+        <ViewFundRaisingsList setTotalRecords={setTotalRecords} fundRaisingsRefresh={fundRaisingsRefresh} setFundRaisingsRefresh={setFundRaisingsRefresh} query={query} rowsPerPage={rowsPerPage} totalRows={10} handleEditOpen={handleEditOpen}/>
         <TableContainer
           component={Paper}
           sx={{

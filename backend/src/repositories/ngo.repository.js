@@ -48,10 +48,12 @@ async function getNGOsByQuery(query, limit = process.env.DEFAULT_LIMIT, offset =
         ngoContactNumber: 1,
         ngoId: 1
     })
+    .sort({approvedDate: -1})
     .skip(offset)
     .limit(limit);
 
-    return ngos;
+    const total = await NGO.countDocuments(query);
+    return {total, ngos};
 }
 
 async function getNGOById(ngoId){

@@ -9,13 +9,15 @@ async function getTransactionsByQuery(query, limit = process.env.DEFAULT_LIMIT, 
             { $lookup: { from:"ngos", localField:'reciever', foreignField:"_id" , as : 'reciever' } },
             { $unwind: "$reciever"},
             { $unwind: "$sender"},
+            { $sort: {transactionDate: -1}},
             { $match: query},
             { $skip: offset},
             { $limit: parseInt(limit)}
         ]
     );
 
-
+    const total = await Transaction.countDocuments(query);
+    
     transactions = transactions.map(
         (obj)=>{
             let newObj = {
@@ -32,7 +34,7 @@ async function getTransactionsByQuery(query, limit = process.env.DEFAULT_LIMIT, 
         }
     );
 
-    return transactions;
+    return {total, transactions};
 }
 
 async function getTransactionById(id){

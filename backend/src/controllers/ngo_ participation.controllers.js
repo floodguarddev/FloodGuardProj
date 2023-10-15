@@ -82,7 +82,7 @@ async function viewMyNGOParticipationRequests(req, res, next){
 
         let ngoParticipationRequests = await ngoParticipationServices.viewNGOParticipationRequestsByNGO(ngoId, query, limit, offset)
         
-        return res.status(200).send(dataResponse("success", {ngoParticipationRequests}));
+        return res.status(200).send(dataResponse("success", {...ngoParticipationRequests}));
     
     }
     catch(error){
@@ -107,7 +107,7 @@ async function viewNGOParticipationRequests(req, res, next){
         
         let ngoParticipationRequests = await ngoParticipationServices.viewNGOParticipationRequests(mongooseQuery, limit, offset);
 
-        return res.send(dataResponse("success", {ngoParticipationRequests}));
+        return res.send(dataResponse("success", {...ngoParticipationRequests}));
     }
     catch(error){
         next(error)
@@ -185,7 +185,7 @@ async function viewNGOParticipationPosts(req, res, next){
         
         let ngoParticipationPosts = await ngoParticipationServices.viewNGOParticipationPosts(mongooseQuery, limit, offset);
 
-        return res.send(dataResponse("success", {ngoParticipationPosts}));
+        return res.send(dataResponse("success", {...ngoParticipationPosts}));
     }
     catch(error){
         next(error);
@@ -251,7 +251,7 @@ async function viewNGOParticipationPostsByNGO(req, res, next){
         
         let ngoParticipationPosts = await ngoParticipationServices.viewNGOParticipationPostsByNGO(ngoId, mongooseQuery, limit, offset);
 
-        return res.send(dataResponse("success", {ngoParticipationPosts}));
+        return res.send(dataResponse("success", {...ngoParticipationPosts}));
     }
     catch(error){
         next(error);

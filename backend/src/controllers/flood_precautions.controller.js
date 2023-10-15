@@ -65,7 +65,7 @@ async function viewPrecautions(req, res, next){
         let offset = parseInt(req.query.offset) || 0;
         let flood_precautions = await floodPrecautionServices.getFloodPrecautions( mongooseQuery, limit, offset);
 
-        return res.status(200).send(dataResponse("success", {flood_precautions}))
+        return res.status(200).send(dataResponse("success", {...flood_precautions}))
     }
     catch(error)
     {

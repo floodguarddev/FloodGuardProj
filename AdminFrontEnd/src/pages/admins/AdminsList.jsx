@@ -211,7 +211,7 @@ export default function AdminsList() {
             className="dark-table"
           >
             {/* View Admins */}
-            <ViewAdminList adminsRefresh={adminsRefresh} setAdminsRefresh={setAdminsRefresh} handleEditOpen={handleEditOpen} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
+            <ViewAdminList setTotalRecords={setTotalRecords} adminsRefresh={adminsRefresh} setAdminsRefresh={setAdminsRefresh} handleEditOpen={handleEditOpen} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
 
             <TableFooter>
               <TableRow>

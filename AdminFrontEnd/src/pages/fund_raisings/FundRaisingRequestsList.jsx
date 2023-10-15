@@ -164,7 +164,7 @@ export default function FundRaisingRequestsList() {
           
         </Box>
         <SearchAndFilter setFundRaisingRequestsRefresh={setFundRaisingRequestsRefresh} offset={page*rowsPerPage} limit = {rowsPerPage} query = {query} setQuery = {setQuery}/>
-        <ViewFundRaisingRequestsList fundRaisingRequestsRefresh={fundRaisingRequestsRefresh} setFundRaisingRequestsRefresh={setFundRaisingRequestsRefresh} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
+        <ViewFundRaisingRequestsList setTotalRecords={setTotalRecords} fundRaisingRequestsRefresh={fundRaisingRequestsRefresh} setFundRaisingRequestsRefresh={setFundRaisingRequestsRefresh} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
         <TableContainer
           component={Paper}
           sx={{

@@ -27,9 +27,12 @@ async function getRequestsByQuery(query, limit = process.env.DEFAULT_LIMIT, offs
     let rescuerRequests = await Rescuer_Request.find(query)
     .select({"fullName": 1, "cnicNumber": 1, "mobileNumber":1, "address":1, "rescuerImageLink": 1})
     .skip(offset)
+    .sort({registrationDate: -1})
     .limit(limit);
 
-    return rescuerRequests;
+    const total = await Rescuer_Request.countDocuments(query);
+
+    return {total, rescuerRequests};
 }
 
 async function getRescuerRequestById(id){

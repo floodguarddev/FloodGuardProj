@@ -8,6 +8,7 @@ async function getRequestsByQuery(query, limit = process.env.DEFAULT_LIMIT, offs
             { $lookup: { from:"ngos", localField:'ngoId', foreignField:"_id" , as : 'ngo' } },
             { $unwind: "$ngo" },
             { $match: query},
+            { $sort: {requestedDate: -1}},
             { $skip: offset},
             { $limit: parseInt(limit)}
         ]
@@ -20,8 +21,9 @@ async function getRequestsByQuery(query, limit = process.env.DEFAULT_LIMIT, offs
             return newObj;
         }
     );
+    const total = await NGO_Participation_Post_Request.countDocuments(query);
 
-    return ngoParticipationRequests;
+    return {total, ngoParticipationRequests};
 }
 
 async function getNGOParticipationRequestById(id){

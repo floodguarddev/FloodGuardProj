@@ -16,7 +16,7 @@ import { Box, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import { getPublishDate } from '../../utils/date';
 
-export const ViewFundRaisingRequestsList = ({query, fundRaisingRequestsRefresh, setFundRaisingRequestsRefresh}) => {
+export const ViewFundRaisingRequestsList = ({setTotalRecords, query, fundRaisingRequestsRefresh, setFundRaisingRequestsRefresh}) => {
   const navigate = useNavigate();
   const [userContext, setUserContext] = useUser();
   const [fundRaisingRequestList,setFundRaisingRequestList]=useState(null);
@@ -33,11 +33,12 @@ export const ViewFundRaisingRequestsList = ({query, fundRaisingRequestsRefresh, 
         getFundRaisingRequestsList(userContext.token, searchQuery).then(
             (response)=>{
                 console.log(response.data);
-                return response.data.data.fundRaisingRequests;
+                return response.data.data;
             }
-        ).then((fundRaisingRequests)=>{
-            console.log(fundRaisingRequests);
-            setFundRaisingRequestList(fundRaisingRequests);
+        ).then((data)=>{
+            console.log(data.fundRaisingRequests);
+            setTotalRecords(data.total);
+            setFundRaisingRequestList(data.fundRaisingRequests);
             setFundRaisingRequestsRefresh(false);
         }).catch((error)=>{
             enqueueSnackbar(error.message || error.response.data.message, { variant: "error", anchorOrigin: {

@@ -196,7 +196,7 @@ export default function NewsList() {
           
         </Box>
         <SearchAndFilter setNewsRefresh={setNewsRefresh} offset={page*rowsPerPage} limit = {rowsPerPage} query = {query} setQuery = {setQuery}/>
-        <ViewNewsList newsRefresh={newsRefresh} setNewsRefresh={setNewsRefresh} handleEditOpen={handleEditOpen} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
+        <ViewNewsList setTotalRecords={setTotalRecords} newsRefresh={newsRefresh} setNewsRefresh={setNewsRefresh} handleEditOpen={handleEditOpen} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
         <TableContainer
           component={Paper}
           sx={{

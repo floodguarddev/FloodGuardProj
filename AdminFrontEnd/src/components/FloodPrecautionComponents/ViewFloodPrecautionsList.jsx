@@ -17,7 +17,7 @@ import { Box, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import styles from "@/components/FloodPrecautionComponents/ViewFloodPrecautionsList.module.css";
 
-export const ViewFloodPrecautionsList = ({rowsPerPage, query, handleEditOpen, floodPrecautionsRefresh, setFloodPrecautionsRefresh}) => {
+export const ViewFloodPrecautionsList = ({setTotalRecords, rowsPerPage, query, handleEditOpen, floodPrecautionsRefresh, setFloodPrecautionsRefresh}) => {
   const navigate = useNavigate();
   const [userContext, setUserContext] = useUser();
   const [precautionsList,setPrecautionsList]=useState(null);
@@ -33,11 +33,11 @@ export const ViewFloodPrecautionsList = ({rowsPerPage, query, handleEditOpen, fl
 
         getPrecautionsList(userContext.token, searchQuery).then(
             (response)=>{
-                console.log("Response", response);
-                return response.data.data.flood_precautions;
+                return response.data.data;
             }
-        ).then((flood_precautions)=>{
-            setPrecautionsList(flood_precautions);
+        ).then((data)=>{
+            setTotalRecords(data.total);
+            setPrecautionsList(data.flood_precautions);
             setFloodPrecautionsRefresh(false);
         }).catch((error)=>{
             enqueueSnackbar(error.message || error.response.data.message, { variant: "error", anchorOrigin: {

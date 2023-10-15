@@ -18,7 +18,7 @@ import { getPublishDate } from '../../utils/date';
 import DeleteIcon from "@mui/icons-material/Delete";
 import DriveFileRenameOutlineIcon from "@mui/icons-material/DriveFileRenameOutline";
 
-export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipationsRefresh, setNgoParticipationsRefresh}) => {
+export const ViewNgoParticipationsList = ({setTotalRecords, query, handleEditOpen, ngoParticipationsRefresh, setNgoParticipationsRefresh}) => {
   const navigate = useNavigate();
   const [userContext, setUserContext] = useUser();
   const [ngoParticipationList,setNgoParticipationList]=useState(null);
@@ -34,12 +34,11 @@ export const ViewNgoParticipationsList = ({query, handleEditOpen, ngoParticipati
 
         getNgoParticipationsList(userContext.token, searchQuery).then(
             (response)=>{
-                console.log("Response", response);
-                return response.data.data.ngoParticipationPosts;
+                return response.data.data;
             }
-        ).then((ngoParticipationPosts)=>{
-            console.log(ngoParticipationPosts);
-            setNgoParticipationList(ngoParticipationPosts);
+        ).then((data)=>{
+            setTotalRecords(data.total);
+            setNgoParticipationList(data.ngoParticipationPosts);
             setNgoParticipationsRefresh(false);
         }).catch((error)=>{
             enqueueSnackbar(error.message || error.response.data.message, { variant: "error", anchorOrigin: {

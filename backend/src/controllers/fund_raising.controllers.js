@@ -82,7 +82,7 @@ async function viewMyFundRaisingRequests(req, res, next){
 
         let fundRaisingRequests = await fundRaisingServices.viewFundRaisingRequestsByNGO(ngoId, query, limit, offset)
         
-        return res.status(200).send(dataResponse("success", {fundRaisingRequests}));
+        return res.status(200).send(dataResponse("success", {...fundRaisingRequests}));
     
     }
     catch(error){
@@ -107,7 +107,7 @@ async function viewFundRaisingRequests(req, res, next){
         
         let fundRaisingRequests = await fundRaisingServices.viewFundRaisingRequests(mongooseQuery, limit, offset);
 
-        return res.send(dataResponse("success", {fundRaisingRequests}));
+        return res.send(dataResponse("success", {...fundRaisingRequests}));
     }
     catch(error){
         next(error)
@@ -185,7 +185,7 @@ async function viewFundRaisingPosts(req, res, next){
         
         let fundRaisingPosts = await fundRaisingServices.viewFundRaisingPosts(mongooseQuery, limit, offset);
 
-        return res.send(dataResponse("success", {fundRaisingPosts}));
+        return res.send(dataResponse("success", {...fundRaisingPosts}));
     }
     catch(error){
         next(error);
@@ -251,7 +251,7 @@ async function viewFundRaisingPostsByNGO(req, res, next){
         
         let fundRaisingPosts = await fundRaisingServices.viewFundRaisingPostsByNGO(ngoId, mongooseQuery, limit, offset);
 
-        return res.send(dataResponse("success", {fundRaisingPosts}));
+        return res.send(dataResponse("success", {...fundRaisingPosts}));
     }
     catch(error){
         next(error);

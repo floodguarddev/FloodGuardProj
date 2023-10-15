@@ -38,11 +38,11 @@ async function viewRescuerRequests(req, res, next){
         
         let rescuerRequests = await rescuerServices.viewRescuerRequests(mongooseQuery, limit, offset);
 
-        return res.send(dataResponse("success", {rescuerRequests}));
+        return res.send(dataResponse("success", {...rescuerRequests}));
     }
     catch(error){
         next(error)
-    }
+    } 
 }
 
 async function viewSpecificRescuerRequest(req, res, next){
@@ -134,7 +134,7 @@ async function viewRescuers(req, res, next){
         
         let rescuers = await rescuerServices.viewRescuers(mongooseQuery, limit, offset);
 
-        return res.send(dataResponse("success", {rescuers}));
+        return res.send(dataResponse("success", {...rescuers}));
     }
     catch(error){
         next(error)

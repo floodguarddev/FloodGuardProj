@@ -48,7 +48,7 @@ async function viewNGORequests(req, res, next){
         
         let ngoRequests = await ngoServices.viewNGORequests(mongooseQuery, limit, offset);
 
-        return res.send(dataResponse("success", {ngoRequests}));
+        return res.send(dataResponse("success", {...ngoRequests}));
     }
     catch(error){
         next(error)
@@ -156,7 +156,7 @@ async function viewNGOs(req, res, next){
         
         let ngos = await ngoServices.viewNGOs(mongooseQuery, limit, offset);
 
-        return res.send(dataResponse("success", {ngos}));
+        return res.send(dataResponse("success", {...ngos}));
     }
     catch(error){
         next(error)

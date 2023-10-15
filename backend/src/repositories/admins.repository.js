@@ -27,8 +27,8 @@ async function getAdminById(id){
 
 async function getAdminsByQuery(query, limit = process.env.DEFAULT_LIMIT, offset = 0){
     let admins = await Admin.find(query).skip(offset).limit(limit);
-
-    return admins;
+    const total = await Admin.countDocuments(query);
+    return {total, admins};
 }
 
 module.exports = {getAdminUsingEmail, getAdminById, isAdminAvailableUsingEmail, getAdminsByQuery}

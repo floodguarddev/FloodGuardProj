@@ -16,7 +16,7 @@ import { Box, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import { getPublishDate } from '../../utils/date';
 
-export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequestsRefresh, setNgoParticipationRequestsRefresh}) => {
+export const ViewNgoParticipationRequestsList = ({setTotalRecords, query, ngoParticipationRequestsRefresh, setNgoParticipationRequestsRefresh}) => {
   const navigate = useNavigate();
   const [userContext, setUserContext] = useUser();
   const [ngoParticipationRequestList,setNgoParticipationRequestList]=useState(null);
@@ -33,11 +33,11 @@ export const ViewNgoParticipationRequestsList = ({query, ngoParticipationRequest
         getNgoParticipationRequestsList(userContext.token, searchQuery).then(
             (response)=>{
                 console.log(response.data);
-                return response.data.data.ngoParticipationRequests;
+                return response.data.data;
             }
-        ).then((ngoParticipationRequests)=>{
-            console.log(ngoParticipationRequests);
-            setNgoParticipationRequestList(ngoParticipationRequests);
+        ).then((data)=>{
+            setTotalRecords(data.total);
+            setNgoParticipationRequestList(data.ngoParticipationRequests);
             setNgoParticipationRequestsRefresh(false);
         }).catch((error)=>{
             enqueueSnackbar(error.message || error.response.data.message, { variant: "error", anchorOrigin: {

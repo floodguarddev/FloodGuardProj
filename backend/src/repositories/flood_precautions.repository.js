@@ -2,18 +2,18 @@ let Flood_Precaution = require('./../models/flood_precaution.model');
 const createHttpError = require('http-errors');
 
 async function getFloodPrecautionsByQuery(query, limit, offset){
-    let flood_precatuions = await Flood_Precaution.find(query)
+    let flood_precautions = await Flood_Precaution.find(query)
     .skip(offset)
     .limit(limit);
-
-    return flood_precatuions;
+    const total = await Flood_Precaution.countDocuments(query);
+    return {total, flood_precautions};
 }
 
 async function getFloodPrecautionById(id){
-    let flood_precatuion = await Flood_Precaution.findById(id).catch((error)=>{
+    let flood_precaution = await Flood_Precaution.findById(id).catch((error)=>{
         throw new createHttpError.InternalServerError(error);
     });
 
-    return flood_precatuion;
+    return flood_precaution;
 }
 module.exports = {getFloodPrecautionsByQuery, getFloodPrecautionById}

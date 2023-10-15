@@ -40,10 +40,11 @@ async function getRequestsByQuery(query, limit = process.env.DEFAULT_LIMIT, offs
         ngoContactNumber: 1,
         ngoId: 1
     })
+    .sort({registrationDate: -1})
     .skip(offset)
     .limit(limit);
-
-    return ngoRequests;
+    const total = await NGO_Request.countDocuments(query);
+    return {total, ngoRequests};
 }
 
 async function getNGORequestById(id){

@@ -162,7 +162,7 @@ async function viewAdmins(req, res, next){
         
         let admins = await adminServices.viewAdmins(mongooseQuery, limit, offset);
 
-        return res.send(dataResponse("success", {admins}));
+        return res.send(dataResponse("success", {...admins}));
     }
     catch(error){
         return next(error);

@@ -16,7 +16,7 @@ import { useView } from '@/context/ViewContext';
 import { useNavigate } from "react-router-dom";
 import {deleteAdmin} from "@/services/admins.services"
 import { jsonToSearchQuery } from '../../utils/query';
-export const ViewAdminList = ({rowsPerPage, query, handleEditOpen, adminsRefresh, setAdminsRefresh}) => {
+export const ViewAdminList = ({setTotalRecords, rowsPerPage, query, handleEditOpen, adminsRefresh, setAdminsRefresh}) => {
   const navigate = useNavigate();
   const [adminContext, setAdminContext] = useUser();
   const [adminsList,setAdminsList]=useState(null);
@@ -34,11 +34,12 @@ export const ViewAdminList = ({rowsPerPage, query, handleEditOpen, adminsRefresh
         getAdminsList(adminContext.token, searchQuery).then(
             (response)=>{
                 console.log("Response", response);
-                return response.data.data.admins;
+                return response.data.data;
             }
-        ).then((admins)=>{
-            setAdminsList(admins);
-            setEmptyRows(rowsPerPage - admins.length) ;
+        ).then((data)=>{
+            setTotalRecords(data.total);
+            setAdminsList(data.admins);
+            setEmptyRows(rowsPerPage - data.admins.length) ;
             setAdminsRefresh(false);
         }).catch((error)=>{
             enqueueSnackbar(error.message || error.response.data.message, { variant: "error", anchorOrigin: {

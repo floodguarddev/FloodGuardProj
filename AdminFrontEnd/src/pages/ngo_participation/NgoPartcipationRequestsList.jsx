@@ -164,7 +164,7 @@ export default function NgoParticipationRequestsList() {
           
         </Box>
         <SearchAndFilter setNgoParticipationRequestsRefresh={setNgoParticipationRequestsRefresh} offset={page*rowsPerPage} limit = {rowsPerPage} query = {query} setQuery = {setQuery}/>
-        <ViewNgoParticipationRequestsList ngoParticipationRequestsRefresh={ngoParticipationRequestsRefresh} setNgoParticipationRequestsRefresh={setNgoParticipationRequestsRefresh} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
+        <ViewNgoParticipationRequestsList setTotalRecords={setTotalRecords} ngoParticipationRequestsRefresh={ngoParticipationRequestsRefresh} setNgoParticipationRequestsRefresh={setNgoParticipationRequestsRefresh} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
         <TableContainer
           component={Paper}
           sx={{

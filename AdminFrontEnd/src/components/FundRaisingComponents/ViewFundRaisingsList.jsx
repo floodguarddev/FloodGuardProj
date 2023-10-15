@@ -35,7 +35,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   },
 }));
 
-export const ViewFundRaisingsList = ({query, handleEditOpen, fundRaisingsRefresh, setFundRaisingsRefresh}) => {
+export const ViewFundRaisingsList = ({setTotalRecords, query, handleEditOpen, fundRaisingsRefresh, setFundRaisingsRefresh}) => {
   const navigate = useNavigate();
   const [userContext, setUserContext] = useUser();
   const [fundRaisingList,setFundRaisingList]=useState(null);
@@ -52,11 +52,12 @@ export const ViewFundRaisingsList = ({query, handleEditOpen, fundRaisingsRefresh
         getFundRaisingsList(userContext.token, searchQuery).then(
             (response)=>{
                 console.log("Response", response);
-                return response.data.data.fundRaisingPosts;
+                return response.data.data;
             }
-        ).then((fundRaisingPosts)=>{
-            console.log(fundRaisingPosts);
-            setFundRaisingList(fundRaisingPosts);
+        ).then((data)=>{
+            console.log(data.fundRaisingPosts);
+            setTotalRecords(data.total)
+            setFundRaisingList(data.fundRaisingPosts);
             setFundRaisingsRefresh(false);
         }).catch((error)=>{
             enqueueSnackbar(error.message || error.response.data.message, { variant: "error", anchorOrigin: {

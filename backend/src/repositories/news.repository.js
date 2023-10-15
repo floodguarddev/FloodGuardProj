@@ -4,9 +4,10 @@ const createHttpError = require('http-errors');
 async function getNewsByQuery(query, limit, offset){
     let news = await News.find(query)
     .skip(offset)
+    .sort({publishedAt: -1})
     .limit(limit);
-
-    return news;
+    const total = await News.countDocuments(query);
+    return {total, news};
 }
 
 async function getNewsById(id){

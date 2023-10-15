@@ -8,6 +8,7 @@ async function getPostsByQuery(query, limit = process.env.DEFAULT_LIMIT, offset 
             { $lookup: { from:"ngos", localField:'ngoId', foreignField:"_id" , as : 'ngo' } },
             { $unwind: "$ngo" },
             { $match: query},
+            {$sort: {approvedDate : -1}},
             { $skip: offset},
             { $limit: parseInt(limit)}
         ]
@@ -21,8 +22,8 @@ async function getPostsByQuery(query, limit = process.env.DEFAULT_LIMIT, offset 
             return newObj;
         }
     );
-
-    return fundRaisingPosts;
+    const total = await Fund_Raising_Post.countDocuments(query);
+    return {total, fundRaisingPosts};
 }
 
 async function getFundRaisingById(id){

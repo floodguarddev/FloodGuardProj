@@ -33,7 +33,7 @@ import NotFound from './pages/general/NotFound'
 import Logout from './pages/auth/Logout'
 import Account from './pages/settings/Account';
 import Security from './pages/settings/Security';
-
+import Dashboard from './pages/dashboard/Dashboard'
 //Users
 import UsersList from './pages/users/UsersList'
 import AddUserPage from './pages/users/AddUserPage';
@@ -118,6 +118,10 @@ function App() {
               <Layout>
                 <Routes >
                   <Route path="logout" element={<Logout/>} />
+                  <Route path = '/'>
+                    <Route path="/" element={<Navigate to="/dashboard" />}/>
+                    <Route path='/dashboard' element={<Dashboard />}/>
+                  </Route>
                   <Route path='/settings'>
                     <Route path='/settings/account' element={<Account/>}/>
                     <Route path='/settings/security' element={<Security/>}/>

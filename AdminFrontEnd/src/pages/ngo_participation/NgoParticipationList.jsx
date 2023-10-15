@@ -193,7 +193,7 @@ export default function NgoParticipationsList() {
           </Link>
         </Box>
         <SearchAndFilter setNgoParticipationsRefresh={setNgoParticipationsRefresh} offset={page*rowsPerPage} limit = {rowsPerPage} query = {query} setQuery = {setQuery}/>
-        <ViewNgoParticipationsList ngoParticipationsRefresh={ngoParticipationsRefresh} setNgoParticipationsRefresh={setNgoParticipationsRefresh} query={query} rowsPerPage={rowsPerPage} totalRows={10} handleEditOpen={handleEditOpen}/>
+        <ViewNgoParticipationsList setTotalRecords={setTotalRecords} ngoParticipationsRefresh={ngoParticipationsRefresh} setNgoParticipationsRefresh={setNgoParticipationsRefresh} query={query} rowsPerPage={rowsPerPage} totalRows={10} handleEditOpen={handleEditOpen}/>
         <TableContainer
           component={Paper}
           sx={{

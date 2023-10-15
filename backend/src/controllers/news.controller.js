@@ -71,7 +71,7 @@ async function viewNews(req, res, next){
         let offset = parseInt(req.query.offset) || 0;
         let news = await newsServices.getNews( mongooseQuery, limit, offset);
 
-        return res.status(200).send(dataResponse("success", {news}))
+        return res.status(200).send(dataResponse("success", {...news}))
     }
     catch(error)
     {

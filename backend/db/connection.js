@@ -1,5 +1,6 @@
 const { default: mongoose } = require("mongoose");
 const { addAdmin } = require("../src/services/admins.services");
+const { seedUsers } = require("../src/seeders/users.seeders");
 
 async function dropAllCollections(){
     const db = mongoose.connection.db;

@@ -17,7 +17,7 @@ import { Box, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import { getPublishDate } from '../../utils/date';
 
-export const ViewNewsList = ({rowsPerPage, query, handleEditOpen, newsRefresh, setNewsRefresh}) => {
+export const ViewNewsList = ({setTotalRecords, rowsPerPage, query, handleEditOpen, newsRefresh, setNewsRefresh}) => {
   const navigate = useNavigate();
   const [userContext, setUserContext] = useUser();
   const [newsList,setNewsList]=useState(null);
@@ -33,10 +33,11 @@ export const ViewNewsList = ({rowsPerPage, query, handleEditOpen, newsRefresh, s
 
         getNewsList(userContext.token, searchQuery).then(
             (response)=>{
-                return response.data.data.news;
+                return response.data.data;
             }
-        ).then((news)=>{
-            setNewsList(news);
+        ).then((data)=>{
+            setTotalRecords(data.total);
+            setNewsList(data.news);
             setNewsRefresh(false);
         }).catch((error)=>{
             enqueueSnackbar(error.message || error.response.data.message, { variant: "error", anchorOrigin: {
