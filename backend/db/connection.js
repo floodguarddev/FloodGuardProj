@@ -1,6 +1,9 @@
 const { default: mongoose } = require("mongoose");
 const { addAdmin } = require("../src/services/admins.services");
 const { seedUsers } = require("../src/seeders/users.seeders");
+const { getMonthlyCounts } = require("../src/repositories/transaction.repository");
+const { getNgosSummary } = require("../src/services/reports.services");
+const { getMonthlyUserCounts } = require("../src/repositories/users.repository");
 
 async function dropAllCollections(){
     const db = mongoose.connection.db;
@@ -20,7 +23,7 @@ async function dropAllCollections(){
 mongoose.connect(process.env.DB_URI)
 .then(async ()=>{
     console.log('DB has been successfully connected');
-
+    console.log(await getMonthlyUserCounts())
     // await dropAllCollections();
 
     // console.log('Collections have been deleted from db');

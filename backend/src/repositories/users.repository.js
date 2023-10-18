@@ -69,6 +69,8 @@ async function getMonthlyUserCounts() {
         $project: {
           month: { $month: '$createdDate' },
           year: { $year: '$createdDate' },
+          verified: "$verified",
+          donations: "$donations"
         },
       },
       {
@@ -78,6 +80,8 @@ async function getMonthlyUserCounts() {
             year: '$year',
           },
           count: { $sum: 1 },
+          verified: {$sum: { "$cond": [{ "$eq": ["$verified", true] }, 1, 0] } },
+          donated: {$sum: {"$cond": [{"$gt": ["$donations", 0]}, 1, 0]}}
         },
       },
       {
@@ -87,4 +91,91 @@ async function getMonthlyUserCounts() {
     return userCounts;
 };
 
-module.exports = {getUserUsingEmail, getUserById, getUserRoles, isUserAvailableUsingEmail, getUsersByQuery, getMonthlyUserCounts}
+async function getYearlyUserCount() {
+
+  const currentDate = new Date();
+  const last10YearsDate = new Date(currentDate.getFullYear() - 10, 0, 1);
+
+  const userCounts = await User.aggregate([
+    {
+      $match: {
+        createdDate: {
+          $gte: last10YearsDate,
+          $lte: currentDate,
+        },
+      },
+    },
+    {
+      $project: {
+        year: { $year: '$createdDate' },
+        verified: "$verified",
+          donations: "$donations"
+      },
+    },
+    {
+      $group: {
+        _id: {
+          year: '$year',
+        },
+        count: { $sum: 1 },
+        verified: {$sum: { "$cond": [{ "$eq": ["$verified", true] }, 1, 0] } },
+        donated: {$sum: {"$cond": [{"$gt": ["$donations", 0]}, 1, 0]}}
+      },
+    },
+    {
+      $sort: { '_id.year': 1},
+    },
+  ]);
+  return userCounts;
+};
+
+async function getLast7DaysCount(){
+  const currentDate = new Date();
+  const sevenDaysBackDate = new Date(currentDate.getFullYear(),currentDate.getMonth(),currentDate.getDate() - 7);
+
+  const userCounts = await User.aggregate([
+    {
+      $match: {
+        createdDate: {
+          $gte: sevenDaysBackDate,
+          $lte: currentDate,
+        },
+      },
+    },
+    {
+      $project: {
+        year: {$year: '$createdDate'},
+        month: { $month: '$createdDate' },
+        date: {$dayOfMonth: '$createdDate'},
+        day: { $dayOfWeek: '$createdDate' },
+        verified: "$verified",
+          donations: "$donations"
+      },
+    },
+    {
+      $group: {
+        _id: {
+          year: '$year',
+          month: '$month',
+          date: '$date',
+          day: '$day',
+        },
+        count: { $sum: 1 },
+        verified: {$sum: { "$cond": [{ "$eq": ["$verified", true] }, 1, 0] } },
+          donated: {$sum: {"$cond": [{"$gt": ["$donations", 0]}, 1, 0]}}
+      },
+    },
+    {
+      $sort: { '_id.year': 1, '_id.month': 1, '_id.date': 1},
+    },
+  ]);
+
+  return userCounts;
+}
+
+async function getUsersSummary(){
+  let usersCount = await  getYearlyUserCount();
+  const total = await User.countDocuments({});
+  return {usersCount, total};
+}
+module.exports = {getUserUsingEmail, getUserById, getUserRoles, isUserAvailableUsingEmail, getUsersByQuery, getMonthlyUserCounts, getYearlyUserCount, getLast7DaysCount, getUsersSummary}

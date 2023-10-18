@@ -45,6 +45,11 @@ const Fund_Raising_Post = new Schema({
         type: [{type: Schema.Types.ObjectId, ref: "Transaction"}],
         required: true,
         default: []
+    },
+    completed:{
+        type: Boolean,
+        required: true,
+        default: false
     }
 })
 

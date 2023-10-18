@@ -18,6 +18,7 @@ const NGO = new Schema({
     taxExemptionLink: {type: String, required: true},
     creditCardNumber: {type: String, required: true},
     stripeAccountId: {type:String, default: null},
+    receivedDonations : {type: Number, required: true, default: 0},
     fundRaisingPosts: {
         type: [{type: Schema.Types.ObjectId, ref:'Fund Raising Post'}],
         required: true,

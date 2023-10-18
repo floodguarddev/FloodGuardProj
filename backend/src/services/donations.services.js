@@ -2,6 +2,8 @@ const createHttpError = require('http-errors');
 const ngoRepository = require('../repositories/ngo.repository');
 const { generateStripeVerificationToken, parseStripeVerificationToken } = require('../utils/stripe');
 const Transaction = require('../models/transaction.model');
+const User = require('../models/user.model');
+const NGO = require('../models/ngo.model');
 const transactionRepository = require('../repositories/transaction.repository');
 const fund_raising_postModel = require('../models/fund_raising_post.model');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
@@ -110,6 +112,16 @@ async function successfulPayment(paymentIntentSucceededObj){
             throw new createHttpError.InternalServerError(error);
         }
     )
+    if(ngoId){
+        let ngo = await NGO.findById(ngoId);
+        ngo.recievedDonations = ngo.recievedDonations + amount;
+        await ngo.save();
+    }
+    if(userId){
+        let user = await User.findById(userId);
+        user.donations = user.donations + amount;
+        await user.save();
+    }
     if(postId){
         let post = await fund_raising_postModel.findById(postId).catch((error)=>{
             throw new createHttpError.InternalServerError(error);
@@ -121,7 +133,9 @@ async function successfulPayment(paymentIntentSucceededObj){
         post.transactions.push(transaction._id);
 
         post.recievedAmount = post.recievedAmount + transaction.amount;
-
+        if(post.recievedAmount > post.requestedAmount){
+            post.completed = true;
+        }
         await post.save().catch((error)=>{
             throw new createHttpError.InternalServerError(error);
         });

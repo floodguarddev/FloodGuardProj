@@ -6,20 +6,17 @@ const Local_Strategy = require('../models/local_strategy.model');
 
 const seedUsers = async (numberOfUsers) => {
     let usersIdArray = [];
-    console.log(faker.date.between({
-        from:new Date(new Date().getFullYear() - 1, 0, 1), // One year ago
-        to: new Date() // Today
-    }))
+    let currentDate = new Date();
     try {
         for(let i = 0; i<numberOfUsers; i++){
             const userData = {
-                name: faker.person.firstName(),
+                name: faker.person.firstName() + " " + faker.person.lastName(),
                 verified: true,
                 email: faker.internet.email(),
                 donations: 0, // Always 0
                 createdDate: faker.date.between({
-                    from:new Date(new Date().getFullYear() - 1, 0, 1), // One year ago
-                    to: new Date() // Today
+                    from:new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() - 30), // One year ago
+                    to: currentDate // Today
                 }
                 ),
                 userPhotoLink: null,

@@ -64,6 +64,16 @@ import FundRaisingRequestsList from './pages/fund_raisings/FundRaisingRequestsLi
 import AddFundRaisingPage from "./pages/fund_raisings/AddFundRaising";
 import ViewSpecificFundRaising from './pages/fund_raisings/ViewSpecificFundRaising';
 import FundRaisingsList from './pages/fund_raisings/FundRaisingList';
+import RescuersList from './pages/rescuers/RescuersList';
+import RescuerRequestsList from './pages/rescuer_requests/RescuerRequestsList';
+import AddRescuerPage from './pages/rescuers/AddRescuerPage';
+import ViewRescuer from './pages/rescuers/ViewRescuer';
+import NgosList from './pages/ngos/NgosList';
+import NgoRequestsList from './pages/ngo_requests/NgoRequestsList';
+import AddNgoPage from './pages/ngos/addNgoPage';
+import ViewNgo from './pages/ngos/ViewNgo';
+import ViewRescuerRequest from './pages/rescuer_requests/ViewRescuerRequest';
+import ViewNgoRequest from './pages/ngo_requests/ViewNgoRequest';
 function App() {
   const [userContext, setUserContext] = useContext(UserContext)
 
@@ -163,6 +173,22 @@ function App() {
                     <Route path='/fund_raisings/requests' element={<FundRaisingRequestsList />}/>
                     <Route path='/fund_raisings/add' element={<AddFundRaisingPage />}/>
                     <Route path='/fund_raisings/:id' element={<ViewSpecificFundRaising />}/>
+                  </Route>
+                  <Route path="/rescuers">
+                    <Route path="/rescuers" element={<Navigate to="/rescuers/list" />}/>
+                    <Route path='/rescuers/list' element={<RescuersList />}/> 
+                    <Route path='/rescuers/requests' element={<RescuerRequestsList />}/>
+                    <Route path ='/rescuers/requests/:id' element={<ViewRescuerRequest/>}/>
+                    <Route path='/rescuers/add' element={<AddRescuerPage />}/>
+                    <Route path='/rescuers/:id' element={<ViewRescuer />}/>
+                  </Route>
+                  <Route path="/ngos">
+                    <Route path="/ngos" element={<Navigate to="/ngos/list" />}/>
+                    <Route path='/ngos/list' element={<NgosList />}/> 
+                    <Route path='/ngos/requests' element={<NgoRequestsList />}/>
+                    <Route path ='/ngos/requests/:id' element={<ViewNgoRequest/>}/>
+                    <Route path='/ngos/add' element={<AddNgoPage />}/>
+                    <Route path='/ngos/:id' element={<ViewNgo />}/>
                   </Route>
                   <Route path='*' element={<NotFound/>} />
                 </Routes>

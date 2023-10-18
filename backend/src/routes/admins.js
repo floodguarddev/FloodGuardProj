@@ -134,5 +134,10 @@ router.put('/precautions/:precautionId', verifyAdmin, floodPrecautionController.
 
 //Reports//
 router.get('/reports/users', verifyAdmin, reportController.getUsersStatus);
+router.get('/reports/donations', verifyAdmin, reportController.getDonationsStatus);
+router.get('/reports/ngos', verifyAdmin, reportController.getNgosStatus);
+router.get('/reports/ngosSummary', verifyAdmin, reportController.getNgosSummary);
+router.get('/reports/donationsSummary', verifyAdmin, reportController.getDonationsSummary);
+router.get('/reports/usersSummary', verifyAdmin, reportController.getUsersSummary)
 
 module.exports = router;

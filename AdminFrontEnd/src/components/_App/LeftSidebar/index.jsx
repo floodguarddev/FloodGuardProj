@@ -187,6 +187,66 @@ const Sidebar = ({ toogleActive }) => {
       ],
     },
     {
+      title: "NGOs",
+      path: "/ngos/",
+      icon: <PostAddIcon />,
+      iconClosed: <KeyboardArrowRightIcon />,
+      iconOpened: <KeyboardArrowDownIcon />,
+  
+      subNav: [
+        {
+          title: "NGOs List",
+          path: "/ngos/list",
+        },
+        {
+          title: "View Ngo",
+          path: "/ngos/"+viewContext.selectedNgo
+        },
+        {
+          title: "Add NGO",
+          path: "/ngos/add"
+        },
+        {
+          title: "NGO Requests",
+          path: "/ngos/requests"
+        },
+        {
+          title: "View NGO Request",
+          path: "/ngos/requests/"+viewContext.selectedNgoRequest
+        }
+      ],
+    },
+    {
+      title: "Rescuers",
+      path: "/rescuers/",
+      icon: <PostAddIcon />,
+      iconClosed: <KeyboardArrowRightIcon />,
+      iconOpened: <KeyboardArrowDownIcon />,
+  
+      subNav: [
+        {
+          title: "Rescuers List",
+          path: "/rescuers/list",
+        },
+        {
+          title: "View Rescuer",
+          path: "/rescuers/"+viewContext.selectedRescuer
+        },
+        {
+          title: "Add Rescuer",
+          path: "/rescuers/add"
+        },
+        {
+          title: "Rescuer Requests",
+          path: "/rescuers/requests"
+        },
+        {
+          title: "View Rescuer Request",
+          path: "/rescuers/requests/"+viewContext.selectedRescuerRequest
+        }
+      ],
+    },
+    {
       title: "Notification",
       path: "/notification/",
       icon: <NotificationsNoneIcon />,

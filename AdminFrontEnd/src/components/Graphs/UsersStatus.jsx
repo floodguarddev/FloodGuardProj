@@ -14,16 +14,41 @@ import { useUser } from '@/context/UserContext';
 const UsersStatus = () => {
   const [userContext, setUserContext] = useUser();
   // Select Form
-  const [select, setSelect] = React.useState("");
+  const [select, setSelect] = React.useState(1);
 
-  const [usersCount, setUsersCount] = React.useState({})
+  const [usersCount, setUsersCount] = React.useState(null)
 
-  const [yAxis, setYAxis] = React.useState([]);
+  const [countAxis, setCountAxis] = React.useState([]);
+  const [verifiedAxis, setVerifiedAxis] = React.useState([]);
+  const [donatedAxis, setDonatedAxis] = React.useState([]);
   const [xAxis, setXAxis] = React.useState([]);
 
   const handleChange = (event) => {
     setSelect(event.target.value);
   };
+  
+  useEffect(()=>{
+    if(usersCount){
+      if(select == 0){
+        setXAxis(usersCount.last7days.count.x)
+        setCountAxis(usersCount.last7days.count.y)
+        setDonatedAxis(usersCount.last7days.donated.y)
+        setVerifiedAxis(usersCount.last7days.verified.y)
+      }
+      else if(select == 1){
+        setXAxis(usersCount.monthly.count.x)
+        setCountAxis(usersCount.monthly.count.y)
+        setDonatedAxis(usersCount.yearly.donated.y)
+        setVerifiedAxis(usersCount.yearly.verified.y)
+      }
+      else if(select == 2){
+        setXAxis(usersCount.yearly.count.x)
+        setCountAxis(usersCount.yearly.count.y)
+        setDonatedAxis(usersCount.yearly.donated.y)
+        setVerifiedAxis(usersCount.yearly.verified.y)
+      }
+    }
+  }, [select])
 
   useEffect(()=>{
     getUsersReport(userContext.token).then(
@@ -31,9 +56,10 @@ const UsersStatus = () => {
     ).then(
       (data)=>{
         setUsersCount(data.usersCount);
-        console.log(data.usersCount)
-        setXAxis(data.usersCount.monthly.monthYearArray)
-        setYAxis(data.usersCount.monthly.countArray)
+        setXAxis(data.usersCount.monthly.count.x)
+        setCountAxis(data.usersCount.monthly.count.y)
+        setDonatedAxis(data.usersCount.monthly.donated.y)
+        setVerifiedAxis(data.usersCount.monthly.verified.y)
       }
     )
   }, [])
@@ -41,8 +67,16 @@ const UsersStatus = () => {
   // Chart
   const series = [
     {
-      name: "Users Joined",
-      data: yAxis,
+      name: "Users Count",
+      data: countAxis,
+    },
+    {
+      name: "Verified Users",
+      data: verifiedAxis,
+    },
+    {
+      name: "Donors",
+      data: donatedAxis,
     },
   ];
   const options = {
@@ -51,13 +85,23 @@ const UsersStatus = () => {
         show: false,
       },
     },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: "40%",
+        endingShape: "rounded",
+        borderRadius: "4",
+      },
+    },
     dataLabels: {
       enabled: false,
     },
     stroke: {
-      curve: "smooth",
+      show: true,
+      width: 1,
+      colors: ["transparent"],
     },
-    colors: ["#757FEF"],
+    colors: ["#757FEF", "#2DB6F5", "#EE368C"],
     xaxis: {
       categories: xAxis,
       labels: {
@@ -67,21 +111,39 @@ const UsersStatus = () => {
         },
       },
     },
+    yaxis: {
+      labels: {
+        style: {
+          colors: "#A9A9C8",
+          fontSize: "12px",
+        },
+      },
+      axisBorder: {
+        show: false,
+        colors: "#f6f6f7",
+      },
+    },
+    fill: {
+      opacity: 1,
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return val + " Users";
+        },
+      },
+    },
+    legend: {
+      offsetY: 12,
+      position: "top",
+      horizontalAlign: "right",
+    },
     grid: {
       show: true,
       borderColor: "#f6f6f7",
     },
-    tooltip: {
-      x: {
-        format: "dd/MM/yy HH:mm",
-      },
-      y: {
-        formatter: function (val) {
-          return val;
-        },
-      },
-    },
   };
+
 
   return (
     <>
@@ -89,7 +151,7 @@ const UsersStatus = () => {
         sx={{
           boxShadow: "none",
           borderRadius: "10px",
-          p: "25px 25px 10px",
+          p: "25px 25px 15px",
           mb: "15px",
         }}
       >
@@ -110,7 +172,7 @@ const UsersStatus = () => {
               fontWeight: 500,
             }}
           >
-            Users Status
+            Users Overview
           </Typography>
           <Box>
             <FormControl sx={{ minWidth: 120 }} size="small">
@@ -123,18 +185,16 @@ const UsersStatus = () => {
                 onChange={handleChange} 
                 sx={{ fontSize: '14px' }}
                 className="select"
-              >
-                <MenuItem value={0} sx={{ fontSize: '14px' }}>Today</MenuItem>
-                <MenuItem value={1} sx={{ fontSize: '14px' }}>Last 7 Days</MenuItem>
-                <MenuItem value={2} sx={{ fontSize: '14px' }}>Last Month</MenuItem>
-                <MenuItem value={3} sx={{ fontSize: '14px' }}>Last 12 Months</MenuItem>
-                <MenuItem value={4} sx={{ fontSize: '14px' }}>All Time</MenuItem>
+              > 
+                <MenuItem value={0} sx={{ fontSize: '14px' }}>Last 7 Days</MenuItem>
+                <MenuItem value={1} sx={{ fontSize: '14px' }}>Last 12 Months</MenuItem>
+                <MenuItem value={2} sx={{ fontSize: '14px' }}>Last 10 Years</MenuItem>
               </Select>
             </FormControl>
           </Box>
         </Box>
 
-        <Chart options={options} series={series} type="area" height={285} />
+        <Chart options={options} series={series} type="bar" height={328} />
       </Card>
     </>
   );

@@ -3,7 +3,7 @@ const cookiesOptions = require('../../config/cookiesConfig');
 const userServices = require('../services/users.services');
 const { dataResponse, messageResponse } = require('../utils/commonResponse');
 const { parseEmailVerificationToken } = require('../utils/emailVerification');
-const { addStringQuery, addNumberQuery } = require('../utils/query');
+const { addStringQuery, addNumberQuery, addSimpleQuerySearch } = require('../utils/query');
 const { parseResetPasswordToken } = require('../utils/resetPassword');
 const multerFilesParser = require("../utils/multerFilesParser");
 
@@ -191,9 +191,12 @@ async function viewUsers(req, res, next){
         //Filtering//
         let mongooseQuery = {};
         let query = req.query;
-        addStringQuery('name', mongooseQuery, query);
-        addStringQuery('email', mongooseQuery, query);
-        addNumberQuery('donations', mongooseQuery, query);
+        if(!addSimpleQuerySearch([['name'], ['email']], mongooseQuery, query))
+        {
+            addStringQuery('name', mongooseQuery, query);
+            addStringQuery('email', mongooseQuery, query);
+            addNumberQuery('donations', mongooseQuery, query);
+        }
         //Pagination//
         let limit = parseInt(req.query.limit) || process.env.DEFAULT_LIMIT;
         let offset = parseInt(req.query.offset) || 0;

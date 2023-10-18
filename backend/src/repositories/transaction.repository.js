@@ -57,4 +57,127 @@ async function getTransactionById(id){
     return transaction;
 }
 
-module.exports = {getTransactionsByQuery, getTransactionById}
+
+async function getMonthlyCounts() {
+
+    const currentDate = new Date();
+    const lastYearStartDate = new Date(currentDate.getFullYear() - 1, currentDate.getMonth(), 1);
+
+    const transactionCounts = await Transaction.aggregate([
+      {
+        $match: {
+          transactionDate: {
+            $gte: lastYearStartDate,
+            $lte: currentDate,
+          },
+        },
+      },
+      {
+        $project: {
+          month: { $month: '$transactionDate' },
+          year: { $year: '$transactionDate' },
+          amount: "$amount"
+        },
+      },
+      {
+        $group: {
+          _id: {
+            month: '$month',
+            year: '$year',
+          },
+          count: { $sum: "$amount" },
+        },
+      },
+      {
+        $sort: { '_id.year': 1, '_id.month': 1 },
+      },
+    ]);
+
+    return transactionCounts;
+};
+
+async function getYearlyCounts() {
+
+  const currentDate = new Date();
+  const last10YearsDate = new Date(currentDate.getFullYear() - 10, 0, 1);
+
+  const transactionCounts = await Transaction.aggregate([
+    {
+      $match: {
+        transactionDate: {
+          $gte: last10YearsDate,
+          $lte: currentDate,
+        },
+      },
+    },
+    {
+      $project: {
+        year: { $year: '$transactionDate' },
+        amount: "$amount"
+      },
+    },
+    {
+      $group: {
+        _id: {
+          year: '$year',
+        },
+        count: { $sum: "$amount" },
+      },
+    },
+    {
+      $sort: { '_id.year': 1},
+    },
+  ]);
+  return transactionCounts;
+};
+
+async function getLast7DaysCounts(){
+  const currentDate = new Date();
+  const sevenDaysBackDate = new Date(currentDate.getFullYear(),currentDate.getMonth(),currentDate.getDate() - 7);
+
+  const transactionCounts = await Transaction.aggregate([
+    {
+      $match: {
+        transactionDate: {
+          $gte: sevenDaysBackDate,
+          $lte: currentDate,
+        },
+      },
+    },
+    {
+      $project: {
+        year: {$year: '$transactionDate'},
+        month: { $month: '$transactionDate' },
+        date: {$dayOfMonth: '$transactionDate'},
+        day: { $dayOfWeek: '$transactionDate' },
+        amount: "$amount"
+      },
+    },
+    {
+      $group: {
+        _id: {
+          year: '$year',
+          month: '$month',
+          date: '$date',
+          day: '$day',
+        },
+        count: { $sum: "$amount" },
+      },
+    },
+    {
+      $sort: { '_id.year': 1, '_id.month': 1, '_id.date': 1},
+    },
+  ]);
+  return transactionCounts;
+}
+
+async function getDonationsSummary(){
+  let donationsCount = await  getYearlyCounts();
+  const total = (await Transaction.aggregate([
+    { $group: { _id: null, amount: { $sum: "$amount" } } }
+  ]))[0].amount;
+  console.log(total);
+  return {donationsCount, total};
+}
+
+module.exports = {getTransactionsByQuery, getTransactionById, getMonthlyCounts, getYearlyCounts, getLast7DaysCounts, getDonationsSummary}
