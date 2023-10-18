@@ -38,6 +38,7 @@ export default function AddNgo() {
     const [address, setAddress] = React.useState("");
     const [ngoId, setNgoId] = React.useState("");
     //Document Upload//
+    
     const [registrationCertificate, setRegistrationCertificate] = React.useState(null);
     const [annualReport, setAnnualReport] = React.useState(null);
     const [taxExemption, setTaxExemption] = React.useState(null);
@@ -66,7 +67,7 @@ export default function AddNgo() {
         },
         {
           label: 'NGO Documents',
-          component: <DocumentsUpload/>,
+          component: <DocumentsUpload {...{setRegistrationCertificate, setAnnualReport, setTaxExemption, setFrontSideCNICImage, setBackSideCNICImage}}/>,
         },
     ];
     return (
@@ -87,10 +88,10 @@ export default function AddNgo() {
               mb: '10px'
             }}
           >
-            Vertical Stepper
+            Add NGO
           </Typography>
   
-          <Box sx={{ maxWidth: 400 }}>
+          <Box>
             <Stepper activeStep={activeStep} orientation="vertical">
               {steps.map((step, index) => (
                 <Step key={step.label}>

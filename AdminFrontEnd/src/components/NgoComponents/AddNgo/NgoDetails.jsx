@@ -10,7 +10,7 @@ export const NgoDetails = ({ngoName, setNgoName, ngoContactNumber, setNgoContact
           <Box sx={{mb: "10px"}}>
             <Grid container alignItems="center" justifyContent="center" spacing={3}>
 
-                <Grid item xs={12}>
+                <Grid item xs={12} md = {4}>
                     <Typography
                         component="label"
                         sx={{
@@ -34,8 +34,7 @@ export const NgoDetails = ({ngoName, setNgoName, ngoContactNumber, setNgoContact
                         }}
                     />
                 </Grid>
-
-                <Grid item xs={12}>
+                <Grid item xs={12} md = {4}>
                     <Typography
                         component="label"
                         sx={{
@@ -45,7 +44,32 @@ export const NgoDetails = ({ngoName, setNgoName, ngoContactNumber, setNgoContact
                         display: "block",
                         }}
                     >
-                        Ngo Contact Number
+                        NGO ID
+                    </Typography>
+
+                    <TextField
+                        multiline
+                        fullWidth
+                        id="title"
+                        name="title"
+                        autoComplete="family-name"
+                        value={ngoId}
+                        onChange={(event)=>{
+                            setNgoId(event.target.value)
+                        }}
+                    />
+                </Grid>
+                <Grid item xs={12} md = {4}>
+                    <Typography
+                        component="label"
+                        sx={{
+                        fontWeight: "500",
+                        fontSize: "14px",
+                        mb: "10px",
+                        display: "block",
+                        }}
+                    >
+                        NGO Contact Number
                     </Typography>
 
                     <TextField
@@ -61,7 +85,7 @@ export const NgoDetails = ({ngoName, setNgoName, ngoContactNumber, setNgoContact
                     />
                 </Grid>
                 
-                <Grid item xs={12}>
+                <Grid item xs={12} md = {6}>
                     <Typography
                         component="label"
                         sx={{
@@ -86,7 +110,7 @@ export const NgoDetails = ({ngoName, setNgoName, ngoContactNumber, setNgoContact
                         }}
                     />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} md = {6}>
                     <Typography
                         component="label"
                         sx={{
@@ -111,31 +135,7 @@ export const NgoDetails = ({ngoName, setNgoName, ngoContactNumber, setNgoContact
                         }}
                     />
                 </Grid>
-                <Grid item xs={12}>
-                    <Typography
-                        component="label"
-                        sx={{
-                        fontWeight: "500",
-                        fontSize: "14px",
-                        mb: "10px",
-                        display: "block",
-                        }}
-                    >
-                        Ngo Id
-                    </Typography>
-
-                    <TextField
-                        multiline
-                        fullWidth
-                        id="title"
-                        name="title"
-                        autoComplete="family-name"
-                        value={ngoId}
-                        onChange={(event)=>{
-                            setNgoId(event.target.value)
-                        }}
-                    />
-                </Grid>
+                
             </Grid>
           </Box>
     </Box>

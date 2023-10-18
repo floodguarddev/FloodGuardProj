@@ -114,7 +114,7 @@ async function successfulPayment(paymentIntentSucceededObj){
     )
     if(ngoId){
         let ngo = await NGO.findById(ngoId);
-        ngo.recievedDonations = ngo.recievedDonations + amount;
+        ngo.receivedDonations = ngo.receivedDonations + amount;
         await ngo.save();
     }
     if(userId){

@@ -10,7 +10,7 @@ export const PersonSelection = ({user, setUser, cnicNumber, setCnicNumber, mobil
     <Box component="form" noValidate >
           <Box sx={{mb: "10px"}}>
             <Grid container alignItems="center" justifyContent="center" spacing={3}>
-            <Grid item xs={12}>
+            <Grid item xs={12} md = {6}>
                     <Typography
                         component="label"
                         sx={{
@@ -25,7 +25,7 @@ export const PersonSelection = ({user, setUser, cnicNumber, setCnicNumber, mobil
 
                     <UserSearchBox setUserId={setUser}/>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} md = {6}>
                     <Typography
                         component="label"
                         sx={{
@@ -50,7 +50,7 @@ export const PersonSelection = ({user, setUser, cnicNumber, setCnicNumber, mobil
                     />
                 </Grid>
 
-                <Grid item xs={12}>
+                <Grid item xs={12} md = {6}>
                     <Typography
                         component="label"
                         sx={{
@@ -76,7 +76,7 @@ export const PersonSelection = ({user, setUser, cnicNumber, setCnicNumber, mobil
                     />
                 </Grid>
                 
-                <Grid item xs={12}>
+                <Grid item xs={12} md = {6}>
                     <Typography
                         component="label"
                         sx={{
