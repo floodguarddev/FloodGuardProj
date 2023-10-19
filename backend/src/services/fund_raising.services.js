@@ -125,7 +125,7 @@ async function viewSpecificFundRaisingRequest(requestId){
 
 /*-----------------NGO Participation Posts-----------------*/
 
-async function addFundRaisingPost(ngoId, postTitle, postDescription, postImagesLinks)
+async function addFundRaisingPost(ngoId, postTitle, postDescription, requestedAmount, postImagesLinks)
 {
     let ngo = await getNGOById(ngoId);
 
@@ -133,7 +133,7 @@ async function addFundRaisingPost(ngoId, postTitle, postDescription, postImagesL
         throw new createHttpError.NotFound(`No such a NGO with id ${ngoId}`);
     }
 
-    let fundRaisingPost = await Fund_Raising_Post.create({ngoId, postTitle, postDescription, postImagesLinks});
+    let fundRaisingPost = await Fund_Raising_Post.create({ngoId, postTitle, postDescription,requestedAmount, postImagesLinks});
 
     ngo.fundRaisingPosts.push(fundRaisingPost._id);
 

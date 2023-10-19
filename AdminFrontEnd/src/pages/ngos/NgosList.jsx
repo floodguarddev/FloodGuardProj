@@ -21,10 +21,10 @@ import AddIcon from "@mui/icons-material/Add";
 import ClearIcon from "@mui/icons-material/Clear";
 import styles from '@/styles/PageTitle.module.css'
 import {Link} from 'react-router-dom';
-import { ViewAdminList } from "../../components/AdminComponents/ViewAdminList";
-import EditAdmin from "@/components/AdminComponents/EditAdmin";
-import { SearchAndFilter } from '../../components/AdminComponents/SearchAndFilter';
-// End Create new admin Modal
+import { ViewNgoList } from "../../components/NgoComponents/ViewNgoList";
+import EditNgo from "@/components/NgoComponents/EditNgo";
+import { SearchAndFilter } from '../../components/NgoComponents/SearchAndFilter';
+// End Create new ngo Modal
 
 function MembersLists(props) {
   const theme = useTheme();
@@ -96,8 +96,8 @@ MembersLists.propTypes = {
 };
 
 export default function NgosList() {
-  //Admin List Refresher
-  const [adminsRefresh, setAdminsRefresh] = React.useState(true);
+  //Ngo List Refresher
+  const [ngosRefresh, setNgosRefresh] = React.useState(true);
   //Query//
   const[query, setQuery] = React.useState({limit: 10, offset:0});
   // Table
@@ -111,7 +111,7 @@ export default function NgosList() {
       oldValues.offset = newPage * rowsPerPage
       return oldValues
     })
-    setAdminsRefresh(true);
+    setNgosRefresh(true);
   };
 
   const handleChangeRowsPerPage = (event) => {
@@ -122,30 +122,30 @@ export default function NgosList() {
       oldValues.limit = parseInt(event.target.value, 10);
       return oldValues;
     })
-    setAdminsRefresh(true);
+    setNgosRefresh(true);
   };
 
-  // Edit Admin Model
-  const [editAdmin, setEditAdmin] = React.useState(null);
+  // Edit NGO Model
+  const [editNgo, setEditNgo] = React.useState(null);
   const [editOpen, setEditOpen] = React.useState(false);
-  const handleEditOpen = (admin) => {
-    setEditAdmin(admin)
+  const handleEditOpen = (ngo) => {
+    setEditNgo(ngo)
     setEditOpen(true);
   };
   const handleEditClose = () => {
     setEditOpen(false);
-    setAdminsRefresh(true);
+    setNgosRefresh(true);
   };
   return (
     <>
       {/* Page title */}
       <div className={styles.pageTitle}>
-        <h1>Admins List</h1>
+        <h1>NGOs List</h1>
         <ul>
           <li>
             <Link to="/">Dashboard</Link>
           </li>
-          <li>Admins List</li>
+          <li>NGOs List</li>
         </ul>
       </div>
 
@@ -175,9 +175,9 @@ export default function NgosList() {
               fontWeight: 500,
             }}
           >
-            Admins List
+            NGOs List
           </Typography>
-          <Link to = "/admins/add">
+          <Link to = "/ngos/add">
             <Button
               variant="contained"
               sx={{
@@ -193,12 +193,12 @@ export default function NgosList() {
                 sx={{ position: "relative", top: "-1px" }}
                 className='mr-5px'
               />{" "}
-              Create New Admin
+              Create New NGO
             </Button>
           </Link>
           
         </Box>
-        <SearchAndFilter setAdminsRefresh={setAdminsRefresh} offset={page*rowsPerPage} limit = {rowsPerPage} query = {query} setQuery = {setQuery}/>
+        <SearchAndFilter setNgosRefresh={setNgosRefresh} offset={page*rowsPerPage} limit = {rowsPerPage} query = {query} setQuery = {setQuery}/>
         <TableContainer
           component={Paper}
           sx={{
@@ -210,8 +210,8 @@ export default function NgosList() {
             aria-label="custom pagination table"
             className="dark-table"
           >
-            {/* View Admins */}
-            <ViewAdminList setTotalRecords={setTotalRecords} adminsRefresh={adminsRefresh} setAdminsRefresh={setAdminsRefresh} handleEditOpen={handleEditOpen} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
+            {/* View NGOs */}
+            <ViewNgoList setTotalRecords={setTotalRecords} ngosRefresh={ngosRefresh} setNgosRefresh={setNgosRefresh} handleEditOpen={handleEditOpen} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
 
             <TableFooter>
               <TableRow>
@@ -239,15 +239,15 @@ export default function NgosList() {
       </Card>
       
       {
-        /*Update Admin*/
+        /*Update NGO*/
       }
       
-      <EditAdmin
+      <EditNgo
         handleClose={handleEditClose}
         aria-labelledby="customized-dialog-title"
         open={editOpen}
-        admin={editAdmin}
-        setAdmin={setEditAdmin}
+        ngo={editNgo}
+        setNgo={setEditNgo}
       />
     </>
   );

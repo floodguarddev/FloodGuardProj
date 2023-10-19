@@ -95249,3 +95249,4832 @@
   },
   timestamp: '2023-10-18T22:23:59.721Z'
 }
+{
+  errorStatus: 500,
+  errorName: 'Internal Server Error',
+  functionReference: 'F:\\FYP-Project\\backend\\src\\repositories\\ngo_participation.repository.js:33:15',
+  requestPath: '/admins/ngo_participation_posts/undefined',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "NGO Participation Post"
+      at ObjectId.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\schema\objectid.js:250:11)
+      at SchemaType.applySetters (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1220:12)
+      at SchemaType.castForQuery (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1632:15)
+      at cast (F:\FYP-Project\backend\node_modules\mongoose\lib\cast.js:356:32)
+      at Query.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4910:12)
+      at Query._castConditions (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2232:10)
+      at model.Query._findOne (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2519:8)
+      at model.Query.exec (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4429:28)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async Object.getNGOParticipationById (F:\FYP-Project\backend\src\repositories\ngo_participation.repository.js:32:32) {
+    stringValue: '"undefined"',
+    messageFormat: undefined,
+    kind: 'ObjectId',
+    value: 'undefined',
+    path: '_id',
+    reason: BSONError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+        at new ObjectId (F:\FYP-Project\backend\node_modules\bson\lib\bson.cjs:2006:23)
+        at castObjectId (F:\FYP-Project\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+        at ObjectId.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\schema\objectid.js:248:12)
+        at SchemaType.applySetters (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1220:12)
+        at SchemaType.castForQuery (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1632:15)
+        at cast (F:\FYP-Project\backend\node_modules\mongoose\lib\cast.js:356:32)
+        at Query.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4910:12)
+        at Query._castConditions (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2232:10)
+        at model.Query._findOne (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2519:8)
+        at model.Query.exec (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4429:28),
+    valueType: 'string',
+    model: Model { NGO Participation Post }
+  },
+  timestamp: '2023-10-18T23:28:55.699Z'
+}
+{
+  errorStatus: 500,
+  errorName: 'Internal Server Error',
+  functionReference: 'F:\\FYP-Project\\backend\\src\\repositories\\fund_raising.repository.js:31:15',
+  requestPath: '/admins/fund_raising_posts/undefined',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Fund Raising Post"
+      at ObjectId.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\schema\objectid.js:250:11)
+      at SchemaType.applySetters (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1220:12)
+      at SchemaType.castForQuery (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1632:15)
+      at cast (F:\FYP-Project\backend\node_modules\mongoose\lib\cast.js:356:32)
+      at Query.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4910:12)
+      at Query._castConditions (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2232:10)
+      at model.Query._findOne (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2519:8)
+      at model.Query.exec (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4429:28)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async Object.getFundRaisingById (F:\FYP-Project\backend\src\repositories\fund_raising.repository.js:30:27) {
+    stringValue: '"undefined"',
+    messageFormat: undefined,
+    kind: 'ObjectId',
+    value: 'undefined',
+    path: '_id',
+    reason: BSONError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+        at new ObjectId (F:\FYP-Project\backend\node_modules\bson\lib\bson.cjs:2006:23)
+        at castObjectId (F:\FYP-Project\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+        at ObjectId.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\schema\objectid.js:248:12)
+        at SchemaType.applySetters (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1220:12)
+        at SchemaType.castForQuery (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1632:15)
+        at cast (F:\FYP-Project\backend\node_modules\mongoose\lib\cast.js:356:32)
+        at Query.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4910:12)
+        at Query._castConditions (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2232:10)
+        at model.Query._findOne (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2519:8)
+        at model.Query.exec (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4429:28),
+    valueType: 'string',
+    model: Model { Fund Raising Post }
+  },
+  timestamp: '2023-10-18T23:29:02.448Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'ValidationError',
+  functionReference: 'Document.invalidate (F:\\FYP-Project\\backend\\node_modules\\mongoose\\lib\\document.js:3162:32)',
+  requestPath: '/admins/ngos/64ffc2ff44fdf78a181e5934/fund_raising_posts',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'Fund Raising Post validation failed: requestedAmount: Path `requestedAmount` is required.',
+  timestamp: '2023-10-18T23:43:52.663Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'ValidationError',
+  functionReference: 'Document.invalidate (F:\\FYP-Project\\backend\\node_modules\\mongoose\\lib\\document.js:3162:32)',
+  requestPath: '/admins/ngos/64ffc2ff44fdf78a181e5934/fund_raising_posts',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'Fund Raising Post validation failed: requestedAmount: Path `requestedAmount` is required.',
+  timestamp: '2023-10-18T23:44:01.105Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Token Expired Error',
+  functionReference: 'F:\\FYP-Project\\backend\\node_modules\\jsonwebtoken\\verify.js:190:21',
+  requestPath: '/admins/ngos/64ffc2ff44fdf78a181e5934/fund_raising_posts',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'jwt expired',
+  timestamp: '2023-10-18T23:46:06.934Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'ValidationError',
+  functionReference: 'Document.invalidate (F:\\FYP-Project\\backend\\node_modules\\mongoose\\lib\\document.js:3162:32)',
+  requestPath: '/admins/ngos/64ffc2ff44fdf78a181e5934/fund_raising_posts',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'Fund Raising Post validation failed: requestedAmount: Path `requestedAmount` is required.',
+  timestamp: '2023-10-18T23:46:21.665Z'
+}
+{
+  errorStatus: 500,
+  errorName: 'Internal Server Error',
+  functionReference: 'F:\\FYP-Project\\backend\\src\\repositories\\admins.repository.js:21:15',
+  requestPath: '/admins/admins/undefined',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Admin"
+      at ObjectId.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\schema\objectid.js:250:11)
+      at SchemaType.applySetters (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1220:12)
+      at SchemaType.castForQuery (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1632:15)
+      at cast (F:\FYP-Project\backend\node_modules\mongoose\lib\cast.js:356:32)
+      at Query.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4910:12)
+      at Query._castConditions (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2232:10)
+      at model.Query._findOne (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2519:8)
+      at model.Query.exec (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4429:28)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async getAdminById (F:\FYP-Project\backend\src\repositories\admins.repository.js:20:17) {
+    stringValue: '"undefined"',
+    messageFormat: undefined,
+    kind: 'ObjectId',
+    value: 'undefined',
+    path: '_id',
+    reason: BSONError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+        at new ObjectId (F:\FYP-Project\backend\node_modules\bson\lib\bson.cjs:2006:23)
+        at castObjectId (F:\FYP-Project\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+        at ObjectId.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\schema\objectid.js:248:12)
+        at SchemaType.applySetters (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1220:12)
+        at SchemaType.castForQuery (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1632:15)
+        at cast (F:\FYP-Project\backend\node_modules\mongoose\lib\cast.js:356:32)
+        at Query.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4910:12)
+        at Query._castConditions (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2232:10)
+        at model.Query._findOne (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2519:8)
+        at model.Query.exec (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4429:28),
+    valueType: 'string',
+    model: Model { Admin }
+  },
+  timestamp: '2023-10-18T23:52:37.599Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Bad Request Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:6:15)',
+  requestPath: '/admins/ngos/652d901d9241de8f01b3f58b',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'ngoImage field is missing',
+  timestamp: '2023-10-19T00:01:30.679Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Bad Request Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:6:15)',
+  requestPath: '/admins/ngos/652d901d9241de8f01b3f58b',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'ngoImage field is missing',
+  timestamp: '2023-10-19T00:02:23.511Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Bad Request Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:6:15)',
+  requestPath: '/admins/ngos/652d901d9241de8f01b3f58b',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'ngoImage field is missing',
+  timestamp: '2023-10-19T00:02:44.579Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Bad Request Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:6:15)',
+  requestPath: '/admins/ngos/652d901d9241de8f01b3f58b',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'frontSideCNIC field is missing',
+  timestamp: '2023-10-19T00:05:24.824Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Bad Request Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:6:15)',
+  requestPath: '/admins/ngos/652d901d9241de8f01b3f58b',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'frontSideCNIC field is missing',
+  timestamp: '2023-10-19T00:07:42.100Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Bad Request Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:6:15)',
+  requestPath: '/admins/ngos/652d901d9241de8f01b3f58b',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'frontSideCNIC field is missing',
+  timestamp: '2023-10-19T00:09:11.749Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Bad Request Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:6:15)',
+  requestPath: '/admins/ngos/652d901d9241de8f01b3f58b',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'frontSideCNIC field is missing',
+  timestamp: '2023-10-19T00:10:44.053Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Bad Request Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:6:15)',
+  requestPath: '/admins/ngos/652d901d9241de8f01b3f58b',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'frontSideCNIC field is missing',
+  timestamp: '2023-10-19T00:10:55.230Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Bad Request Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:6:15)',
+  requestPath: '/admins/ngos/652d901d9241de8f01b3f58b',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'frontSideCNIC field is missing',
+  timestamp: '2023-10-19T00:11:04.865Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Bad Request Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:6:15)',
+  requestPath: '/admins/ngos/652d901d9241de8f01b3f58b',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'frontSideCNIC field is missing',
+  timestamp: '2023-10-19T00:13:22.826Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'CastError',
+  functionReference: 'SchemaNumber.cast (F:\\FYP-Project\\backend\\node_modules\\mongoose\\lib\\schema\\number.js:380:11)',
+  requestPath: '/admins/ngos/652d901d9241de8f01b3f58b',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'Cast to Number failed for value "Hussain" (type string) at path "ngoId" for model "NGO"',
+  timestamp: '2023-10-19T00:13:36.898Z'
+}
+{
+  errorStatus: 500,
+  errorName: 'Internal Server Error',
+  functionReference: 'F:\\FYP-Project\\backend\\src\\repositories\\admins.repository.js:21:15',
+  requestPath: '/admins/admins/undefined',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Admin"
+      at ObjectId.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\schema\objectid.js:250:11)
+      at SchemaType.applySetters (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1220:12)
+      at SchemaType.castForQuery (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1632:15)
+      at cast (F:\FYP-Project\backend\node_modules\mongoose\lib\cast.js:356:32)
+      at Query.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4910:12)
+      at Query._castConditions (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2232:10)
+      at model.Query._findOne (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2519:8)
+      at model.Query.exec (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4429:28)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async getAdminById (F:\FYP-Project\backend\src\repositories\admins.repository.js:20:17) {
+    stringValue: '"undefined"',
+    messageFormat: undefined,
+    kind: 'ObjectId',
+    value: 'undefined',
+    path: '_id',
+    reason: BSONError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+        at new ObjectId (F:\FYP-Project\backend\node_modules\bson\lib\bson.cjs:2006:23)
+        at castObjectId (F:\FYP-Project\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+        at ObjectId.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\schema\objectid.js:248:12)
+        at SchemaType.applySetters (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1220:12)
+        at SchemaType.castForQuery (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1632:15)
+        at cast (F:\FYP-Project\backend\node_modules\mongoose\lib\cast.js:356:32)
+        at Query.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4910:12)
+        at Query._castConditions (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2232:10)
+        at model.Query._findOne (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2519:8)
+        at model.Query.exec (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4429:28),
+    valueType: 'string',
+    model: Model { Admin }
+  },
+  timestamp: '2023-10-19T00:56:31.748Z'
+}
+{
+  errorStatus: 404,
+  errorName: 'Not Found Error',
+  functionReference: 'Object.getUserProfile (F:\\FYP-Project\\backend\\src\\services\\admins.services.js:161:15)',
+  requestPath: '/admins/admins/653074c07c1b2c80d388c99a',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "User with the given information doesn't exist",
+  timestamp: '2023-10-19T00:56:36.355Z'
+}
+{
+  error: F:\FYP-Project\backend\src\controllers\ngo.controllers.js:292
+  }
+   
+  
+  SyntaxError: Unexpected end of input
+      at internalCompileFunction (node:internal/vm:73:18)
+      at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+      at Module._compile (node:internal/modules/cjs/loader:1220:27)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:4:23)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14),
+  level: 'error',
+  message: 'uncaughtException: Unexpected end of input\n' +
+    'F:\\FYP-Project\\backend\\src\\controllers\\ngo.controllers.js:292\n' +
+    '}\n' +
+    ' \n' +
+    '\n' +
+    'SyntaxError: Unexpected end of input\n' +
+    '    at internalCompileFunction (node:internal/vm:73:18)\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1178:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1220:27)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:4:23)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)',
+  stack: 'F:\\FYP-Project\\backend\\src\\controllers\\ngo.controllers.js:292\n' +
+    '}\n' +
+    ' \n' +
+    '\n' +
+    'SyntaxError: Unexpected end of input\n' +
+    '    at internalCompileFunction (node:internal/vm:73:18)\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1178:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1220:27)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:4:23)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)',
+  exception: true,
+  date: 'Thu Oct 19 2023 06:01:58 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 13848,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 82259968,
+      heapTotal: 41865216,
+      heapUsed: 27832352,
+      external: 19658918,
+      arrayBuffers: 18709234
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 21501.609 },
+  trace: [
+    {
+      column: 18,
+      file: 'node:internal/vm',
+      function: 'internalCompileFunction',
+      line: 73,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapSafe',
+      line: 1178,
+      method: null,
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1220,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 23,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 4,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T01:01:58.981Z'
+}
+{
+  error: F:\FYP-Project\backend\src\controllers\ngo.controllers.js:292
+  }
+   
+  
+  SyntaxError: Unexpected end of input
+      at internalCompileFunction (node:internal/vm:73:18)
+      at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+      at Module._compile (node:internal/modules/cjs/loader:1220:27)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:4:23)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14),
+  level: 'error',
+  message: 'uncaughtException: Unexpected end of input\n' +
+    'F:\\FYP-Project\\backend\\src\\controllers\\ngo.controllers.js:292\n' +
+    '}\n' +
+    ' \n' +
+    '\n' +
+    'SyntaxError: Unexpected end of input\n' +
+    '    at internalCompileFunction (node:internal/vm:73:18)\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1178:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1220:27)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:4:23)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)',
+  stack: 'F:\\FYP-Project\\backend\\src\\controllers\\ngo.controllers.js:292\n' +
+    '}\n' +
+    ' \n' +
+    '\n' +
+    'SyntaxError: Unexpected end of input\n' +
+    '    at internalCompileFunction (node:internal/vm:73:18)\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1178:20)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1220:27)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:4:23)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)',
+  exception: true,
+  date: 'Thu Oct 19 2023 06:02:02 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 10260,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 82317312,
+      heapTotal: 42127360,
+      heapUsed: 27791184,
+      external: 19644981,
+      arrayBuffers: 18695297
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 21505.046 },
+  trace: [
+    {
+      column: 18,
+      file: 'node:internal/vm',
+      function: 'internalCompileFunction',
+      line: 73,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapSafe',
+      line: 1178,
+      method: null,
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1220,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 23,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 4,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T01:02:02.410Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'CastError',
+  functionReference: 'SchemaNumber.cast (F:\\FYP-Project\\backend\\node_modules\\mongoose\\lib\\schema\\number.js:380:11)',
+  requestPath: '/admins/ngos/652d901d9241de8f01b3f58b',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'Cast to Number failed for value "Hussain" (type string) at path "cnicNumber" for model "NGO"',
+  timestamp: '2023-10-19T01:03:00.959Z'
+}
+{
+  errorStatus: 404,
+  errorName: 'Not Found Error',
+  functionReference: 'Object.getUserProfile (F:\\FYP-Project\\backend\\src\\services\\admins.services.js:161:15)',
+  requestPath: '/admins/admins/6530805a82fdbdf0c6f59c53',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "User with the given information doesn't exist",
+  timestamp: '2023-10-19T01:03:39.057Z'
+}
+{
+  errorStatus: 404,
+  errorName: 'Not Found Error',
+  functionReference: 'Object.getUserProfile (F:\\FYP-Project\\backend\\src\\services\\admins.services.js:161:15)',
+  requestPath: '/admins/admins/6530805a82fdbdf0c6f59c53',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "User with the given information doesn't exist",
+  timestamp: '2023-10-19T01:03:59.964Z'
+}
+{
+  errorStatus: 404,
+  errorName: 'Not Found Error',
+  functionReference: 'Object.getUserProfile (F:\\FYP-Project\\backend\\src\\services\\admins.services.js:161:15)',
+  requestPath: '/admins/admins/64ffc2ff44fdf78a181e5934',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "User with the given information doesn't exist",
+  timestamp: '2023-10-19T01:10:56.402Z'
+}
+{
+  errorStatus: 404,
+  errorName: 'Not Found Error',
+  functionReference: 'Object.getUserProfile (F:\\FYP-Project\\backend\\src\\services\\admins.services.js:161:15)',
+  requestPath: '/admins/admins/64ffc2ff44fdf78a181e5934',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "User with the given information doesn't exist",
+  timestamp: '2023-10-19T01:11:08.076Z'
+}
+{
+  errorStatus: 404,
+  errorName: 'Not Found Error',
+  functionReference: 'Object.getUserProfile (F:\\FYP-Project\\backend\\src\\services\\admins.services.js:161:15)',
+  requestPath: '/admins/admins/64ffc2ff44fdf78a181e5934',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "User with the given information doesn't exist",
+  timestamp: '2023-10-19T01:13:55.306Z'
+}
+{
+  errorStatus: 404,
+  errorName: 'Not Found Error',
+  functionReference: 'Object.getUserProfile (F:\\FYP-Project\\backend\\src\\services\\admins.services.js:161:15)',
+  requestPath: '/admins/admins/64ffc2ff44fdf78a181e5934',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "User with the given information doesn't exist",
+  timestamp: '2023-10-19T01:15:57.318Z'
+}
+{
+  errorStatus: 404,
+  errorName: 'Not Found Error',
+  functionReference: 'Object.getUserProfile (F:\\FYP-Project\\backend\\src\\services\\admins.services.js:161:15)',
+  requestPath: '/admins/admins/64ffc2ff44fdf78a181e5934',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "User with the given information doesn't exist",
+  timestamp: '2023-10-19T01:16:07.403Z'
+}
+{
+  errorStatus: 404,
+  errorName: 'Not Found Error',
+  functionReference: 'Object.getUserProfile (F:\\FYP-Project\\backend\\src\\services\\admins.services.js:161:15)',
+  requestPath: '/admins/admins/64ffc2ff44fdf78a181e5934',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "User with the given information doesn't exist",
+  timestamp: '2023-10-19T01:16:24.862Z'
+}
+{
+  errorStatus: 404,
+  errorName: 'Not Found Error',
+  functionReference: 'Object.getUserProfile (F:\\FYP-Project\\backend\\src\\services\\admins.services.js:161:15)',
+  requestPath: '/admins/admins/64ffc2ff44fdf78a181e5934',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "User with the given information doesn't exist",
+  timestamp: '2023-10-19T01:16:52.408Z'
+}
+{
+  errorStatus: 404,
+  errorName: 'Not Found Error',
+  functionReference: 'Object.getUserProfile (F:\\FYP-Project\\backend\\src\\services\\admins.services.js:161:15)',
+  requestPath: '/admins/admins/64ffc2ff44fdf78a181e5934',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "User with the given information doesn't exist",
+  timestamp: '2023-10-19T01:17:56.769Z'
+}
+{
+  errorStatus: 404,
+  errorName: 'Not Found Error',
+  functionReference: 'Object.getUserProfile (F:\\FYP-Project\\backend\\src\\services\\admins.services.js:161:15)',
+  requestPath: '/admins/admins/64ffc2ff44fdf78a181e5934',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "User with the given information doesn't exist",
+  timestamp: '2023-10-19T01:18:05.982Z'
+}
+{
+  errorStatus: 404,
+  errorName: 'Not Found Error',
+  functionReference: 'Object.getUserProfile (F:\\FYP-Project\\backend\\src\\services\\admins.services.js:161:15)',
+  requestPath: '/admins/admins/64ffc2ff44fdf78a181e5934',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "User with the given information doesn't exist",
+  timestamp: '2023-10-19T01:18:51.880Z'
+}
+{
+  errorStatus: 500,
+  errorName: 'Internal Server Error',
+  functionReference: 'F:\\FYP-Project\\backend\\src\\repositories\\users.repository.js:24:15',
+  requestPath: '/admins/users/null',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: CastError: Cast to ObjectId failed for value "null" (type string) at path "_id" for model "User"
+      at ObjectId.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\schema\objectid.js:250:11)
+      at SchemaType.applySetters (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1220:12)
+      at SchemaType.castForQuery (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1632:15)
+      at cast (F:\FYP-Project\backend\node_modules\mongoose\lib\cast.js:356:32)
+      at Query.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4910:12)
+      at Query._castConditions (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2232:10)
+      at model.Query._findOne (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2519:8)
+      at model.Query.exec (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4429:28)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async getUserById (F:\FYP-Project\backend\src\repositories\users.repository.js:23:16) {
+    stringValue: '"null"',
+    messageFormat: undefined,
+    kind: 'ObjectId',
+    value: 'null',
+    path: '_id',
+    reason: BSONError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+        at new ObjectId (F:\FYP-Project\backend\node_modules\bson\lib\bson.cjs:2006:23)
+        at castObjectId (F:\FYP-Project\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+        at ObjectId.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\schema\objectid.js:248:12)
+        at SchemaType.applySetters (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1220:12)
+        at SchemaType.castForQuery (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1632:15)
+        at cast (F:\FYP-Project\backend\node_modules\mongoose\lib\cast.js:356:32)
+        at Query.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4910:12)
+        at Query._castConditions (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2232:10)
+        at model.Query._findOne (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2519:8)
+        at model.Query.exec (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4429:28),
+    valueType: 'string',
+    model: Model { User }
+  },
+  timestamp: '2023-10-19T01:41:01.690Z'
+}
+{
+  errorStatus: 500,
+  errorName: 'Internal Server Error',
+  functionReference: 'F:\\FYP-Project\\backend\\src\\repositories\\ngo.repository.js:62:15',
+  requestPath: '/admins/ngos/undefined',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "NGO"
+      at ObjectId.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\schema\objectid.js:250:11)
+      at SchemaType.applySetters (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1220:12)
+      at SchemaType.castForQuery (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1632:15)
+      at cast (F:\FYP-Project\backend\node_modules\mongoose\lib\cast.js:356:32)
+      at Query.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4910:12)
+      at Query._castConditions (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2232:10)
+      at model.Query._findOne (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2519:8)
+      at model.Query.exec (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4429:28)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async Object.getNGOById (F:\FYP-Project\backend\src\repositories\ngo.repository.js:61:15) {
+    stringValue: '"undefined"',
+    messageFormat: undefined,
+    kind: 'ObjectId',
+    value: 'undefined',
+    path: '_id',
+    reason: BSONError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+        at new ObjectId (F:\FYP-Project\backend\node_modules\bson\lib\bson.cjs:2006:23)
+        at castObjectId (F:\FYP-Project\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+        at ObjectId.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\schema\objectid.js:248:12)
+        at SchemaType.applySetters (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1220:12)
+        at SchemaType.castForQuery (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1632:15)
+        at cast (F:\FYP-Project\backend\node_modules\mongoose\lib\cast.js:356:32)
+        at Query.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4910:12)
+        at Query._castConditions (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2232:10)
+        at model.Query._findOne (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2519:8)
+        at model.Query.exec (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4429:28),
+    valueType: 'string',
+    model: Model { NGO }
+  },
+  timestamp: '2023-10-19T01:43:38.975Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Type Error',
+  functionReference: 'verifyAdmin (F:\\FYP-Project\\backend\\src\\middlewares\\authentication.js:88:22)',
+  requestPath: '/admins/ngos/65299cc7ebb9fc1789d058d3',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "Cannot read properties of undefined (reading '0')",
+  timestamp: '2023-10-19T01:48:54.689Z'
+}
+{
+  errorStatus: 404,
+  errorName: 'Not Found Error',
+  functionReference: 'Object.viewSpecificNGO (F:\\FYP-Project\\backend\\src\\services\\ngos.services.js:98:15)',
+  requestPath: '/admins/ngos/65299cc7ebb9fc1789d058d3',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: "NGO with the given information doesn't exist",
+  timestamp: '2023-10-19T01:49:32.603Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Type Error',
+  functionReference: 'Object.viewSpecificNGO (F:\\FYP-Project\\backend\\src\\services\\ngos.services.js:94:53)',
+  requestPath: '/admins/ngos/64ffc2ff44fdf78a181e5934',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'ngoRepository.getNGOById(...).populate is not a function',
+  timestamp: '2023-10-19T01:53:05.121Z'
+}
+{
+  errorStatus: 500,
+  errorName: 'Internal Server Error',
+  functionReference: 'F:\\FYP-Project\\backend\\src\\repositories\\ngo.repository.js:62:15',
+  requestPath: '/admins/ngos/undefined',
+  requestMethod: 'GET',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "NGO"
+      at ObjectId.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\schema\objectid.js:250:11)
+      at SchemaType.applySetters (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1220:12)
+      at SchemaType.castForQuery (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1632:15)
+      at cast (F:\FYP-Project\backend\node_modules\mongoose\lib\cast.js:356:32)
+      at Query.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4910:12)
+      at Query._castConditions (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2232:10)
+      at model.Query._findOne (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2519:8)
+      at model.Query.exec (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4429:28)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async Object.getNGOById (F:\FYP-Project\backend\src\repositories\ngo.repository.js:61:15) {
+    stringValue: '"undefined"',
+    messageFormat: undefined,
+    kind: 'ObjectId',
+    value: 'undefined',
+    path: '_id',
+    reason: BSONError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+        at new ObjectId (F:\FYP-Project\backend\node_modules\bson\lib\bson.cjs:2006:23)
+        at castObjectId (F:\FYP-Project\backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+        at ObjectId.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\schema\objectid.js:248:12)
+        at SchemaType.applySetters (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1220:12)
+        at SchemaType.castForQuery (F:\FYP-Project\backend\node_modules\mongoose\lib\schematype.js:1632:15)
+        at cast (F:\FYP-Project\backend\node_modules\mongoose\lib\cast.js:356:32)
+        at Query.cast (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4910:12)
+        at Query._castConditions (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2232:10)
+        at model.Query._findOne (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:2519:8)
+        at model.Query.exec (F:\FYP-Project\backend\node_modules\mongoose\lib\query.js:4429:28),
+    valueType: 'string',
+    model: Model { NGO }
+  },
+  timestamp: '2023-10-19T02:00:58.431Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Bad Request Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:6:15)',
+  requestPath: '/admins/ngos/null',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'frontSideCNIC field is missing',
+  timestamp: '2023-10-19T02:13:51.203Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Bad Request Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:6:15)',
+  requestPath: '/admins/ngos/null',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'backSideCNIC field is missing',
+  timestamp: '2023-10-19T02:14:01.310Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Bad Request Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:6:15)',
+  requestPath: '/admins/ngos/null',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'registrationCertificate field is missing',
+  timestamp: '2023-10-19T02:14:07.364Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'Bad Request Error',
+  functionReference: 'Object.getSingleFileUrlRequired (F:\\FYP-Project\\backend\\src\\utils\\multerFilesParser.js:6:15)',
+  requestPath: '/admins/ngos/null',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'annualReport field is missing',
+  timestamp: '2023-10-19T02:14:11.560Z'
+}
+{
+  errorStatus: 400,
+  errorName: 'CastError',
+  functionReference: 'ObjectId.cast (F:\\FYP-Project\\backend\\node_modules\\mongoose\\lib\\schema\\objectid.js:250:11)',
+  requestPath: '/admins/ngos/null',
+  requestMethod: 'POST',
+  ip: '127.0.0.1',
+  level: 'error',
+  message: 'Cast to ObjectId failed for value "null" (type string) at path "userId" for model "NGO"',
+  timestamp: '2023-10-19T02:14:17.777Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:36:46 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 12856,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85778432,
+      heapTotal: 61788160,
+      heapUsed: 31084104,
+      external: 19455820,
+      arrayBuffers: 18506136
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27189.25 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:36:46.614Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:37:01 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 10424,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85504000,
+      heapTotal: 61263872,
+      heapUsed: 31117000,
+      external: 19447627,
+      arrayBuffers: 18497943
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27204.421 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:37:01.784Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:37:16 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14848,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85467136,
+      heapTotal: 61526016,
+      heapUsed: 31017888,
+      external: 19447628,
+      arrayBuffers: 18497944
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27219.406 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:37:16.760Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:37:47 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 10376,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85671936,
+      heapTotal: 61788160,
+      heapUsed: 31080824,
+      external: 19447628,
+      arrayBuffers: 18497944
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27249.718 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:37:47.080Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:37:58 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 11804,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 86089728,
+      heapTotal: 61526016,
+      heapUsed: 31148832,
+      external: 19447628,
+      arrayBuffers: 18497944
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27260.828 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:37:58.184Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:38:17 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 12344,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85491712,
+      heapTotal: 61263872,
+      heapUsed: 30891256,
+      external: 19447628,
+      arrayBuffers: 18497944
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27279.781 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:38:17.146Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:39:02 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 360,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85741568,
+      heapTotal: 61526016,
+      heapUsed: 31012792,
+      external: 19465948,
+      arrayBuffers: 18516264
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27325.578 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:39:02.946Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:39:18 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14732,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85680128,
+      heapTotal: 61788160,
+      heapUsed: 31144920,
+      external: 19475497,
+      arrayBuffers: 18525813
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27340.765 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:39:18.124Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:39:21 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 7216,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85504000,
+      heapTotal: 62050304,
+      heapUsed: 30979472,
+      external: 19455819,
+      arrayBuffers: 18506135
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27344.265 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:39:21.629Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:39:26 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 13148,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85721088,
+      heapTotal: 61788160,
+      heapUsed: 31039632,
+      external: 19458019,
+      arrayBuffers: 18508335
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27349.453 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:39:26.815Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:39:31 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 9592,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85860352,
+      heapTotal: 61788160,
+      heapUsed: 31135536,
+      external: 19447627,
+      arrayBuffers: 18497943
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27353.656 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:39:31.023Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:39:36 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14128,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 86048768,
+      heapTotal: 61788160,
+      heapUsed: 30987872,
+      external: 19455819,
+      arrayBuffers: 18506135
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27358.656 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:39:36.020Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:39:40 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 12592,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85680128,
+      heapTotal: 62050304,
+      heapUsed: 31121544,
+      external: 19447628,
+      arrayBuffers: 18497944
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27362.687 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:39:40.054Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:40:24 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 9716,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85426176,
+      heapTotal: 62050304,
+      heapUsed: 30845280,
+      external: 19455819,
+      arrayBuffers: 18506135
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27407.359 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:40:24.723Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:40:35 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14396,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85495808,
+      heapTotal: 61788160,
+      heapUsed: 31118248,
+      external: 19455820,
+      arrayBuffers: 18506136
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27417.734 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:40:35.135Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:40:38 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 11820,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85622784,
+      heapTotal: 61526016,
+      heapUsed: 30996392,
+      external: 19447628,
+      arrayBuffers: 18497944
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27420.671 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:40:38.035Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:40:42 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 2600,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85667840,
+      heapTotal: 62050304,
+      heapUsed: 31159024,
+      external: 19447627,
+      arrayBuffers: 18497943
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27425.156 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:40:42.511Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:40:45 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14744,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85577728,
+      heapTotal: 62050304,
+      heapUsed: 30935024,
+      external: 19455819,
+      arrayBuffers: 18506135
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27428.265 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:40:45.629Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:41:06 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 12584,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85577728,
+      heapTotal: 61526016,
+      heapUsed: 31057216,
+      external: 19447628,
+      arrayBuffers: 18497944
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27449.062 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:41:06.430Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:41:09 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 4000,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85843968,
+      heapTotal: 61788160,
+      heapUsed: 30916464,
+      external: 19465949,
+      arrayBuffers: 18516265
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27452.125 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:41:09.482Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:41:20 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 12540,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85606400,
+      heapTotal: 62050304,
+      heapUsed: 31089520,
+      external: 19447628,
+      arrayBuffers: 18497944
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27462.906 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:41:20.264Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:41:46 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 10096,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85479424,
+      heapTotal: 61526016,
+      heapUsed: 30949376,
+      external: 19447628,
+      arrayBuffers: 18497944
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27489.5 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:41:46.861Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:41:59 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 14412,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85422080,
+      heapTotal: 61788160,
+      heapUsed: 31139168,
+      external: 19447628,
+      arrayBuffers: 18497944
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27502.593 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:41:59.947Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:42:12 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 13740,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85471232,
+      heapTotal: 61788160,
+      heapUsed: 31000640,
+      external: 19465950,
+      arrayBuffers: 18516266
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27515.453 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:42:12.813Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:42:20 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 3660,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85426176,
+      heapTotal: 61526016,
+      heapUsed: 30936808,
+      external: 19447627,
+      arrayBuffers: 18497943
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27523.265 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:42:20.619Z'
+}
+{
+  error: ReferenceError: verifyAdmin is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: verifyAdmin is not defined\n' +
+    'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: verifyAdmin is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:42:30 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 7892,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 85471232,
+      heapTotal: 61526016,
+      heapUsed: 30979768,
+      external: 19447627,
+      arrayBuffers: 18497943
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27532.796 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:42:30.165Z'
+}
+{
+  error: ReferenceError: ve is not defined
+      at Object.<anonymous> (F:\FYP-Project\backend\src\routes\users.js:18:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+      at Module.load (node:internal/modules/cjs/loader:1119:32)
+      at Module._load (node:internal/modules/cjs/loader:960:12)
+      at Module.require (node:internal/modules/cjs/loader:1143:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (F:\FYP-Project\backend\app.js:16:19)
+      at Module._compile (node:internal/modules/cjs/loader:1256:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1310:10),
+  level: 'error',
+  message: 'uncaughtException: ve is not defined\n' +
+    'ReferenceError: ve is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  stack: 'ReferenceError: ve is not defined\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\src\\routes\\users.js:18:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1119:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:960:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1143:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (F:\\FYP-Project\\backend\\app.js:16:19)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1256:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)',
+  exception: true,
+  date: 'Thu Oct 19 2023 07:42:49 GMT+0500 (Pakistan Standard Time)',
+  process: {
+    pid: 13000,
+    uid: null,
+    gid: null,
+    cwd: 'F:\\FYP-Project\\backend',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v18.16.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'F:\\FYP-Project\\backend\\bin\\www'
+    ],
+    memoryUsage: {
+      rss: 86016000,
+      heapTotal: 61788160,
+      heapUsed: 31011552,
+      external: 19447592,
+      arrayBuffers: 18497908
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 27552.265 },
+  trace: [
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\src\\routes\\users.js',
+      function: null,
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1119,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 960,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1143,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'F:\\FYP-Project\\backend\\app.js',
+      function: null,
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1256,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1310,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-19T02:42:49.632Z'
+}

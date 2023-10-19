@@ -1,7 +1,7 @@
 const multerFilesParser = require("../utils/multerFilesParser");
 const ngoServices = require("../services/ngos.services");
 const { addStringQuery, addSimpleQuerySearch } = require("../utils/query");
-const { dataResponse } = require("../utils/commonResponse");
+const { dataResponse, messageResponse } = require("../utils/commonResponse");
 
 //{frontSideCNICLink, backSideCNICLink: ngoImageLink: registrationCertificateLink: annualReportLink: taxExemptionLink: }
 
@@ -179,7 +179,7 @@ async function deleteNGO(req, res, next){
         
         let ngo = await ngoServices.deleteNGO(ngoId);
 
-        return res.send(dataResponse("success", {ngo}));
+        return res.send(messageResponse("success", `Ngo with id ${ngo._id} has been deleted successffully`));
     }catch(error){
         next(error)
     }
@@ -218,7 +218,7 @@ async function addNGO(req, res, next){
         let userId = req.params.userId;
         const {cnicNumber, address, mobileNumber, assosiatedPersonStatus, ngoName, ngoContactNumber, ngoId, creditCardNumber} = req.body;
         console.log(req.body);
-        let ngoImageLink = await multerFilesParser.getSingleFileUrlRequired("ngoImage", req.files)
+        let ngoImageLink = await multerFilesParser.getSingleFileUrl("ngoImage", req.files)
         let frontSideCNICLink = await multerFilesParser.getSingleFileUrlRequired("frontSideCNIC", req.files)
         let backSideCNICLink = await multerFilesParser.getSingleFileUrlRequired("backSideCNIC", req.files)
         let registrationCertificateLink = await multerFilesParser.getSingleFileUrlRequired("registrationCertificate", req.files) 

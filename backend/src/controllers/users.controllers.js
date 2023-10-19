@@ -222,9 +222,25 @@ async function viewSpecificUser(req, res, next){
     }
 }
 
+async function updateMyProfile(req, res, next){
+    try{
+        let userId = req.user.id;
+
+        let {name, email} = req.body;
+ 
+        let userPhotoLink = await multerFilesParser.getSingleFileUrl("userPhoto", req.files)
+        
+        let user = await userServices.updateProfile(userId, name, email, userPhotoLink);
+
+        return res.status(200).send(dataResponse("success", {user}));
+    }
+    catch(error){
+        return next(error);
+    }
+}
 
 module.exports = {
     signup, signin, sendPasswordResetEmail, resetPassword, sendVerificationEmail, verifyEmail, viewMyProfile, setPassword, refreshTokenCall, signout, 
     
-    addUser, deleteUser, viewSpecificUser, editUser, viewUsers
+    addUser, deleteUser, viewSpecificUser, editUser, viewUsers, updateMyProfile
 }

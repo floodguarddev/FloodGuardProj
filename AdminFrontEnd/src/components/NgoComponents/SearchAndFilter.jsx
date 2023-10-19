@@ -35,7 +35,7 @@ const cardStyle = { // Black outline
     bottom: '10px',
     right: '10px',
   };
-export const SearchAndFilter = ({query, setQuery, offset, limit, setAdminsRefresh}) => {
+export const SearchAndFilter = ({query, setQuery, offset, limit, setNgosRefresh}) => {
     //References//''
     const nameRef = useRef(null);
     const emailRef = useRef(null);
@@ -52,12 +52,12 @@ export const SearchAndFilter = ({query, setQuery, offset, limit, setAdminsRefres
       newQuery = {...newQuery, offset: offset};
       newQuery = {...newQuery, limit: limit};
       setQuery(newQuery);
-      setAdminsRefresh(true);
+      setNgosRefresh(true);
     }
 
     const handleClearSearch = () => {
         setSearchText('');
-        setAdminsRefresh(true);
+        setNgosRefresh(true);
     };
     
 
@@ -78,7 +78,7 @@ export const SearchAndFilter = ({query, setQuery, offset, limit, setAdminsRefres
           setShowFilters(false);
           console.log(offset);
           setQuery({"q": searchText, offset: offset, limit: limit});
-          setAdminsRefresh(true);
+          setNgosRefresh(true);
         }, 700);
     
         // Update the timeoutId state

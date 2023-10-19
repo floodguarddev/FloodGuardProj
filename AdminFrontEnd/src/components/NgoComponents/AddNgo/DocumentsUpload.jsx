@@ -6,19 +6,19 @@ import TextField from "@mui/material/TextField";
 
 export const DocumentsUpload = ({setRegistrationCertificate, setAnnualReport, setTaxExemption, setFrontSideCNICImage, setBackSideCNICImage}) => {
     const registrationCertificateHandler = (event)=>{
-        setRegistrationCertificate(setAdminPhoto(event.target.files[0]))
+        setRegistrationCertificate(event.target.files[0])
     }
     const annualReportHandler = (event)=>{
-        setAnnualReport(setAdminPhoto(event.target.files[0]))
+        setAnnualReport(event.target.files[0])
     }
     const taxExemptionHandler = (event)=>{
-        setTaxExemption(setAdminPhoto(event.target.files[0]))
+        setTaxExemption(event.target.files[0])
     }
     const frontSideCNICHandler = (event)=>{
-        setFrontSideCNICImage(setAdminPhoto(event.target.files[0]))
+        setFrontSideCNICImage(event.target.files[0])
     }
     const backSideCNICHandler = (event)=>{
-        setBackSideCNICImage(setAdminPhoto(event.target.files[0]))
+        setBackSideCNICImage(event.target.files[0])
     }
     return (
     <Box component="form" noValidate >

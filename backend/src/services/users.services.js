@@ -405,4 +405,15 @@ async function viewUsers(query, limit, offset){
     return {total, users};
 }
 
-module.exports = {signup, signin, sendPasswordResetEmail, resetPassword, sendVerificationEmail, verifyEmail, getUserProfile, setPassword, refreshToken, signout, addUser, deleteUser, editUser, viewUsers, changeUserPassword}
+async function updateProfile(userId, name, email, userPhotoLink){
+    let user = await User.findByIdAndUpdate(userId, {name, email, userPhotoLink}, {new: true});
+
+    if(!user)
+    {
+        throw new createHttpError.NotFound("User with given details doesn't exist");
+    }
+
+    return user
+}
+
+module.exports = {signup, signin, sendPasswordResetEmail, resetPassword, sendVerificationEmail, verifyEmail, getUserProfile, setPassword, refreshToken, signout, addUser, deleteUser, editUser, viewUsers, changeUserPassword, updateProfile}

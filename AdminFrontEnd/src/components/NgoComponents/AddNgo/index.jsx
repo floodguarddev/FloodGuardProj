@@ -24,7 +24,8 @@ import { DocumentsUpload } from './DocumentsUpload';
 
 export default function AddNgo() {
     const [activeStep, setActiveStep] = React.useState(0);
-    
+    const [userContext, setUserContext] = useUser();
+    const { enqueueSnackbar } =  useSnackbar();
     //Person Selection//
     const [user, setUser] = React.useState(null);
     const [cnicNumber, setCnicNumber] = React.useState("");
@@ -37,6 +38,7 @@ export default function AddNgo() {
     const [creditCardNumber, setCreditCardNumber] = React.useState("");
     const [address, setAddress] = React.useState("");
     const [ngoId, setNgoId] = React.useState("");
+    const [ngoImage, setNgoImage] = React.useState(null);
     //Document Upload//
     
     const [registrationCertificate, setRegistrationCertificate] = React.useState(null);
@@ -52,8 +54,68 @@ export default function AddNgo() {
     const handleBack = () => {
       setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
-  
+    
+    const addNGOFunc = async ()=>{
+            console.log('here')
+            try{
+              let formData = new FormData();
+              //User
+              formData.append('cnicNumber', cnicNumber);
+              formData.append('mobileNumber', mobileNumber);
+              formData.append('assosiatedPersonStatus', associatedPersonStatus);
+              formData.append('frontSideCNIC', frontSideCNICImage)
+              formData.append('backSideCNIC', backSideCNICImage)
+
+              //Ngo
+              formData.append('ngoName', ngoName);
+              formData.append('ngoContactNumber', ngoContactNumber)
+              formData.append('creditCardNumber', creditCardNumber)
+              formData.append('address', address)
+              formData.append('ngoId', ngoId)
+              formData.append('ngoImage', ngoImage)
+              
+              //Documents
+              formData.append('registrationCertificate', registrationCertificate);
+              formData.append('annualReport', annualReport);
+              formData.append('taxExemption', taxExemption);
+        
+              await addNgo(userContext.token, user, formData);
+        
+              enqueueSnackbar("Ngo Has been added Successfully", { variant: "success" ,anchorOrigin: {
+                vertical: 'bottom',
+                horizontal: 'right'
+              } });
+              
+              handleReset();
+            }
+            catch(error)
+            {
+                enqueueSnackbar(error.response? error.response.data.message : error.message, { variant: "error", anchorOrigin: {
+                  vertical: 'bottom',
+                  horizontal: 'right'
+                }  });
+            }
+    }
+
     const handleReset = () => {
+    //Person Selection//
+    setCnicNumber(null);
+    setCnicNumber("");
+    setMobileNumber("");
+    setAssociatedPersonStatus("");
+    //Ngo Details//
+    setNgoName("");
+    setNgoContactNumber("");
+    setCreditCardNumber("");
+    setAddress("");
+    setNgoId("");
+    //Document Upload//
+    
+    setRegistrationCertificate(null);
+    setAnnualReport(null);
+    setTaxExemption(null);
+    setFrontSideCNICImage(null);
+    setBackSideCNICImage(null);
       setActiveStep(0);
     };
     const steps = [
@@ -63,7 +125,7 @@ export default function AddNgo() {
         },
         {
           label: 'NGO Details',
-          component: <NgoDetails {...{ngoName, setNgoName, ngoContactNumber, setNgoContactNumber,creditCardNumber, setCreditCardNumber, address, setAddress, ngoId, setNgoId}}/>,
+          component: <NgoDetails {...{ngoName, setNgoName, ngoContactNumber, setNgoContactNumber,creditCardNumber, setCreditCardNumber, address, setAddress, ngoId, setNgoId, ngoImage, setNgoImage}}/>,
         },
         {
           label: 'NGO Documents',
@@ -110,7 +172,7 @@ export default function AddNgo() {
                       <div>
                         <Button
                           variant="contained"
-                          onClick={handleNext}
+                          onClick={index === steps.length - 1 ?addNGOFunc:handleNext}
                           sx={{ mt: 1 }}
                           className="mr-1 whiteColor"
                         >

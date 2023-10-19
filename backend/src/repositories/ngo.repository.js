@@ -46,7 +46,8 @@ async function getNGOsByQuery(query, limit = process.env.DEFAULT_LIMIT, offset =
         ngoImageLink: 1,
         ngoName: 1,
         ngoContactNumber: 1,
-        ngoId: 1
+        ngoId: 1,
+        receivedDonations: 1
     })
     .sort({approvedDate: -1})
     .skip(offset)
@@ -57,7 +58,7 @@ async function getNGOsByQuery(query, limit = process.env.DEFAULT_LIMIT, offset =
 }
 
 async function getNGOById(ngoId){
-    let ngo = await NGO.findById(ngoId).catch(error => {
+    let ngo = await NGO.findById(ngoId).populate('userId').catch(error => {
         throw new createHttpError.InternalServerError(error);
     }
     );

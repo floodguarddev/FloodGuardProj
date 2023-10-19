@@ -156,11 +156,11 @@ async function viewSpecificFundRaisingRequest(req, res, next){
 async function addFundRaisingPost(req, res, next){
     try{
         let ngoId = req.params.ngoId;
-        const {postTitle, postDescription} = req.body;
+        const {postTitle, postDescription, requestedAmount} = req.body;
         
         let postImagesLinks = await multerFilesParser.getMultipleFilesUrls("postImages", req.files)
 
-        let fundRaisingPost = await fundRaisingServices.addFundRaisingPost(ngoId, postTitle, postDescription, postImagesLinks);
+        let fundRaisingPost = await fundRaisingServices.addFundRaisingPost(ngoId, postTitle, postDescription, requestedAmount, postImagesLinks);
 
 
         return res.status(200).send(dataResponse("success", {fundRaisingPost}));

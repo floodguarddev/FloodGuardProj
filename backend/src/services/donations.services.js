@@ -122,11 +122,12 @@ async function successfulPayment(paymentIntentSucceededObj){
         user.donations = user.donations + amount;
         await user.save();
     }
+    console.log(postId);
     if(postId){
         let post = await fund_raising_postModel.findById(postId).catch((error)=>{
             throw new createHttpError.InternalServerError(error);
         })
-        
+        console.log(post);
         if(!post)
             throw new createHttpError.NotFound('Failed To Find Post With ID ${postId}')
 

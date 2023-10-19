@@ -3,23 +3,23 @@ import {useParams } from 'react-router-dom'
 import Loader from '@/pages/general/Loader';
 import { useSnackbar } from 'notistack';
 import { useUser } from '@/context/UserContext';
-import { getSpecificAdmin } from '@/services/admins.services';
+import { getSpecificNgo } from '@/services/ngos.services';
 import BadRequest from '@/pages/general/BadRequest';
-import { AdminProfile } from '@/components/AdminComponents/AdminProfile';
+import { NgoProfile } from '@/components/NgoComponents/NgoProfile/index';
 export default function  ViewNgo(){
-  const [admin, setAdmin] = useState(null);
-  const [adminContext, setAdminContext] = useUser();
+  const [ngo, setNgo] = useState(null);
+  const [userContext, setuserContext] = useUser();
   const [error, setError] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
   const params = useParams();
 
   useEffect(()=>{
-    getSpecificAdmin(adminContext.token, params.id).then(
-        (response)=>response.data.data.user
+    getSpecificNgo(userContext.token, params.id).then(
+        (response)=>response.data.data.ngo
     ).then(
-        (admin)=>{
-            console.log(admin);
-            setAdmin(admin);
+        (ngo)=>{
+            console.log(ngo);
+            setNgo(ngo);
         }
     ).catch(
         (error)=>{
@@ -34,9 +34,9 @@ export default function  ViewNgo(){
 
   return (
     (error)?
-    <BadRequest message="Given Admin Id is not Valid, Please Try to Select a Valid Id from Admins List" buttonLabel="Go to Admins List" buttonLink="/admins/list"/>:
-    (admin)?
-    <div><AdminProfile admin = {admin} /></div>:
+    <BadRequest message="Given Ngo Id is not Valid, Please Try to Select a Valid Id from Ngos List" buttonLabel="Go to Ngos List" buttonLink="/ngos/list"/>:
+    (ngo)?
+    <div><NgoProfile ngo = {ngo} /></div>:
     <Loader/>
   )
 }

@@ -267,7 +267,7 @@ export const ViewFundRaisingsList = ({setTotalRecords, query, handleEditOpen, fu
                     </Typography>
                     <Typography component="div">{Math.floor(100*fundRaising.recievedAmount/fundRaising.requestedAmount)}%</Typography>
                   </Box>
-                  <BorderLinearProgress variant="determinate" value={Math.floor(100*fundRaising.recievedAmount/fundRaising.requestedAmount)} />
+                  <BorderLinearProgress variant="determinate" value={Math.min(100, Math.floor(100*fundRaising.recievedAmount/fundRaising.requestedAmount))} />
                 </Box>
             </CardContent>
 

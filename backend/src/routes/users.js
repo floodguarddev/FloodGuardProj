@@ -8,13 +8,14 @@ const donationController = require('../controllers/donations.controller');
 const newsController = require('../controllers/news.controller');
 const floodPrecautionController = require('../controllers/flood_precautions.controller')
 const { verifyUser, verifyLocalStrategy, verifyRefreshToken } = require('../middlewares/authentication');
-const { rescuerFiles, ngoFiles } = require('../middlewares/fileupload');
+const { rescuerFiles, ngoFiles, profileFiles } = require('../middlewares/fileupload');
 var router = express.Router();
 
 /* Module 1: User Profiling */
 router.post('/signup', userController.signup);
 router.post('/signin', userController.signin);
 router.post('/sendPasswordResetEmail', userController.sendPasswordResetEmail);
+router.put('/me', verifyUser, profileFiles.fields([{'name': 'userPhoto'}]), userController.updateMyProfile);
 router.post('/resetPassword', userController.resetPassword);
 router.get('/sendVerificationEmail', verifyUser, verifyLocalStrategy, userController.sendVerificationEmail);
 router.get('/verifyEmail', userController.verifyEmail)

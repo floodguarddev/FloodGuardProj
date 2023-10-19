@@ -19,6 +19,7 @@ export function AddFundRaising() {
   const [postTitle, setTitle] = React.useState("");
   const [postDescription, setDescription] = React.useState("");
   const [ngoId, setNgoId] = React.useState("");
+  const [requestedAmount, setRequestedAmount] = React.useState(0);
 
   const fileSelectedHandler = (event) => {
     console.log(event.target.files)
@@ -50,6 +51,7 @@ export function AddFundRaising() {
       let formData = new FormData();
       formData.append('postTitle', postTitle);
       formData.append('postDescription', postDescription);
+      formData.append('requestedAmount', requestedAmount);
       images.forEach((image)=>{
         formData.append('postImages', image);
       })
@@ -162,6 +164,31 @@ export function AddFundRaising() {
                         value={postDescription}
                         onChange={(event)=>{
                         setDescription(event.target.value)
+                        }}
+                    />
+                </Grid>
+                <Grid item xs={12}>
+                    <Typography
+                        component="label"
+                        sx={{
+                        fontWeight: "500",
+                        fontSize: "14px",
+                        mb: "10px",
+                        display: "block",
+                        }}
+                    >
+                        Requested Amount
+                    </Typography>
+
+                    <TextField
+                        multiline
+                        fullWidth
+                        id="requestedAmount"
+                        name="requestedAmount"
+                        autoComplete="family-name"
+                        value={requestedAmount}
+                        onChange={(event)=>{
+                        setRequestedAmount(event.target.value)
                         }}
                     />
                 </Grid>
