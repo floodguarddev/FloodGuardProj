@@ -9,6 +9,19 @@ export default function index () {
   const [features, setFeatures] = useState([]);
   const [userContext, setUserContext] = useUser();
 
+  function formatNumber(number) {
+    if (number >= 1000000000) {
+        return (number / 1000000000).toFixed(1) + 'B';
+    }
+    else if (number >= 1000000) {
+      return (number / 1000000).toFixed(1) + 'M';
+    } else if (number >= 1000) {
+      return (number / 1000).toFixed(1) + 'k';
+    } else {
+      return number.toString();
+    }
+  }
+
   useEffect(()=>{
     Promise.all([
         getNgosSummary(userContext.token),
@@ -18,6 +31,7 @@ export default function index () {
         return responses.map((response)=>{
             let data = response.data.data;
             data.amount = Math.abs(data.total);
+            data.amount = formatNumber(data.amount)
             if(data.lastYearCompare>0){
                 data.icon = <TrendingUpIcon/>
                 data.growthText = `${data.lastYearCompare}% up from past year`

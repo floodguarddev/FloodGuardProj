@@ -1,9 +1,5 @@
 import React from 'react'
 import Grid from "@mui/material/Grid";
-import Features from '@/components/Pages/Profile/Features';
-//import Overview from '@/components/Pages/Profile/Overview';
-import MyTasks from '@/components/Pages/Profile/MyTasks';
-//import ImpressionGoalConversions from "@/components/Dashboard/Analytics/ImpressionGoalConversions";
 import {Link} from 'react-router-dom';
 import styles from '@/styles/PageTitle.module.css';
 import { Box, Typography } from "@mui/material";
@@ -45,15 +41,6 @@ export const UserProfile = ({user}) => {
 
           {/* ActivityTimeline */}
           <UserDonations userId = {user._id} />
-        </Grid>
-
-        <Grid item xs={12} md={12} lg={12} xl={8}>
-          {/* Features */}
-          <Features />
-
-
-          {/* MyTasks */}
-          <MyTasks />
         </Grid>
       </Grid>
     </>

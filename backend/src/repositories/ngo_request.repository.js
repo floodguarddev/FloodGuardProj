@@ -48,7 +48,7 @@ async function getRequestsByQuery(query, limit = process.env.DEFAULT_LIMIT, offs
 }
 
 async function getNGORequestById(id){
-    let ngoRequest = await NGO_Request.findById(id).catch(error => {
+    let ngoRequest = await NGO_Request.findById(id).populate('userId').catch(error => {
         throw new createHttpError.InternalServerError(error);
     }
     );

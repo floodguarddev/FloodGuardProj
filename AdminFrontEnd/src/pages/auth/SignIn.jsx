@@ -27,8 +27,10 @@ const SignInForm = () => {
       if(response.status == 200){
         
         let data = await response.data.data;
+        console.log(data);
         setUserContext(oldValues => {
           return { ...oldValues, 
+            id: data.admin._id,
             token: data.token, 
             adminPhotoLink: data.admin.adminPhotoLink||'/images/admin/defaultProfile.jpg',
             name: data.admin.name,

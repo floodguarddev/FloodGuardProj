@@ -2,7 +2,8 @@ import './styles/remixicon.css'
 import 'react-tabs/style/react-tabs.css';
 import "swiper/css";
 import "swiper/css/bundle";
-
+//Map CSS
+import 'mapbox-gl/dist/mapbox-gl.css';
 // Chat Styles
 import './styles/chat.css'
 // Globals Styles
@@ -74,6 +75,15 @@ import AddNgoPage from './pages/ngos/addNgoPage';
 import ViewNgo from './pages/ngos/ViewNgo';
 import ViewRescuerRequest from './pages/rescuer_requests/ViewRescuerRequest';
 import ViewNgoRequest from './pages/ngo_requests/ViewNgoRequest';
+
+//Flood
+import AddFloodPage from './pages/floods/AddFloodPage';
+import DangerZonesPage from './pages/floods/DangerZonesPage'
+import FloodsListPage from './pages/floods/FloodsListPage'
+import { AddCamera } from './components/CameraComponents/AddCamera';
+import AddCameraPage from './pages/cameras/AddCameraPage';
+import CamerasListPage from './pages/cameras/CamerasListPage';
+
 function App() {
   const [userContext, setUserContext] = useContext(UserContext)
 
@@ -85,9 +95,9 @@ function App() {
     }).then(async response => {
       if (response.ok) {
         const data = await response.json()
-        
         setUserContext(oldValues => {
           return { ...oldValues, 
+            id: data.data.admin._id,
             token: data.data.token, 
             adminPhotoLink: data.data.admin.adminPhotoLink||'/images/admin/defaultProfile.jpg',
             name: data.data.admin.name,
@@ -189,6 +199,17 @@ function App() {
                     <Route path ='/ngos/requests/:id' element={<ViewNgoRequest/>}/>
                     <Route path='/ngos/add' element={<AddNgoPage />}/>
                     <Route path='/ngos/:id' element={<ViewNgo />}/>
+                  </Route>
+                  <Route path="/floods">
+                    <Route path="/floods" element={<Navigate to="/floods/dangerzones" />}/>
+                    <Route path="/floods/add" element={<AddFloodPage />}/>
+                    <Route path='/floods/dangerzones' element={<DangerZonesPage />}/> 
+                    <Route path='/floods/list' element={<FloodsListPage/>}/>
+                  </Route>
+                  <Route path="/cameras">
+                    <Route path="/cameras" element={<Navigate to="/cameras/list" />}/>
+                    <Route path="/cameras/add" element={<AddCameraPage />}/>
+                    <Route path='/cameras/list' element={<CamerasListPage />}/>
                   </Route>
                   <Route path='*' element={<NotFound/>} />
                 </Routes>

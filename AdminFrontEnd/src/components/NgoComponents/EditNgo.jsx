@@ -58,7 +58,7 @@ BootstrapDialogTitle.propTypes = {
 
 
 const EditNgo = ({ngo, setNgo, handleClose, open}) => {
-  const [ngoContext, setNgoContext] = useUser();
+  const [userContext, setUserContext] = useUser();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [ngoPhoto, setNgoPhoto] = useState(undefined);
@@ -77,7 +77,7 @@ const EditNgo = ({ngo, setNgo, handleClose, open}) => {
   const updateNgoFunc = async (event) => {
 
     try{
-      let token = ngoContext.token;
+      let token = userContext.token;
     
       let formData = new FormData();
       formData.append('name', name);

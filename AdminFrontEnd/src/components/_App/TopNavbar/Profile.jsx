@@ -87,7 +87,8 @@ const Profile = () => {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         className="for-dark-top-navList"
       >
-        <MenuItem>
+        <MenuItem >
+          <Link to = {`/admins/${userContext.id}`} style={{display: "flex", color:"inherit", textDecoration: "none", }}>
           <Avatar src={userContext.adminPhotoLink} className="mr-1" />
           <Box>
             <Typography sx={{ fontSize: "11px", color: "#757FEF" }}>
@@ -103,6 +104,8 @@ const Profile = () => {
               {userContext.name}
             </Typography>
           </Box>
+          </Link>
+          
         </MenuItem>
 
         <Divider />
@@ -112,37 +115,11 @@ const Profile = () => {
             <PersonIcon fontSize="small" />
           </ListItemIcon>
           <Link
-            to="/pages/profile/"
+            to = {`/admins/${userContext.id}`}
             fontSize="13px"
             style={{color:"inherit", textDecoration: "none", }}
           >
             Profile
-          </Link>
-        </MenuItem>
-
-        <MenuItem>
-          <ListItemIcon sx={{ mr: "-8px", mt: "-3px" }}>
-            <MailOutlineIcon fontSize="small" />
-          </ListItemIcon>
-          <Link
-            to="/email/inbox/"
-            fontSize="13px"
-            style={{color:"inherit", textDecoration: "none", }}
-          >
-            Inbox
-          </Link>
-        </MenuItem>
-
-        <MenuItem>
-          <ListItemIcon sx={{ mr: "-8px", mt: "-3px" }}>
-            <ChatBubbleOutlineIcon fontSize="small" />
-          </ListItemIcon>
-          <Link
-            to="/apps/chat/"
-            fontSize="13px"
-            style={{color:"inherit", textDecoration: "none", }}
-          >
-            Chat
           </Link>
         </MenuItem>
 

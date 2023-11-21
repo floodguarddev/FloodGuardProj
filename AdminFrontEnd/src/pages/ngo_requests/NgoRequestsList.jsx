@@ -21,10 +21,9 @@ import AddIcon from "@mui/icons-material/Add";
 import ClearIcon from "@mui/icons-material/Clear";
 import styles from '@/styles/PageTitle.module.css'
 import {Link} from 'react-router-dom';
-import { ViewAdminList } from "../../components/AdminComponents/ViewAdminList";
-import EditAdmin from "@/components/AdminComponents/EditAdmin";
-import { SearchAndFilter } from '../../components/AdminComponents/SearchAndFilter';
-// End Create new admin Modal
+import { ViewNgoRequestList } from "../../components/NgoComponents/ViewNgoRequestList";
+import { SearchAndFilter } from '../../components/NgoComponents/SearchAndFilter';
+// End Create new ngoRequest Modal
 
 function MembersLists(props) {
   const theme = useTheme();
@@ -96,8 +95,8 @@ MembersLists.propTypes = {
 };
 
 export default function NgoRequestsList() {
-  //Admin List Refresher
-  const [adminsRefresh, setAdminsRefresh] = React.useState(true);
+  //NgoRequest List Refresher
+  const [ngoRequestsRefresh, setNgoRequestsRefresh] = React.useState(true);
   //Query//
   const[query, setQuery] = React.useState({limit: 10, offset:0});
   // Table
@@ -111,7 +110,7 @@ export default function NgoRequestsList() {
       oldValues.offset = newPage * rowsPerPage
       return oldValues
     })
-    setAdminsRefresh(true);
+    setNgoRequestsRefresh(true);
   };
 
   const handleChangeRowsPerPage = (event) => {
@@ -122,30 +121,18 @@ export default function NgoRequestsList() {
       oldValues.limit = parseInt(event.target.value, 10);
       return oldValues;
     })
-    setAdminsRefresh(true);
-  };
-
-  // Edit Admin Model
-  const [editAdmin, setEditAdmin] = React.useState(null);
-  const [editOpen, setEditOpen] = React.useState(false);
-  const handleEditOpen = (admin) => {
-    setEditAdmin(admin)
-    setEditOpen(true);
-  };
-  const handleEditClose = () => {
-    setEditOpen(false);
-    setAdminsRefresh(true);
-  };
+    setNgoRequestsRefresh(true);
+  }
   return (
     <>
       {/* Page title */}
       <div className={styles.pageTitle}>
-        <h1>Admins List</h1>
+        <h1>NgoRequests List</h1>
         <ul>
           <li>
             <Link to="/">Dashboard</Link>
           </li>
-          <li>Admins List</li>
+          <li>NgoRequests List</li>
         </ul>
       </div>
 
@@ -175,30 +162,11 @@ export default function NgoRequestsList() {
               fontWeight: 500,
             }}
           >
-            Admins List
+            NgoRequests List
           </Typography>
-          <Link to = "/admins/add">
-            <Button
-              variant="contained"
-              sx={{
-                textTransform: "capitalize",
-                borderRadius: "8px",
-                fontWeight: "500",
-                fontSize: "13px",
-                padding: "12px 20px",
-                color: "#fff !important",
-              }}
-            >
-              <AddIcon
-                sx={{ position: "relative", top: "-1px" }}
-                className='mr-5px'
-              />{" "}
-              Create New Admin
-            </Button>
-          </Link>
           
         </Box>
-        <SearchAndFilter setAdminsRefresh={setAdminsRefresh} offset={page*rowsPerPage} limit = {rowsPerPage} query = {query} setQuery = {setQuery}/>
+        <SearchAndFilter setNgoRequestsRefresh={setNgoRequestsRefresh} offset={page*rowsPerPage} limit = {rowsPerPage} query = {query} setQuery = {setQuery}/>
         <TableContainer
           component={Paper}
           sx={{
@@ -210,8 +178,8 @@ export default function NgoRequestsList() {
             aria-label="custom pagination table"
             className="dark-table"
           >
-            {/* View Admins */}
-            <ViewAdminList setTotalRecords={setTotalRecords} adminsRefresh={adminsRefresh} setAdminsRefresh={setAdminsRefresh} handleEditOpen={handleEditOpen} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
+            {/* View NgoRequests */}
+            <ViewNgoRequestList setTotalRecords={setTotalRecords} ngoRequestsRefresh={ngoRequestsRefresh} setNgoRequestsRefresh={setNgoRequestsRefresh} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
 
             <TableFooter>
               <TableRow>
@@ -237,18 +205,7 @@ export default function NgoRequestsList() {
           </Table>
         </TableContainer>
       </Card>
-      
-      {
-        /*Update Admin*/
-      }
-      
-      <EditAdmin
-        handleClose={handleEditClose}
-        aria-labelledby="customized-dialog-title"
-        open={editOpen}
-        admin={editAdmin}
-        setAdmin={setEditAdmin}
-      />
+
     </>
   );
 }

@@ -6,6 +6,7 @@ import UsersStatus from '../../components/Graphs/UsersStatus'
 import DonationsGraph from '../../components/Graphs/DonationsGraph'
 import NgosStatus from '../../components/Graphs/NgosStatus';
 import Summary from '../../components/Summary';
+import CamerasInstalled from '../../components/Graphs/CamerasInstalled';
 
 export default function Dashboard() {
   return (
@@ -36,6 +37,7 @@ export default function Dashboard() {
             <Grid item xs={12} md={12}>
               {/* RevenuStatus */}
               <UsersStatus/>
+              <CamerasInstalled/>
               <DonationsGraph/>
               <NgosStatus />
             </Grid>

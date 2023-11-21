@@ -13,6 +13,13 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import GridViewIcon from "@mui/icons-material/GridView";
 import SettingsIcon from "@mui/icons-material/Settings";
 import PostAddIcon from "@mui/icons-material/PostAdd";
+import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
+import PersonIcon from '@mui/icons-material/Person';
+import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
+import FeedIcon from '@mui/icons-material/Feed';
+import PrivacyTipIcon from '@mui/icons-material/PrivacyTip';
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 
 const SidebarNav = styled("nav")(({ theme }) => ({
@@ -49,7 +56,7 @@ const Sidebar = ({ toogleActive }) => {
     {
       title: "Admins",
       path: "/admins/",
-      icon: <PostAddIcon />,
+      icon: <SupervisorAccountIcon />,
       iconClosed: <KeyboardArrowRightIcon />,
       iconOpened: <KeyboardArrowDownIcon />,
   
@@ -71,7 +78,7 @@ const Sidebar = ({ toogleActive }) => {
     {
       title: "Users",
       path: "/users/",
-      icon: <PostAddIcon />,
+      icon: <PersonIcon />,
       iconClosed: <KeyboardArrowRightIcon />,
       iconOpened: <KeyboardArrowDownIcon />,
   
@@ -91,9 +98,49 @@ const Sidebar = ({ toogleActive }) => {
       ],
     },
     {
+      title: "Cameras",
+      path: "/cameras/",
+      icon: <ReportGmailerrorredIcon />,
+      iconClosed: <KeyboardArrowRightIcon />,
+      iconOpened: <KeyboardArrowDownIcon />,
+  
+      subNav: [
+        {
+          title: "Add Camera",
+          path: "/cameras/add"
+        },
+        {
+          title: "View Cameras",
+          path: "/cameras/list"
+        }
+      ],
+    },
+    {
+      title: "Flood",
+      path: "/floods/",
+      icon: <ReportGmailerrorredIcon />,
+      iconClosed: <KeyboardArrowRightIcon />,
+      iconOpened: <KeyboardArrowDownIcon />,
+  
+      subNav: [
+        {
+          title: "Add Flood",
+          path: "/floods/add"
+        },
+        {
+          title: "Danger Zones",
+          path: "/floods/dangerzones",
+        },
+        {
+          title: "View Floods",
+          path: "/floods/list"
+        }
+      ],
+    },
+    {
       title: "Flood Precautions",
       path: "/flood_precautions/",
-      icon: <PostAddIcon />,
+      icon: <ReportGmailerrorredIcon />,
       iconClosed: <KeyboardArrowRightIcon />,
       iconOpened: <KeyboardArrowDownIcon />,
   
@@ -115,7 +162,7 @@ const Sidebar = ({ toogleActive }) => {
     {
       title: "News",
       path: "/news/",
-      icon: <PostAddIcon />,
+      icon: <FeedIcon />,
       iconClosed: <KeyboardArrowRightIcon />,
       iconOpened: <KeyboardArrowDownIcon />,
   
@@ -163,7 +210,7 @@ const Sidebar = ({ toogleActive }) => {
     {
       title: "Fund Raising",
       path: "/fund_raisings/",
-      icon: <PostAddIcon />,
+      icon: <VolunteerActivismIcon />,
       iconClosed: <KeyboardArrowRightIcon />,
       iconOpened: <KeyboardArrowDownIcon />,
   
@@ -189,7 +236,7 @@ const Sidebar = ({ toogleActive }) => {
     {
       title: "NGOs",
       path: "/ngos/",
-      icon: <PostAddIcon />,
+      icon: <PrivacyTipIcon />,
       iconClosed: <KeyboardArrowRightIcon />,
       iconOpened: <KeyboardArrowDownIcon />,
   
@@ -219,7 +266,8 @@ const Sidebar = ({ toogleActive }) => {
     {
       title: "Rescuers",
       path: "/rescuers/",
-      icon: <PostAddIcon />,
+      icon: <LocalHospitalIcon />,
+      
       iconClosed: <KeyboardArrowRightIcon />,
       iconOpened: <KeyboardArrowDownIcon />,
   

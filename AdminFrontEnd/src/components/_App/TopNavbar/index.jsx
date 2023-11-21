@@ -1,7 +1,6 @@
 import * as React from "react";
 import { AppBar, Toolbar, IconButton, Stack, Typography } from "@mui/material";
 import SearchForm from "./SearchForm";
-import Email from "./Email";
 import Notification from "./Notification";
 import Profile from "./Profile";
 import Tooltip from "@mui/material/Tooltip";
@@ -43,9 +42,6 @@ const TopNavbar = ({ toogleActive }) => {
             <Stack direction="row" spacing={2}>
               {/* CurrentDate */}
               <CurrentDate />
-
-              {/* Notification */}
-              <Email />
 
               {/* Notification */}
               <Notification />
