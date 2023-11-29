@@ -7,6 +7,7 @@ const ngoParticipationController = require('../controllers/ngo_ participation.co
 const donationController = require('../controllers/donations.controller');
 const newsController = require('../controllers/news.controller');
 const floodPrecautionController = require('../controllers/flood_precautions.controller')
+const chatController = require('../controllers/chat.controllers')
 const { verifyUser, verifyLocalStrategy, verifyRefreshToken } = require('../middlewares/authentication');
 const { rescuerFiles, ngoFiles, profileFiles } = require('../middlewares/fileupload');
 var router = express.Router();
@@ -70,4 +71,7 @@ router.get('/news/:newsId',  newsController.viewSpecificNews);
 router.get('/precautions', floodPrecautionController.viewPrecautions)
 router.get('/precautions/:precautionId', floodPrecautionController.viewSpecificPrecaution);
 
+/*--- Module 7:  Chat System---*/
+router.get('/chat/contactsHistory', verifyUser, chatController.getContactsHistory)
+router.get('/chat/messages/:userId', verifyUser, chatController.getChat)
 module.exports = router;

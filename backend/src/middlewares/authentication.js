@@ -1,6 +1,7 @@
 const createHttpError = require('http-errors')
 const {getPayload, getRefreshTokenPayload} = require('../utils/authentication.js')
 
+
 const verifyLocalStrategy = (req, res, next) =>{
   try{
     if(!req.user.authStrategy == "local")
