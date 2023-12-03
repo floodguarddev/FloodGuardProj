@@ -12,6 +12,7 @@ const donationController = require('../controllers/donations.controller');
 const newsController = require('../controllers/news.controller');
 const floodPrecautionController = require('../controllers/flood_precautions.controller')
 const reportController = require('../controllers/reports.controllers');
+const floodController = require('../controllers/floods.controllers');
 /* Module 1: User Profiling */
 /* -- Admin Profile -- */
 router.post('/signin', adminController.signin);
@@ -140,4 +141,11 @@ router.get('/reports/ngosSummary', verifyAdmin, reportController.getNgosSummary)
 router.get('/reports/donationsSummary', verifyAdmin, reportController.getDonationsSummary);
 router.get('/reports/usersSummary', verifyAdmin, reportController.getUsersSummary)
 
+//Flood//
+router.get('/floods',verifyAdmin, floodController.viewFloods);
+router.get('/floods/:id',verifyAdmin, floodController.viewSpecificFlood);
+router.post('/floods',verifyAdmin, floodController.addFlood);
+router.put('/floods/:id',verifyAdmin, floodController.editFlood);
+router.delete('/floods/:id',verifyAdmin, floodController.viewSpecificFlood);
+router.get('/districts_floods',verifyAdmin, floodController.currentDistrictsFloodStatus);
 module.exports = router;

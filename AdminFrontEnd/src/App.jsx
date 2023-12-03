@@ -88,7 +88,7 @@ function App() {
   const [userContext, setUserContext] = useContext(UserContext)
 
   const verifyUser = useCallback(() => {
-    fetch("http://localhost:80/"+ "admins/refreshTokenCall", {
+    fetch("http://localhost:8080/"+ "admins/refreshTokenCall", {
       method: "GET",
       credentials: "include",
       headers: { "Content-Type": "application/json" },

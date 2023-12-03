@@ -8,6 +8,7 @@ const donationController = require('../controllers/donations.controller');
 const newsController = require('../controllers/news.controller');
 const floodPrecautionController = require('../controllers/flood_precautions.controller')
 const chatController = require('../controllers/chat.controllers')
+const floodController = require('../controllers/floods.controllers');
 const { verifyUser, verifyLocalStrategy, verifyRefreshToken } = require('../middlewares/authentication');
 const { rescuerFiles, ngoFiles, profileFiles } = require('../middlewares/fileupload');
 var router = express.Router();
@@ -74,4 +75,13 @@ router.get('/precautions/:precautionId', floodPrecautionController.viewSpecificP
 /*--- Module 7:  Chat System---*/
 router.get('/chat/contactsHistory', verifyUser, chatController.getContactsHistory)
 router.get('/chat/messages/:userId', verifyUser, chatController.getChat)
+
+/*--- Module 3: Flood Prediction---*/
+router.get('/floods', floodController.viewFloods);
+router.get('/floods/:id', floodController.viewSpecificFlood);
+router.post('/floods/report', floodController.reportFlood);
+router.post('/flood_prediction', floodController.predictFlood);
+router.get('/districts_floods', floodController.currentDistrictsFloodStatus);
+/*--- Module ---*/
+
 module.exports = router;
