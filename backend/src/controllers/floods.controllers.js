@@ -1,13 +1,13 @@
-const floodPrecautionServices = require("../services/flood_precautions.services");
+const floodServices = require("../services/floods.services");
 const { addStringQuery } = require("../utils/query");
 const { dataResponse, messageResponse } = require("../utils/commonResponse");
 
 //Delete
 async function viewFloods(req, res, next){
     try{
-        let precautionId = req.params.precautionId;
-        await floodPrecautionServices.deletePrecaution(precautionId);
-        return res.status(200).send(messageResponse("success", `Flood Precaution with id ${precautionId} has been deleted successfully.`))
+        let floods = await floodServices.getFloods();
+
+        return res.status(200).send(dataResponse("success", {floods}))
     }
     catch(error)
     {
@@ -17,9 +17,11 @@ async function viewFloods(req, res, next){
 //Edit
 async function viewSpecificFlood(req, res, next){
     try{
-        let precautionId = req.params.precautionId;
-        await floodPrecautionServices.deletePrecaution(precautionId);
-        return res.status(200).send(messageResponse("success", `Flood Precaution with id ${precautionId} has been deleted successfully.`))
+        let floodId = req.params.floodId;
+
+        let flood = await floodServices.getSpecificFlood(floodId);
+ 
+        return res.status(200).send(dataResponse("success", {flood}))
     }
     catch(error)
     {
@@ -39,11 +41,13 @@ async function reportFlood(req, res, next){
     }
 }
 
-async function predictFlood(req, res, next){
+async function getFloodPrediction(req, res, next){
     try{
-        let {lat, log} = req.body;
-        let flood_precaution = await floodPrecautionServices.addPrecaution(title, description, precautions);
-        res.status(200).send(dataResponse("success", {flood_precaution}));
+        let {lat, lon} = req.query;
+        
+        let predictiondetails = await floodServices.predictFlood(lat, lon);
+        
+        res.status(200).send(dataResponse("success", {...predictiondetails}));
     }
     catch(error)
     {
@@ -52,9 +56,9 @@ async function predictFlood(req, res, next){
 }
 async function addFlood(req,res,next){
     try{
-        let {lat, log} = req.body;
-        let flood_precaution = await floodPrecautionServices.addPrecaution(title, description, precautions);
-        res.status(201).send(dataResponse("success", {flood_precaution}));
+        let {description, date, districts} = req.body;
+        let flood = await floodServices.addFlood(date, description, districts);
+        res.status(201).send(dataResponse("success", {flood}));
     }
     catch(error)
     {
@@ -64,9 +68,10 @@ async function addFlood(req,res,next){
 
 async function editFlood(req,res,next){
     try{
-        let {lat, log} = req.body;
-        let flood_precaution = await floodPrecautionServices.addPrecaution(title, description, precautions);
-        res.status(200).send(dataResponse("success", {flood_precaution}));
+        let floodId = req.params.floodId;
+        let {description, date, districts} = req.body;
+        let flood = await floodServices.editFlood(floodId, date, description, districts)
+        res.status(200).send(dataResponse("success", {flood}));
     }
     catch(error)
     {
@@ -76,9 +81,9 @@ async function editFlood(req,res,next){
 
 async function deleteFlood(req,res,next){
     try{
-        let {lat, log} = req.body;
-        let flood_precaution = await floodPrecautionServices.addPrecaution(title, description, precautions);
-        res.status(200).send(dataResponse("success", {flood_precaution}));
+        let floodId = req.params.floodId;
+        let flood = await floodServices.deleteFlood(floodId);
+        res.status(200).send(messageResponse("success", `Flood with id ${floodId} has been deleted`));
     }
     catch(error)
     {
@@ -86,11 +91,10 @@ async function deleteFlood(req,res,next){
     }
 }
 
-async function currentDistrictsFloodStatus(req, res, next){
+async function viewFloodPredictionHeatMap(req, res, next){
     try{
-        let {lat, log} = req.body;
-        let flood_precaution = await floodPrecautionServices.addPrecaution(title, description, precautions);
-        res.status(200).send(dataResponse("success", {flood_precaution}));
+        let districts = await floodServices.getFloodPredictionHeatmap()
+        res.status(200).send(dataResponse("success", {districts}));
     }
     catch(error)
     {
@@ -98,4 +102,5 @@ async function currentDistrictsFloodStatus(req, res, next){
     }
 }
 
-module.exports = {viewFloods, viewSpecificFlood, reportFlood, predictFlood, addFlood, editFlood, deleteFlood, currentDistrictsFloodStatus}
+
+module.exports = {viewFloods, viewSpecificFlood, reportFlood, getFloodPrediction, addFlood, editFlood, deleteFlood, viewFloodPredictionHeatMap}

@@ -80,8 +80,7 @@ router.get('/chat/messages/:userId', verifyUser, chatController.getChat)
 router.get('/floods', floodController.viewFloods);
 router.get('/floods/:id', floodController.viewSpecificFlood);
 router.post('/floods/report', floodController.reportFlood);
-router.post('/flood_prediction', floodController.predictFlood);
-router.get('/districts_floods', floodController.currentDistrictsFloodStatus);
-/*--- Module ---*/
+router.get('/flood_prediction_heatmap', floodController.viewFloodPredictionHeatMap);
+router.get('/flood_prediction', floodController.getFloodPrediction);
 
 module.exports = router;

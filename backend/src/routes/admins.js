@@ -143,9 +143,10 @@ router.get('/reports/usersSummary', verifyAdmin, reportController.getUsersSummar
 
 //Flood//
 router.get('/floods',verifyAdmin, floodController.viewFloods);
-router.get('/floods/:id',verifyAdmin, floodController.viewSpecificFlood);
+router.get('/floods/:floodId',verifyAdmin, floodController.viewSpecificFlood);
+router.get('/flood_prediction_heatmap',verifyAdmin, floodController.viewFloodPredictionHeatMap);
 router.post('/floods',verifyAdmin, floodController.addFlood);
-router.put('/floods/:id',verifyAdmin, floodController.editFlood);
-router.delete('/floods/:id',verifyAdmin, floodController.viewSpecificFlood);
-router.get('/districts_floods',verifyAdmin, floodController.currentDistrictsFloodStatus);
+router.put('/floods/:floodId',verifyAdmin, floodController.editFlood);
+router.delete('/floods/:floodId',verifyAdmin, floodController.deleteFlood);
+
 module.exports = router;

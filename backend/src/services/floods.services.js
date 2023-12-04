@@ -1,46 +1,65 @@
-
-async function viewFloods(){
+const createHttpError = require('http-errors');
+const floodModel = require('../models/flood.model');
+const { getAddress } = require('../utils/location');
+async function getFloods(){
     let floods = floodModel.find({});
-    
-    return floods
+    return floods;
 }
 //Edit
-async function viewSpecificFlood(id){
+async function getSpecificFlood(id){
     let flood = floodModel.findById(id);
+
+    if(!flood)
+    {
+        throw new createHttpError.NotFound(`Flood with given id ${id} doesn't exist`);
+    }
+
     return flood
 }
 //Add
 async function reportFlood(userId, lat, lng){
-    
+
 }
 
 async function predictFlood(lat, lng){
-    let predict;
+    let address = await getAddress(lat, lng);
+
+    let prediction = false;
+
+    return {address, prediction};
+}
+async function addFlood(date, description, districts){
+    let flood = await floodModel.create({date, description, districts});
 
     return flood;
 }
-async function addFlood(date, description, cityNames){
-    let flood;
 
-    return flood;
-}
+async function editFlood(id, date, description, districts){
+    let flood = await floodModel.findByIdAndUpdate(id, {date, description, districts}, {new: true});
 
-async function editFlood(id, date, description, cityNames){
-    let flood;
+    if(!flood)
+    {
+        throw new createHttpError.NotFound(`Flood with given id ${id} doesn't exist`);
+    }
 
     return flood;
 }
 
 async function deleteFlood(id){
-    let flood;
+    let flood = await floodModel.findByIdAndDelete(id);
+    console.log('deleting');
+    if(!flood)
+    {
+        throw new createHttpError.NotFound(`Flood with given id ${id} doesn't exist`);
+    }
 
     return flood;
 }
 
-async function currentDistrictsFloodStatus(){
-    let cityFloods;
+async function getFloodPredictionHeatmap(){
+    let districts = ["Isalamabad", "Rawalpindi"];
 
-    return cityFloods;
+    return districts;
 }
 
-module.exports = {viewFloods, viewSpecificFlood, reportFlood, predictFlood, addFlood, editFlood, deleteFlood, currentDistrictsFloodStatus}
+module.exports = {getFloods, getSpecificFlood, reportFlood, predictFlood, addFlood, editFlood, deleteFlood, getFloodPredictionHeatmap}
