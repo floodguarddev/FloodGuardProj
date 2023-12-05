@@ -5,7 +5,9 @@ const { dataResponse, messageResponse } = require("../utils/commonResponse");
 //Delete
 async function viewFloods(req, res, next){
     try{
-        let floods = await floodServices.getFloods();
+        let {limit, offset} = req.query;
+
+        let floods = await floodServices.getFloods(limit, offset);
 
         return res.status(200).send(dataResponse("success", {floods}))
     }
@@ -31,9 +33,9 @@ async function viewSpecificFlood(req, res, next){
 //Add
 async function reportFlood(req, res, next){
     try{
-        let {lat, log} = req.body;
-        let flood_precaution = await floodPrecautionServices.addPrecaution(title, description, precautions);
-        res.status(200).send(dataResponse("success", {flood_precaution}));
+        // let {lat, log} = req.body;
+        // let flood_precaution = await floodPrecautionServices.addPrecaution(title, description, precautions);
+        res.status(591).send(messageResponse("success", "Not Implemented Yet"));
     }
     catch(error)
     {

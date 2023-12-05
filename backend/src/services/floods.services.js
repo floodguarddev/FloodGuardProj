@@ -1,8 +1,8 @@
 const createHttpError = require('http-errors');
 const floodModel = require('../models/flood.model');
 const { getAddress } = require('../utils/location');
-async function getFloods(){
-    let floods = floodModel.find({});
+async function getFloods(limit = process.env.DEFAULT_LIMIT, offset = 0){
+    let floods = floodModel.find({}).skip(offset).limit(limit);
     return floods;
 }
 //Edit
@@ -21,13 +21,14 @@ async function reportFlood(userId, lat, lng){
 
 }
 
-async function predictFlood(lat, lng){
-    let address = await getAddress(lat, lng);
+async function predictFlood(lat, lon){
+    let address = await getAddress(lat, lon);
 
     let prediction = false;
 
     return {address, prediction};
 }
+
 async function addFlood(date, description, districts){
     let flood = await floodModel.create({date, description, districts});
 
@@ -57,7 +58,7 @@ async function deleteFlood(id){
 }
 
 async function getFloodPredictionHeatmap(){
-    let districts = ["Isalamabad", "Rawalpindi"];
+    let districts = ["Islamabad", "Rawalpindi"];
 
     return districts;
 }

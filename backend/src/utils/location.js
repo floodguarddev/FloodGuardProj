@@ -2,7 +2,7 @@ const { default: axios } = require("axios");
 
 async function getAddress(lat, lon){
 
-    let response = await axios.get(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&accept-language=en`);
+    let response = await axios.get(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&accept-language=en&zoom=10`);
 
     if(!response.data.address){
         return null;
