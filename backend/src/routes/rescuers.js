@@ -1,6 +1,7 @@
 var express = require('express');
 const { verifyUser, verifyRescuer } = require('../middlewares/authentication');
 const rescuerController = require('../controllers/rescuer.controllers');
+const cameraController = require('../controllers/cameras.controllers');
 const { rescuerFiles } = require('../middlewares/fileupload');
 var router = express.Router();
 
@@ -15,5 +16,10 @@ router.delete('/me', rescuerController.deleteMyProfile );
 router.put('/me', 
   rescuerFiles.fields([{name: "rescuerImage"}, {name: "frontSideCNIC"}, {name: "backSideCNIC"}, {name: "rescuerApproval"}]),
   rescuerController.editMyProfile);
+
+/*Cameras*/
+router.get('/cameras', cameraController.viewCameras);
+router.get('/cameras/assigned', cameraController.getAssignedCameras);
+router.put('/cameras/:cameraId', cameraController.editCameraByRescuer);
 
 module.exports = router;

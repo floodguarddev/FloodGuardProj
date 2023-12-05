@@ -16,8 +16,25 @@ async function getTransactionsByQuery(query, limit = process.env.DEFAULT_LIMIT, 
         ]
     );
 
-    const total = await Transaction.countDocuments(query);
+    const info = await Transaction.aggregate([
+      { $lookup: { from: "users", localField: 'sender', foreignField: "_id", as: 'sender' } },
+      { $lookup: { from: "ngos", localField: 'reciever', foreignField: "_id", as: 'reciever' } },
+      { $unwind: "$reciever" },
+      { $unwind: "$sender" },
+      { $sort: { transactionDate: -1 } },
+      { $match: query },
+      {
+          $group: {
+              _id: null,
+              totalAmount: { $sum: "$amount" },
+              total: { $sum: 1 } // Count the number of documents
+          }
+      }
+  ]);
     
+
+    console.log(info);
+
     transactions = transactions.map(
         (obj)=>{
             let newObj = {
@@ -34,7 +51,7 @@ async function getTransactionsByQuery(query, limit = process.env.DEFAULT_LIMIT, 
         }
     );
 
-    return {total, transactions};
+    return {total: info[0].total, totalAmount: info[0].totalAmount, transactions};
 }
 
 async function getTransactionById(id){

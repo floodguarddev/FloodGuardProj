@@ -13,6 +13,7 @@ const newsController = require('../controllers/news.controller');
 const floodPrecautionController = require('../controllers/flood_precautions.controller')
 const reportController = require('../controllers/reports.controllers');
 const floodController = require('../controllers/floods.controllers');
+const cameraController = require('../controllers/cameras.controllers');
 /* Module 1: User Profiling */
 /* -- Admin Profile -- */
 router.post('/signin', adminController.signin);
@@ -148,5 +149,12 @@ router.get('/flood_prediction_heatmap',verifyAdmin, floodController.viewFloodPre
 router.post('/floods',verifyAdmin, floodController.addFlood);
 router.put('/floods/:floodId',verifyAdmin, floodController.editFlood);
 router.delete('/floods/:floodId',verifyAdmin, floodController.deleteFlood);
+
+//Cameras//
+router.get('/cameras',verifyAdmin, cameraController.viewCameras);
+router.post('/cameras',verifyAdmin, cameraController.addCamera);
+router.put('/cameras/:cameraId',verifyAdmin, cameraController.editCamera);
+router.delete('/cameras/:cameraId',verifyAdmin, cameraController.deleteCamera);
+
 
 module.exports = router;
