@@ -21,7 +21,7 @@ import {Link} from 'react-router-dom';
 import { ViewCameraList } from "../../components/CameraComponents/ViewCameraList";
 import EditCamera from "@/components/CameraComponents/EditCamera";
 import { SearchAndFilter } from '../../components/CameraComponents/SearchAndFilter';
-import DistrictCities from "../../components/CameraComponents/DistrictCities";
+import CamerasMap from "../../components/CameraComponents/CamerasMap";
 import io from 'socket.io-client'
 // End Create new camera Modal
 
@@ -99,7 +99,26 @@ MembersLists.propTypes = {
 const socket = io('http://192.168.137.1:3000/')
 export default function CamerasListPage() {
   const [image, setImage] = React.useState(null);
-
+  const [cameras, setCameras] = React.useState( [
+      {
+          "_id": "656f97e3cf62a1b0561bd527",
+          "uniqueId": "124399929121",
+          "lat": 35,
+          "lon": 75,
+          "assignedTo": "656f5891b8e8ed54c961aa98",
+          "installedDate": "2023-12-05T21:36:35.732Z",
+          "__v": 0
+      },
+      {
+          "_id": "6570c7b29cf34660acb1fd50",
+          "uniqueId": "124399929128",
+          "lat": 36,
+          "lon": 75,
+          "assignedTo": "656f5891b8e8ed54c961aa98",
+          "installedDate": "2023-12-06T19:12:50.725Z",
+          "__v": 0
+      }
+  ]);
   React.useEffect(()=>{
     socket.on('newImage', (image)=>{
       setImage(image);
@@ -210,7 +229,7 @@ export default function CamerasListPage() {
         </Box>
         <Grid container alignItems="center" justifyContent="center" spacing={3}>
           <Grid item xs = {12} md = {8}>
-            <DistrictCities cities = {[]}/>
+            <CamerasMap cameras = {cameras}/>
           </Grid>
           <Grid item xs = {12} md ={4}>
             <Hidden mdUp>

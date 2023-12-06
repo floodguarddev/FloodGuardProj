@@ -35,7 +35,7 @@ async function reportFlood(req, res, next){
     try{
         // let {lat, log} = req.body;
         // let flood_precaution = await floodPrecautionServices.addPrecaution(title, description, precautions);
-        res.status(591).send(messageResponse("success", "Not Implemented Yet"));
+        res.status(501).send(messageResponse("success", "Not Implemented Yet"));
     }
     catch(error)
     {

@@ -16,9 +16,10 @@ import { useView } from '@/context/ViewContext';
 import { useNavigate } from "react-router-dom";
 //import {deleteFlood} from "@/services/floods.services"
 import { jsonToSearchQuery } from '../../utils/query';
-export const ViewFloodList = ({setTotalRecords, rowsPerPage, query, handleEditOpen, floodsRefresh, setFloodsRefresh}) => {
+import { getFloodsList } from '../../services/floods.services';
+export const ViewFloodList = ({setSelectedFlood, setTotalRecords, rowsPerPage, query, handleEditOpen, floodsRefresh, setFloodsRefresh}) => {
   const navigate = useNavigate();
-  const [floodContext, setFloodContext] = useUser();
+  const [userContext, setUserContext] = useUser();
   const [floodsList,setFloodsList]=useState(null);
   const [emptyRows, setEmptyRows] = useState(rowsPerPage);
   const { enqueueSnackbar } = useSnackbar();
@@ -31,28 +32,36 @@ export const ViewFloodList = ({setTotalRecords, rowsPerPage, query, handleEditOp
         
         let searchQuery = jsonToSearchQuery(query);
         setFloodsList([])
-        // getFloodsList(floodContext.token, searchQuery).then(
-        //     (response)=>{
-        //         console.log("Response", response);
-        //         return response.data.data;
-        //     }
-        // ).then((data)=>{
-        //     setTotalRecords(data.total);
-        //     setFloodsList(data.floods);
-        //     setEmptyRows(rowsPerPage - data.floods.length) ;
-        //     setFloodsRefresh(false);
-        // }).catch((error)=>{
-        //     enqueueSnackbar(error.message || error.response.data.message, { variant: "error", anchorOrigin: {
-        //         vertical: 'bottom',
-        //         horizontal: 'right'
-        //     }  });
-        // })
+        getFloodsList(userContext.token, searchQuery).then(
+            (response)=>{
+                return response.data.data;
+            }
+        ).then((data)=>{
+            setTotalRecords(data.total);
+            setFloodsList(data.floods);
+            setEmptyRows(rowsPerPage-data.floods.length);
+            setFloodsRefresh(false);
+        }).catch((error)=>{
+                enqueueSnackbar(error.message || error.response.data.message, { variant: "error", anchorOrigin: {
+                    vertical: 'bottom',
+                    horizontal: 'right'
+                }  });
+            })
   }, 
   [floodsRefresh])
 
   const viewFlood = (floodId)=>{
     setViewContext((oldValues)=>{return {...oldValues, selectedFlood: floodId}});
     navigate(`/floods/${floodId}`);
+  }
+
+  function getDate(dateString){
+    const dateObject = new Date(dateString);
+
+    const month = dateObject.toLocaleString('en-US', { month: 'short' });
+    const year = dateObject.getFullYear();
+
+    return month + "-" + year
   }
 
   const deleteFloodFunc = (floodId)=>{
@@ -113,41 +122,15 @@ export const ViewFloodList = ({setTotalRecords, rowsPerPage, query, handleEditOp
             {floodsList.map((row) => (
             <TableRow key={row._id} hover={true}>
                 <TableCell
+                align="center"
                 style={{
                     borderBottom: "1px solid #F7FAFF",
+                    fontSize: "13px",
                     paddingTop: "13px",
                     paddingBottom: "13px",
-                    display: "flex",
-                    alignItems: "center",
                 }}
                 >
-                <Box
-                    sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    }}
-                    className="ml-10px"
-                >
-                    <img
-                    src={row.floodPhotoLink || '/images/flood/defaultProfile.jpg'}
-                    alt="Flood"
-                    width={40}
-                    height={40}
-                    className="borRadius100"
-                    />
-                    <Box>
-                    <Typography
-                        as="h5"
-                        sx={{
-                        fontWeight: "500",
-                        fontSize: "13.5px",
-                        }}
-                        className='ml-10px'
-                    >
-                        {row.name}
-                    </Typography>
-                    </Box>
-                </Box>
+                {getDate(row.date)}
                 </TableCell>
 
                 <TableCell
@@ -159,7 +142,19 @@ export const ViewFloodList = ({setTotalRecords, rowsPerPage, query, handleEditOp
                     paddingBottom: "13px",
                 }}
                 >
-                {row.email}
+                {row.description}
+                </TableCell>
+
+                <TableCell
+                align="center"
+                style={{
+                    borderBottom: "1px solid #F7FAFF",
+                    fontSize: "13px",
+                    paddingTop: "13px",
+                    paddingBottom: "13px",
+                }}
+                >
+                {row.districts.length}
                 </TableCell>
 
                 <TableCell
@@ -178,7 +173,7 @@ export const ViewFloodList = ({setTotalRecords, rowsPerPage, query, handleEditOp
                         color="info"
                         className="info"
                         onClick={()=>{
-                            viewFlood(row._id);
+                            setSelectedFlood(row);
                         }}
                     >
                         <VisibilityIcon fontSize="inherit" />

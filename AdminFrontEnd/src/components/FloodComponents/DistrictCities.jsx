@@ -13,7 +13,7 @@ function fetchJSON(url) {
         return response.json();
       });
 }
-export default function DistrictCities({cities, setCities}) {
+export default function DistrictCities({ cities, setCities}) {
     const mapContainer = useRef(null);
     const map = useRef(null);
     var tooltip;
@@ -23,7 +23,7 @@ export default function DistrictCities({cities, setCities}) {
     
     useEffect(() => {
 
-        if (map.current) return; // initialize map only once
+        if (map.current && setCities) return; // initialize map only once
 
         map.current = new mapboxgl.Map({
             container: mapContainer.current,
@@ -212,7 +212,7 @@ export default function DistrictCities({cities, setCities}) {
         });
 
         
-    });
+    }, [cities]);
     return (
     <>
       <div ref={mapContainer} style={{height: 400}}/>

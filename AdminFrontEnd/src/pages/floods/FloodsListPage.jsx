@@ -94,7 +94,7 @@ MembersLists.propTypes = {
 };
 
 export default function FloodsListPage() {
-  const [selectedflood, setSelectedFlood] = React.useState(null) 
+  const [selectedFlood, setSelectedFlood] = React.useState(null) 
   //Flood List Refresher
   const [floodsRefresh, setFloodsRefresh] = React.useState(true);
   //Query//
@@ -127,6 +127,14 @@ export default function FloodsListPage() {
   // Edit Flood Model
   const [editFlood, setEditFlood] = React.useState(null);
   const [editOpen, setEditOpen] = React.useState(false);
+  function getDate(dateString){
+    const dateObject = new Date(dateString);
+
+    const month = dateObject.toLocaleString('en-US', { month: 'short' });
+    const year = dateObject.getFullYear();
+
+    return month + "-" + year
+  }
   const handleEditOpen = (flood) => {
     setEditFlood(flood)
     setEditOpen(true);
@@ -199,7 +207,7 @@ export default function FloodsListPage() {
         </Box>
         <Grid container alignItems="center" justifyContent="center" spacing={3}>
           <Grid item xs = {12} md = {8}>
-            <DistrictCities cities = {[]}/>
+            <DistrictCities cities = {selectedFlood?selectedFlood.districts:[]}/>
           </Grid>
           <Grid item xs = {12} md ={4}>
             <Hidden mdUp>
@@ -235,24 +243,21 @@ export default function FloodsListPage() {
                   <div style={{ marginBottom: '20px', padding: '14px' }}>
                     {/* Additional styling for city information */}
                     <Typography variant="body2" color="text.secondary" sx={{ marginBottom: '8px' }}>
-                      <strong>City Name:</strong> Test
+                      <strong>Flood Date:</strong> {selectedFlood?getDate(selectedFlood.date):""}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" sx={{ marginBottom: '8px' }}>
-                      <strong>Province:</strong> Test
+                      <strong>Flooded Cities:</strong> {selectedFlood?selectedFlood.districts.length:""}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" sx={{ marginBottom: '8px' }}>
-                      <strong>Flooded:</strong> Test
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{ marginBottom: '8px' }}>
-                      <strong>People Affected:</strong> Test
+                      <strong>People Affected:</strong> -
                     </Typography>
 
                     {/* Styling for the nearby cities list */}
                     <Typography variant="body2" color="text.secondary" sx={{ marginBottom: '8px' }}>
-                      <strong>Nearby Cities:</strong>
+                      <strong>Affected Cities:</strong>
                     </Typography>
                     <ul style={{ maxHeight: '100px', overflowY: 'auto', padding: 0, marginBottom: '20px' }}>
-                      {["Talagang", "Islamabad", "Talagang", "Islamabad", "Talagang", "Islamabad", "Talagang", "Islamabad"].map((city, index) => (
+                      {(selectedFlood?selectedFlood.districts:[]).map((city, index) => (
                         <li key={index}>{city}</li>
                       ))}
                     </ul>
@@ -278,7 +283,7 @@ export default function FloodsListPage() {
                 className="dark-table"
               >
                 {/* View Floods */}
-                <ViewFloodList setTotalRecords={setTotalRecords} floodsRefresh={floodsRefresh} setFloodsRefresh={setFloodsRefresh} handleEditOpen={handleEditOpen} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
+                <ViewFloodList setSelectedFlood={setSelectedFlood} setTotalRecords={setTotalRecords} floodsRefresh={floodsRefresh} setFloodsRefresh={setFloodsRefresh} handleEditOpen={handleEditOpen} query={query} rowsPerPage={rowsPerPage} totalRows={10} />
 
                 <TableFooter>
                   <TableRow>

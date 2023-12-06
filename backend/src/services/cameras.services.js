@@ -4,6 +4,7 @@ const cameraModel = require('../models/camera.model');
 
 async function viewCameras(){
     let cameras = cameraModel.find({});
+    
     return cameras;
 }
 async function addCamera(lat, lon, uniqueId,  rescuerId){
@@ -24,11 +25,11 @@ async function editCamera(id, lat, lon, uniqueId,  rescuerId){
 }
 
 async function deleteCamera(id){
-    let camera = await camera.findByIdAndDelete(id);
+    let camera = await cameraModel.findByIdAndDelete(id);
     
     if(!camera)
     {
-        throw new createHttpError.NotFound(`Flood with given id ${id} doesn't exist`);
+        throw new createHttpError.NotFound(`Camera with given id ${id} doesn't exist`);
     }
 
     return camera;
@@ -39,7 +40,7 @@ async function editCameraByRescuer(id, rescuerId, lat, lon){
 
     if(!camera)
     {
-        throw new createHttpError.NotFound(`Flood with given id ${id} doesn't exist or belongs to this rescuer`);
+        throw new createHttpError.NotFound(`Camera with given id ${id} doesn't exist or belongs to this rescuer`);
     }
   
     return camera;

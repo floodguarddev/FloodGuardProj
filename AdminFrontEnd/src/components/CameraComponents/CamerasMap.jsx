@@ -13,7 +13,7 @@ function fetchJSON(url) {
         return response.json();
       });
 }
-export default function DistrictCities({cities, setCities}) {
+export default function CamerasMap({cameras, setCities}) {
     const mapContainer = useRef(null);
     const map = useRef(null);
     var tooltip;
@@ -31,6 +31,10 @@ export default function DistrictCities({cities, setCities}) {
             center: [lng, lat],
             zoom: zoom
         });
+
+        cameras.map((camera)=>{
+
+        })
 
         fetchJSON('PakistanPolygon.geojson')
             .then((data)=>{

@@ -13,12 +13,13 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import DistrictCities from './DistrictCities';
+import { addFlood } from "../../services/floods.services";
 export function AddFlood() {
   const [userContext, setUserContext] = useUser();
 
-  const [title, setTitle] = React.useState("");
+  const [description, setDescription] = React.useState("");
   const [date, setDate] = React.useState(null);
-  const [affectedCitiesList, setAffectedCitiesList] = React.useState([]);
+  const [districts, setDistricts] = React.useState([]);
 
   const { enqueueSnackbar } =  useSnackbar();
 
@@ -29,14 +30,14 @@ export function AddFlood() {
       let token = userContext.token;
     
       let FormData = {
-        title,
         description,
-        precautions: precautionsList
+        date,
+        districts
       }
 
-      await addPrecautions(token, FormData);
+      await addFlood(token, FormData);
 
-      enqueueSnackbar("Flood Precations Has been Created Successfully", { variant: "success" ,anchorOrigin: {
+      enqueueSnackbar("Flood Has been Added Successfully", { variant: "success" ,anchorOrigin: {
         vertical: 'bottom',
         horizontal: 'right'
       } });
@@ -91,17 +92,17 @@ export function AddFlood() {
                         display: "block",
                         }}
                     >
-                        Title
+                        Description
                     </Typography>
 
                     <TextField
                         fullWidth
-                        id="title"
-                        name="title"
+                        id="description"
+                        name="description"
                         autoComplete="family-name"
-                        value={title}
+                        value={description}
                         onChange={(event)=>{
-                        setTitle(event.target.value)
+                        setDescription(event.target.value)
                         }}
                     />
                 </Grid>
@@ -140,7 +141,7 @@ export function AddFlood() {
                     >
                         Selected Cities
                     </Typography>
-                  <DistrictCities cities = {affectedCitiesList} setCities={setAffectedCitiesList}/>
+                  <DistrictCities cities = {districts} setCities={setDistricts}/>
                 </Grid>
             </Grid>
           </Box>

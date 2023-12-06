@@ -30,40 +30,6 @@ export function DangerZone() {
             center: [lng, lat],
             zoom: zoom
         });
-        // fetchJSON('/floods/PakistanPolygon.geojson')
-        //     .then((data)=>{
-        //         let pakistanFeature = data.features[0];
-        //         map.current.on('load', () => {
-        //             map.current.addSource("pakistan", {
-        //                 'type': 'geojson',
-        //                 'data': {
-        //                 'type': 'Feature',
-        //                 'geometry': pakistanFeature.geometry
-        //                 }
-        //             });
-                    
-        //             map.current.addLayer({
-        //                 'id': "pakistan",
-        //                 'type': 'fill',
-        //                 'source': "pakistan", // reference the data source
-        //                 'layout': {},
-        //                 'paint': {
-        //                 'fill-color': '#ff0000', // blue color fill
-        //                 'fill-opacity': 0.0
-        //             }
-        //             });
-
-        //             map.current.on('mouseleave', "pakistan", function () {
-        //                 map.current.getCanvas().style.cursor = '';
-        //                 if(tooltip)
-        //                 {
-        //                     tooltip.remove();
-        //                 }
-                            
-        //             });
-
-        //         });
-        //     })
         fetchJSON('/floods/DistrictsFloodingStatus.geojson')
             .then(function(data) { 
             let features = data.features;
@@ -72,6 +38,14 @@ export function DangerZone() {
                 map.current.addSource('places', {
                     'type': 'geojson',
                     data: data});
+                map.current.on('mouseleave', "places", function () {
+                  map.current.getCanvas().style.cursor = '';
+                  if(tooltip)
+                  {
+                      tooltip.remove();
+                  }
+                          
+                });
                 map.current.addLayer({
                     'id': 'places',
                     'type': 'fill',
@@ -99,93 +73,73 @@ export function DangerZone() {
                     'line-width': 1 // outline width (adjust as needed)
                 }
                 });
-                // features.forEach((feature)=>{
-                //     map.current.addSource(feature.properties['City Name'], {
-                //         'type': 'geojson',
-                //         'data': {
-                //         'type': 'Feature',
-                //         'geometry': feature.geometry
-                //         }
-                //         });
-                //     let fillColor;
-                //     if(feature.properties['floodingstatus'] == 'Low'){
-                //         fillColor = '#ADD8E6';
-                //     }
-                //     else if(feature.properties['floodingstatus'] == 'Medium'){
-                //         fillColor = '#4682B4';
-                //     }
-                //     else{
-                //         fillColor = '#000080';
-                //     }
-                //     map.current.addLayer({
-                //         'id': feature.properties['City Name'],
-                //         'type': 'fill',
-                //         'source': feature.properties['City Name'], // reference the data source
-                //         'layout': {},
-                //         'paint': {
-                //         'fill-color': fillColor, // blue color fill
-                //         'fill-opacity': 0.8,
-                //     }
-                //     });
-                //     map.current.addLayer({
-                //         'id': feature.properties['City Name'] + "-Outline",
-                //         'type': 'line',
-                //         'source': feature.properties['City Name'], // reference the data source
-                //         'layout': {},
-                //         'paint': {
-                //         'line-color': '#000', // outline color (black in this example)
-                //         'line-width': 1 // outline width (adjust as needed)
-                //     }
-                //     });
-                //     map.current.on('mouseenter', feature.properties['City Name'], function (e) {
-                //         // Create a tooltip element
-                //         if(tooltip)
-                //         {
-                //             tooltip.remove();
-                //         }
-                //         map.current.getCanvas().style.cursor = "pointer"
-                //         tooltip = new mapboxgl.Popup()
-                //           .setLngLat(e.lngLat)
-                //           .setHTML(`
-                //           <!DOCTYPE html>
-                //             <html lang="en">
-                //             <head>
-                //                 <meta charset="UTF-8">
-                //                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                //                 <title>OpenStreetMap Popup</title>
-                //                 <style>
-                //                     body {
-                //                         font-family: Arial, sans-serif;
-                //                         margin: 0;
-                //                         padding: 0;
-                //                     }
+                features.forEach((feature)=>{
+                    map.current.addSource(feature.properties['City Name'], {
+                        'type': 'geojson',
+                        'data': {
+                        'type': 'Feature',
+                        'geometry': feature.geometry
+                        }
+                    });
+                    map.current.addLayer({
+                      'id': feature.properties['City Name'],
+                      'type': 'fill',
+                      'source': feature.properties['City Name'], // reference the data source
+                      'layout': {},
+                      'paint': {
+                      'fill-color': "#000", // blue color fill
+                      'fill-opacity': 0.0,
+                      }
+                  });
+                    map.current.on('mouseenter', feature.properties['City Name'], function (e) {
+                        // Create a tooltip element
+                        if(tooltip)
+                        {
+                            tooltip.remove();
+                        }
+                        map.current.getCanvas().style.cursor = "pointer"
+                        tooltip = new mapboxgl.Popup()
+                          .setLngLat(e.lngLat)
+                          .setHTML(`
+                          <!DOCTYPE html>
+                            <html lang="en">
+                            <head>
+                                <meta charset="UTF-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <title>OpenStreetMap Popup</title>
+                                <style>
+                                    body {
+                                        font-family: Arial, sans-serif;
+                                        margin: 0;
+                                        padding: 0;
+                                    }
 
-                //                     .popup {
-                //                         max-width: 300px;
-                //                     }
+                                    .popup {
+                                        max-width: 300px;
+                                    }
 
-                //                     .popup img {
-                //                         width: 100%;
-                //                         height: auto;
-                //                         margin-top: 8px;
-                //                     }
-                //                 </style>
-                //             </head>
-                //             <body>
+                                    .popup img {
+                                        width: 100%;
+                                        height: auto;
+                                        margin-top: 8px;
+                                    }
+                                </style>
+                            </head>
+                            <body>
 
-                //             <div class="popup">
-                //                 <h2 id="cityName">${feature.properties['City Name']}</h2>
-                //                 <p id="provinceName">Province Name: ${feature.properties['Province']}</p>
-                //                 <p id="floodingStatus">Flooding Status: ${feature.properties['floodingstatus']}</p>
-                //             </div>
+                            <div class="popup">
+                                <h2 id="cityName">${feature.properties['City Name']}</h2>
+                                <p id="provinceName">Province Name: ${feature.properties['Province']}</p>
+                                <p id="floodingStatus">Flooding Status: ${feature.properties['floodingstatus']}</p>
+                            </div>
 
-                //             </body>
-                //             </html>`) // Customize the tooltip content
-                //           .addTo(map.current);
+                            </body>
+                            </html>`) // Customize the tooltip content
+                          .addTo(map.current);
 
-                //     });
+                    });
                     
-                // })
+                })
             });
 
         });
