@@ -58,7 +58,7 @@ async function deleteFlood(id){
 }
 
 async function getFloodPredictionHeatmap(){
-    let districts = ["Islamabad", "Rawalpindi"];
+    let districts = ["Badin"];
 
     return districts;
 }

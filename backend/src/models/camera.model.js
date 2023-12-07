@@ -24,6 +24,11 @@ Camera = new Schema({
       type: Schema.Types.ObjectId,
       require: true,
       ref: "Rescuer"
+    },
+    address:{
+      type: [String],
+      require: true,
+      default: ["Isalamabad", "Pakistan"]
     }
 });
 

@@ -3,18 +3,20 @@ const { getAddress } = require('../utils/location');
 const cameraModel = require('../models/camera.model');
 
 async function viewCameras(){
-    let cameras = cameraModel.find({});
+    let cameras = cameraModel.find({}).populate("assignedTo");
     
     return cameras;
 }
 async function addCamera(lat, lon, uniqueId,  rescuerId){
-    let camera = await cameraModel.create({lat, lon, uniqueId, assignedTo: rescuerId});
+    let address = await getAddress(lat, lon);
+    let camera = await cameraModel.create({lat, lon, uniqueId, assignedTo: rescuerId, address: address});
 
     return camera;
 } 
 
 async function editCamera(id, lat, lon, uniqueId,  rescuerId){
-    let camera = await cameraModel.findByIdAndUpdate(id, {lat, lon, uniqueId, assignedTo: rescuerId}, {new: true});
+    let address = await getAddress(lat, lon);
+    let camera = await cameraModel.findByIdAndUpdate(id, {lat, lon, uniqueId, assignedTo: rescuerId, address}, {new: true});
 
     if(!camera)
     {

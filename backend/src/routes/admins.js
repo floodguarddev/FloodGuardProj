@@ -56,8 +56,8 @@ router.put('/rescuers/:rescuerId', verifyAdmin, rescuerController.editRescuer);
 // /* -- NGO Requests -- */
 router.get('/ngo_requests', verifyAdmin, ngoController.viewNGORequests);
 router.get('/ngo_requests/:requestId',  verifyAdmin, ngoController.viewSpecificNGORequest);
-router.delete('/ngo_requests/:requestId',  verifyAdmin, ngoController.rejectNGORequest);
-router.get('/ngo_requests/approve/:requestId', verifyAdmin, ngoController.approveNGORequest);
+router.delete('/ngo_requests/reject/:requestId',  verifyAdmin, ngoController.rejectNGORequest);
+router.post('/ngo_requests/approve/:requestId', verifyAdmin, ngoController.approveNGORequest);
 
 // /* -- NGO -- */
 router.get('/ngos', verifyAdmin, ngoController.viewNGOs);
