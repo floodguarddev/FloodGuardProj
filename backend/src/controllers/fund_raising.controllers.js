@@ -1,6 +1,6 @@
 const multerFilesParser = require("../utils/multerFilesParser");
 const fundRaisingServices = require("../services/fund_raising.services");
-const { addStringQuery, addDateQuery } = require("../utils/query");
+const { addStringQuery, addDateQuery, addBooleanQuery } = require("../utils/query");
 const { dataResponse, messageResponse } = require("../utils/commonResponse");
 
 /*For NGO Role*/
@@ -179,6 +179,7 @@ async function viewFundRaisingPosts(req, res, next){
         addStringQuery('postDescription', mongooseQuery, query);
         addStringQuery(['ngo', 'ngoName'], mongooseQuery, query);
         addDateQuery('postedDate', mongooseQuery, query);
+        addBooleanQuery('completed', mongooseQuery, query);
         //Pagination//
         let limit = parseInt(req.query.limit) || process.env.DEFAULT_LIMIT;
         let offset = parseInt(req.query.offset) || 0;
@@ -245,6 +246,8 @@ async function viewFundRaisingPostsByNGO(req, res, next){
         addStringQuery('postTitle', mongooseQuery, query);
         addStringQuery('postDescription', mongooseQuery, query);
         addDateQuery('postedDate', mongooseQuery, query);
+        
+        addBooleanQuery('completed', mongooseQuery, query);
         //Pagination//
         let limit = parseInt(req.query.limit) || process.env.DEFAULT_LIMIT;
         let offset = parseInt(req.query.offset) || 0;
