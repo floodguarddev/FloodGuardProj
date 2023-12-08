@@ -39,7 +39,8 @@ async function deleteCamera(id){
 }
 
 async function editCameraByRescuer(id, rescuerId, lat, lon){
-    let camera = await cameraModel.findOneAndUpdate({_id:id, assignedTo: rescuerId}, {lat, lon}, {new: true});
+    let address = await getAddress(lat, lon);
+    let camera = await cameraModel.findOneAndUpdate({_id:id, assignedTo: rescuerId}, {lat, lon, address}, {new: true});
 
     if(!camera)
     {
