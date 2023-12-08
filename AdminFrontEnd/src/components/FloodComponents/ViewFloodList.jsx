@@ -16,7 +16,7 @@ import { useView } from '@/context/ViewContext';
 import { useNavigate } from "react-router-dom";
 //import {deleteFlood} from "@/services/floods.services"
 import { jsonToSearchQuery } from '../../utils/query';
-import { getFloodsList } from '../../services/floods.services';
+import { deleteFlood, getFloodsList } from '../../services/floods.services';
 export const ViewFloodList = ({setSelectedFlood, setTotalRecords, rowsPerPage, query, handleEditOpen, floodsRefresh, setFloodsRefresh}) => {
   const navigate = useNavigate();
   const [userContext, setUserContext] = useUser();
@@ -65,7 +65,7 @@ export const ViewFloodList = ({setSelectedFlood, setTotalRecords, rowsPerPage, q
   }
 
   const deleteFloodFunc = (floodId)=>{
-    deleteFlood(floodContext.token, floodId).then(
+    deleteFlood(userContext.token, floodId).then(
         (response)=>{
             return response.data.message;
         }

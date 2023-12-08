@@ -12,14 +12,16 @@ import { useSnackbar } from 'notistack';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import DistrictCities from './DistrictCities';
+import DistrictCities from '../FloodComponents/DistrictCities';
+import { RescuerSearchBar } from "../SearchComponents/RescuerSearchBar";
+import { addCamera } from "../../services/cameras.services";
 export function AddCamera() {
   const [userContext, setUserContext] = useUser();
 
-  const [title, setTitle] = React.useState("");
-  const [date, setDate] = React.useState(null);
-  const [affectedCitiesList, setAffectedCitiesList] = React.useState([]);
-
+  const [uniqueId, setUniqueId] = React.useState("");
+  const [lat, setLat] = React.useState("");
+  const [lon, setLon] = React.useState("");
+  const [rescuerId, setRescuerId] = React.useState(null);
   const { enqueueSnackbar } =  useSnackbar();
 
   const addCameraPrecationsFunc = async (event) => {
@@ -29,9 +31,10 @@ export function AddCamera() {
       let token = userContext.token;
     
       let FormData = {
-        title,
-        description,
-        precautions: precautionsList
+        uniqueId,
+        lat,
+        lon,
+        rescuerId
       }
 
       await addCamera(token, FormData);
@@ -81,7 +84,7 @@ export function AddCamera() {
           <Box sx={{mb: "10px"}}>
             <Grid container alignItems="center" justifyContent="center" spacing={3}>
 
-                <Grid item style={{flex: 1}}>
+                <Grid item xs={12}>
                     <Typography
                         component="label"
                         sx={{
@@ -91,7 +94,55 @@ export function AddCamera() {
                         display: "block",
                         }}
                     >
-                        Title
+                        Unique Id
+                    </Typography>
+
+                    <TextField
+                        fullWidth
+                        id="uniqueId"
+                        name="uniqueId"
+                        autoComplete="family-name"
+                        value={uniqueId}
+                        onChange={(event)=>{
+                        setUniqueId(event.target.value)
+                        }}
+                    />
+                </Grid>
+                <Grid item xs={12}>
+                    <Typography
+                        component="label"
+                        sx={{
+                        fontWeight: "500",
+                        fontSize: "14px",
+                        mb: "10px",
+                        display: "block",
+                        }}
+                    >
+                        Latitude
+                    </Typography>
+
+                    <TextField
+                        fullWidth
+                        id="lat"
+                        name="lat"
+                        autoComplete="family-name"
+                        value={lat}
+                        onChange={(event)=>{
+                        setLat(event.target.value)
+                        }}
+                    />
+                </Grid>
+                <Grid item xs={12}>
+                    <Typography
+                        component="label"
+                        sx={{
+                        fontWeight: "500",
+                        fontSize: "14px",
+                        mb: "10px",
+                        display: "block",
+                        }}
+                    >
+                        Longitude
                     </Typography>
 
                     <TextField
@@ -99,13 +150,13 @@ export function AddCamera() {
                         id="title"
                         name="title"
                         autoComplete="family-name"
-                        value={title}
+                        value={lon}
                         onChange={(event)=>{
-                        setTitle(event.target.value)
+                        setLon(event.target.value)
                         }}
                     />
                 </Grid>
-                <Grid item >
+                <Grid item xs={12}>
                     <Typography
                         component="label"
                         sx={{
@@ -115,32 +166,11 @@ export function AddCamera() {
                         display: "block",
                         }}
                     >
-                        Date
+                        Rescuer
                     </Typography>
 
-                  <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <DatePicker
-                      value={date}
-                      onChange={(newValue) => {
-                        setDate(newValue);
-                      }}
-                      renderInput={(params) => <TextField {...params} />}
-                    />
-                  </LocalizationProvider>
-                </Grid>
-                <Grid item xs={12}>
-                <Typography
-                        component="label"
-                        sx={{
-                        fontWeight: "500",
-                        fontSize: "14px",
-                        mb: "10px",
-                        display: "block",
-                        }}
-                    >
-                        Selected Cities
-                    </Typography>
-                  <DistrictCities cities = {affectedCitiesList} setCities={setAffectedCitiesList}/>
+                    
+                  <RescuerSearchBar setRescuerId={setRescuerId}/>
                 </Grid>
             </Grid>
           </Box>

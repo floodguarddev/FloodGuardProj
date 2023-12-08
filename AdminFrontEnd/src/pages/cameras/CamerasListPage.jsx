@@ -23,6 +23,8 @@ import EditCamera from "@/components/CameraComponents/EditCamera";
 import { SearchAndFilter } from '../../components/CameraComponents/SearchAndFilter';
 import CamerasMap from "../../components/CameraComponents/CamerasMap";
 import io from 'socket.io-client'
+import {useUser} from "../../context/UserContext"
+import { getCamerasList } from "../../services/cameras.services";
 // End Create new camera Modal
 
 function MembersLists(props) {
@@ -96,35 +98,13 @@ MembersLists.propTypes = {
 };
 
 
-const socket = io('http://192.168.137.1:3000/')
+const socket = io('http://localhost:3000/')
 export default function CamerasListPage() {
+  const [userContext, setUserContext] = useUser();
   const [image, setImage] = React.useState(null);
-  const [cameras, setCameras] = React.useState( [
-      {
-          "_id": "656f97e3cf62a1b0561bd527",
-          "uniqueId": "124399929121",
-          "lat": 35,
-          "lon": 75,
-          "assignedTo": "656f5891b8e8ed54c961aa98",
-          "installedDate": "2023-12-05T21:36:35.732Z",
-          "__v": 0
-      },
-      {
-          "_id": "6570c7b29cf34660acb1fd50",
-          "uniqueId": "124399929128",
-          "lat": 36,
-          "lon": 75,
-          "assignedTo": "656f5891b8e8ed54c961aa98",
-          "installedDate": "2023-12-06T19:12:50.725Z",
-          "__v": 0
-      }
-  ]);
-  React.useEffect(()=>{
-    socket.on('newImage', (image)=>{
-      setImage(image);
-    })
-  }, [])
-  const [selectedcamera, setSelectedCamera] = React.useState(null) 
+  const [cameras, setCameras] = React.useState( []);
+  const [status, setStatus] = React.useState("");
+  const [selectedCamera, setSelectedCamera] = React.useState(null) 
   //Camera List Refresher
   const [camerasRefresh, setCamerasRefresh] = React.useState(true);
   //Query//
@@ -133,6 +113,38 @@ export default function CamerasListPage() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [totalRecords, setTotalRecords] = React.useState(100);
+
+  React.useEffect(()=>{
+    getCamerasList(userContext.token).then((response)=>response.data.data.cameras).then(
+      (cameras)=>{
+        setCameras(cameras)
+      }
+    )
+    socket.on('camera_status', (cameraId, cameraStatus)=>{
+      
+    })
+    socket.on('status', (detection)=>{
+      let detect = JSON.parse(detection);
+      detect.forEach((ent)=>{
+        if(ent == 'person')
+        {
+          
+         setStatus("PERSON")
+         return
+        }
+      })
+      setStatus("NO PERSON DETECTED-----------------------")
+    })
+    socket.on('newImage', (image)=>{
+      
+      setImage(image);
+    })
+  }, [])
+  React.useEffect(()=>{
+    if(selectedCamera){
+      socket.emit('join', selectedCamera.uniqueId)
+    }
+  }, [selectedCamera])
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -229,7 +241,7 @@ export default function CamerasListPage() {
         </Box>
         <Grid container alignItems="center" justifyContent="center" spacing={3}>
           <Grid item xs = {12} md = {8}>
-            <CamerasMap cameras = {cameras}/>
+            <CamerasMap cameras = {cameras} setSelectedCamera={setSelectedCamera}/>
           </Grid>
           <Grid item xs = {12} md ={4}>
             <Hidden mdUp>
@@ -243,7 +255,6 @@ export default function CamerasListPage() {
                   height: '400px',
                   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
                   borderRadius: '8px',
-                  overflow: 'hidden',
                 }}
               >
                 <CardContent sx={{padding: 0}}>
@@ -262,37 +273,31 @@ export default function CamerasListPage() {
                   >
                     Camera Details
                   </Typography>
-                  <div style={{ marginBottom: '20px', padding: '14px' }}>
+                  <div style={{overflowY: 'auto', height:'320px', padding: 0, marginBottom: '20px' }}>
                     {/* Additional styling for city information */}
-                    <div>
-                      {
-                        (image)?
-                        <img src = {`data:image/jpeg;base64,${image}`} alt=""/>:
-                        <div>No Image</div>
-                      }
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <img
+                          src={image?`data:image/jpeg;base64,${image}`:"https://png.pngtree.com/png-vector/20190820/ourmid/pngtree-no-image-vector-illustration-isolated-png-image_1694547.jpg"}
+                          alt=""
+                          style={{
+                            width: 250,
+                            height: 250,
+                            objectFit: 'cover', // This property will crop the image while maintaining aspect ratio
+                          }}
+                        />
                     </div>
                     <Typography variant="body2" color="text.secondary" sx={{ marginBottom: '8px' }}>
-                      <strong>City Name:</strong> Test
+                      <strong>Status:</strong> {status?status:""}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" sx={{ marginBottom: '8px' }}>
-                      <strong>Province:</strong> Test
+                      <strong>Camera Unique ID:</strong> {selectedCamera?selectedCamera.uniqueId:""}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" sx={{ marginBottom: '8px' }}>
-                      <strong>Cameraed:</strong> Test
+                      <strong>Address:</strong> {selectedCamera?selectedCamera.address.join(', '):""}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" sx={{ marginBottom: '8px' }}>
-                      <strong>People Affected:</strong> Test
+                      <strong>Installed Date:</strong> {selectedCamera?new Date(selectedCamera.installedDate).toLocaleString():""}
                     </Typography>
-
-                    {/* Styling for the nearby cities list */}
-                    <Typography variant="body2" color="text.secondary" sx={{ marginBottom: '8px' }}>
-                      <strong>Nearby Cities:</strong>
-                    </Typography>
-                    <ul style={{ maxHeight: '100px', overflowY: 'auto', padding: 0, marginBottom: '20px' }}>
-                      {["Talagang", "Islamabad", "Talagang", "Islamabad", "Talagang", "Islamabad", "Talagang", "Islamabad"].map((city, index) => (
-                        <li key={index}>{city}</li>
-                      ))}
-                    </ul>
                   </div>
                   
                   {/* Add more content or customize styles based on your needs */}

@@ -1,225 +1,62 @@
-import React from 'react';
-import Grid from "@mui/material/Grid";
-import {Link} from 'react-router-dom';
-import styles from '@/styles/PageTitle.module.css'
+import React, { useRef, useEffect } from 'react';
 import mapboxgl from 'mapbox-gl';
-import { useRef, useState, useEffect } from 'react';
-import './InstalledCameras.module.css'
+import './InstalledCameras.module.css'; // You may need to adjust the path to your CSS file
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiZHJzdGFuZ2VudCIsImEiOiJjbG9ramRjMm8yMXI4MmluMDR5MXBuMzJ0In0.RDs0ovR6g_DaAlsTMeZ_nQ';
 
-function fetchJSON(url) {
-    return fetch(url)
-      .then(function(response) {
-        return response.json();
+export default function CamerasMap({ cameras, setSelectedCamera }) {
+  const mapContainer = useRef(null);
+  const map = useRef(null);
+
+  useEffect(() => {
+    console.log(cameras);
+    console.log('here');
+    console.log(map.current);
+    if (!map.current) {
+      map.current = new mapboxgl.Map({
+        container: mapContainer.current,
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: [75, 35], // Default center
+        zoom: 4, // Default zoom
       });
-}
-export default function CamerasMap({cameras, setCities}) {
-    const mapContainer = useRef(null);
-    const map = useRef(null);
-    var tooltip;
-    const [lng, setLng] = useState(69.3451);
-    const [lat, setLat] = useState(30.3753);
-    const [zoom, setZoom] = useState(4);
-    
-    useEffect(() => {
+    }
 
-        if (map.current) return; // initialize map only once
-
-        map.current = new mapboxgl.Map({
-            container: mapContainer.current,
-            style: 'mapbox://styles/mapbox/streets-v12',
-            center: [lng, lat],
-            zoom: zoom
-        });
-
-        cameras.map((camera)=>{
-
-        })
-
-        fetchJSON('PakistanPolygon.geojson')
-            .then((data)=>{
-                let pakistanFeature = data.features[0];
-                map.current.on('load', () => {
-                    map.current.addSource("pakistan", {
-                        'type': 'geojson',
-                        'data': {
-                        'type': 'Feature',
-                        'geometry': pakistanFeature.geometry
-                        }
-                    });
-                    
-                    map.current.addLayer({
-                        'id': "pakistan",
-                        'type': 'fill',
-                        'source': "pakistan", // reference the data source
-                        'layout': {},
-                        'paint': {
-                        'fill-color': '#ff0000', // blue color fill
-                        'fill-opacity': 0.0
-                    }
-                    });
-
-                    map.current.on('mouseleave', "pakistan", function () {
-                        map.current.getCanvas().style.cursor = '';
-                        if(tooltip)
-                        {
-                            tooltip.remove();
-                        }
-                            
-                    });
-
-                });
-            })
-        fetchJSON('DistrictsCameraingStatus.geojson')
-            .then(function(data) { 
-            let features = data.features;
-            features.forEach(feature => {
-              feature.properties.camera = cities.includes(feature.properties['City Name']);
-            });
-            
-            map.current.on('load', () => {
-                features.forEach((feature)=>{
-                    map.current.addSource(feature.properties['City Name'], {
-                        'type': 'geojson',
-                        'data': {
-                        'type': 'Feature',
-                        'geometry': feature.geometry
-                        }
-                        });
-                    let fillColor;
-                    if(feature.properties['camera']){
-                        fillColor = '#37b0f7';
-                    }
-                    else{
-                        fillColor = '#111111';
-                    }
-                    map.current.addLayer({
-                        'id': feature.properties['City Name'],
-                        'type': 'fill',
-                        'source': feature.properties['City Name'], // reference the data source
-                        'layout': {},
-                        'paint': {
-                        'fill-color': fillColor, // blue color fill
-                        'fill-opacity': 0.8,
-                    }
-                    });
-                    map.current.addLayer({
-                        'id': feature.properties['City Name'] + "-Outline",
-                        'type': 'line',
-                        'source': feature.properties['City Name'], // reference the data source
-                        'layout': {},
-                        'paint': {
-                        'line-color': '#000', // outline color (black in this example)
-                        'line-width': 1 // outline width (adjust as needed)
-                    }
-                    });
-                    if(setCities){
-                        map.current.on('click', feature.properties['City Name'], function(e){
-                            if(feature.properties['camera']){//If Camera is Already 
-                              map.current.setPaintProperty(
-                                feature.properties['City Name'], 
-                                'fill-color', 
-                                '#111111');
-                              feature.properties['camera'] = false;
-                              
-                              cities = cities.filter((city)=>{
-                                return city != feature.properties['City Name']
-                              });
-                              
-                              setCities(cities);
-                            }
-                            else
-                            {
-                              map.current.setPaintProperty(
-                                feature.properties['City Name'], 
-                                'fill-color', 
-                                '#37b0f7');
-                              feature.properties['camera'] = true;
-                              
-                              cities.push(feature.properties['City Name']);
+    map.current.on('load', () => {
+      // Add markers for cameras
+      cameras.forEach((camera) => {
+        const { lat, lon, uniqueId, status } = camera;
       
-                              
-                              setCities(cities);
-                            }
-                          })
-                    }
-                    map.current.on('mouseenter', feature.properties['City Name'], function (e) {
-                        // Create a tooltip element
-                        if(tooltip)
-                        {
-                            tooltip.remove();
-                        }
-                        map.current.getCanvas().style.cursor = "pointer"
-                        tooltip = new mapboxgl.Popup()
-                          .setLngLat(e.lngLat)
-                          .setHTML(`
-                          <!DOCTYPE html>
-                              <html lang="en">
-                              <head>
-                                  <meta charset="UTF-8">
-                                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                  <title>OpenStreetMap Popup</title>
-                                  <style>
-                                      body {
-                                          font-family: Arial, sans-serif;
-                                          margin: 0;
-                                          padding: 0;
-                                      }
-
-                                      .popup {
-                                          max-width: 300px;
-                                      }
-
-                                      .popup img {
-                                          width: 100%;
-                                          height: auto;
-                                          margin-top: 8px;
-                                      }
-                                  </style>
-                              </head>
-                              <body>
-
-                              <div class="popup">
-                                  <h2 id="cityName">${feature.properties['City Name']}</h2>
-                                  <p id="provinceName">Province Name: ${feature.properties['Province']}</p>
-                                  <p id="cameraingStatus">Cameraed: ${feature.properties['camera']?"Yes":"No"}</p>
-                              </div>
-
-                              </body>
-                              </html>`) // Customize the tooltip content
-                          .addTo(map.current);
-
-                    });
-
-                    // map.current.on('mouseleave',feature.id, function () {
-                    //     map.current.getCanvas().style.cursor = '';
-                    //     if(tooltip)
-                    //     {
-                    //         tooltip.remove();
-                    //     }
-                            
-                    // });
-                    
-                    
-                })
-            });
-
+        // Create a custom marker element
+        const markerElement = document.createElement('div');
+        markerElement.style='width: 30px;height: 30px;cursor: pointer;'
+        markerElement.className = 'custom-marker';
+      
+        // Create a colored circle inside the marker
+        const circleElement = document.createElement('div');
+        circleElement.style = 'position: absolute; top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;height: 100%;border-radius: 50%;'
+        circleElement.style.backgroundColor = status == "danger"? '#007BFF' :'#007BFF'; // Default color is blue
+        markerElement.appendChild(circleElement);
+      
+        // Create an image element inside the marker
+        const imageElement = document.createElement('img');
+        imageElement.style = 'position: relative;z-index: 1;width: 100%;height: 100%;border-radius: 50%;'
+        imageElement.src = "https://static.vecteezy.com/system/resources/previews/018/931/360/original/black-camera-icon-png.png"; // Set the image source
+        imageElement.alt = uniqueId; // Set the alt text for accessibility
+        markerElement.appendChild(imageElement);
+      
+        // Create a mapboxgl.Marker with the custom marker element
+        new mapboxgl.Marker(markerElement)
+          .setLngLat([lon, lat])
+          .addTo(map.current);
+          
+        markerElement.addEventListener('click', () => {
+          setSelectedCamera(camera);
+          // Optionally, you can perform other actions here
         });
-        map.current.on('mousemove', function (e) {
-            setLng(map.current.getCenter().lng.toFixed(4));
-            setLat(map.current.getCenter().lat.toFixed(4));
-            setZoom(map.current.getZoom().toFixed(2));
-            if (tooltip) {
-              // Update the tooltip's position to follow the cursor
-              tooltip.setLngLat(e.lngLat);
-            }
-        });
-
-        
+      });
     });
-    return (
-    <>
-      <div ref={mapContainer} style={{height: 400}}/>
-    </>
-    );
+
+  }, [cameras]);
+
+  return <div ref={mapContainer} style={{ height: '400px' }} />;
 }

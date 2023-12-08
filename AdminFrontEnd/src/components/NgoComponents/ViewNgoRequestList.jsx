@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getNgoRequestsList, rejectNgoRequest } from '../../services/ngos.services';
+import { approveNgoRequest, getNgoRequestsList, rejectNgoRequest } from '../../services/ngos.services';
 import { useUser } from "@/context/UserContext"
 import { Box, CircularProgress, Typography } from "@mui/material";
 import TableHead from "@mui/material/TableHead";
@@ -56,9 +56,27 @@ const navigate = useNavigate();
     setViewContext((oldValues)=>{return {...oldValues, selectedNgoRequest: ngoRequestId}});
     navigate(`/ngos/requests/${ngoRequestId}`);
   }
+  const approveNgoRequestFunc = (ngoRequestId) =>{
+    approveNgoRequest(userContext.token, ngoRequestId).then(
+        (response)=>{
+            return response.data.message;
+        }
+    ).then((message)=>{
+        setNgoRequestsRefresh(true);
+        enqueueSnackbar(message, { variant: "success", anchorOrigin: {
+            vertical: 'bottom',
+            horizontal: 'right'
+        }  });
+    }).catch((error)=>{
+        enqueueSnackbar(error.response.data.message || error.message , { variant: "error", anchorOrigin: {
+            vertical: 'bottom',
+            horizontal: 'right'
+        }  });
+    })
 
+  }
   const deleteNgoRequestFunc = (ngoRequestId)=>{
-    deleteNgoRequest(userContext.token, ngoRequestId).then(
+    rejectNgoRequest(userContext.token, ngoRequestId).then(
         (response)=>{
             return response.data.message;
         }
@@ -239,7 +257,7 @@ const navigate = useNavigate();
                         color="success"
                         className="primary"
                         onClick = {()=>{
-                            handleEditOpen(row);
+                            approveNgoRequestFunc(row._id);
                         }}
                     >
                         <CheckIcon fontSize="inherit" />
