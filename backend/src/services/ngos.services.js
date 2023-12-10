@@ -3,17 +3,23 @@ const NGO_Request = require('../models/ngo_request.model');
 const NGO = require('../models/ngo.model');
 const ngoRepository = require('../repositories/ngo.repository')
 const ngoRequestRepository = require('../repositories/ngo_request.repository')
-
+const notificationServices = require('../services/notifications.services');
+const userServices = require('../services/users.services');
 
 /*NGO Requests*/
 
 async function applyForNGO(userId,cnicNumber,address, mobileNumber, assosiatedPersonStatus, frontSideCNICLink, backSideCNICLink, ngoImageLink, ngoName, ngoContactNumber, ngoId, registrationCertificateLink, annualReportLink, taxExemptionLink, creditCardNumber){
     await ngoRepository.validityOfNGO(userId, cnicNumber, ngoName, ngoContactNumber, ngoId);
 
+   
+
     await ngoRequestRepository.validityOfNGORequest(userId, cnicNumber, ngoName, ngoContactNumber, ngoId);
     
-
     let ngoRequest = await NGO_Request.create({userId,cnicNumber,address, mobileNumber, assosiatedPersonStatus, frontSideCNICLink, backSideCNICLink, ngoImageLink, ngoName, ngoContactNumber, ngoId, registrationCertificateLink, annualReportLink, taxExemptionLink, creditCardNumber})
+
+     /* Fetch User to get name and userPhotoLink for Notification */
+    let user = await userServices.getUserProfile(userId);
+    await notificationServices.createUserNotificationToAdmin(user.name, user.userPhotoLink, "NGO Request", "/ngos/request");
 
     return ngoRequest;
 }

@@ -14,6 +14,11 @@ const floodPrecautionController = require('../controllers/flood_precautions.cont
 const reportController = require('../controllers/reports.controllers');
 const floodController = require('../controllers/floods.controllers');
 const cameraController = require('../controllers/cameras.controllers');
+const notificationController = require('../controllers/notifications.controller');
+
+/** Notifications for Admin*/
+// router.get('/notifications', verifyAdmin, notificationController.getAllNotifications);
+
 /* Module 1: User Profiling */
 /* -- Admin Profile -- */
 router.post('/signin', adminController.signin);
@@ -72,9 +77,9 @@ router.post('/ngos/:userId', verifyAdmin,
 
 /*-- Module 7: NGO Participation -- */
 // 1. Approve NGO Participation Request
-router.post('/ngo_participation_requests/approve/:requestId', verifyAdmin, ngoParticipationController.approveNGOParticipationRequest)
+router.post('/ngo_partcipation_requests/approve/:requestId', verifyAdmin, ngoParticipationController.approveNGOParticipationRequest)
 // 2. Reject NGO Participation Request
-router.delete('/ngo_participation_requests/reject/:requestId', verifyAdmin, ngoParticipationController.rejectNGOParticipationRequest)
+router.delete('/ngo_partcipation_requests/reject/:requestId', verifyAdmin, ngoParticipationController.rejectNGOParticipationRequest)
 // 3. View NGO Participation Requests
 router.get('/ngo_participation_requests', verifyAdmin, ngoParticipationController.viewNGOParticipationRequests);
 // 4. View Specific NGO Participation Request

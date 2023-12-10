@@ -6,6 +6,7 @@ const NGO_Participation_Post = require('../models/ngo_participation_post.model')
 const NGO_Participation_Post_Request = require('../models/ngo_participation_post_requests.model');
 const { default: mongoose } = require('mongoose');
 const ObjectId = mongoose.Types.ObjectId;
+const notificationServices = require('../services/notifications.services');
 
 /*-----------------NGO Participation Requests-----------------*/
 async function postNGOParticipationRequest(ngoId, postTitle, postDescription, postImagesLinks){
@@ -20,6 +21,8 @@ async function postNGOParticipationRequest(ngoId, postTitle, postDescription, po
     ngo.ngoParticipationPostRequests.push(ngoParticipationPostRequest._id);
 
     await ngo.save();
+
+    await notificationServices.createUserNotificationToAdmin(ngo.ngoName, ngo.ngoImageLink,"NGO Participation Request","/ngos/request");
 
     return ngoParticipationPostRequest
 }
