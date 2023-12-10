@@ -83,6 +83,7 @@ import FloodsListPage from './pages/floods/FloodsListPage'
 import { AddCamera } from './components/CameraComponents/AddCamera';
 import AddCameraPage from './pages/cameras/AddCameraPage';
 import CamerasListPage from './pages/cameras/CamerasListPage';
+import Notifications from './pages/notifications/Notifications';
 
 function App() {
   const [userContext, setUserContext] = useContext(UserContext)
@@ -201,9 +202,9 @@ function App() {
                     <Route path='/ngos/:id' element={<ViewNgo />}/>
                   </Route>
                   <Route path="/floods">
-                    <Route path="/floods" element={<Navigate to="/floods/dangerzones" />}/>
+                    <Route path="/floods" element={<Navigate to="/floods/heatmaps" />}/>
                     <Route path="/floods/add" element={<AddFloodPage />}/>
-                    <Route path='/floods/dangerzones' element={<DangerZonesPage />}/> 
+                    <Route path='/floods/heatmaps' element={<DangerZonesPage />}/> 
                     <Route path='/floods/list' element={<FloodsListPage/>}/>
                   </Route>
                   <Route path="/cameras">
@@ -211,6 +212,7 @@ function App() {
                     <Route path="/cameras/add" element={<AddCameraPage />}/>
                     <Route path='/cameras/list' element={<CamerasListPage />}/>
                   </Route>
+                  <Route path = "notification" element={<Notifications />}/>
                   <Route path='*' element={<NotFound/>} />
                 </Routes>
               </Layout>

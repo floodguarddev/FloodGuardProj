@@ -128,8 +128,8 @@ const Sidebar = ({ toogleActive }) => {
           path: "/floods/add"
         },
         {
-          title: "Danger Zones",
-          path: "/floods/dangerzones",
+          title: "Heat Maps",
+          path: "/floods/heatmaps",
         },
         {
           title: "View Floods",

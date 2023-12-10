@@ -24,7 +24,7 @@ import PrintIcon from "@mui/icons-material/Print";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import Checkbox from "@mui/material/Checkbox";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -58,7 +58,7 @@ function Notification(props) {
         {theme.direction === "rtl" ? <LastPageIcon /> : <FirstPageIcon />}
       </IconButton>
       <IconButton
-        onClick={handleBackButtonClick}
+        onClick={(e)=>{handleBackButtonClick(e)}}
         disabled={page === 0}
         aria-label="previous page"
       >
