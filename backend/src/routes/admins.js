@@ -72,9 +72,9 @@ router.post('/ngos/:userId', verifyAdmin,
 
 /*-- Module 7: NGO Participation -- */
 // 1. Approve NGO Participation Request
-router.post('/ngo_partcipation_requests/approve/:requestId', verifyAdmin, ngoParticipationController.approveNGOParticipationRequest)
+router.post('/ngo_participation_requests/approve/:requestId', verifyAdmin, ngoParticipationController.approveNGOParticipationRequest)
 // 2. Reject NGO Participation Request
-router.delete('/ngo_partcipation_requests/reject/:requestId', verifyAdmin, ngoParticipationController.rejectNGOParticipationRequest)
+router.delete('/ngo_participation_requests/reject/:requestId', verifyAdmin, ngoParticipationController.rejectNGOParticipationRequest)
 // 3. View NGO Participation Requests
 router.get('/ngo_participation_requests', verifyAdmin, ngoParticipationController.viewNGOParticipationRequests);
 // 4. View Specific NGO Participation Request

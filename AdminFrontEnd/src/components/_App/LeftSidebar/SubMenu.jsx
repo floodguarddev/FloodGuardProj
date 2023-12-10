@@ -42,7 +42,7 @@ const SubMenu = ({ item }) => {
         </div>
       </Link>
       {subnav &&
-        item.subNav.map((item, index) => {
+        item.subNav.filter((item)=>item.var!==null).map((item, index) => {
           return (
             <Link
               to={item.path} // Use "to" instead of "href"

@@ -66,6 +66,7 @@ const Sidebar = ({ toogleActive }) => {
           path: "/admins/list",
         },
         {
+          var: viewContext.selectedAdmin || null,
           title: "View Admin",
           path: "/admins/"+viewContext.selectedAdmin
         },
@@ -88,6 +89,8 @@ const Sidebar = ({ toogleActive }) => {
           path: "/users/list",
         },
         {
+          
+          var: viewContext.selectedUser || null,
           title: "View User",
           path: "/users/"+viewContext.selectedUser
         },
@@ -150,6 +153,7 @@ const Sidebar = ({ toogleActive }) => {
           path: "/flood_precautions/list",
         },
         {
+          var: viewContext.selectedFloodPrecaution || null,
           title: "View Precaution",
           path: "/flood_precautions/"+viewContext.selectedFloodPrecaution
         },
@@ -172,6 +176,7 @@ const Sidebar = ({ toogleActive }) => {
           path: "/news/list",
         },
         {
+          var: viewContext.selectedNews || null,
           title: "View News",
           path: "/news/"+viewContext.selectedNews
         },
@@ -194,6 +199,7 @@ const Sidebar = ({ toogleActive }) => {
           path: "/ngo_participations/list",
         },
         {
+          var: viewContext.selectedNgoParticipation || null,
           title: "View Post",
           path: "/ngo_participations/"+viewContext.selectedNgoParticipation
         },
@@ -220,6 +226,7 @@ const Sidebar = ({ toogleActive }) => {
           path: "/fund_raisings/list",
         },
         {
+          var: viewContext.selectedFundRaising || null,
           title: "View Post",
           path: "/fund_raisings/"+viewContext.selectedFundRaising
         },
@@ -246,6 +253,7 @@ const Sidebar = ({ toogleActive }) => {
           path: "/ngos/list",
         },
         {
+          var: viewContext.selectedNgo || null,
           title: "View Ngo",
           path: "/ngos/"+viewContext.selectedNgo
         },
@@ -258,6 +266,7 @@ const Sidebar = ({ toogleActive }) => {
           path: "/ngos/requests"
         },
         {
+          var: viewContext.selectedNgoRequest || null,
           title: "View NGO Request",
           path: "/ngos/requests/"+viewContext.selectedNgoRequest
         }
@@ -277,6 +286,7 @@ const Sidebar = ({ toogleActive }) => {
           path: "/rescuers/list",
         },
         {
+          var: viewContext.selectedRescuer || null,
           title: "View Rescuer",
           path: "/rescuers/"+viewContext.selectedRescuer
         },
@@ -289,6 +299,7 @@ const Sidebar = ({ toogleActive }) => {
           path: "/rescuers/requests"
         },
         {
+          var: viewContext.selectedRescuerRequest || null,
           title: "View Rescuer Request",
           path: "/rescuers/requests/"+viewContext.selectedRescuerRequest
         }
