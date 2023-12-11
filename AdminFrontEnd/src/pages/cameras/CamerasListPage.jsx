@@ -125,18 +125,17 @@ export default function CamerasListPage() {
     })
     socket.on('status', (detection)=>{
       let detect = JSON.parse(detection);
+      let status = "NO PERSON DETECTED";
       detect.forEach((ent)=>{
         if(ent == 'person')
         {
-          
-         setStatus("PERSON")
-         return
+         status = "PERSON DETECTED"
         }
       })
-      setStatus("NO PERSON DETECTED-----------------------")
+      setStatus(status)
     })
+    
     socket.on('newImage', (image)=>{
-      
       setImage(image);
     })
   }, [])
