@@ -15,6 +15,7 @@ const reportController = require('../controllers/reports.controllers');
 const floodController = require('../controllers/floods.controllers');
 const cameraController = require('../controllers/cameras.controllers');
 const notificationController = require('../controllers/notifications.controller');
+const cacheMiddleWare = require('../middlewares/cache');
 
 /** Notifications for Admin*/
 // router.get('/notifications', verifyAdmin, notificationController.getAllNotifications);
@@ -140,12 +141,12 @@ router.delete('/precautions/:precautionId', verifyAdmin, floodPrecautionControll
 router.put('/precautions/:precautionId', verifyAdmin, floodPrecautionController.editPrecaution);
 
 //Reports//
-router.get('/reports/users', verifyAdmin, reportController.getUsersStatus);
-router.get('/reports/donations', verifyAdmin, reportController.getDonationsStatus);
-router.get('/reports/ngos', verifyAdmin, reportController.getNgosStatus);
-router.get('/reports/ngosSummary', verifyAdmin, reportController.getNgosSummary);
-router.get('/reports/donationsSummary', verifyAdmin, reportController.getDonationsSummary);
-router.get('/reports/usersSummary', verifyAdmin, reportController.getUsersSummary)
+router.get('/reports/users', verifyAdmin, cacheMiddleWare.getUsersStatus, reportController.getUsersStatus);
+router.get('/reports/donations', verifyAdmin, cacheMiddleWare.getDonationsStatus, reportController.getDonationsStatus);
+router.get('/reports/ngos', verifyAdmin, cacheMiddleWare.getNgosStatus, reportController.getNgosStatus);
+router.get('/reports/ngosSummary', verifyAdmin, cacheMiddleWare.getNgosSummary, reportController.getNgosSummary);
+router.get('/reports/donationsSummary', verifyAdmin, cacheMiddleWare.getDonationsSummary, reportController.getDonationsSummary);
+router.get('/reports/usersSummary', verifyAdmin, cacheMiddleWare.getUsersSummary, reportController.getUsersSummary)
 
 //Flood//
 router.get('/floods',verifyAdmin, floodController.viewFloods);

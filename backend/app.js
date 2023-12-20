@@ -8,8 +8,8 @@ var cors = require('cors');
 require('dotenv').config();
 var {infoLogger} = require('./src/logging/logger')
 var {errorLogger, errorResponder, invalidPathHandler, assignHTTPError} = require('./src/middlewares/errorhandling');
-
 global.__basedir = __dirname;
+require('./config/redisConfig');
 
 //Importing Routes//
 var indexRouter = require('./src/routes/index');
